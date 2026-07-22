@@ -1,3 +1,5 @@
+[日本語](/) | [English](/en/) | [한국어](/ko/) | [繁體中文](/zh/)
+
 ### ALM4GEST
 
 コナミの音楽ゲーム（初版は「SOUND VOLTEX」「DanceDanceRevolution」）のスコアを記録・分析する、個人開発のスコア管理アプリです。
