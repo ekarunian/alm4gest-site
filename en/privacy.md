@@ -2,7 +2,7 @@
 
 ### ALM4GEST Privacy Policy
 
-Last updated: July 22, 2026
+Last updated: July 26, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -42,6 +42,7 @@ Data sent to the server is used only for the following purposes.
 1. Compiling all-player statistics (per-chart average scores, clear rates, T-scores, tier lists, and similar) and delivering them to users of the App
 2. Improving the quality of the App (verifying data consistency and investigating causes of crashes)
 3. Restoring data from a backup (when you use the feature described in section 3)
+4. Publishing statistics aggregated so that no individual can be identified (for example, per-chart clear rates, score distributions, and usage trend analyses), including via the Operator's social media accounts and websites
 
 When statistics are compiled and delivered, player codes are converted into an anonymous ID via an irreversible hash, and no player code or player name is included in the delivered data.
 No individual user's scores are ever delivered in a form that identifies that person.
