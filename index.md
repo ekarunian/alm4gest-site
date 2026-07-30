@@ -13,11 +13,12 @@
 
 #### ダウンロード
 
-App Store / Google Play にて準備中です。
+- App Store: [ダウンロード](https://apps.apple.com/app/id6793808647)
+- Google Play: Android版はクローズドテスト中です（一般公開前）
 
-<!-- 公開後に差し替え:
-- [App Store](ストアURL)
-- [Google Play](ストアURL)
+<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
+     一般公開（製品版リリース）後は、上の「Android版はクローズドテスト中です（一般公開前）」を次のリンクへ差し替える:
+     [ダウンロード](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 
 #### 規約・ポリシー

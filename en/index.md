@@ -13,11 +13,12 @@ It is not provided or operated by Konami Arcade Games Co., Ltd. or any KONAMI gr
 
 #### Download
 
-Coming soon to the App Store and Google Play.
+- App Store: [Download](https://apps.apple.com/app/id6793808647)
+- Google Play: the Android app is in closed testing (not yet public)
 
-<!-- 公開後に差し替え:
-- [App Store](ストアURL)
-- [Google Play](ストアURL)
+<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
+     一般公開（製品版リリース）後は、上の "the Android app is in closed testing (not yet public)" を次のリンクへ差し替える:
+     [Download](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 
 #### Terms and policies

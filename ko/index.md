@@ -13,11 +13,12 @@
 
 #### 다운로드
 
-App Store / Google Play에서 준비 중입니다.
+- App Store: [다운로드](https://apps.apple.com/app/id6793808647)
+- Google Play: Android 버전은 비공개 테스트 중입니다 (일반 공개 전)
 
-<!-- 公開後に差し替え:
-- [App Store](ストアURL)
-- [Google Play](ストアURL)
+<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
+     一般公開（製品版リリース）後は、上の「Android 버전은 비공개 테스트 중입니다 (일반 공개 전)」を次のリンクへ差し替える:
+     [다운로드](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 
 #### 약관·정책

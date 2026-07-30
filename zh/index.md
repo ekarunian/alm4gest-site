@@ -13,11 +13,12 @@
 
 #### 下載
 
-App Store / Google Play 準備中。
+- App Store: [下載](https://apps.apple.com/app/id6793808647)
+- Google Play: Android 版正在進行封閉測試（尚未公開）
 
-<!-- 公開後に差し替え:
-- [App Store](ストアURL)
-- [Google Play](ストアURL)
+<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
+     一般公開（製品版リリース）後は、上の「Android 版正在進行封閉測試（尚未公開）」を次のリンクへ差し替える:
+     [下載](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 
 #### 條款・政策
