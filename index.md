@@ -16,8 +16,20 @@
 - App Store: [ダウンロード](https://apps.apple.com/app/id6793808647)
 - Google Play: Android版はクローズドテスト中です（一般公開前）
 
-<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
-     一般公開（製品版リリース）後は、上の「Android版はクローズドテスト中です（一般公開前）」を次のリンクへ差し替える:
+#### Android版のテスター募集
+
+Android版はまだ一般公開しておらず、テスターとして参加した方だけが使えます。
+インストールしてプレイし、気づいた不具合や使いにくい点を教えてください。
+
+1. [テスター用のGoogleグループに参加する](https://groups.google.com/g/alm4gest_closed)
+2. [Google Playのページ](https://play.google.com/store/apps/details?id=com.alm4gest)を開いてインストールする
+
+手順1を先に済ませてください。
+グループに参加していないアカウントでは、手順2のページを開けません。
+参加にはGoogleアカウントが必要です。
+
+<!-- Android を一般公開（製品版リリース）したら、この節を削除し、
+     上の「Android版はクローズドテスト中です（一般公開前）」を次のリンクへ差し替える:
      [ダウンロード](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 

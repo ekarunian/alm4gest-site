@@ -16,8 +16,20 @@ It is not provided or operated by Konami Arcade Games Co., Ltd. or any KONAMI gr
 - App Store: [Download](https://apps.apple.com/app/id6793808647)
 - Google Play: the Android app is in closed testing (not yet public)
 
-<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
-     一般公開（製品版リリース）後は、上の "the Android app is in closed testing (not yet public)" を次のリンクへ差し替える:
+#### Android testers wanted
+
+The Android app is not public yet, so only testers can install it.
+Play it and tell me about any bugs or issues you run into.
+
+1. [Join the tester Google Group](https://groups.google.com/g/alm4gest_closed)
+2. [Open the Google Play page](https://play.google.com/store/apps/details?id=com.alm4gest) and install the app
+
+Do step 1 first.
+The Play page will not open for an account that has not joined the group.
+A Google account is required.
+
+<!-- Android を一般公開（製品版リリース）したら、この節を削除し、
+     上の "the Android app is in closed testing (not yet public)" を次のリンクへ差し替える:
      [Download](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 

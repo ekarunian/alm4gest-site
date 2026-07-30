@@ -16,8 +16,20 @@
 - App Store: [다운로드](https://apps.apple.com/app/id6793808647)
 - Google Play: Android 버전은 비공개 테스트 중입니다 (일반 공개 전)
 
-<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
-     一般公開（製品版リリース）後は、上の「Android 버전은 비공개 테스트 중입니다 (일반 공개 전)」を次のリンクへ差し替える:
+#### Android 버전 테스터 모집
+
+Android 버전은 아직 일반 공개되지 않아 테스터로 참여한 분만 사용할 수 있습니다.
+설치해서 플레이해 보시고, 발견한 버그나 불편한 점을 알려 주시기 바랍니다.
+
+1. [테스터용 Google 그룹에 가입하기](https://groups.google.com/g/alm4gest_closed)
+2. [Google Play 페이지](https://play.google.com/store/apps/details?id=com.alm4gest)를 열어 설치하기
+
+1번을 먼저 진행해 주시기 바랍니다.
+그룹에 가입하지 않은 계정으로는 2번 페이지가 열리지 않습니다.
+참여하려면 Google 계정이 필요합니다.
+
+<!-- Android を一般公開（製品版リリース）したら、この節を削除し、
+     上の「Android 버전은 비공개 테스트 중입니다 (일반 공개 전)」を次のリンクへ差し替える:
      [다운로드](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 

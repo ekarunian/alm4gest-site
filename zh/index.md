@@ -16,8 +16,20 @@
 - App Store: [下載](https://apps.apple.com/app/id6793808647)
 - Google Play: Android 版正在進行封閉測試（尚未公開）
 
-<!-- Android のテスター募集案内（Googleグループへの参加手順）は、グループURLが確定してからこの節へ追記する。
-     一般公開（製品版リリース）後は、上の「Android 版正在進行封閉測試（尚未公開）」を次のリンクへ差し替える:
+#### 招募 Android 版測試人員
+
+Android 版尚未對外公開，只有參與測試的人才能安裝。
+安裝後請試玩看看，並告訴我你發現的問題或不好用的地方。
+
+1. [加入測試人員的 Google 群組](https://groups.google.com/g/alm4gest_closed)
+2. [開啟 Google Play 頁面](https://play.google.com/store/apps/details?id=com.alm4gest)並安裝
+
+請先完成步驟 1。
+未加入群組的帳號無法開啟步驟 2 的頁面。
+參與需要 Google 帳號。
+
+<!-- Android を一般公開（製品版リリース）したら、この節を削除し、
+     上の「Android 版正在進行封閉測試（尚未公開）」を次のリンクへ差し替える:
      [下載](https://play.google.com/store/apps/details?id=com.alm4gest)
 -->
 
