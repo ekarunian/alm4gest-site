@@ -2,7 +2,7 @@
 
 ### ALM4GEST Privacy Policy
 
-Last updated: July 26, 2026
+Last updated: August 1, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -16,6 +16,7 @@ The App collects the following information.
 | Player identifiers | Per-game player code (DDR code, SOUND VOLTEX player ID) and player name | Same as above |
 | Manually entered records | Scores and similar entered by the user | When entered (sent as described in section 3) |
 | Crash information | Error details, where the error occurred, device model, and OS version when the App terminates unexpectedly | When the App crashes |
+| Usage information | App launches, screens viewed, sync runs and their results (games covered, records fetched, time taken), the start of first-time setup and whether a first record was saved, device model, OS version, country, App version, and an identifier assigned per installation (this is not the advertising identifier) | While you use the App |
 | Advertising identifier | IDFA on iOS, advertising ID on Android | When ads are shown (only with the permission or consent described in section 5) |
 
 The App does not collect your e-amusement login ID, password, or other credentials.
@@ -25,6 +26,8 @@ The App does not collect your e-amusement login ID, password, or other credentia
 1. Collected information is first stored in a database on your device.
 2. When a sync completes, the play data and player identifiers obtained from that sync are sent to a server managed by the Operator, for the purpose of building all-player statistics.
 3. Data sent to the server is stored in a private area and is never published or provided to third parties in its raw form.
+4. Usage information is sent to Google Analytics for Firebase (section 6), not to the Operator's server.
+   Play data, player identifiers, and manually entered records are not sent there.
 
 #### 3. Backup
 
@@ -40,7 +43,7 @@ The App has a backup feature for carrying your data over when you change devices
 Data sent to the server is used only for the following purposes.
 
 1. Compiling all-player statistics (per-chart average scores, clear rates, T-scores, tier lists, and similar) and delivering them to users of the App
-2. Improving the quality of the App (verifying data consistency and investigating causes of crashes)
+2. Improving the quality of the App (verifying data consistency, investigating causes of crashes, and analyzing usage to improve features)
 3. Restoring data from a backup (when you use the feature described in section 3)
 4. Publishing statistics aggregated so that no individual can be identified (for example, per-chart clear rates, score distributions, and usage trend analyses), including via the Operator's social media accounts and websites
 
@@ -68,6 +71,7 @@ However, the App uses the following services to operate, and information is proc
 | Cloud storage provider | Storing data | Play data, player identifiers, backup data |
 | Google (AdMob) | Delivering ads | Advertising identifier |
 | Google (Firebase Crashlytics) | Investigating causes of crashes | Crash information |
+| Google (Google Analytics for Firebase) | Analyzing usage | Usage information |
 
 The cloud storage provider is entrusted with storage only, and does not use this data for its own purposes.
 
@@ -76,6 +80,8 @@ The cloud storage provider is entrusted with storage only, and does not use this
 1. Data on your device is deleted in full when you uninstall the App.
 2. If you want data stored on the server deleted, contact us at the address below with your player code (we will delete it within a reasonable period).
 3. If you want backed-up data deleted, contact us with your restore code.
+4. Usage information is not linked to your player code, so we cannot delete it for an individual user.
+   What is stored in Google Analytics is deleted automatically once Google's retention period has passed.
 
 #### 8. Changes to this policy
 
