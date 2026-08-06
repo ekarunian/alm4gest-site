@@ -2,7 +2,7 @@
 
 ### ALM4GEST Privacy Policy
 
-Last updated: August 1, 2026
+Last updated: August 6, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -15,6 +15,7 @@ The App collects the following information.
 | Play data | Per-chart scores, grades, clear status, flare rank, EX score, play count, last played date, and similar | When syncing with e-amusement |
 | Player identifiers | Per-game player code (DDR code, SOUND VOLTEX player ID) and player name | Same as above |
 | Manually entered records | Scores and similar entered by the user | When entered (sent as described in section 3) |
+| User settings data | Per-chart memos, judge timing values, challenge songs you have pinned, saved filters, and app settings | When entered or set (sent as described in section 3) |
 | Crash information | Error details, where the error occurred, device model, and OS version when the App terminates unexpectedly | When the App crashes |
 | Usage information | App launches, screens viewed, sync runs and their results (games covered, records fetched, time taken), the start of first-time setup and whether a first record was saved, device model, OS version, country, App version, and an identifier assigned per installation (this is not the advertising identifier) | While you use the App |
 | Advertising identifier | IDFA on iOS, advertising ID on Android | When ads are shown (only with the permission or consent described in section 5) |
@@ -27,13 +28,13 @@ The App does not collect your e-amusement login ID, password, or other credentia
 2. When a sync completes, the play data and player identifiers obtained from that sync are sent to a server managed by the Operator, for the purpose of building all-player statistics.
 3. Data sent to the server is stored in a private area and is never published or provided to third parties in its raw form.
 4. Usage information is sent to Google Analytics for Firebase (section 6), not to the Operator's server.
-   Play data, player identifiers, and manually entered records are not sent there.
+   Play data, player identifiers, manually entered records, and user settings data are not sent there.
 
 #### 3. Backup
 
 The App has a backup feature for carrying your data over when you change devices.
 
-1. Every time a sync completes, a full set of the play data on your device is automatically sent to and stored on a server managed by the Operator (this includes manually entered records, your player name, saved filters, and app settings).
+1. Every time a sync completes, a full set of the play data on your device is automatically sent to and stored on a server managed by the Operator (this includes manually entered records, your player name, saved filters, app settings, per-chart memos, judge timing values, and challenge songs you have pinned).
    You can also run a backup manually from the settings screen.
 2. The stored data is tied to a restore code issued by the App, and only someone who knows the restore code can retrieve it.
 3. If you want your backup deleted, contact the Operator with your restore code as described in section 7.
