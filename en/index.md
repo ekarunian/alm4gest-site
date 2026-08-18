@@ -37,6 +37,7 @@ A Google account is required.
 
 - [Terms of Service](./terms)
 - [Privacy Policy](./privacy)
+- [Data deletion request](./delete)
 
 #### Contact
 
