@@ -6,12 +6,13 @@ layout: default
 {%- if page.lang == 'ja' -%}
   {%- assign roadmap_url = u.roadmap_ja -%}
   {%- assign release_url = u.release_ja -%}
-  {%- assign mock_src = '/assets/img/mock.png' -%}
+  {%- assign shot_dir = 'ja' -%}
 {%- else -%}
   {%- assign roadmap_url = u.roadmap_en -%}
   {%- assign release_url = u.release_en -%}
-  {%- assign mock_src = '/assets/img/mock-en.png' -%}
+  {%- assign shot_dir = 'en' -%}
 {%- endif -%}
+{%- assign shot_files = '01_home,02_songs,03_tier,04_growth,05_share' | split: ',' -%}
 
 <section class="hero">
   <div class="container">
@@ -29,7 +30,35 @@ layout: default
       <p class="hero-meta">{{ i.hero.meta }}</p>
     </div>
     <div class="hero-mock-wrap">
-      <img class="hero-mock" src="{{ mock_src }}" alt="{{ i.mock_alt }}" width="376" height="817">
+      <div class="shots" role="group" aria-roledescription="carousel" aria-label="{{ i.shots.label }}">
+        <ul class="shots-track" id="shots-track">
+          {%- for f in shot_files %}
+          {%- assign name = i.shots.names[forloop.index0] %}
+          <li class="shots-slide" id="shot-{{ forloop.index }}">
+            <div class="phone">
+              <img class="hero-mock" src="/assets/img/shots/{{ shot_dir }}/{{ f }}.webp"
+                   alt="{{ i.logo_alt }} — {{ name }}" width="358" height="778"
+                   {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+              <span class="phone-island" aria-hidden="true"></span>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+        <div class="shots-nav">
+          <button type="button" class="shots-arrow" data-shots-dir="-1" aria-label="{{ i.shots.prev }}" hidden>
+            <svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M8.5 1L1.5 8l7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          </button>
+          <div class="shots-dots">
+            {%- for f in shot_files %}
+            {%- assign name = i.shots.names[forloop.index0] %}
+            <a class="shots-dot" href="#shot-{{ forloop.index }}" data-shots-to="{{ forloop.index0 }}" aria-label="{{ name }}"{% if forloop.first %} aria-current="true"{% endif %}><span></span></a>
+            {%- endfor %}
+          </div>
+          <button type="button" class="shots-arrow" data-shots-dir="1" aria-label="{{ i.shots.next }}" hidden>
+            <svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M1.5 1l7 7-7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -37,6 +37,11 @@ ja:
   lang_label: 言語
   logo_alt: ALM4GEST
   mock_alt: ALM4GEST のアプリ画面
+  shots:
+    label: アプリの画面
+    prev: 前の画面
+    next: 次の画面
+    names: [ホーム, 楽曲, Tier表, 成長, 共有画像]
   external: Notion で開く
   hero:
     lead: |
@@ -107,6 +112,11 @@ en:
   lang_label: Language
   logo_alt: ALM4GEST
   mock_alt: A screen from the ALM4GEST app
+  shots:
+    label: App screens
+    prev: Previous screen
+    next: Next screen
+    names: [Home, Songs, Tier List, Growth, Share image]
   external: Open in Notion
   hero:
     lead: |
@@ -169,6 +179,11 @@ ko:
   lang_label: 언어
   logo_alt: ALM4GEST
   mock_alt: ALM4GEST 앱 화면
+  shots:
+    label: 앱 화면
+    prev: 이전 화면
+    next: 다음 화면
+    names: [홈, 곡, 티어표, 성장, 공유 이미지]
   external: Notion에서 열기
   hero:
     lead: |
@@ -231,6 +246,11 @@ zh:
   lang_label: 語言
   logo_alt: ALM4GEST
   mock_alt: ALM4GEST 的應用程式畫面
+  shots:
+    label: 應用程式畫面
+    prev: 上一個畫面
+    next: 下一個畫面
+    names: [首頁, 樂曲, Tier表, 成長, 分享圖片]
   external: 在 Notion 開啟
   hero:
     lead: |
