@@ -15,7 +15,7 @@ title: "ALM4GEST 利用規約"
 
 1. 本アプリは、個人が開発・運営する非公式のスコア管理ツールです。
 2. 本アプリは、株式会社コナミアーケードゲームスおよびコナミグループ各社（以下「コナミ」）が提供・運営するものではなく、コナミとは一切関係がありません。
-3. 「SOUND VOLTEX」「DanceDanceRevolution」「e-amusement」その他の名称・商標は、それぞれの権利者に帰属します。
+3. 「SOUND VOLTEX」「DanceDanceRevolution」「GITADORA」「e-amusement」その他の名称・商標は、それぞれの権利者に帰属します。
 
 ## 第3条（e-amusementアカウントの利用）
 

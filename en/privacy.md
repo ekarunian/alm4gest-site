@@ -14,7 +14,7 @@ The App collects the following information.
 | Information | Details | When it is collected |
 | --- | --- | --- |
 | Play data | Per-chart scores, grades, clear status, flare rank, EX score, play count, last played date, and similar | When syncing with e-amusement |
-| Player identifiers | Per-game player code (DDR code, SOUND VOLTEX player ID) and player name | Same as above |
+| Player identifiers | Per-game player code (DDR code, SOUND VOLTEX player ID, GITADORA ID) and player name | Same as above |
 | Manually entered records | Scores and similar entered by the user | When entered (sent as described in section 3) |
 | User settings data | Per-chart memos, judge timing values, challenge songs you have pinned, saved filters, tier lists you have made, and app settings | When entered or set (sent as described in sections 3 and 4) |
 | Friend data | Your friend code, your relationships with other users (requests, approvals, removals, blocks), and the version of the notice you agreed to | When you use the friend feature (sent as described in section 5) |

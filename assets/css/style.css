@@ -269,7 +269,8 @@ a:focus-visible {
 
 .badge-appstore {
   display: inline-block;
-  width: 120px;
+  width: auto;
+  height: 40px;
 }
 
 .note {
@@ -330,6 +331,7 @@ a:focus-visible {
 .hero-mock {
   flex: 0 0 auto;
   width: 376px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
 }
@@ -708,6 +710,7 @@ a:focus-visible {
 
   .hero-mock {
     width: 267px;
+    height: auto;
     border-radius: 8px 8px 0 0;
     -webkit-mask-image: linear-gradient(180deg, #000 68%, transparent 100%);
     mask-image: linear-gradient(180deg, #000 68%, transparent 100%);

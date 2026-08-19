@@ -6,9 +6,11 @@ layout: default
 {%- if page.lang == 'ja' -%}
   {%- assign roadmap_url = u.roadmap_ja -%}
   {%- assign release_url = u.release_ja -%}
+  {%- assign mock_src = '/assets/img/mock.png' -%}
 {%- else -%}
   {%- assign roadmap_url = u.roadmap_en -%}
   {%- assign release_url = u.release_en -%}
+  {%- assign mock_src = '/assets/img/mock-en.png' -%}
 {%- endif -%}
 
 <section class="hero">
@@ -21,13 +23,13 @@ layout: default
       <p class="hero-lead">{{ i.hero.lead | strip | newline_to_br }}</p>
       <p class="hero-download">
         <a href="{{ u.appstore }}" target="_blank" rel="noopener">
-          <img class="badge-appstore" src="/assets/img/appstore-badge.png" alt="{{ i.hero.appstore_alt }}" width="120" height="40">
+          <img class="badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
         </a>
       </p>
       <p class="hero-meta">{{ i.hero.meta }}</p>
     </div>
     <div class="hero-mock-wrap">
-      <img class="hero-mock" src="/assets/img/mock.png" alt="{{ i.mock_alt }}" width="376" height="700">
+      <img class="hero-mock" src="{{ mock_src }}" alt="{{ i.mock_alt }}" width="376" height="817">
     </div>
   </div>
 </section>
@@ -59,7 +61,7 @@ layout: default
 
     <p>
       <a href="{{ u.appstore }}" target="_blank" rel="noopener">
-        <img class="badge-appstore" src="/assets/img/appstore-badge.png" alt="{{ i.hero.appstore_alt }}" width="120" height="40">
+        <img class="badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
       </a>
     </p>
     <p class="note store-note">{{ i.download.android_note }}</p>

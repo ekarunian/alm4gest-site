@@ -15,7 +15,7 @@ By using the App, you are deemed to have agreed to these Terms.
 
 1. The App is an unofficial score management tool developed and operated by an individual.
 2. The App is not provided or operated by Konami Arcade Games Co., Ltd. or any KONAMI group company ("KONAMI"), and has no affiliation with KONAMI.
-3. "SOUND VOLTEX", "DanceDanceRevolution", "e-amusement", and other names and trademarks belong to their respective owners.
+3. "SOUND VOLTEX", "DanceDanceRevolution", "GITADORA", "e-amusement", and other names and trademarks belong to their respective owners.
 
 ## 3. Use of your e-amusement account
 

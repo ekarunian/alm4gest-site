@@ -15,7 +15,7 @@ title: "ALM4GEST 使用條款"
 
 1. 本應用程式是由個人開發・營運的非官方分數管理工具。
 2. 本應用程式並非由株式會社Konami Arcade Games及KONAMI集團各公司（以下稱「KONAMI」）提供・營運，與KONAMI沒有任何關係。
-3. 「SOUND VOLTEX」「DanceDanceRevolution」「e-amusement」及其他名稱・商標，均歸屬於各自的權利人。
+3. 「SOUND VOLTEX」「DanceDanceRevolution」「GITADORA」「e-amusement」及其他名稱・商標，均歸屬於各自的權利人。
 
 ## 第3條（e-amusement帳號的使用）
 

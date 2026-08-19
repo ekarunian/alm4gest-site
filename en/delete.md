@@ -14,7 +14,7 @@ Data on the server is tied to the following identifiers.
 | Friend feature registration (friend code, relationships with other users, records shown to friends) | Friend code | Friends → "Visibility" at the top right → Common → "Stop using friends" |
 | Published tier lists | Share code | Tier list → open that list → turn "Publish" off |
 | Backup (a full set of the data on your device) | Restore code | By email, as below |
-| Play data used to build all-player statistics | Per-game player code (DDR code, SDVX ID) | By email, as below |
+| Play data used to build all-player statistics | Per-game player code (DDR code, SDVX ID, GITADORA ID) | By email, as below |
 
 Data on your device is deleted in full when you uninstall the App.
 

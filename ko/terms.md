@@ -15,7 +15,7 @@ title: "ALM4GEST 이용약관"
 
 1. 본 앱은 개인이 개발·운영하는 비공식 스코어 관리 도구입니다.
 2. 본 앱은 주식회사 코나미 아케이드 게임스(Konami Arcade Games Co., Ltd.) 및 코나미 그룹 각사(이하 "코나미")가 제공·운영하는 것이 아니며, 코나미와 일절 관계가 없습니다.
-3. "SOUND VOLTEX", "DanceDanceRevolution", "e-amusement" 및 그 밖의 명칭·상표는 각 권리자에게 귀속됩니다.
+3. "SOUND VOLTEX", "DanceDanceRevolution", "GITADORA", "e-amusement" 및 그 밖의 명칭·상표는 각 권리자에게 귀속됩니다.
 
 ## 제3조 (e-amusement 계정의 이용)
 
