@@ -1,0 +1,115 @@
+---
+layout: default
+---
+{%- assign i = site.data.i18n[page.lang] -%}
+{%- assign u = site.data.i18n.urls -%}
+{%- if page.lang == 'ja' -%}
+  {%- assign roadmap_url = u.roadmap_ja -%}
+  {%- assign release_url = u.release_ja -%}
+{%- else -%}
+  {%- assign roadmap_url = u.roadmap_en -%}
+  {%- assign release_url = u.release_en -%}
+{%- endif -%}
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-body">
+      <h1 class="hero-logo">
+        <img class="mark" src="/assets/img/logo-mark.png" alt="" width="92" height="92">
+        <img class="type" src="/assets/img/logo-type.png" alt="{{ i.logo_alt }}" width="576" height="92">
+      </h1>
+      <p class="hero-lead">{{ i.hero.lead | strip | newline_to_br }}</p>
+      <p class="hero-download">
+        <a href="{{ u.appstore }}" target="_blank" rel="noopener">
+          <img class="badge-appstore" src="/assets/img/appstore-badge.png" alt="{{ i.hero.appstore_alt }}" width="120" height="40">
+        </a>
+      </p>
+      <p class="hero-meta">{{ i.hero.meta }}</p>
+    </div>
+    <div class="hero-mock-wrap">
+      <img class="hero-mock" src="/assets/img/mock.png" alt="{{ i.mock_alt }}" width="376" height="700">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="feature">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="en">{{ i.feature.en }}</h2>
+      {%- if i.feature.sub != "" %}<span class="sub">{{ i.feature.sub }}</span>{% endif %}
+    </div>
+    <div class="features">
+      {%- for item in i.feature.items %}
+      <div class="feature">
+        <img class="feature-icon" src="/assets/img/{{ item.icon }}" alt="" width="75" height="75">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.body | strip | newline_to_br }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section download" id="download">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="en">{{ i.download.en }}</h2>
+      {%- if i.download.sub != "" %}<span class="sub">{{ i.download.sub }}</span>{% endif %}
+    </div>
+
+    <p>
+      <a href="{{ u.appstore }}" target="_blank" rel="noopener">
+        <img class="badge-appstore" src="/assets/img/appstore-badge.png" alt="{{ i.hero.appstore_alt }}" width="120" height="40">
+      </a>
+    </p>
+    <p class="note store-note">{{ i.download.android_note }}</p>
+
+    <div class="tester">
+      <h3>{{ i.download.tester_title }}</h3>
+      <p class="tester-lead">{{ i.download.tester_lead | strip | newline_to_br }}</p>
+      <div class="steps">
+        <ol>
+          {%- for s in site.data.i18n.steps[page.lang] %}
+          <li>{{ s | replace: 'TESTER_GROUP', u.tester_group | replace: 'PLAY_STORE', u.playstore }}</li>
+          {%- endfor %}
+        </ol>
+      </div>
+      <p class="tester-notes">{{ i.download.tester_notes | strip | newline_to_br }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="development">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="en">{{ i.development.en }}</h2>
+      {%- if i.development.sub != "" %}<span class="sub">{{ i.development.sub }}</span>{% endif %}
+    </div>
+    <div class="links-grid">
+      <a class="link-card" href="{{ roadmap_url }}" target="_blank" rel="noopener">
+        <h3>{{ i.development.roadmap_title }}</h3>
+        <p>{{ i.development.roadmap_body }}</p>
+        <span class="external">{{ i.external }} ↗</span>
+      </a>
+      <a class="link-card" href="{{ release_url }}" target="_blank" rel="noopener">
+        <h3>{{ i.development.release_title }}</h3>
+        <p>{{ i.development.release_body }}</p>
+        <span class="external">{{ i.external }} ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="en">{{ i.contact.en }}</h2>
+      {%- if i.contact.sub != "" %}<span class="sub">{{ i.contact.sub }}</span>{% endif %}
+    </div>
+    <p class="contact-info">{{ i.contact.info | strip | newline_to_br }}</p>
+    <div class="contact-actions">
+      <a class="btn" href="{{ u.x }}" target="_blank" rel="noopener">{{ i.contact.x_label }}</a>
+      <a class="btn" href="{{ u.mail }}">{{ i.contact.mail_label }}</a>
+    </div>
+  </div>
+</section>

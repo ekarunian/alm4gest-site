@@ -1,0 +1,298 @@
+# サイトの表示文言（4言語）。ページ本文は各 Markdown、共通パーツと
+# トップページの文言はこのファイルが正本。
+# 開発ロードマップ・リリースノートは Notion の外部向けページへリンクする。
+# 日本語ページは日本語版、それ以外の3言語は英語版を指す。
+
+langs:
+  - code: ja
+    name: 日本語
+    prefix: ""
+  - code: en
+    name: English
+    prefix: "/en"
+  - code: ko
+    name: 한국어
+    prefix: "/ko"
+  - code: zh
+    name: 繁體中文
+    prefix: "/zh"
+
+urls:
+  appstore: https://apps.apple.com/app/id6793808647
+  playstore: https://play.google.com/store/apps/details?id=com.alm4gest
+  tester_group: https://groups.google.com/g/alm4gest_closed
+  x: https://x.com/ekarunian
+  mail: mailto:kawaguchi.ek@gmail.com
+  roadmap_ja: https://app.notion.com/p/3af0513fdbf880738e13e953ee84e900
+  roadmap_en: https://app.notion.com/p/804682d933bb467e95cfbb5ffb097378
+  release_ja: https://app.notion.com/p/3b00513fdbf88128990bcedae004017e
+  release_en: https://app.notion.com/p/3b00513fdbf881eabaffcf5baf877f68
+
+ja:
+  og_locale: ja_JP
+  html_lang: ja
+  site_title: ALM4GEST
+  description: コナミの音楽ゲームのスコアを記録・分析する、個人開発のスコア管理アプリです。
+  skip: 本文へスキップ
+  lang_label: 言語
+  logo_alt: ALM4GEST
+  mock_alt: ALM4GEST のアプリ画面
+  external: Notion で開く
+  hero:
+    lead: |
+      「ALM4GEST」は、コナミの音楽ゲームのスコアを記録・分析する、
+      個人開発のスコア管理アプリです。
+      （初版は「SOUND VOLTEX」「DanceDanceRevolution」）
+    meta: 無料 · iOS 対応 / Android 対応予定
+    appstore_alt: App Store でダウンロード
+  feature:
+    en: FEATURE
+    sub: 特長・機能
+    items:
+      - icon: icon-scores.svg
+        title: プレーデータ・スコア管理
+        body: |
+          e-amusementのプレーデータを取り込み、
+          スコア・クリア状況・EXスコアを一覧できます
+      - icon: icon-tier.svg
+        title: 偏差値・Tier分析
+        body: |
+          同レベル帯の統計と比べられる
+          偏差値・Tier表で、得意と弱点が分かります
+      - icon: icon-growth.svg
+        title: 成長記録
+        body: |
+          成長グラフ・共有画像で、上達の
+          記録を残せます
+  download:
+    en: DOWNLOAD
+    sub: ダウンロード
+    android_note: Android版は現在クローズドテスト中です。（一般公開前）
+    tester_title: Android版のテスター募集
+    tester_lead: |
+      Android版はまだ一般公開しておらず、テスターとして参加した方だけが使えます。
+      インストールしてプレイし、気づいた不具合や使いにくい点を教えてください。
+    tester_notes: |
+      ※手順1を先に済ませてください。
+      グループに参加していないアカウントでは、手順2のページを開けません。
+      ※参加にはGoogleアカウントが必要です。
+  development:
+    en: DEVELOPMENT
+    sub: 開発状況
+    roadmap_title: 開発ロードマップ
+    roadmap_body: これから作るもの・作っているものの一覧です。
+    release_title: リリースノート
+    release_body: 各バージョンで変わったことの記録です。
+  contact:
+    en: CONTACT
+    sub: お問い合わせ
+    info: |
+      運営者：川口貴大（@ekarunian）
+      連絡先：kawaguchi.ek＠gmail.com（＠→半角へ）
+    x_label: X（旧Twitter）
+    mail_label: メール
+  nav:
+    label: 規約・お問い合わせ
+    terms: 利用規約
+    privacy: プライバシーポリシー
+    delete: データ削除の申し込み
+
+en:
+  og_locale: en_US
+  html_lang: en
+  site_title: ALM4GEST
+  description: An independently developed score management app for KONAMI's music games.
+  skip: Skip to content
+  lang_label: Language
+  logo_alt: ALM4GEST
+  mock_alt: A screen from the ALM4GEST app
+  external: Open in Notion
+  hero:
+    lead: |
+      An independently developed score management app for KONAMI's music games
+      — "SOUND VOLTEX" and "DanceDanceRevolution" in the first release.
+    meta: Free · iOS available / Android coming
+    appstore_alt: Download on the App Store
+  feature:
+    en: FEATURE
+    sub: ""
+    items:
+      - icon: icon-scores.svg
+        title: Scores and play data
+        body: Import your play data from e-amusement and browse scores, clear status, and EX scores in one list
+      - icon: icon-tier.svg
+        title: T-scores and tier lists
+        body: See what you are good at and where you fall short, through statistics from players at your level
+      - icon: icon-growth.svg
+        title: Progress records
+        body: Keep a record of your progress with growth charts and shareable images
+  download:
+    en: DOWNLOAD
+    sub: ""
+    android_note: The Android app is in closed testing (not yet public).
+    tester_title: Android testers wanted
+    tester_lead: |
+      The Android app is not public yet, so only testers can install it.
+      Play it and tell me about any bugs or issues you run into.
+    tester_notes: |
+      Do step 1 first.
+      The Play page will not open for an account that has not joined the group.
+      A Google account is required.
+  development:
+    en: DEVELOPMENT
+    sub: ""
+    roadmap_title: Roadmap
+    roadmap_body: What is planned and what is being built.
+    release_title: Release notes
+    release_body: What changed in each version.
+  contact:
+    en: CONTACT
+    sub: ""
+    info: |
+      Operator: Takahiro Kawaguchi (@ekarunian)
+      Contact: kawaguchi.ek＠gmail.com (replace ＠ with @)
+    x_label: X (Twitter)
+    mail_label: Email
+  nav:
+    label: Terms and contact
+    terms: Terms of Service
+    privacy: Privacy Policy
+    delete: Data deletion request
+
+ko:
+  og_locale: ko_KR
+  html_lang: ko
+  site_title: ALM4GEST
+  description: 코나미의 음악 게임 스코어를 기록·분석하는, 개인이 개발한 스코어 관리 앱입니다.
+  skip: 본문으로 건너뛰기
+  lang_label: 언어
+  logo_alt: ALM4GEST
+  mock_alt: ALM4GEST 앱 화면
+  external: Notion에서 열기
+  hero:
+    lead: |
+      코나미의 음악 게임(초판은 "SOUND VOLTEX"와 "DanceDanceRevolution")의
+      스코어를 기록·분석하는, 개인이 개발한 스코어 관리 앱입니다.
+    meta: 무료 · iOS 지원 / Android 지원 예정
+    appstore_alt: App Store에서 다운로드
+  feature:
+    en: FEATURE
+    sub: 특장·기능
+    items:
+      - icon: icon-scores.svg
+        title: 플레이 데이터·스코어 관리
+        body: e-amusement의 플레이 데이터를 가져와 스코어·클리어 상황·EX 스코어를 한눈에 볼 수 있습니다
+      - icon: icon-tier.svg
+        title: T점수·티어 분석
+        body: 같은 레벨대의 통계와 비교하는 T점수·티어표로 잘하는 것과 약점을 알 수 있습니다
+      - icon: icon-growth.svg
+        title: 성장 기록
+        body: 성장 그래프·공유 이미지로 실력 향상의 기록을 남길 수 있습니다
+  download:
+    en: DOWNLOAD
+    sub: 다운로드
+    android_note: Android 버전은 비공개 테스트 중입니다. (일반 공개 전)
+    tester_title: Android 버전 테스터 모집
+    tester_lead: |
+      Android 버전은 아직 일반 공개되지 않아 테스터로 참여한 분만 사용할 수 있습니다.
+      설치해서 플레이해 보시고, 발견한 버그나 불편한 점을 알려 주시기 바랍니다.
+    tester_notes: |
+      ※1번을 먼저 진행해 주시기 바랍니다.
+      그룹에 가입하지 않은 계정으로는 2번 페이지가 열리지 않습니다.
+      ※참여하려면 Google 계정이 필요합니다.
+  development:
+    en: DEVELOPMENT
+    sub: 개발 현황
+    roadmap_title: 개발 로드맵
+    roadmap_body: 앞으로 만들 것과 만들고 있는 것의 목록입니다.
+    release_title: 릴리스 노트
+    release_body: 각 버전에서 바뀐 내용의 기록입니다.
+  contact:
+    en: CONTACT
+    sub: 문의
+    info: |
+      운영자: 카와구치 타카히로(@ekarunian)
+      연락처: kawaguchi.ek＠gmail.com (＠를 반각으로)
+    x_label: X (구 Twitter)
+    mail_label: 메일
+  nav:
+    label: 약관·문의
+    terms: 이용약관
+    privacy: 개인정보처리방침
+    delete: 데이터 삭제 신청
+
+zh:
+  og_locale: zh_TW
+  html_lang: zh-Hant
+  site_title: ALM4GEST
+  description: 記錄・分析KONAMI音樂遊戲分數的個人開發分數管理應用程式。
+  skip: 跳到主要內容
+  lang_label: 語言
+  logo_alt: ALM4GEST
+  mock_alt: ALM4GEST 的應用程式畫面
+  external: 在 Notion 開啟
+  hero:
+    lead: |
+      記錄・分析KONAMI音樂遊戲（初版為「SOUND VOLTEX」「DanceDanceRevolution」）
+      分數的個人開發分數管理應用程式。
+    meta: 免費 · 支援 iOS / Android 預定支援
+    appstore_alt: 在 App Store 下載
+  feature:
+    en: FEATURE
+    sub: 特長・功能
+    items:
+      - icon: icon-scores.svg
+        title: 遊玩資料・分數管理
+        body: 匯入e-amusement的遊玩資料，一覽分數・通關狀況・EX分數
+      - icon: icon-tier.svg
+        title: T分數・Tier分析
+        body: 透過與同等級統計比較的T分數・Tier表，看出擅長之處與弱點
+      - icon: icon-growth.svg
+        title: 成長記錄
+        body: 以成長圖表・分享圖片，留下進步的記錄
+  download:
+    en: DOWNLOAD
+    sub: 下載
+    android_note: Android 版正在進行封閉測試。（尚未公開）
+    tester_title: 招募 Android 版測試人員
+    tester_lead: |
+      Android 版尚未對外公開，只有參與測試的人才能安裝。
+      安裝後請試玩看看，並告訴我你發現的問題或不好用的地方。
+    tester_notes: |
+      ※請先完成步驟 1。
+      未加入群組的帳號無法開啟步驟 2 的頁面。
+      ※參與需要 Google 帳號。
+  development:
+    en: DEVELOPMENT
+    sub: 開發狀況
+    roadmap_title: 開發藍圖
+    roadmap_body: 預計開發與開發中的項目一覽。
+    release_title: 版本資訊
+    release_body: 各版本變更內容的記錄。
+  contact:
+    en: CONTACT
+    sub: 聯絡方式
+    info: |
+      營運者: 川口貴大（@ekarunian）
+      聯絡方式: kawaguchi.ek＠gmail.com（＠請改為半形）
+    x_label: X（原 Twitter）
+    mail_label: 電子郵件
+  nav:
+    label: 條款・聯絡方式
+    terms: 使用條款
+    privacy: 隱私權政策
+    delete: 資料刪除申請
+
+steps:
+  ja:
+    - '<a href="TESTER_GROUP">テスター用のGoogleグループに参加する</a>'
+    - '<a href="PLAY_STORE">Google Playのページ</a>を開いてインストールする'
+  en:
+    - '<a href="TESTER_GROUP">Join the tester Google Group</a>'
+    - '<a href="PLAY_STORE">Open the Google Play page</a> and install the app'
+  ko:
+    - '<a href="TESTER_GROUP">테스터용 Google 그룹에 가입하기</a>'
+    - '<a href="PLAY_STORE">Google Play 페이지</a>를 열어 설치하기'
+  zh:
+    - '<a href="TESTER_GROUP">加入測試人員的 Google 群組</a>'
+    - '<a href="PLAY_STORE">開啟 Google Play 頁面</a>並安裝'

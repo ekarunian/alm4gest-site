@@ -1,0 +1,93 @@
+{%- assign i = site.data.i18n[page.lang] -%}
+{%- assign lang_prefix = "" -%}
+{%- for l in site.data.i18n.langs -%}
+  {%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}
+{%- endfor -%}
+{%- if page.page_id == 'index' -%}{%- assign self_path = '/' -%}{%- else -%}{%- assign self_path = '/' | append: page.page_id -%}{%- endif -%}
+{%- if page.lang == 'en' -%}
+  {%- assign font_family = 'Noto+Sans:wght@400;700' -%}
+{%- elsif page.lang == 'ko' -%}
+  {%- assign font_family = 'Noto+Sans+KR:wght@400;700' -%}
+{%- elsif page.lang == 'zh' -%}
+  {%- assign font_family = 'Noto+Sans+TC:wght@400;700' -%}
+{%- else -%}
+  {%- assign font_family = 'Noto+Sans+JP:wght@400;700' -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ i.html_lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {{ i.site_title }}{% else %}{{ i.site_title }}{% endif %}</title>
+<meta name="description" content="{{ i.description }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ i.site_title }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ i.site_title }}{% endif %}">
+<meta property="og:description" content="{{ i.description }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/logo-mark.png">
+<meta property="og:locale" content="{{ i.og_locale }}">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/img/logo-mark.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/logo-mark.png">
+{%- for l in site.data.i18n.langs %}
+{%- if page.page_id == 'index' %}{% assign alt_href = l.prefix | append: '/' %}{% else %}{% assign alt_href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
+<link rel="alternate" hreflang="{{ site.data.i18n[l.code].html_lang }}" href="{{ site.url }}{{ alt_href }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ self_path }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">{{ i.skip }}</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ lang_prefix }}/">
+      <img class="brand-mark" src="/assets/img/logo-mark.png" alt="" width="40" height="40">
+      <img class="brand-type" src="/assets/img/logo-type.png" alt="{{ i.logo_alt }}" width="250" height="40">
+    </a>
+
+    <nav class="lang-switch" aria-label="{{ i.lang_label }}">
+      {%- for l in site.data.i18n.langs %}
+      {%- if page.page_id == 'index' %}{% assign href = l.prefix | append: '/' %}{% else %}{% assign href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
+      <a href="{{ href }}" lang="{{ site.data.i18n[l.code].html_lang }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
+      {%- endfor %}
+    </nav>
+
+    <details class="lang-drop">
+      <summary aria-label="{{ i.lang_label }}">
+        <svg class="lang-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1.667A8.333 8.333 0 1 0 18.333 10 8.343 8.343 0 0 0 10 1.667Zm5.775 5.833h-2.46a13 13 0 0 0-1.317-3.4A6.68 6.68 0 0 1 15.775 7.5ZM10 3.375A11.7 11.7 0 0 1 11.62 7.5H8.38A11.7 11.7 0 0 1 10 3.375ZM3.542 11.667a6.6 6.6 0 0 1 0-3.334h2.816a13.7 13.7 0 0 0 0 3.334Zm.683 1.666h2.46a13 13 0 0 0 1.317 3.4 6.68 6.68 0 0 1-3.777-3.4Zm2.46-6.666h-2.46a6.68 6.68 0 0 1 3.777-3.4 13 13 0 0 0-1.317 3.4Zm3.315 10.125A11.7 11.7 0 0 1 8.38 12.75h3.24A11.7 11.7 0 0 1 10 16.792Zm1.978-5.708H8.022a12.2 12.2 0 0 1 0-3.334h3.956a12.2 12.2 0 0 1 0 3.334Zm.02 5.283a13 13 0 0 0 1.317-3.4h2.46a6.68 6.68 0 0 1-3.777 3.4Zm1.644-5.283a13.7 13.7 0 0 0 0-3.334h2.816a6.6 6.6 0 0 1 0 3.334Z" fill="#C2CCDA"/></svg>
+        <span>LANGUAGE</span>
+        <svg class="caret" width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#C2CCDA" stroke-width="1.5" fill="none"/></svg>
+      </summary>
+      <div class="lang-drop-list">
+        {%- for l in site.data.i18n.langs %}
+        {%- if page.page_id == 'index' %}{% assign href = l.prefix | append: '/' %}{% else %}{% assign href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
+        <a href="{{ href }}" lang="{{ site.data.i18n[l.code].html_lang }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
+        {%- endfor %}
+      </div>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <p class="footer-brand">ALM4GEST</p>
+      <p class="footer-copyright">Ⓒ2026 ALM4GEST</p>
+    </div>
+    <nav class="footer-links" aria-label="{{ i.nav.label }}">
+      <a href="{{ lang_prefix }}/terms">{{ i.nav.terms }}</a>
+      <a href="{{ lang_prefix }}/privacy">{{ i.nav.privacy }}</a>
+      <a href="{{ lang_prefix }}/delete">{{ i.nav.delete }}</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,6 +1,7 @@
-[日本語](/delete) | [English](/en/delete) | [한국어](/ko/delete) | [繁體中文](/zh/delete)
-
-### ALM4GEST data deletion request
+---
+page_id: delete
+title: "ALM4GEST data deletion request"
+---
 
 Last updated: August 18, 2026
 
@@ -17,7 +18,7 @@ Data on the server is tied to the following identifiers.
 
 Data on your device is deleted in full when you uninstall the App.
 
-#### Requesting by email
+## Requesting by email
 
 To: [kawaguchi.ek@gmail.com](mailto:kawaguchi.ek@gmail.com)
 
@@ -33,7 +34,7 @@ If you can no longer open the App, send whichever identifiers you know.
 
 We delete the data within a reasonable period after receiving your request and reply when it is done.
 
-#### What gets deleted
+## What gets deleted
 
 - Data tied to the identifier in your request is deleted from the server.
 - Statistics already aggregated so that no individual can be identified (per-chart average scores, clear rates, and similar) cannot be traced back to the original data, so they are not covered.

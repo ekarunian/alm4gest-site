@@ -1,12 +1,13 @@
-[日本語](/privacy) | [English](/en/privacy) | [한국어](/ko/privacy) | [繁體中文](/zh/privacy)
-
-### ALM4GEST Privacy Policy
+---
+page_id: privacy
+title: "ALM4GEST Privacy Policy"
+---
 
 Last updated: August 18, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
-#### 1. Information we collect
+## 1. Information we collect
 
 The App collects the following information.
 
@@ -23,7 +24,7 @@ The App collects the following information.
 
 The App does not collect your e-amusement login ID, password, or other credentials.
 
-#### 2. Where data is stored and sent
+## 2. Where data is stored and sent
 
 1. Collected information is first stored in a database on your device.
 2. When a sync completes, the play data and player identifiers obtained from that sync are sent to a server managed by the Operator, for the purpose of building all-player statistics.
@@ -32,7 +33,7 @@ The App does not collect your e-amusement login ID, password, or other credentia
 4. Usage information is sent to Google Analytics for Firebase (section 8), not to the Operator's server.
    Play data, player identifiers, manually entered records, and user settings data are not sent there.
 
-#### 3. Backup
+## 3. Backup
 
 The App has a backup feature for carrying your data over when you change devices.
 
@@ -41,7 +42,7 @@ The App has a backup feature for carrying your data over when you change devices
 2. The stored data is tied to a restore code issued by the App, and only someone who knows the restore code can retrieve it.
 3. If you want your backup deleted, contact the Operator with your restore code as described in section 9.
 
-#### 4. Publishing a tier list
+## 4. Publishing a tier list
 
 The App lets you share a tier list you made with other users.
 This works only when you choose to publish it.
@@ -62,7 +63,7 @@ This works only when you choose to publish it.
 7. A tier list is deleted automatically two years after it was last retrieved.
 8. If you find a problem with a published tier list, contact us through "Send feedback / report a problem" on the settings screen.
 
-#### 5. Friends
+## 5. Friends
 
 The App has a feature for sharing your records with other users.
 It only works once you issue a friend code.
@@ -82,7 +83,7 @@ It only works once you issue a friend code.
 8. When you stop using friends, your friend code, your relationships with other users, and the records written out for them are deleted from the server.
    Records that friends imported to their own devices while you were friends remain on those devices.
 
-#### 6. Purpose of use
+## 6. Purpose of use
 
 Data sent to the server is used only for the following purposes.
 
@@ -96,7 +97,7 @@ Data sent to the server is used only for the following purposes.
 When statistics are compiled and delivered, player codes are converted into an anonymous ID via an irreversible hash, and no player code or player name is included in the delivered data.
 No individual user's scores are ever delivered in a form that identifies that person.
 
-#### 7. Advertising
+## 7. Advertising
 
 The App displays advertisements through Google AdMob.
 
@@ -107,7 +108,7 @@ The App displays advertisements through Google AdMob.
 
 Data handling within AdMob follows [Google's policies](https://policies.google.com/technologies/partner-sites).
 
-#### 8. Service providers
+## 8. Service providers
 
 Except where required by law, the Operator does not provide or sell collected information to third parties.
 However, the App uses the following services to operate, and information is processed by them within the scope of each purpose.
@@ -121,7 +122,7 @@ However, the App uses the following services to operate, and information is proc
 
 The cloud storage provider is entrusted with storage only, and does not use this data for its own purposes.
 
-#### 9. Deleting your data
+## 9. Deleting your data
 
 1. Data on your device is deleted in full when you uninstall the App.
 2. If you want data stored on the server deleted, contact us at the address below with your player code (we will delete it within a reasonable period).
@@ -132,12 +133,12 @@ The cloud storage provider is entrusted with storage only, and does not use this
 7. Usage information is not linked to your player code, so we cannot delete it for an individual user.
    What is stored in Google Analytics is deleted automatically once Google's retention period has passed.
 
-#### 10. Changes to this policy
+## 10. Changes to this policy
 
 The contents of this policy may be changed as needed.
 The revised policy takes effect when it is posted on this page.
 
-#### 11. Contact
+## 11. Contact
 
 Operator: Takahiro Kawaguchi (@ekarunian)
 Contact: [kawaguchi.ek@gmail.com](mailto:kawaguchi.ek@gmail.com)

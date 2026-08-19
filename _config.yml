@@ -1,0 +1,53 @@
+title: ALM4GEST
+url: https://alm4gest.com
+encoding: utf-8
+
+# 既定は日本語・文書レイアウト。言語別ディレクトリで lang を上書きする。
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: doc
+      lang: ja
+  - scope:
+      path: "en"
+    values:
+      lang: en
+  - scope:
+      path: "ko"
+    values:
+      lang: ko
+  - scope:
+      path: "zh"
+    values:
+      lang: zh
+  - scope:
+      path: "index.md"
+    values:
+      layout: home
+      page_id: index
+  - scope:
+      path: "en/index.md"
+    values:
+      layout: home
+      page_id: index
+  - scope:
+      path: "ko/index.md"
+    values:
+      layout: home
+      page_id: index
+  - scope:
+      path: "zh/index.md"
+    values:
+      layout: home
+      page_id: index
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
