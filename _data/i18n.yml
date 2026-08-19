@@ -54,7 +54,7 @@ ja:
         body: |
           e-amusementのプレーデータを取り込み、
           スコア・クリア状況・EXスコア・
-          中核指標を一覧できます
+          VOLFORCE等の指標を一覧できます
       - icon: icon-tier.svg
         title: 偏差値・Tier分析
         body: |
@@ -120,7 +120,7 @@ en:
     items:
       - icon: icon-scores.svg
         title: Scores and play data
-        body: Import your play data from e-amusement and browse scores, clear status, EX scores, and your core metric in one list
+        body: Import your play data from e-amusement and browse scores, clear status, EX scores, and metrics such as VOLFORCE in one list
       - icon: icon-tier.svg
         title: T-scores and tier lists
         body: See what you are good at and where you fall short, through statistics from players at your level
@@ -182,7 +182,7 @@ ko:
     items:
       - icon: icon-scores.svg
         title: 플레이 데이터·스코어 관리
-        body: e-amusement의 플레이 데이터를 가져와 스코어·클리어 상황·EX 스코어·핵심 지표를 한눈에 볼 수 있습니다
+        body: e-amusement의 플레이 데이터를 가져와 스코어·클리어 상황·EX 스코어·VOLFORCE 등의 지표를 한눈에 볼 수 있습니다
       - icon: icon-tier.svg
         title: T점수·티어 분석
         body: 같은 레벨대의 통계와 비교하는 T점수·티어표로 잘하는 것과 약점을 알 수 있습니다
@@ -244,7 +244,7 @@ zh:
     items:
       - icon: icon-scores.svg
         title: 遊玩資料・分數管理
-        body: 匯入e-amusement的遊玩資料，一覽分數・通關狀況・EX分數・核心指標
+        body: 匯入e-amusement的遊玩資料，一覽分數・通關狀況・EX分數・VOLFORCE等指標
       - icon: icon-tier.svg
         title: T分數・Tier分析
         body: 透過與同等級統計比較的T分數・Tier表，看出擅長之處與弱點
