@@ -3,7 +3,7 @@ page_id: terms
 title: "ALM4GEST Terms of Service"
 ---
 
-Last updated: July 22, 2026
+Last updated: August 19, 2026
 
 ## 1. Scope
 
@@ -32,6 +32,8 @@ You must not:
 2. Sync another person's e-amusement account without their permission
 3. Send falsified scores with the intent of contaminating the statistics
 4. Act in violation of law or public order
+5. Defame or harass other users
+6. Impersonate another user
 
 ## 5. Advertising
 
@@ -52,22 +54,38 @@ You must not:
 3. The Operator cannot provide backup data to a user who has lost their restore code.
 4. The Operator does not guarantee the preservation of backup data (please keep a separate copy of important data using the App's export feature).
 
-## 8. Disclaimer
+## 8. Publishing a tier list
+
+1. The App lets you share a tier list you created with other users who know the share code it issues.
+2. Publishing is your choice, and the Operator is not responsible for what you publish.
+3. A tier list name must not contain defamatory expressions, expressions contrary to public order and morals, or expressions that infringe the rights of others (the Operator checks names automatically at publication and refuses those that match).
+4. Even after you stop publishing, copies other users imported while it was published remain on their devices.
+5. A tier list that has not been read for two years is deleted automatically.
+
+## 9. Friends feature
+
+1. The App lets you show records to other users through a friend code you issue.
+2. You decide what friends can see, and nothing outside that range is sent.
+3. You must not publish another user's records learned through the friends feature outside the App without their permission.
+4. Even after you stop using the friends feature, records imported onto a friend's device while you were friends remain on that device.
+5. The Operator is not responsible for disputes arising between users.
+
+## 10. Disclaimer
 
 1. The App is provided as is, and the Operator does not guarantee that it will be complete, accurate, or continuously available.
 2. Statistics, T-scores, tiers, and similar figures are reference information based on the samples that could be collected, and their accuracy is not guaranteed.
 3. Except in cases of willful misconduct or gross negligence, the Operator is not liable for damages arising from your use of, or inability to use, the App.
 
-## 9. Changes to and termination of the service
+## 11. Changes to and termination of the service
 
 The Operator may change the content of the App or stop offering it without prior notice to users.
 
-## 10. Changes to these Terms
+## 12. Changes to these Terms
 
 The Operator may revise these Terms as needed.
 Revised Terms take effect when they are posted on this page.
 
-## 11. Governing law and jurisdiction
+## 13. Governing law and jurisdiction
 
 These Terms are governed by Japanese law, and the court with jurisdiction over the Operator's address shall be the exclusive court of first instance for disputes concerning the App.
 
