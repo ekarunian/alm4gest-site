@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 /* ALM4GEST サイト共通スタイル
-   Figma「ALM4GEST_サイト」Top - PC2 / Top - SP2 / 利用規約 - PC / 利用規約 - SP に対応 */
+   土台は Figma「ALM4GEST_サイト」Top - PC2 / Top - SP2 / 利用規約 - PC / 利用規約 - SP。
+   配色・構成はそのまま、タイポグラフィ・余白・動き・状態表現を磨いてある */
 
 :root {
   --bg-top: #12171e;
@@ -13,6 +14,11 @@
   --btn-text: #f4f6fb;
   --line: #979a9e;
   --card: rgba(217, 217, 217, 0.05);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --line-soft: rgba(151, 154, 158, 0.45);
+  --hairline: rgba(255, 255, 255, 0.08);
+  --heading: #eaeff6;
+  --muted: #9aa7b8;
   --footer: #12171e;
   --container: 1140px;
   --font-en: "Belanosima", sans-serif;
@@ -72,6 +78,22 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+::selection {
+  background: var(--accent);
+  color: #0e1420;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 固定ヘッダーの高さぶん、アンカー到達位置を下げる */
+  scroll-padding-top: 96px;
+}
+
+h2,
+h3 {
+  color: var(--heading);
+}
+
 .container {
   width: 100%;
   max-width: var(--container);
@@ -93,10 +115,28 @@ a:focus-visible {
   left: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* ---------------- ヘッダー ---------------- */
 
 .site-header {
-  padding: 34px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 18px 0;
+  background: rgba(18, 23, 30, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .site-header .container {
@@ -123,6 +163,30 @@ a:focus-visible {
   object-fit: contain;
 }
 
+/* PC用のセクション導線 */
+.site-nav {
+  display: flex;
+  gap: 26px;
+  margin-left: auto;
+}
+
+.site-nav a {
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  border-bottom-color: var(--accent);
+  color: var(--heading);
+  text-decoration: none;
+}
+
 .lang-switch {
   display: flex;
 }
@@ -130,13 +194,22 @@ a:focus-visible {
 .lang-switch a {
   display: flex;
   align-items: center;
-  height: 42px;
-  padding: 0 20px;
-  border: 1px solid var(--line);
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line-soft);
   color: var(--text);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-switch a:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.lang-switch a:last-child {
+  border-radius: 0 8px 8px 0;
 }
 
 .lang-switch a + a {
@@ -149,8 +222,11 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.lang-switch a[aria-current="true"] {
-  background: var(--card);
+/* 現在地は塗りと太字の両方で示す（色差だけに頼らない） */
+.lang-switch a[aria-current] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #10151c;
   font-weight: 700;
 }
 
@@ -160,6 +236,7 @@ a:focus-visible {
 }
 
 .lang-drop > summary {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -177,6 +254,13 @@ a:focus-visible {
 
 .lang-drop > summary::-webkit-details-marker {
   display: none;
+}
+
+/* 見た目を変えずに当たり判定を44pxへ広げる */
+.lang-drop > summary::after {
+  content: "";
+  position: absolute;
+  inset: -7px 0;
 }
 
 .lang-drop .caret {
@@ -214,14 +298,14 @@ a:focus-visible {
   text-decoration: none;
 }
 
-.lang-drop-list a[aria-current="true"] {
+.lang-drop-list a[aria-current] {
   font-weight: 700;
 }
 
 /* ---------------- 共通セクション ---------------- */
 
 .section {
-  padding: 100px 0;
+  padding: clamp(84px, 9vw, 120px) 0;
 }
 
 .section-head {
@@ -236,14 +320,17 @@ a:focus-visible {
   font-family: var(--font-en);
   font-size: 40px;
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
+  color: var(--heading);
 }
 
 .section-head .sub {
   display: block;
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 13px;
   line-height: 2;
+  letter-spacing: 0.14em;
+  color: var(--muted);
 }
 
 .btn {
@@ -253,17 +340,20 @@ a:focus-visible {
   min-width: 250px;
   height: 60px;
   padding: 0 24px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: var(--btn);
   color: var(--btn-text);
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.4;
   text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover,
 .btn:focus-visible {
   background: var(--btn-hover);
+  transform: translateY(-2px);
   text-decoration: none;
 }
 
@@ -280,13 +370,18 @@ a:focus-visible {
 
 /* ---------------- ヒーロー ---------------- */
 
+/* 光彩がビューポート外へ伸びてもスクロール領域を広げない */
+.hero {
+  overflow-x: clip;
+}
+
 .hero .container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
   padding-top: 96px;
-  padding-bottom: 90px;
+  padding-bottom: 40px;
 }
 
 .hero-body {
@@ -318,14 +413,49 @@ a:focus-visible {
   line-height: 2;
 }
 
+.hero-machines {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 30px;
+}
+
+.machines-label {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.machine-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.machine-chips li {
+  padding: 5px 14px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .hero-download {
-  margin-top: 50px;
+  margin-top: 44px;
 }
 
 .hero-meta {
   margin: 18px 0 0;
   font-size: 14px;
   line-height: 2;
+  color: var(--muted);
 }
 
 /* iPhone の筐体。画像は素のまま置き、枠はここで作る */
@@ -361,9 +491,29 @@ a:focus-visible {
   background: #000;
 }
 
+/* 端末の背後にアクセント色の光彩を敷く */
+
+.hero-mock-wrap {
+  position: relative;
+}
+
+.hero-mock-wrap::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 540px;
+  height: 540px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(109, 151, 224, 0.26), transparent 65%);
+  pointer-events: none;
+}
+
 /* 画面のカルーセル。JSが無くても横スクロールで全部見られる */
 
 .shots {
+  position: relative;
+  z-index: 1;
   flex: 0 0 auto;
   width: 376px;
 }
@@ -386,8 +536,16 @@ a:focus-visible {
 .shots-slide {
   flex: 0 0 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   scroll-snap-align: center;
+}
+
+.shots-caption {
+  margin-top: 16px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
 }
 
 .shots-nav {
@@ -395,7 +553,7 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 10px;
 }
 
 .shots-dots {
@@ -405,8 +563,12 @@ a:focus-visible {
 
 .shots-dot {
   display: block;
-  padding: 6px;
+  padding: 14px;
   line-height: 0;
+}
+
+.shots-dot:hover span {
+  border-color: var(--accent);
 }
 
 .shots-dot span {
@@ -428,16 +590,19 @@ a:focus-visible {
 }
 
 .shots-arrow {
-  padding: 6px 8px;
+  padding: 14px 17px;
   border: 0;
+  border-radius: 10px;
   background: none;
   color: var(--text);
   line-height: 0;
   cursor: pointer;
   opacity: 0.65;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
 .shots-arrow:hover {
+  background: var(--card);
   opacity: 1;
 }
 
@@ -508,8 +673,8 @@ a:focus-visible {
   max-width: 600px;
   margin: 32px auto 0;
   padding: 24px 30px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
   background: var(--card);
   text-align: left;
 }
@@ -525,6 +690,8 @@ a:focus-visible {
 
 .steps li a {
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .tester-notes {
@@ -541,16 +708,19 @@ a:focus-visible {
 
 .link-card {
   display: block;
-  padding: 30px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
+  padding: 34px 32px;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
   background: var(--card);
   color: var(--text);
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .link-card:hover,
 .link-card:focus-visible {
+  transform: translateY(-3px);
   border-color: var(--accent);
+  background: rgba(109, 151, 224, 0.07);
   text-decoration: none;
 }
 
@@ -558,7 +728,7 @@ a:focus-visible {
   margin: 0;
   font-size: 20px;
   font-weight: 700;
-  line-height: 2;
+  line-height: 1.6;
   color: var(--accent);
 }
 
@@ -570,9 +740,11 @@ a:focus-visible {
 
 .link-card .external {
   display: inline-block;
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
   line-height: 2;
+  color: var(--muted);
 }
 
 /* ---------------- お問い合わせ ---------------- */
@@ -598,6 +770,7 @@ a:focus-visible {
 .site-footer {
   background: var(--footer);
   padding: 50px 0;
+  border-top: 1px solid var(--hairline);
 }
 
 .site-footer .container {
@@ -610,15 +783,19 @@ a:focus-visible {
 
 .footer-brand {
   margin: 0;
+  font-family: var(--font-en);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   line-height: 2;
+  color: var(--heading);
 }
 
 .footer-copyright {
-  margin: 20px 0 0;
-  font-size: 16px;
+  margin: 12px 0 0;
+  font-size: 14px;
   line-height: 2;
+  color: var(--muted);
 }
 
 .footer-links {
@@ -637,7 +814,12 @@ a:focus-visible {
 /* ---------------- 文書ページ（利用規約・プライバシー・削除申込） ---------------- */
 
 .doc {
-  padding: 20px 0 100px;
+  padding: 40px 0 110px;
+}
+
+/* 規約類は行長を抑えて読みやすく */
+.doc .container {
+  max-width: 900px;
 }
 
 .doc-body > *:first-child {
@@ -645,17 +827,24 @@ a:focus-visible {
 }
 
 .doc-title {
-  margin: 0 0 30px;
-  font-size: 24px;
+  margin: 0 0 28px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 2;
+  line-height: 1.7;
+  color: var(--heading);
+}
+
+/* 最終更新日の行 */
+.doc-body > p:first-child {
+  font-size: 14px;
+  color: var(--muted);
 }
 
 .doc-body h2 {
   position: relative;
-  margin: 56px 0 16px;
+  margin: 64px 0 18px;
   padding-left: 15px;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.6;
 }
@@ -667,7 +856,8 @@ a:focus-visible {
   top: 0.25em;
   width: 5px;
   height: 1em;
-  background: #d9d9d9;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), #4a72bb);
 }
 
 .doc-body h3 {
@@ -681,6 +871,20 @@ a:focus-visible {
 .doc-body li {
   font-size: 16px;
   line-height: 2;
+}
+
+.doc-body li {
+  margin: 4px 0;
+}
+
+.doc-body li::marker {
+  color: var(--muted);
+}
+
+/* 本文中のリンクは常に下線を出す */
+.doc-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .doc-body ol,
@@ -704,9 +908,6 @@ a:focus-visible {
 
 .doc-body table {
   width: 100%;
-}
-
-.doc-body table {
   margin: 16px 0 24px;
   border-collapse: collapse;
   font-size: 15px;
@@ -715,15 +916,49 @@ a:focus-visible {
 .doc-body th,
 .doc-body td {
   padding: 12px 16px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-soft);
   line-height: 1.8;
   text-align: left;
   vertical-align: top;
 }
 
 .doc-body th {
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.05);
   font-weight: 700;
+}
+
+/* ---------------- 出現アニメーション ---------------- */
+
+/* html.js は shots.js が付ける。JSが無い環境では最初から見えている */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 /* ---------------- SP ---------------- */
@@ -743,7 +978,7 @@ a:focus-visible {
   }
 
   .site-header {
-    padding: 40px 0 0;
+    padding: 14px 0;
   }
 
   .brand-mark {
@@ -757,6 +992,10 @@ a:focus-visible {
   }
 
   .lang-switch {
+    display: none;
+  }
+
+  .site-nav {
     display: none;
   }
 
@@ -807,6 +1046,16 @@ a:focus-visible {
     line-height: 1.7;
   }
 
+  .hero-machines {
+    margin-top: 22px;
+    gap: 8px 12px;
+  }
+
+  .machine-chips li {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+
   .hero-download {
     margin-top: 36px;
     text-align: center;
@@ -823,8 +1072,15 @@ a:focus-visible {
     text-align: center;
   }
 
+  .hero-mock-wrap::before {
+    top: 20px;
+    width: 360px;
+    height: 360px;
+  }
+
   .shots {
     width: 267px;
+    margin: 0 auto;
   }
 
   /* 筐体を付けたので下端は切らず、端末を丸ごと見せる */
@@ -843,6 +1099,15 @@ a:focus-visible {
     width: 71px;
     height: 21px;
     border-radius: 11px;
+  }
+
+  .shots-caption {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .shots-dot {
+    padding: 10px;
   }
 
   .features {

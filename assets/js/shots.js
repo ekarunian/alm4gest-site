@@ -1,7 +1,12 @@
-// トップの画面カルーセル。JSが無い状態でも横スクロールで全部見られるので、
+// トップの画面カルーセルと出現アニメーション。
+// カルーセルはJSが無くても横スクロールで全部見られるので、
 // ここでやるのは矢印を出すことと、現在地をドットへ反映することだけ。
 (function () {
   'use strict';
+
+  // CSSの .js ゲート。このスクリプトが動いた時だけ .reveal を隠すので、
+  // JSが無い・読み込みに失敗した環境では全部最初から見えている
+  document.documentElement.classList.add('js');
 
   function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -12,6 +17,7 @@
     var slides = Array.prototype.slice.call(root.querySelectorAll('.shots-slide'));
     var dots = Array.prototype.slice.call(root.querySelectorAll('.shots-dot'));
     var arrows = Array.prototype.slice.call(root.querySelectorAll('.shots-arrow'));
+    var status = root.querySelector('[data-shots-status]');
     if (!track || slides.length < 2) {
       return;
     }
@@ -52,6 +58,9 @@
             return;
           }
           index = i;
+          if (status) {
+            status.textContent = dots[i] ? dots[i].getAttribute('aria-label') : '';
+          }
           dots.forEach(function (dot, j) {
             if (j === i) {
               dot.setAttribute('aria-current', 'true');
@@ -67,4 +76,29 @@
       observer.observe(slide);
     });
   });
+
+  // スクロールに合わせた出現アニメーション（reduced-motion では即時表示）
+  var toReveal = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (toReveal.length) {
+    if (prefersReducedMotion() || !('IntersectionObserver' in window)) {
+      toReveal.forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+    } else {
+      var revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+      );
+      toReveal.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    }
+  }
 })();

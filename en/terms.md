@@ -58,14 +58,14 @@ You must not:
 
 1. The App lets you share a tier list you created with other users who know the share code it issues.
 2. Publishing is your choice, and the Operator is not responsible for what you publish.
-3. A tier list name must not contain defamatory expressions, expressions contrary to public order and morals, or expressions that infringe the rights of others (the Operator checks names automatically at publication and refuses those that match).
+3. A tier list name must not contain defamatory expressions, expressions contrary to public order and morals, or expressions that infringe the rights of others (the Operator checks names automatically at publication and rejects any that match).
 4. Even after you stop publishing, copies other users imported while it was published remain on their devices.
 5. A tier list that has not been read for two years is deleted automatically.
 
 ## 9. Friends feature
 
 1. The App lets you show records to other users through a friend code you issue.
-2. You decide what friends can see, and nothing outside that range is sent.
+2. You decide what friends can see; the App sends nothing beyond that.
 3. You must not publish another user's records learned through the friends feature outside the App without their permission.
 4. Even after you stop using the friends feature, records imported onto a friend's device while you were friends remain on that device.
 5. The Operator is not responsible for disputes arising between users.

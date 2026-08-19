@@ -22,6 +22,14 @@ layout: default
         <img class="type" src="/assets/img/logo-type.png" alt="{{ i.logo_alt }}" width="576" height="92">
       </h1>
       <p class="hero-lead">{{ i.hero.lead | strip | newline_to_br }}</p>
+      <div class="hero-machines">
+        <span class="machines-label">{{ i.hero.machines_label }}</span>
+        <ul class="machine-chips">
+          {%- for m in site.data.i18n.machines %}
+          <li>{{ m }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
       <p class="hero-download">
         <a href="{{ u.appstore }}" target="_blank" rel="noopener">
           <img class="badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
@@ -31,6 +39,7 @@ layout: default
     </div>
     <div class="hero-mock-wrap">
       <div class="shots" role="group" aria-roledescription="carousel" aria-label="{{ i.shots.label }}">
+        <p class="visually-hidden" aria-live="polite" data-shots-status></p>
         <ul class="shots-track" id="shots-track">
           {%- for f in shot_files %}
           {%- assign name = i.shots.names[forloop.index0] %}
@@ -41,6 +50,7 @@ layout: default
                    {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
               <span class="phone-island" aria-hidden="true"></span>
             </div>
+            <span class="shots-caption">{{ name }}</span>
           </li>
           {%- endfor %}
         </ul>
@@ -65,13 +75,13 @@ layout: default
 
 <section class="section" id="feature">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2 class="en">{{ i.feature.en }}</h2>
       {%- if i.feature.sub != "" %}<span class="sub">{{ i.feature.sub }}</span>{% endif %}
     </div>
     <div class="features">
       {%- for item in i.feature.items %}
-      <div class="feature">
+      <div class="feature reveal">
         <img class="feature-icon" src="/assets/img/{{ item.icon }}" alt="" width="75" height="75">
         <h3>{{ item.title }}</h3>
         <p>{{ item.body | strip | newline_to_br }}</p>
@@ -83,7 +93,7 @@ layout: default
 
 <section class="section download" id="download">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2 class="en">{{ i.download.en }}</h2>
       {%- if i.download.sub != "" %}<span class="sub">{{ i.download.sub }}</span>{% endif %}
     </div>
@@ -95,7 +105,7 @@ layout: default
     </p>
     <p class="note store-note">{{ i.download.android_note }}</p>
 
-    <div class="tester">
+    <div class="tester reveal">
       <h3>{{ i.download.tester_title }}</h3>
       <p class="tester-lead">{{ i.download.tester_lead | strip | newline_to_br }}</p>
       <div class="steps">
@@ -112,17 +122,17 @@ layout: default
 
 <section class="section" id="development">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2 class="en">{{ i.development.en }}</h2>
       {%- if i.development.sub != "" %}<span class="sub">{{ i.development.sub }}</span>{% endif %}
     </div>
     <div class="links-grid">
-      <a class="link-card" href="{{ roadmap_url }}" target="_blank" rel="noopener">
+      <a class="link-card reveal" href="{{ roadmap_url }}" target="_blank" rel="noopener">
         <h3>{{ i.development.roadmap_title }}</h3>
         <p>{{ i.development.roadmap_body }}</p>
         <span class="external">{{ i.external }} ↗</span>
       </a>
-      <a class="link-card" href="{{ release_url }}" target="_blank" rel="noopener">
+      <a class="link-card reveal" href="{{ release_url }}" target="_blank" rel="noopener">
         <h3>{{ i.development.release_title }}</h3>
         <p>{{ i.development.release_body }}</p>
         <span class="external">{{ i.external }} ↗</span>
@@ -133,12 +143,12 @@ layout: default
 
 <section class="section contact" id="contact">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2 class="en">{{ i.contact.en }}</h2>
       {%- if i.contact.sub != "" %}<span class="sub">{{ i.contact.sub }}</span>{% endif %}
     </div>
-    <p class="contact-info">{{ i.contact.info | strip | newline_to_br }}</p>
-    <div class="contact-actions">
+    <p class="contact-info reveal">{{ i.contact.info | strip | newline_to_br }}</p>
+    <div class="contact-actions reveal">
       <a class="btn" href="{{ u.x }}" target="_blank" rel="noopener">{{ i.contact.x_label }}</a>
       <a class="btn" href="{{ u.mail }}">{{ i.contact.mail_label }}</a>
     </div>

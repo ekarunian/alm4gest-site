@@ -4,6 +4,7 @@
   {%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}
 {%- endfor -%}
 {%- if page.page_id == 'index' -%}{%- assign self_path = '/' -%}{%- else -%}{%- assign self_path = '/' | append: page.page_id -%}{%- endif -%}
+{%- if page.page_id == 'index' -%}{%- assign own_path = lang_prefix | append: '/' -%}{%- else -%}{%- assign own_path = lang_prefix | append: '/' | append: page.page_id -%}{%- endif -%}
 {%- if page.lang == 'en' -%}
   {%- assign font_family = 'Noto+Sans:wght@400;700' -%}
 {%- elsif page.lang == 'ko' -%}
@@ -18,15 +19,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12171e">
 <title>{% if page.title %}{{ page.title }} | {{ i.site_title }}{% else %}{{ i.site_title }}{% endif %}</title>
 <meta name="description" content="{{ i.description }}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ i.site_title }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ i.site_title }}{% endif %}">
 <meta property="og:description" content="{{ i.description }}">
-<meta property="og:image" content="{{ site.url }}/assets/img/logo-mark.png">
+<meta property="og:image" content="{{ site.url }}/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="{{ i.og_locale }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="{{ site.url }}{{ own_path }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{{ site.url }}{{ own_path }}">
 <link rel="icon" href="/assets/img/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/logo-mark.png">
 {%- for l in site.data.i18n.langs %}
@@ -36,8 +42,15 @@
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ self_path }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/style.css">
+{%- if page.page_id == 'index' %}
+<link rel="preload" as="image" href="/assets/img/shots/{% if page.lang == 'ja' %}ja{% else %}en{% endif %}/01_home.webp" type="image/webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"ALM4GEST","operatingSystem":"iOS","applicationCategory":"UtilitiesApplication","description":"{{ i.description }}","url":"{{ site.url }}{{ own_path }}","inLanguage":"{{ i.html_lang }}","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}
+</script>
+{%- endif %}
 </head>
 <body>
 <a class="skip-link" href="#main">{{ i.skip }}</a>
@@ -48,6 +61,13 @@
       <img class="brand-mark" src="/assets/img/logo-mark.png" alt="" width="40" height="40">
       <img class="brand-type" src="/assets/img/logo-type.png" alt="{{ i.logo_alt }}" width="250" height="40">
     </a>
+
+    <nav class="site-nav" aria-label="{{ i.nav_sections.label }}">
+      <a href="{{ lang_prefix }}/#feature">{{ i.nav_sections.feature }}</a>
+      <a href="{{ lang_prefix }}/#download">{{ i.nav_sections.download }}</a>
+      <a href="{{ lang_prefix }}/#development">{{ i.nav_sections.development }}</a>
+      <a href="{{ lang_prefix }}/#contact">{{ i.nav_sections.contact }}</a>
+    </nav>
 
     <nav class="lang-switch" aria-label="{{ i.lang_label }}">
       {%- for l in site.data.i18n.langs %}
