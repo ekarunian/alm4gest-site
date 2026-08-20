@@ -409,8 +409,20 @@ h3 {
 
 .hero-lead {
   margin: 100px 0 0;
+  /* 「記録・分析する、」の後ろで折り返させる（実測: そこまで495px・次の文節まで575px） */
+  max-width: 540px;
   font-size: 16px;
   line-height: 2;
+}
+
+/* 日本語・繁体字は文節を1つの塊として置き、語の途中で改行させない */
+.hero-lead span {
+  display: inline-block;
+}
+
+/* 韓国語は分かち書きがあるので、単語の途中で切らせないだけでよい */
+html[lang="ko"] .hero-lead {
+  word-break: keep-all;
 }
 
 .hero-machines {

@@ -49,9 +49,14 @@ ja:
     names: [ホーム, 楽曲, Tier表, 成長, 共有画像]
   external: Notion で開く
   hero:
-    lead: |
-      「ALM4GEST」は、コナミの音楽ゲームのスコアを記録・分析する、
-      個人開発のスコア管理アプリです。
+    # 連結して1文として表示する。要素の切れ目だけで折り返すため、
+    # 語の途中で改行されない（分け方＝文節）
+    lead:
+      - 「ALM4GEST」は、
+      - コナミの
+      - 音楽ゲームの
+      - スコアを記録・分析する、
+      - 個人開発のスコア管理アプリです。
     machines_label: 対応機種
     meta: 無料 · iOS版は配信中 / Android版はクローズドテスト中
     appstore_alt: App Store でダウンロード
@@ -274,7 +279,13 @@ zh:
     names: [首頁, 樂曲, Tier表, 成長, 分享圖片]
   external: 在 Notion 開啟
   hero:
-    lead: 記錄・分析KONAMI音樂遊戲分數的個人開發分數管理應用程式。
+    # 連結して1文として表示する（ja と同じ理由で文節ごとに分ける）
+    lead:
+      - 記錄・分析
+      - KONAMI音樂遊戲分數的
+      - 個人開發
+      - 分數管理
+      - 應用程式。
     machines_label: 支援機種
     meta: 免費 · iOS 已上架 / Android 封閉測試中
     appstore_alt: 在 App Store 下載

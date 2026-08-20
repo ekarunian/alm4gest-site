@@ -21,7 +21,13 @@ layout: default
         <img class="mark" src="/assets/img/logo-mark.png" alt="" width="92" height="92">
         <img class="type" src="/assets/img/logo-type.png" alt="{{ i.logo_alt }}" width="576" height="92">
       </h1>
-      <p class="hero-lead">{{ i.hero.lead | strip | newline_to_br }}</p>
+      <p class="hero-lead">
+        {%- if i.hero.lead.first -%}
+          {%- for c in i.hero.lead %}<span>{{ c }}</span>{% endfor -%}
+        {%- else -%}
+          {{- i.hero.lead | strip | newline_to_br -}}
+        {%- endif -%}
+      </p>
       <div class="hero-machines">
         <span class="machines-label">{{ i.hero.machines_label }}</span>
         <ul class="machine-chips">
