@@ -37,7 +37,7 @@ ja:
   og_locale: ja_JP
   html_lang: ja
   site_title: ALM4GEST
-  description: コナミの音楽ゲームのスコアを記録・分析する、個人開発のスコア管理アプリです。
+  description: ALM4GESTは、KONAMIの音楽ゲームのスコアを記録・分析し、プレイヤーの成長を支援する個人開発のスコア管理アプリです。
   skip: 本文へスキップ
   lang_label: 言語
   logo_alt: ALM4GEST
@@ -52,11 +52,15 @@ ja:
     # 連結して1文として表示する。要素の切れ目だけで折り返すため、
     # 語の途中で改行されない（分け方＝文節）
     lead:
-      - 「ALM4GEST」は、
-      - コナミの
+      - ALM4GESTは、
+      - KONAMIの
       - 音楽ゲームの
-      - スコアを記録・分析する、
-      - 個人開発のスコア管理アプリです。
+      - スコアを
+      - 記録・分析し、
+      - プレイヤーの
+      - 成長を支援する
+      - 個人開発の
+      - スコア管理アプリです。
     machines_label: 対応機種
     meta: 無料 · iOS版は配信中 / Android版はクローズドテスト中
     appstore_alt: App Store でダウンロード
@@ -123,7 +127,7 @@ en:
   og_locale: en_US
   html_lang: en
   site_title: ALM4GEST
-  description: An independently developed score management app for KONAMI's music games.
+  description: An independently developed app that records and analyzes your scores in KONAMI's music games and helps you improve.
   skip: Skip to content
   lang_label: Language
   logo_alt: ALM4GEST
@@ -135,7 +139,7 @@ en:
     names: [Home, Songs, Tier List, Growth, Share image]
   external: Open in Notion
   hero:
-    lead: An independently developed score management app for KONAMI's music games.
+    lead: An independently developed app that records and analyzes your scores in KONAMI's music games and helps you improve.
     machines_label: Supported games
     meta: Free · iOS out now / Android in closed testing
     appstore_alt: Download on the App Store
@@ -195,7 +199,7 @@ ko:
   og_locale: ko_KR
   html_lang: ko
   site_title: ALM4GEST
-  description: 코나미의 음악 게임 스코어를 기록·분석하는, 개인이 개발한 스코어 관리 앱입니다.
+  description: 코나미의 음악 게임 스코어를 기록·분석하고 성장을 돕는, 개인이 개발한 스코어 관리 앱입니다.
   skip: 본문으로 건너뛰기
   lang_label: 언어
   logo_alt: ALM4GEST
@@ -207,7 +211,7 @@ ko:
     names: [홈, 곡, 티어표, 성장, 공유 이미지]
   external: Notion에서 열기
   hero:
-    lead: 코나미의 음악 게임 스코어를 기록·분석하는, 개인이 개발한 스코어 관리 앱입니다.
+    lead: 코나미의 음악 게임 스코어를 기록·분석하고 성장을 돕는, 개인이 개발한 스코어 관리 앱입니다.
     machines_label: 지원 기종
     meta: 무료 · iOS 정식 출시 / Android 비공개 테스트 중
     appstore_alt: App Store에서 다운로드
@@ -267,7 +271,7 @@ zh:
   og_locale: zh_TW
   html_lang: zh-Hant
   site_title: ALM4GEST
-  description: 記錄・分析KONAMI音樂遊戲分數的個人開發分數管理應用程式。
+  description: 記錄・分析KONAMI音樂遊戲分數、支援玩家成長的個人開發分數管理應用程式。
   skip: 跳到主要內容
   lang_label: 語言
   logo_alt: ALM4GEST
@@ -282,7 +286,8 @@ zh:
     # 連結して1文として表示する（ja と同じ理由で文節ごとに分ける）
     lead:
       - 記錄・分析
-      - KONAMI音樂遊戲分數的
+      - KONAMI音樂遊戲分數、
+      - 支援玩家成長的
       - 個人開發
       - 分數管理
       - 應用程式。

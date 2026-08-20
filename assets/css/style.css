@@ -409,15 +409,39 @@ h3 {
 
 .hero-lead {
   margin: 100px 0 0;
-  /* 「記録・分析する、」の後ろで折り返させる（実測: そこまで495px・次の文節まで575px） */
+  /* 日本語は読点「記録・分析し、」の後ろで折り返させる（実測: そこまで460px・
+     次の文節まで556px）。韓国語・繁体字は下で別の幅にする */
   max-width: 540px;
   font-size: 16px;
   line-height: 2;
 }
 
-/* 日本語・繁体字は文節を1つの塊として置き、語の途中で改行させない */
+/* 日本語・繁体字は文節を1つの塊として置き、語の途中で改行させない。
+   ただし塊が行末に入りきらないほど本文が狭いと、大きな空きができる。
+   本文が440px以上とれる幅のときだけ塊にし、それ以外は行を最後まで埋める。
+   本文の幅は viewport 560pxまで=画面幅-60px／560〜900px=500px／
+   901px〜=2カラムになり405pxへ落ちてから540pxまで戻る */
 .hero-lead span {
-  display: inline-block;
+  display: inline;
+}
+
+@media (min-width: 500px) and (max-width: 900px), (min-width: 996px) {
+  .hero-lead span {
+    display: inline-block;
+  }
+}
+
+/* 韓国語・繁体字は同じ内容でも日本語より短く収まるため、日本語に合わせた
+   幅だと1行目がほぼ埋まって2行目に数語しか残らない。2行が釣り合う幅にする
+   （em指定。900px以下は本文が14pxになるため、幅も同じ比で縮む） */
+@media (min-width: 500px) {
+  html[lang="ko"] .hero-lead {
+    max-width: 26em;
+  }
+
+  html[lang="zh-Hant"] .hero-lead {
+    max-width: 25em;
+  }
 }
 
 /* 韓国語は分かち書きがあるので、単語の途中で切らせないだけでよい */
