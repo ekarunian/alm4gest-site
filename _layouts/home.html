@@ -37,9 +37,14 @@ layout: default
         </ul>
       </div>
       <p class="hero-download">
-        <a href="{{ u.appstore }}" target="_blank" rel="noopener">
-          <img class="badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
-        </a>
+        <span class="store-badges">
+          <a href="{{ u.appstore }}" target="_blank" rel="noopener">
+            <img class="badge-store badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
+          </a>
+          <a href="{{ u.playstore }}" target="_blank" rel="noopener">
+            <img class="badge-store badge-googleplay" src="/assets/img/badge-googleplay-{{ page.lang }}.png" alt="{{ i.hero.playstore_alt }}" height="40">
+          </a>
+        </span>
       </p>
       <p class="hero-meta">{{ i.hero.meta }}</p>
     </div>
@@ -105,24 +110,15 @@ layout: default
     </div>
 
     <p>
-      <a href="{{ u.appstore }}" target="_blank" rel="noopener">
-        <img class="badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
-      </a>
+      <span class="store-badges">
+        <a href="{{ u.appstore }}" target="_blank" rel="noopener">
+          <img class="badge-store badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
+        </a>
+        <a href="{{ u.playstore }}" target="_blank" rel="noopener">
+          <img class="badge-store badge-googleplay" src="/assets/img/badge-googleplay-{{ page.lang }}.png" alt="{{ i.hero.playstore_alt }}" height="40">
+        </a>
+      </span>
     </p>
-    <p class="note store-note">{{ i.download.android_note }}</p>
-
-    <div class="tester reveal">
-      <h3>{{ i.download.tester_title }}</h3>
-      <p class="tester-lead">{{ i.download.tester_lead | strip | newline_to_br }}</p>
-      <div class="steps">
-        <ol>
-          {%- for s in site.data.i18n.steps[page.lang] %}
-          <li>{{ s | replace: 'TESTER_GROUP', u.tester_group | replace: 'PLAY_STORE', u.playstore }}</li>
-          {%- endfor %}
-        </ol>
-      </div>
-      <p class="tester-notes">{{ i.download.tester_notes | strip | newline_to_br }}</p>
-    </div>
   </div>
 </section>
 

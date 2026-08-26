@@ -357,10 +357,23 @@ h3 {
   text-decoration: none;
 }
 
-.badge-appstore {
-  display: inline-block;
+.store-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.badge-store {
+  display: block;
   width: auto;
   height: 40px;
+}
+
+/* 公式PNGの縦横比。読み込み前の高さのぶれを止める */
+.badge-googleplay {
+  aspect-ratio: 646 / 192;
 }
 
 .note {
@@ -683,55 +696,6 @@ html[lang="ko"] .hero-lead {
 
 .download {
   text-align: center;
-}
-
-.download .store-note {
-  margin-top: 24px;
-}
-
-.tester {
-  margin-top: 80px;
-  text-align: center;
-}
-
-.tester h3 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 2;
-}
-
-.tester-lead {
-  margin: 24px 0 0;
-}
-
-.steps {
-  max-width: 600px;
-  margin: 32px auto 0;
-  padding: 24px 30px;
-  border: 1px solid var(--line-soft);
-  border-radius: 12px;
-  background: var(--card);
-  text-align: left;
-}
-
-.steps ol {
-  margin: 0;
-  padding-left: 1.4em;
-}
-
-.steps li {
-  line-height: 2.5;
-}
-
-.steps li a {
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.tester-notes {
-  margin: 32px 0 0;
 }
 
 /* ---------------- ロードマップ・リリースノート ---------------- */
@@ -1163,25 +1127,7 @@ html[lang="ko"] .hero-lead {
     line-height: 1.7;
   }
 
-  .tester {
-    margin-top: 60px;
-  }
-
-  .tester h3 {
-    font-size: 20px;
-  }
-
-  .steps {
-    padding: 20px;
-  }
-
-  .steps li {
-    line-height: 2;
-  }
-
-  .note,
-  .tester-lead,
-  .tester-notes {
+  .note {
     font-size: 14px;
     line-height: 1.7;
     text-align: left;
