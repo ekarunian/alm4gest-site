@@ -3,7 +3,7 @@ page_id: privacy
 title: "ALM4GEST Privacy Policy"
 ---
 
-Last updated: August 18, 2026
+Last updated: September 5, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -21,6 +21,7 @@ The App collects the following information.
 | Crash information | Error details, where the error occurred, device model, and OS version when the App terminates unexpectedly | When the App crashes |
 | Usage information | App launches, screens viewed, sync runs and their results (games covered, records fetched, time taken), the start of first-time setup and whether a first record was saved, device model, OS version, country, App version, and an identifier assigned per installation (this is not the advertising identifier) | While you use the App |
 | Advertising identifier | IDFA on iOS, advertising ID on Android | When ads are shown (only with the permission or consent described in section 7) |
+| Health data | Body weight, body fat percentage, and active energy | Only if you turn on the health app link (Health on iOS, Health Connect on Android), when you open the App and when you open the weight entry screen |
 
 The App does not collect your e-amusement login ID, password, or other credentials.
 
@@ -32,6 +33,7 @@ The App does not collect your e-amusement login ID, password, or other credentia
    The only exceptions are a tier list that you choose to publish yourself (section 4) and the records written out for your friends (section 5).
 4. Usage information is sent to Google Analytics for Firebase (section 8), not to the Operator's server.
    Play data, player identifiers, manually entered records, and user settings data are not sent there.
+5. Health data (body weight, body fat percentage, and active energy) is stored only on your device and is not sent to our servers. It is not included in the backup described in section 3, so it does not carry over when you change devices. Body weight is an exception in one direction: when you ask the App to, it is sent to the e-amusement site to update your registered weight there, which that site uses for its calorie calculation. If the health app link is on, the App also writes your DDR sessions to your device's health app as workouts.
 
 ## 3. Backup
 
