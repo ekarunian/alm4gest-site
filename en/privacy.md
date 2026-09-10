@@ -3,7 +3,7 @@ page_id: privacy
 title: "ALM4GEST Privacy Policy"
 ---
 
-Last updated: September 5, 2026
+Last updated: September 10, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -106,7 +106,7 @@ The App displays advertisements through Google AdMob.
 1. To deliver ads, AdMob may use an advertising identifier (IDFA on iOS, advertising ID on Android).
 2. On iOS, the App shows a tracking permission dialog before it displays the first ad. If you do not grant permission, the App shows non-personalized ads that do not use the advertising identifier.
 3. In the European Economic Area and similar regions, the App shows a consent screen provided by Google's consent management tool, and delivers ads within the scope of your consent.
-4. The App does not provide its play data or player identifiers to advertising companies. The only thing used for advertising is the advertising identifier.
+4. The App does not provide its play data, player identifiers, or health data to advertising companies. The only thing used for advertising is the advertising identifier. Health data is never used for ad delivery, targeting, or measurement.
 
 Data handling within AdMob follows [Google's policies](https://policies.google.com/technologies/partner-sites).
 
@@ -126,7 +126,7 @@ The cloud storage provider is entrusted with storage only, and does not use this
 
 ## 9. Deleting your data
 
-1. Data on your device is deleted in full when you uninstall the App.
+1. Data on your device is deleted in full when you uninstall the App. Health data (body weight, body fat percentage, and active energy) is stored only on your device, so uninstalling removes it completely.
 2. If you want data stored on the server deleted, contact us at the address below with your player code (we will delete it within a reasonable period).
 3. If you want backed-up data deleted, contact us with your restore code.
 4. A published tier list is deleted from the server when you stop publishing it in the App (section 4).
