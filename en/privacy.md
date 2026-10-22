@@ -3,7 +3,7 @@ page_id: privacy
 title: "ALM4GEST Privacy Policy"
 ---
 
-Last updated: September 10, 2026
+Last updated: October 22, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -21,6 +21,12 @@ The App collects the following information.
 | Crash information | Error details, where the error occurred, device model, and OS version when the App terminates unexpectedly | When the App crashes |
 | Usage information | App launches, screens viewed, sync runs and their results (games covered, records fetched, time taken), the start of first-time setup and whether a first record was saved, device model, OS version, country, App version, and an identifier assigned per installation (this is not the advertising identifier) | While you use the App |
 | Advertising identifier | IDFA on iOS, advertising ID on Android | When ads are shown (only with the permission or consent described in section 7) |
+| Score attack data | Title, charts, period, and banner image; participants' player names, submitted scores, and result images | When you host or join a score attack |
+| Challenge data | The chart, goal, and comment you sent, and whether a challenge was accepted, declined, or achieved | When you send a challenge to a friend, or answer one you received |
+| Community tips posts | The text and category you post in "Community tips" on a song's details, and your player name | When you post |
+| Icon image | The icon image shown to your friends | When you set an icon |
+| Notification address | The device address used to deliver push notifications, device type, language, time zone, and per-notification settings | When you allow notifications |
+| Feedback content | The text, category, target chart, and app version you send from "Send feedback / report a problem" | When you send feedback |
 | Health data | Body weight, body fat percentage, and active energy | Only if you turn on the health app link (Health on iOS, Health Connect on Android), when you open the App and when you open the weight entry screen |
 
 The App does not collect your e-amusement login ID, password, or other credentials.
@@ -42,7 +48,7 @@ The App has a backup feature for carrying your data over when you change devices
 1. Every time a sync completes, a full set of the play data on your device is automatically sent to and stored on a server managed by the Operator (this includes manually entered records, your player name, saved filters, app settings, per-chart memos, judge timing values, and challenge songs you have pinned).
    You can also run a backup manually from the settings screen.
 2. The stored data is tied to a restore code issued by the App, and only someone who knows the restore code can retrieve it.
-3. If you want your backup deleted, contact the Operator with your restore code as described in section 9.
+3. You can delete your backup with "Delete cloud backup" in the settings. We will also delete it if you contact us with your restore code as described in section 9.
 
 ## 4. Publishing a tier list
 
@@ -121,6 +127,9 @@ However, the App uses the following services to operate, and information is proc
 | Google (AdMob) | Delivering ads | Advertising identifier |
 | Google (Firebase Crashlytics) | Investigating causes of crashes | Crash information |
 | Google (Google Analytics for Firebase) | Analyzing usage | Usage information |
+| Google (Google BigQuery) | Analyzing usage and crashes | Copies of usage information and crash information |
+| Google (Firebase Cloud Messaging) | Delivering push notifications | Notification address and notification text |
+| Google (Google Forms) | Receiving feedback | Feedback content |
 
 The cloud storage provider is entrusted with storage only, and does not use this data for its own purposes.
 
@@ -135,12 +144,32 @@ The cloud storage provider is entrusted with storage only, and does not use this
 7. Usage information is not linked to your player code, so we cannot delete it for an individual user.
    What is stored in Google Analytics is deleted automatically once Google's retention period has passed.
 
-## 10. Changes to this policy
+## 10. Data retention
+
+Data stored on servers managed by the Operator and by service providers is kept only for the periods below, and is deleted automatically once the period has passed.
+Data with no set period is kept until you delete it in the App or we receive a deletion request under section 9.
+
+| Data | Retention period |
+| --- | --- |
+| Play data and player identifiers sent for statistics | Only the latest copy per game is kept and is replaced at each sync. No set period |
+| Sync check records (number of records fetched and the result of each sync) | 90 days after receipt |
+| Backup | Replaced at each sync. No set period |
+| Published tier lists | 2 years after last retrieval. Deleted immediately when you stop publishing |
+| Friend data, icon image, and notification address | Until you stop using the friend feature |
+| Challenge data | A received challenge is deleted when you answer it. The record of an achieved challenge is deleted 30 days after it is achieved. Everything else is kept until you stop using the friend feature |
+| Score attack data | 30 days after the score attack ends. Result images: 14 days after it ends. Final rankings stay on your profile, up to 50 per person; older ones beyond that are deleted first |
+| Community tips posts | Until the person who posted deletes them |
+| Crash information | 90 days in Firebase Crashlytics. Copies in Google BigQuery: 60 days |
+| Usage information | In Google Analytics, according to its retention setting. Copies in Google BigQuery: no set period |
+| Feedback content | Kept with no set period so that we can respond |
+| Data on your device, including health data | Until you uninstall the App |
+
+## 11. Changes to this policy
 
 The contents of this policy may be changed as needed.
 The revised policy takes effect when it is posted on this page.
 
-## 11. Contact
+## 12. Contact
 
 Operator: Takahiro Kawaguchi (@ekarunian)
 Contact: [kawaguchi.ek@gmail.com](mailto:kawaguchi.ek@gmail.com)
