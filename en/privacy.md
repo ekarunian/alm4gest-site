@@ -3,7 +3,7 @@ page_id: privacy
 title: "ALM4GEST Privacy Policy"
 ---
 
-Last updated: October 22, 2026
+Last updated: October 25, 2026
 
 Takahiro Kawaguchi (@ekarunian, the "Operator") sets out below how user information is handled in the mobile application "ALM4GEST" (the "App").
 
@@ -26,7 +26,7 @@ The App collects the following information.
 | Community tips posts | The text and category you post in "Community tips" on a song's details, and your player name | When you post |
 | Icon image | The icon image shown to your friends | When you set an icon |
 | Notification address | The device address used to deliver push notifications, device type, language, time zone, and per-notification settings | When you allow notifications |
-| Feedback content | The text, category, target chart, and app version you send from "Send feedback / report a problem" | When you send feedback |
+| Feedback content | The text, category, target chart, app version, and attached images and videos you send from "Send feedback / report a problem" | When you send feedback |
 | Health data | Body weight, body fat percentage, and active energy | Only if you turn on the health app link (Health on iOS, Health Connect on Android), when you open the App and when you open the weight entry screen |
 
 The App does not collect your e-amusement login ID, password, or other credentials.
@@ -123,7 +123,7 @@ However, the App uses the following services to operate, and information is proc
 
 | Service | Purpose | Information processed |
 | --- | --- | --- |
-| Cloud storage provider | Storing data | Play data, player identifiers, backup data, published tier lists, friend data |
+| Cloud storage provider | Storing data | Play data, player identifiers, backup data, published tier lists, friend data, images and videos attached to feedback |
 | Google (AdMob) | Delivering ads | Advertising identifier |
 | Google (Firebase Crashlytics) | Investigating causes of crashes | Crash information |
 | Google (Google Analytics for Firebase) | Analyzing usage | Usage information |
@@ -162,6 +162,7 @@ Data with no set period is kept until you delete it in the App or we receive a d
 | Crash information | 90 days in Firebase Crashlytics. Copies in Google BigQuery: 60 days |
 | Usage information | In Google Analytics, according to its retention setting. Copies in Google BigQuery: no set period |
 | Feedback content | Kept with no set period so that we can respond |
+| Images and videos attached to feedback | 7 days after receipt |
 | Data on your device, including health data | Until you uninstall the App |
 
 ## 11. Changes to this policy
