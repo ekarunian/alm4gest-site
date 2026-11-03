@@ -18,9 +18,11 @@ layout: default
       </ul>
       {%- for it in t.items %}
       <section class="release-item">
+        <div class="release-text">
         <h2>{{ it.heading }}</h2>
         {%- if it.body %}<p>{{ it.body }}</p>{% endif %}
         {%- if it.list %}<ol>{% for li in it.list %}<li>{{ li }}</li>{% endfor %}</ol>{% endif %}
+        </div>
         <div class="release-media release-media--{{ it.media.size }}">
           {%- for m in it.media %}
           {%- if m.type == 'video' %}
