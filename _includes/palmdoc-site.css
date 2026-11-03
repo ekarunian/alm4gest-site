@@ -44,3 +44,18 @@
 }
 .pd .capfig__media, .pd .capfig__media img { background: #fff; }
 .pd .capfig__media img { cursor: zoom-in; }
+/* 表: 狭い画面では1行を1枚のカードにし、各値の上に列見出しを添える（横にはみ出して列が潰れるのを防ぐ） */
+@media (max-width: 640px) {
+  .pd .dtable { overflow: visible; }
+  .pd .dtable table, .pd .dtable tbody, .pd .dtable tr, .pd .dtable :is(th, td), .pd .dtable caption { display: block; }
+  .pd .dtable table { min-width: 0; }
+  .pd .dtable thead { display: none; }
+  .pd .dtable tr { margin-bottom: 12px; padding: 14px 16px; border: 1px solid var(--pd-hairline); border-radius: 12px; background: var(--pd-card); }
+  .pd .dtable tbody tr:hover { background: var(--pd-card); }
+  .pd .dtable :is(th, td) { min-width: 0; padding: 0; border: 0; white-space: normal; text-align: left; line-height: 1.7; }
+  .pd .dtable tbody th { margin-bottom: 4px; font-size: 15px; }
+  .pd .dtable td { margin-top: 10px; font-size: 14px; }
+  .pd .dtable td[data-label]::before { content: attr(data-label); display: block; margin-bottom: 2px; font-size: 12px; font-weight: 700; color: var(--pd-muted); }
+  .pd .dtable td.num { display: flex; justify-content: space-between; gap: 16px; margin-top: 6px; }
+  .pd .dtable td.num::before { display: inline; margin: 0; }
+}
