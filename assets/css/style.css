@@ -7,7 +7,7 @@
 :root {
   --bg-top: #12171e;
   --bg-bottom: #11264b;
-  --text: #c2ccda;
+  --text: #e4e9f1;
   --accent: #6d97e0;
   --btn: #3b5e9c;
   --btn-hover: #4a72bb;
@@ -18,7 +18,7 @@
   --line-soft: rgba(151, 154, 158, 0.45);
   --hairline: rgba(255, 255, 255, 0.08);
   --heading: #eaeff6;
-  --muted: #9aa7b8;
+  --muted: #bcc6d4;
   --footer: #12171e;
   --container: 1140px;
   --font-en: "Belanosima", sans-serif;
@@ -423,9 +423,10 @@ h3 {
   margin: 100px 0 0;
   /* 日本語は読点「記録・分析し、」の後ろで折り返させる（実測: そこまで460px・
      次の文節まで556px）。韓国語・繁体字は下で別の幅にする */
-  max-width: 540px;
-  font-size: 16px;
-  line-height: 2;
+  max-width: 610px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--heading);
 }
 
 /* 日本語・繁体字は文節を1つの塊として置き、語の途中で改行させない。
@@ -434,13 +435,7 @@ h3 {
    本文の幅は viewport 560pxまで=画面幅-60px／560〜900px=500px／
    901px〜=2カラムになり405pxへ落ちてから540pxまで戻る */
 .hero-lead span {
-  display: inline;
-}
-
-@media (min-width: 500px) and (max-width: 900px), (min-width: 996px) {
-  .hero-lead span {
-    display: inline-block;
-  }
+  display: inline-block;
 }
 
 /* 韓国語・繁体字は同じ内容でも日本語より短く収まるため、日本語に合わせた
@@ -470,29 +465,60 @@ html[lang="ko"] .hero-lead {
 }
 
 .machines-label {
-  font-size: 12px;
-  letter-spacing: 0.16em;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   color: var(--muted);
 }
 
-.machine-chips {
+/* 対応機種: アプリの初期設定画面と同じく、ロゴと機種名の札で並べる */
+.machine-cards {
+  --cols: 5;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
+  width: 100%;
+  max-width: 610px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.machine-chips li {
-  padding: 5px 14px;
-  border: 1px solid var(--line-soft);
-  border-radius: 999px;
+.machine-cards li {
+  flex: 0 0 calc((100% - 8px * (var(--cols) - 1)) / var(--cols));
+  box-sizing: border-box;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 8px 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
   background: var(--card);
-  font-size: 13px;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+}
+
+.machine-cards img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 36px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .machine-cards { --cols: 3; }
+  .machine-cards img { height: 30px; }
+}
+
+.machine-cards span {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--heading);
+  text-align: center;
 }
 
 .hero-download {
@@ -1038,8 +1064,8 @@ html[lang="ko"] .hero-lead {
 
   .hero-lead {
     margin-top: 50px;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .hero-machines {
@@ -1316,7 +1342,7 @@ html[lang="ko"] .hero-lead {
 .release-list { list-style: none; margin: 0; padding: 0; }
 .release-list li { border-top: 1px solid var(--hairline); }
 .release-list { border-bottom: 1px solid var(--hairline); }
-.release-list a { display: flex; flex-direction: column; gap: 8px; padding: 18px 4px; color: var(--text); text-decoration: none; }
+.release-list a { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; align-items: center; row-gap: 8px; padding: 18px 4px; color: var(--text); text-decoration: none; }
 .release-list a:hover .release-name { color: var(--accent); }
 .release-date { color: var(--muted); font-size: 14px; }
 .release-name { font-weight: 700; color: var(--heading); }
@@ -1387,9 +1413,14 @@ html[lang="ko"] .hero-lead {
 .rel-game { font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 6px; border-radius: 4px; border: 1px solid var(--accent); color: var(--accent); white-space: nowrap; }
 
 /* 記事一覧: 1段目に日付と種類（右上に小さく版）、2段目に題。題の書き出しを全行で揃える */
-.release-head { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.release-head .release-ver { margin-left: auto; font-size: 12px; }
-.release-name { display: block; line-height: 1.6; text-wrap: pretty; }
+/* 日付の列幅を一覧の全行で共有し、種類の札の位置を揃える（subgrid） */
+.release-list { display: grid; grid-template-columns: auto auto 1fr; column-gap: 10px; }
+.release-list li { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; }
+.release-head { display: contents; }
+.release-head .release-date { grid-column: 1; }
+.release-head .release-kind { grid-column: 2; justify-self: start; }
+.release-head .release-ver { grid-column: 3; justify-self: end; font-size: 12px; }
+.release-name { grid-column: 1 / -1; display: block; line-height: 1.6; text-wrap: pretty; }
 .release-kind.kind-release { border-color: var(--accent); color: var(--accent); }
 .release-kind.kind-tech { border-color: transparent; background: color-mix(in srgb, var(--heading) 14%, transparent); color: var(--heading); }
 budoux-ja, budoux-zh-hant { word-break: keep-all; overflow-wrap: anywhere; }

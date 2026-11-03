@@ -31,9 +31,9 @@ layout: default
       </p>
       <div class="hero-machines">
         <span class="machines-label">{{ i.hero.machines_label }}</span>
-        <ul class="machine-chips">
+        <ul class="machine-cards">
           {%- for m in site.data.i18n.machines %}
-          <li>{{ m }}</li>
+          <li><img src="/assets/img/machines/{{ m.id }}.webp" alt=""><span>{{ m.name }}</span></li>
           {%- endfor %}
         </ul>
       </div>

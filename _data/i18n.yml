@@ -28,12 +28,13 @@ urls:
   release_en: https://app.notion.com/p/3b00513fdbf881eabaffcf5baf877f68
   basic_course: https://p.eagate.573.jp/payment/p/ex_course_detail.html?course=eaBASIC
 
+# 対応機種。並びはアプリの機種タブと同じ。ロゴは konami_score_app の assets/brand/ を縮めたもの
 machines:
-  - SOUND VOLTEX
-  - DanceDanceRevolution
-  - GITADORA
-  - pop'n music
-  - beatmania IIDX
+  - { id: sdvx, name: SOUND VOLTEX }
+  - { id: ddr, name: "DanceDance<wbr>Revolution" }
+  - { id: gitadora, name: GITADORA }
+  - { id: popn, name: "pop'n music" }
+  - { id: iidx, name: beatmania IIDX }
 
 ja:
   course_note: ["スコアの取り込みには、", "e-amusementベーシックコース", "への加入が必要です。"]
