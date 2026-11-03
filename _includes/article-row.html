@@ -1,0 +1,4 @@
+{%- comment -%}記事一覧の1行。1段目は日付と種類、右上に小さく版。2段目に題（文節で折り返す）{%- endcomment -%}
+{%- assign r = include.r -%}
+{%- if r.kind == 'release' -%}{%- assign href = include.prefix | append: '/blog/' | append: r.id -%}{%- assign name = r[include.lang].title -%}{%- else -%}{%- assign href = r.url -%}{%- assign name = r.title -%}{%- endif -%}
+<li class="kind-{{ r.kind }}"><a href="{{ href }}"><span class="release-head"><span class="release-date">{{ r.date | date: include.i.blog.date_format }}</span><span class="release-kind kind-{{ r.kind }}">{{ include.i.blog.kinds[r.kind] }}</span>{% if r.version %}<span class="release-ver">{{ r.version }}</span>{% endif %}</span><span class="release-name">{% include jp.html text=name %}</span></a></li>

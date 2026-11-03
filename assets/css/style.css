@@ -1234,7 +1234,6 @@ html[lang="ko"] .hero-lead {
 .release-sec-num { display: inline-flex; align-items: center; justify-content: center; line-height: 1; min-width: 1.6em; height: 1.6em; padding: 0 0.3em; border-radius: 6px; background: var(--btn); color: var(--btn-text); font-size: 0.8em; font-weight: 700; font-variant-numeric: tabular-nums; }
 .release-toc .release-sec-num { min-width: 1.5em; height: 1.5em; font-size: 12px; }
 .release-ver { font-variant-numeric: tabular-nums; }
-.nb { display: inline-block; }
 .release-body { display: grid; gap: 32px; align-items: start; }
 .release-sec { scroll-margin-top: 0; }
 .release-sec + .release-sec { margin-top: 28px; }
@@ -1300,15 +1299,15 @@ html[lang="ko"] .hero-lead {
   .rs-text .release-row-desc, .rs-text .release-row-list > span { margin-top: 0; padding-left: 0; }
   .rs-text .release-row-list > span { padding-left: 1em; }
   .rs-text .release-row-list > span::before { left: 0; }
-  /* 進み具合: 見出しごとに区切った点。今の1枚は横に伸ばして塗る */
+  /* 進み具合: 等間隔の点。今の1枚は塗って少し大きくする（位置は動かさない） */
   .rs-nav { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 18px 12px; }
   .rs-arrow { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--hairline); border-radius: 50%; background: var(--card); color: var(--text); cursor: pointer; }
   .rs-arrow svg { width: 18px; height: 18px; }
   .rs-arrow:disabled { opacity: 0.3; cursor: default; }
-  .rs-dots { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 12px; }
-  .rs-dot-group { display: flex; gap: 4px; }
-  .rs-dot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: rgba(154, 167, 184, 0.35); cursor: pointer; transition: width 0.2s, background-color 0.2s; }
-  .rs-dot[aria-current="true"] { width: 22px; background: var(--accent); }
+  .rs-dots { display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .rs-dot-group { display: contents; }
+  .rs-dot { flex: none; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: rgba(154, 167, 184, 0.35); cursor: pointer; transition: transform 0.2s, background-color 0.2s; }
+  .rs-dot[aria-current="true"] { background: var(--accent); transform: scale(1.35); }
   [data-theme="light"] .rs-dot { background: rgba(15, 23, 42, 0.18); }
   [data-theme="light"] .rs-slide, [data-theme="light"] .rs-tab, [data-theme="light"] .rs-arrow { background: #ffffff; border-color: rgba(0, 40, 140, 0.12); }
   [data-theme="light"] .rs-tab[aria-current="true"] { background: rgba(0, 87, 255, 0.08); border-color: var(--accent); }
@@ -1317,9 +1316,9 @@ html[lang="ko"] .hero-lead {
 .release-list { list-style: none; margin: 0; padding: 0; }
 .release-list li { border-top: 1px solid var(--hairline); }
 .release-list li:last-child { border-bottom: 1px solid var(--hairline); }
-.release-list a { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 4px; color: var(--text); text-decoration: none; }
+.release-list a { display: flex; flex-direction: column; gap: 8px; padding: 18px 4px; color: var(--text); text-decoration: none; }
 .release-list a:hover .release-name { color: var(--accent); }
-.release-date { color: var(--muted); font-size: 14px; min-width: 10em; }
+.release-date { color: var(--muted); font-size: 14px; }
 .release-name { font-weight: 700; color: var(--heading); }
 
 /* ---------------- 明暗の切り替え（既定はダーク。ライトは Palm Works のライトと同じ配色） ---------------- */
@@ -1374,9 +1373,7 @@ html[lang="ko"] .hero-lead {
 }
 /* 記事の種類の札（リリースノート・技術記事） */
 .release-kind { display: inline-flex; align-items: center; align-self: center; padding: 2px 10px; border: 1px solid var(--line); border-radius: 50px; font-size: 12px; line-height: 1.6; color: var(--muted); white-space: nowrap; }
-.release-list a { align-items: center; }
 /* 文節の切れ目（release.js がゼロ幅スペースを入れる）でだけ折り返す */
-.nb-phrase { word-break: keep-all; overflow-wrap: anywhere; }
 /* 画像の無い項目は文章だけ（押せない）。画像が1枚も無い記事は枠を出さず1列 */
 .release-row-text { cursor: default; }
 .release-row-text:hover { background: none; }
@@ -1388,3 +1385,14 @@ html[lang="ko"] .hero-lead {
 /* 機種限定の項目に付ける札（Xの投稿のハッシュタグが一部機種のときだけ） */
 .rel-games { display: inline-flex; gap: 4px; margin-left: 8px; vertical-align: 2px; }
 .rel-game { font-size: 11px; font-weight: 700; line-height: 1; padding: 3px 6px; border-radius: 4px; border: 1px solid var(--accent); color: var(--accent); white-space: nowrap; }
+
+/* 記事一覧: 1段目に日付と種類（右上に小さく版）、2段目に題。題の書き出しを全行で揃える */
+.release-head { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.release-head .release-ver { margin-left: auto; font-size: 12px; }
+.release-name { display: block; line-height: 1.6; text-wrap: pretty; }
+.release-kind.kind-release { border-color: var(--accent); color: var(--accent); }
+.release-kind.kind-tech { border-color: transparent; background: color-mix(in srgb, var(--heading) 14%, transparent); color: var(--heading); }
+budoux-ja, budoux-zh-hant { word-break: keep-all; overflow-wrap: anywhere; }
+
+/* 技術記事（palmdoc の書き出しを影の中に置く）。色と書体を影の中へ渡す */
+.pd-host { --pd-bg: var(--bg-top); --pd-text: var(--text); --pd-heading: var(--heading); --pd-muted: var(--muted); --pd-accent: var(--accent); --pd-hairline: var(--hairline); --pd-line: var(--line-soft); --pd-card: var(--card); --pd-font: var(--font-body); margin-top: 8px; }

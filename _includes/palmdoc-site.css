@@ -1,0 +1,46 @@
+/* palmdoc の書き出しを ALM4GEST の配色・書体に合わせる。色はページ側（.pd-host）から --pd-* で受け取る */
+:host { display: block; }
+.pd[data-theme][data-mode] {
+  --role-bg: var(--pd-bg);
+  --role-text-title: var(--pd-heading);
+  --role-text-body: var(--pd-text);
+  --role-text-sub: var(--pd-muted);
+  --role-text-on-primary: #fff;
+  --role-bg-inverse: var(--pd-accent);
+  --role-bg-deep: var(--pd-card);
+  --role-text-on-deep: var(--pd-heading);
+  --role-text-on-inverse: #fff;
+  --role-th-bg: transparent;
+  --role-th-fg: var(--pd-heading);
+  --role-rule-strong: var(--pd-line);
+  --role-rule: var(--pd-hairline);
+  --role-na: var(--pd-hairline);
+  --diagram-primary: var(--pd-accent);
+  --diagram-primary-mid: color-mix(in srgb, var(--pd-accent) 65%, var(--pd-text));
+  --diagram-primary-soft: color-mix(in srgb, var(--pd-accent) 12%, transparent);
+  --diagram-surface: transparent;
+  --diagram-node-border: var(--pd-line);
+  --diagram-surface-alt: var(--pd-card);
+  --diagram-neutral-1: var(--pd-hairline);
+  --diagram-neutral-2: color-mix(in srgb, var(--pd-muted) 40%, transparent);
+  --diagram-neutral-3: color-mix(in srgb, var(--pd-muted) 70%, transparent);
+  --diagram-neutral-4: var(--pd-muted);
+  --diagram-connector: var(--pd-text);
+  --status-ok: var(--pd-accent);
+  --font-heading: var(--pd-font);
+  --font-body: var(--pd-font);
+  --font-numeric: var(--pd-font);
+  background: transparent;
+  color: var(--pd-text);
+}
+.pd .doc-main { padding: 0; }
+.pd .doc-hero > .doc-kicker:first-child { display: none; }
+.pd .doc-hero__title { color: var(--pd-heading); font-size: 28px; line-height: 1.6; }
+.pd[data-theme][data-density] { --type-body: 16px; --type-lead: 16px; }
+@media (max-width: 900px) {
+  .pd .doc-hero__title { font-size: 20px; }
+  .pd .flw-pn__title { font-size: 18px; }
+  .pd[data-theme][data-density] { --type-body: 15px; --type-lead: 15px; }
+}
+.pd .capfig__media, .pd .capfig__media img { background: #fff; }
+.pd .capfig__media img { cursor: zoom-in; }

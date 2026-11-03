@@ -6,19 +6,6 @@
   'use strict';
   var narrow = window.matchMedia('(max-width: 859px)');
 
-  // 句読点で区切った塊が1行に収まらない時、語の途中で折れないよう、文節の切れ目（助詞の後に漢字・カタカナ・英数字・括弧が来る所）だけを折り返し位置にする。
-  // 送り仮名（選び方・見た目・並べ替え）の後では折らない
-  var HIRA = /[にをはがでとのへもやらどてし]/;
-  var HEAD = /[一-鿿々゠-ヿA-Za-z0-9０-９「『（(]/;
-  document.querySelectorAll('.release .nb').forEach(function (el) {
-    var t = el.textContent, out = '';
-    for (var k = 0; k < t.length; k++) {
-      if (k > 0 && HIRA.test(t[k - 1]) && HEAD.test(t[k])) out += '​';
-      out += t[k];
-    }
-    if (out !== t) { el.textContent = out; el.classList.add('nb-phrase'); }
-  });
-
   // ---- PC: 左の項目と右の枠（画像の無い項目 .release-row-text は押せない。画像が1枚も無い記事には枠が無い）
   var root = document.querySelector('[data-release]');
   var showPc = function () {};

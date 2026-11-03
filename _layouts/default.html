@@ -35,17 +35,24 @@
 <link rel="canonical" href="{{ site.url }}{{ own_path }}">
 <link rel="icon" href="/assets/img/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/logo-mark.png">
+{%- unless page.lang_only %}
 {%- for l in site.data.i18n.langs %}
 {%- if page.page_id == 'index' %}{% assign alt_href = l.prefix | append: '/' %}{% else %}{% assign alt_href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
 <link rel="alternate" hreflang="{{ site.data.i18n[l.code].html_lang }}" href="{{ site.url }}{{ alt_href }}">
 {%- endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ self_path }}">
+{%- endunless %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap"></noscript>
 <script>try{if(localStorage.getItem("alm4gest-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
 <link rel="stylesheet" href="/assets/css/style.css?v={{ site.time | date: "%s" }}">
+{%- if page.lang == 'ja' %}
+<script src="/assets/js/vendor/budoux-ja.min.js" defer></script>
+{%- elsif page.lang == 'zh' %}
+<script src="/assets/js/vendor/budoux-zh-hant.min.js" defer></script>
+{%- endif %}
 {%- if page.page_id == 'index' %}
 <link rel="preload" as="image" href="/assets/img/shots/{% if page.lang == 'ja' %}ja{% else %}en{% endif %}/01_home.webp" type="image/webp">
 <script type="application/ld+json">
@@ -82,7 +89,7 @@
       </summary>
       <div class="lang-drop-list">
         {%- for l in site.data.i18n.langs %}
-        {%- if page.page_id == 'index' %}{% assign href = l.prefix | append: '/' %}{% else %}{% assign href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
+        {%- if page.page_id == 'index' %}{% assign href = l.prefix | append: '/' %}{% elsif page.lang_only and l.code != page.lang %}{% assign href = l.prefix | append: '/blog/' %}{% else %}{% assign href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
         <a href="{{ href }}" lang="{{ site.data.i18n[l.code].html_lang }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
         {%- endfor %}
       </div>

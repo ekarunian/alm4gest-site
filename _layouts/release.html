@@ -14,7 +14,7 @@ layout: default
 {%- endif -%}{%- endfor -%}{%- endfor -%}
 <article class="doc release">
   <div class="container">
-    <p class="release-meta"><a href="{{ lang_prefix }}/blog/">{{ i.blog.title }}</a><span class="release-kind">{{ i.blog.kinds[r.kind] }}</span><span>{{ r.date | date: i.blog.date_format }}</span><span class="release-ver">{{ r.version }}</span></p>
+    <p class="release-meta"><a href="{{ lang_prefix }}/blog/">{{ i.blog.title }}</a><span class="release-kind kind-{{ r.kind }}">{{ i.blog.kinds[r.kind] }}</span><span>{{ r.date | date: i.blog.date_format }}</span><span class="release-ver">{{ r.version }}</span></p>
     <h1 class="doc-title">{% include jp.html text=t.title %}</h1>
 
     <nav class="release-toc" aria-label="{{ i.blog.toc }}">
@@ -38,7 +38,7 @@ layout: default
           {%- else %}
           <div class="release-row release-row-text">
           {%- endif %}
-            <span class="release-row-title"><span class="release-row-num">{{ sn }}-{{ forloop.index }}</span>{{ it.title }}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span>
+            <span class="release-row-title"><span class="release-row-num">{{ sn }}-{{ forloop.index }}</span>{% include jp.html text=it.title %}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span>
             {%- if it.desc %}<span class="release-row-desc">{% include jp.html text=it.desc %}</span>{% endif %}
             {%- if it.list %}<span class="release-row-list">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</span>{% endif %}
           {%- if it.media %}
@@ -95,7 +95,7 @@ layout: default
         {%- for s in t.sections %}{%- assign sn = forloop.index %}{%- for it in s.items %}
         {%- assign m = it.media %}
         <li class="rs-slide{% unless m %} rs-slide-text{% endunless %}" data-sec="{{ sn }}">
-          <h2 class="rs-title"><span class="rs-num">{{ sn }}-{{ forloop.index }}</span><span>{{ it.title }}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span></h2>
+          <h2 class="rs-title"><span class="rs-num">{{ sn }}-{{ forloop.index }}</span><span>{% include jp.html text=it.title %}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span></h2>
           <div class="rs-text">
             {%- if it.desc %}<p class="release-row-desc">{% include jp.html text=it.desc %}</p>{% endif %}
             {%- if it.list %}<p class="release-row-list">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}

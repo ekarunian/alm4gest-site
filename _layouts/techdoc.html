@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{%- assign i = site.data.i18n[page.lang] -%}
+<article class="doc release techdoc" id="top">
+  <div class="container">
+    <p class="release-meta"><a href="/blog/">{{ i.blog.title }}</a><span class="release-kind kind-{{ page.kind }}">{{ i.blog.kinds[page.kind] }}</span><span>{{ page.date | date: i.blog.date_format }}</span></p>
+{{ content }}
+  </div>
+</article>
+<script>
+(function () {
+  var host = document.querySelector('.pd-host');
+  var root = host && host.shadowRoot;
+  if (!root) return;
+  var pd = root.querySelector('.pd');
+  // サイトの明暗の切り替えに合わせる
+  var html = document.documentElement;
+  var sync = function () { pd.dataset.mode = html.dataset.theme === 'light' ? 'light' : 'dark'; };
+  sync();
+  new MutationObserver(sync).observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+  // 図を押すと拡大する（palmdoc の書き出しと同じ動き）
+  var dlg = null;
+  var zoom = function (img) {
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'capfig-zoom';
+      dlg.setAttribute('aria-label', '{{ i.blog.zoom }}');
+      dlg.addEventListener('click', function () { dlg.close(); });
+      pd.appendChild(dlg);
+    }
+    var c = img.cloneNode();
+    c.removeAttribute('width'); c.removeAttribute('height'); c.removeAttribute('style');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'capfig-zoom__close'; b.textContent = '{{ i.blog.close }}';
+    dlg.replaceChildren(b, c);
+    dlg.showModal();
+  };
+  root.querySelectorAll('.capfig__media img').forEach(function (img) {
+    img.tabIndex = 0; img.setAttribute('role', 'button');
+    img.addEventListener('click', function () { zoom(img); });
+    img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); zoom(img); } });
+  });
+  // <Block top={N}> の隙間を、今の幅で測り直す（palmdoc の書き出しと同じ計算）
+  var px = function (v) { return parseFloat(v) || 0; };
+  var shown = function (el) { return el && !el.classList.contains('site-block') && ['SCRIPT', 'STYLE', 'TEMPLATE', 'LINK'].indexOf(el.tagName) < 0 && getComputedStyle(el).display !== 'none'; };
+  var before = function (el) {
+    for (var p = el.previousElementSibling; p; p = p.previousElementSibling) if (shown(p)) return p;
+    return el.parentElement && el.parentElement.closest('.doc-sec__body') ? before(el.parentElement) : null;
+  };
+  var fit = function () {
+    root.querySelectorAll('.doc-main .site-block[data-top]').forEach(function (b) {
+      var el = b.nextElementSibling;
+      while (el && !shown(el)) el = el.nextElementSibling;
+      if (!el) return;
+      var want = Number(b.dataset.top), prev = before(el);
+      el.style.marginTop = '0px';
+      if (!prev) { el.style.marginTop = want + 'px'; return; }
+      prev.style.marginBottom = '0px';
+      var gap = el.getBoundingClientRect().top - prev.getBoundingClientRect().bottom;
+      var has = px(getComputedStyle(prev).paddingBottom) + px(getComputedStyle(el).paddingTop);
+      el.style.marginTop = Math.max(0, want - has - gap) + 'px';
+    });
+  };
+  fit();
+  var w = innerWidth;
+  addEventListener('resize', function () { if (innerWidth !== w) { w = innerWidth; fit(); } });
+})();
+</script>

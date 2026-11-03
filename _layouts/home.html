@@ -113,7 +113,7 @@ layout: default
     {%- assign rel = site.data.releases | sort: "date" | reverse -%}
     <ul class="release-list reveal">
       {%- for r in rel limit: 3 %}
-      <li><a href="{{ lang_prefix }}/blog/{{ r.id }}"><span class="release-date">{{ r.date | date: i.blog.date_format }}</span><span class="release-kind">{{ i.blog.kinds[r.kind] }}</span><span class="release-ver">{{ r.version }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>
+      {% include article-row.html r=r i=i lang=page.lang prefix=lang_prefix %}
       {%- endfor %}
     </ul>
     <p class="release-more reveal"><a href="{{ lang_prefix }}/blog/">{{ i.blog.more }} →</a></p>
