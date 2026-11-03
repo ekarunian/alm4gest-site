@@ -10,10 +10,10 @@ layout: default
 {%- assign total = 0 -%}{%- for s in t.sections -%}{%- assign total = total | plus: s.items.size -%}{%- endfor -%}
 <article class="doc release">
   <div class="container">
-    <p class="release-meta"><a href="{{ lang_prefix }}/releases/">{{ i.releases.title }}</a><span>{{ r.date | date: i.releases.date_format }}</span><span class="release-ver">{{ r.version }}</span></p>
+    <p class="release-meta"><a href="{{ lang_prefix }}/blog/">{{ i.blog.title }}</a><span class="release-kind">{{ i.blog.kinds[r.kind] }}</span><span>{{ r.date | date: i.blog.date_format }}</span><span class="release-ver">{{ r.version }}</span></p>
     <h1 class="doc-title">{% include jp.html text=t.title %}</h1>
 
-    <nav class="release-toc" aria-label="{{ i.releases.toc }}">
+    <nav class="release-toc" aria-label="{{ i.blog.toc }}">
       <ol>
         {%- for s in t.sections %}
         <li><a href="#sec-{{ forloop.index }}"><span class="release-sec-num">{{ forloop.index }}</span>{{ s.heading }}</a></li>

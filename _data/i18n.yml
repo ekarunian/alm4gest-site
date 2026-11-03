@@ -39,10 +39,11 @@ ja:
   course_note: ["スコアの取り込みには、", "e-amusementベーシックコース", "への加入が必要です。"]
   theme_light: "ライトモードに切り替え"
   theme_dark: "ダークモードに切り替え"
-  releases:
-    more: "リリースノートをすべて見る"
+  blog:
+    more: "記事をすべて見る"
     toc: "目次"
-    title: "リリースノート"
+    title: "記事"
+    kinds: { release: "リリースノート", tech: "技術記事" }
     date_format: "%Y年%-m月%-d日"
   og_locale: ja_JP
   html_lang: ja
@@ -129,10 +130,11 @@ en:
   course_note: ["Importing scores requires an active ", "e-amusement Basic Course", " subscription."]
   theme_light: "Switch to light mode"
   theme_dark: "Switch to dark mode"
-  releases:
-    more: "See all release notes"
+  blog:
+    more: "See all posts"
     toc: "Contents"
-    title: "Release notes"
+    title: "Blog"
+    kinds: { release: "Release notes", tech: "Tech article" }
     date_format: "%B %-d, %Y"
   og_locale: en_US
   html_lang: en
@@ -201,10 +203,11 @@ ko:
   course_note: ["스코어를 가져오려면 ", "e-amusement 베이직 코스", " 가입이 필요합니다."]
   theme_light: "라이트 모드로 전환"
   theme_dark: "다크 모드로 전환"
-  releases:
-    more: "릴리스 노트 모두 보기"
+  blog:
+    more: "모든 글 보기"
     toc: "목차"
-    title: "릴리스 노트"
+    title: "블로그"
+    kinds: { release: "릴리스 노트", tech: "기술 글" }
     date_format: "%Y년 %-m월 %-d일"
   og_locale: ko_KR
   html_lang: ko
@@ -273,10 +276,11 @@ zh:
   course_note: ["匯入成績需要加入", "e-amusement 基本課程", "。"]
   theme_light: "切換為淺色模式"
   theme_dark: "切換為深色模式"
-  releases:
-    more: "查看所有版本說明"
+  blog:
+    more: "查看所有文章"
     toc: "目錄"
-    title: "版本說明"
+    title: "部落格"
+    kinds: { release: "版本說明", tech: "技術文章" }
     date_format: "%Y年%-m月%-d日"
   og_locale: zh_TW
   html_lang: zh-Hant
