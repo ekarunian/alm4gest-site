@@ -1,5 +1,2365 @@
 # リリースノートの正本。X の告知（8/21 アップデート予告①〜⑦・公開時の投稿）の事実を、機能ごとに整理し直して書く。
 # 1項目 = 右の枠に出す画面1つ。画像・動画は site.release_media_base/<id>/ に置く。
+- id: "2026-11-04"
+  kind: release
+  version: "1.3.20261104"
+  date: "2026-11-02"
+  ja:
+    title: "beatmania IIDX に対応しました"
+    sections:
+      - heading: "beatmania IIDX に対応"
+        items:
+          - title: "同期・楽曲一覧・おすすめ・Tier表・目標管理"
+            games: [IIDX]
+            desc: "beatmania IIDX で、同期・楽曲一覧・おすすめ・Tier表・目標管理を使えます。"
+            media: {type: video, src: iidx.mp4, poster: iidx.jpg}
+          - title: "譜面確認"
+            games: [IIDX]
+            list:
+              - "☆8以上が対象です"
+              - "ZINRAIの「譜面表示エリアの固定」にも対応しました"
+            media: {type: video, src: iidx-chart.mp4, poster: iidx-chart.jpg}
+          - title: "RANDOMの当たり配置の記録と共有"
+            games: [IIDX]
+            list:
+              - "オプションと、RANDOMの当たり配置を記録・管理できます"
+              - "皆さんのオプション設定の分布と当たり配置が共有されます"
+              - "当たり配置から、対応する譜面をすぐ確認できます"
+              - "当たり配置に対応するランダムレーンチケットがある場合は、それが分かるように表示します"
+            media: {type: video, src: iidx-random.mp4, poster: iidx-random.jpg}
+          - title: "注意事項"
+            games: [IIDX]
+            list:
+              - "初めのうちは統計の精度が暴れることが想定されます。11月中はご容赦ください"
+              - "INFINITASの取り込みには対応していません"
+              - "IIDXはジャケットがなく、Tier表が見づらい可能性があります。見せ方のご意見は、アプリ内のフォームなどでお待ちしています"
+      - heading: "楽曲一覧の絞り込み"
+        items:
+          - title: "絞り込みのUIを改善"
+            list:
+              - "レベルごとの楽曲数を棒グラフで表します"
+              - "得意度・レーダーの主軸でも絞り込めます"
+              - "参加中のすべてのスコアタの対象曲で絞り込めます"
+              - "DDRは、フレアランクなどでの絞り込みに対応しました"
+            media: {type: video, src: filter.mp4, poster: filter.jpg}
+      - heading: "課題の受け付け"
+        items:
+          - title: "レベルごとの受け付け設定"
+            list:
+              - "レベルごとに「歓迎」「OK」「NG」を設定できます"
+              - "受け付けるときの一言を設定できます（優先度は譜面ごと→機種ごと→全体）"
+              - "重複を避けるため、課題に登録済みの譜面は投げられないようにしました"
+            media: {type: video, src: ch-accept.mp4, poster: ch-accept.jpg}
+      - heading: "スコアタ"
+        items:
+          - title: "家庭用の参加可否"
+            desc: "主催者が「家庭用の参加可否」を選べます。機能は変わらず、参加できるかどうかを明示するだけです。"
+            media: {type: video, src: sa-home.mp4, poster: sa-home.jpg}
+          - title: "家庭用マークとコメントの全文"
+            list:
+              - "順位表などに「家庭用」マークを表示します"
+              - "投稿されたコメントを、省略せずに全文で表示できます"
+            media: {type: image, src: sa-ranking.jpg}
+      - heading: "ホーム画面ウィジェット"
+        items:
+          - title: "iPhoneのホーム画面ウィジェット"
+            list:
+              - "小・中の2サイズに対応しました"
+              - "この機能はプロトタイプの状態で、今後も改善していきます"
+              - "不具合を報告するときに、画像4枚と動画1本（60秒まで）を添付できます。このアカウントへのリンクも置きました"
+            media: {type: video, src: widget.mp4, poster: widget.jpg}
+      - heading: "軽微な改善と修正"
+        items:
+          - title: "Tier表の未クリアの絞り込み"
+            desc: "Tier表に、未クリアだけの絞り込みを足しました。"
+            media: {type: video, src: tier-uncleared.mp4, poster: tier-uncleared.jpg}
+          - title: "判定調整とハイスピの既定値"
+            list:
+              - "判定調整とハイスピの既定値を、GF/DM・SP/DPで分けました"
+              - "SDVXの判定調整を、1ms単位で変えられるように直しました"
+              - "各機種の同期と表示の不具合を直しました（一部は調査用のログの取得まで）"
+            media: {type: video, src: play-setup.mp4, poster: play-setup.jpg}
+  en:
+    title: "beatmania IIDX support"
+    sections:
+      - heading: "beatmania IIDX support"
+        items:
+          - title: "Sync, song list, recommendations, Tier List and goals"
+            games: [IIDX]
+            desc: "Sync, the song list, recommendations, Tier Lists and goals now work for beatmania IIDX."
+            media: {type: video, src: iidx.mp4, poster: iidx.jpg}
+          - title: "Chart viewer"
+            games: [IIDX]
+            list:
+              - "Covers ☆8 and above"
+              - "Supports ZINRAI's \"fixed chart display area\""
+            media: {type: video, src: iidx-chart.mp4, poster: iidx-chart.jpg}
+          - title: "Record and share good RANDOM patterns"
+            games: [IIDX]
+            list:
+              - "Record and manage options and good RANDOM lane patterns"
+              - "Everyone's option settings and good patterns are shared"
+              - "Jump from a good pattern straight to the matching chart"
+              - "If a random lane ticket matches the pattern, it's shown"
+            media: {type: video, src: iidx-random.mp4, poster: iidx-random.jpg}
+          - title: "Notes"
+            games: [IIDX]
+            list:
+              - "Statistics are expected to be unstable at first. Please bear with us through November"
+              - "INFINITAS import isn't supported"
+              - "IIDX has no jackets, so Tier Lists may be hard to read. We welcome ideas on how to show them through the in-app form"
+      - heading: "Song list filters"
+        items:
+          - title: "A better filter UI"
+            list:
+              - "The number of songs per level is shown as a bar chart"
+              - "Filter by Strength or the main axis of the radar"
+              - "Filter by the songs of all Score Attacks you've joined"
+              - "For DDR, filter by Flare rank and more"
+            media: {type: video, src: filter.mp4, poster: filter.jpg}
+      - heading: "Accepting challenges"
+        items:
+          - title: "Acceptance per level"
+            list:
+              - "Set \"Welcome\", \"OK\" or \"No\" for each level"
+              - "Set a short message for accepting (priority: per chart, then per game, then overall)"
+              - "Charts already registered as challenges can't be sent again, to avoid duplicates"
+            media: {type: video, src: ch-accept.mp4, poster: ch-accept.jpg}
+      - heading: "Score Attack"
+        items:
+          - title: "Home version entries"
+            desc: "The host can choose whether home versions can take part. This doesn't change any features; it only makes it clear."
+            media: {type: video, src: sa-home.mp4, poster: sa-home.jpg}
+          - title: "Home mark and full comments"
+            list:
+              - "A \"Home\" mark appears in rankings and elsewhere"
+              - "Posted comments can be shown in full, without truncation"
+            media: {type: image, src: sa-ranking.jpg}
+      - heading: "Home screen widget"
+        items:
+          - title: "iPhone home screen widget"
+            list:
+              - "Available in small and medium sizes"
+              - "This feature is a prototype and will keep improving"
+              - "Bug reports can include 4 images and 1 video (up to 60 seconds). A link to this account is also included"
+            media: {type: video, src: widget.mp4, poster: widget.jpg}
+      - heading: "Small improvements and fixes"
+        items:
+          - title: "Filter Tier Lists by not cleared"
+            desc: "Added a filter to show only not-cleared charts in Tier Lists."
+            media: {type: video, src: tier-uncleared.mp4, poster: tier-uncleared.jpg}
+          - title: "Timing and hi-speed defaults"
+            list:
+              - "Timing and hi-speed defaults are now separate for GF/DM and SP/DP"
+              - "SDVX timing can now be changed in 1 ms steps"
+              - "Fixed sync and display problems in each game (some only up to collecting logs for investigation)"
+            media: {type: video, src: play-setup.mp4, poster: play-setup.jpg}
+  ko:
+    title: "beatmania IIDX에 대응했습니다"
+    sections:
+      - heading: "beatmania IIDX 지원"
+        items:
+          - title: "동기화·곡 목록·추천·티어표·목표 관리"
+            games: [IIDX]
+            desc: "beatmania IIDX에서 동기화·곡 목록·추천·티어표·목표 관리를 쓸 수 있습니다."
+            media: {type: video, src: iidx.mp4, poster: iidx.jpg}
+          - title: "채보 확인"
+            games: [IIDX]
+            list:
+              - "☆8 이상이 대상입니다"
+              - "ZINRAI의 '채보 표시 영역 고정'에도 대응했습니다"
+            media: {type: video, src: iidx-chart.mp4, poster: iidx-chart.jpg}
+          - title: "RANDOM 좋은 배치 기록과 공유"
+            games: [IIDX]
+            list:
+              - "옵션과 RANDOM의 좋은 배치를 기록·관리할 수 있습니다"
+              - "모두의 옵션 설정 분포와 좋은 배치가 공유됩니다"
+              - "좋은 배치에서 해당 채보를 바로 확인할 수 있습니다"
+              - "좋은 배치에 맞는 랜덤 레인 티켓이 있으면 보이게 표시합니다"
+            media: {type: video, src: iidx-random.mp4, poster: iidx-random.jpg}
+          - title: "주의 사항"
+            games: [IIDX]
+            list:
+              - "처음에는 통계 정확도가 크게 흔들릴 수 있습니다. 11월 중에는 양해 부탁드립니다"
+              - "INFINITAS 가져오기는 지원하지 않습니다"
+              - "IIDX는 재킷이 없어 티어표가 보기 어려울 수 있습니다. 보여 주는 방식에 대한 의견은 앱 내 양식 등으로 보내 주세요"
+      - heading: "곡 목록 필터"
+        items:
+          - title: "필터 UI 개선"
+            list:
+              - "레벨별 곡 수를 막대그래프로 보여 줍니다"
+              - "강점도·레이더 주축으로도 좁힐 수 있습니다"
+              - "참가 중인 모든 스코어 어택 대상곡으로 좁힐 수 있습니다"
+              - "DDR은 플레어 랭크 등으로 좁힐 수 있습니다"
+            media: {type: video, src: filter.mp4, poster: filter.jpg}
+      - heading: "과제 수락"
+        items:
+          - title: "레벨별 수락 설정"
+            list:
+              - "레벨별로 '환영' 'OK' 'NG'를 설정할 수 있습니다"
+              - "수락할 때의 한마디를 설정할 수 있습니다(우선순위는 채보별 → 기종별 → 전체)"
+              - "중복을 피하기 위해 이미 과제로 등록된 채보는 보낼 수 없게 했습니다"
+            media: {type: video, src: ch-accept.mp4, poster: ch-accept.jpg}
+      - heading: "스코어 어택"
+        items:
+          - title: "가정용 참가 가능 여부"
+            desc: "주최자가 '가정용 참가 가능 여부'를 고를 수 있습니다. 기능은 바뀌지 않고, 참가 가능 여부를 명시할 뿐입니다."
+            media: {type: video, src: sa-home.mp4, poster: sa-home.jpg}
+          - title: "가정용 마크와 코멘트 전문"
+            list:
+              - "순위표 등에 '가정용' 마크를 표시합니다"
+              - "올라온 코멘트를 생략하지 않고 전문으로 표시할 수 있습니다"
+            media: {type: image, src: sa-ranking.jpg}
+      - heading: "홈 화면 위젯"
+        items:
+          - title: "iPhone 홈 화면 위젯"
+            list:
+              - "소·중 2가지 크기에 대응했습니다"
+              - "이 기능은 프로토타입 상태이며 앞으로 계속 개선합니다"
+              - "버그를 신고할 때 이미지 4장과 동영상 1개(60초까지)를 첨부할 수 있습니다. 이 계정으로 가는 링크도 두었습니다"
+            media: {type: video, src: widget.mp4, poster: widget.jpg}
+      - heading: "작은 개선과 수정"
+        items:
+          - title: "티어표 미클리어 필터"
+            desc: "티어표에 미클리어만 보는 필터를 추가했습니다."
+            media: {type: video, src: tier-uncleared.mp4, poster: tier-uncleared.jpg}
+          - title: "판정 조정과 하이스피드 기본값"
+            list:
+              - "판정 조정과 하이스피드 기본값을 GF/DM·SP/DP로 나눴습니다"
+              - "SDVX 판정 조정을 1ms 단위로 바꿀 수 있게 고쳤습니다"
+              - "각 기종의 동기화와 표시 문제를 고쳤습니다(일부는 조사용 로그 수집까지)"
+            media: {type: video, src: play-setup.mp4, poster: play-setup.jpg}
+  zh:
+    title: "支援 beatmania IIDX"
+    sections:
+      - heading: "支援 beatmania IIDX"
+        items:
+          - title: "同步、樂曲一覽、推薦、Tier表與目標管理"
+            games: [IIDX]
+            desc: "beatmania IIDX 可使用同步、樂曲一覽、推薦、Tier表與目標管理。"
+            media: {type: video, src: iidx.mp4, poster: iidx.jpg}
+          - title: "譜面確認"
+            games: [IIDX]
+            list:
+              - "對象為 ☆8 以上"
+              - "也支援 ZINRAI 的「固定譜面顯示區域」"
+            media: {type: video, src: iidx-chart.mp4, poster: iidx-chart.jpg}
+          - title: "記錄與分享 RANDOM 的好配置"
+            games: [IIDX]
+            list:
+              - "可記錄與管理選項及 RANDOM 的好配置"
+              - "會分享大家的選項設定分布與好配置"
+              - "可從好配置立即確認對應的譜面"
+              - "若有對應好配置的隨機軌道券，會顯示出來"
+            media: {type: video, src: iidx-random.mp4, poster: iidx-random.jpg}
+          - title: "注意事項"
+            games: [IIDX]
+            list:
+              - "初期統計精度可能不穩定，11 月期間敬請見諒"
+              - "尚不支援匯入 INFINITAS"
+              - "IIDX 沒有封面，Tier表可能不易閱讀。歡迎透過 App 內表單等提供呈現方式的意見"
+      - heading: "樂曲一覽篩選"
+        items:
+          - title: "改善篩選 UI"
+            list:
+              - "以長條圖呈現各等級的樂曲數"
+              - "也能依擅長度或雷達的主軸篩選"
+              - "可依參加中所有分數挑戰的對象曲篩選"
+              - "DDR 支援依 Flare 階級等篩選"
+            media: {type: video, src: filter.mp4, poster: filter.jpg}
+      - heading: "接受課題"
+        items:
+          - title: "依等級設定接受"
+            list:
+              - "可依等級設定「歡迎」「OK」「NG」"
+              - "可設定接受時的一句話（優先順序為譜面 → 機種 → 全體）"
+              - "為避免重複，已登錄為課題的譜面無法再送出"
+            media: {type: video, src: ch-accept.mp4, poster: ch-accept.jpg}
+      - heading: "分數挑戰"
+        items:
+          - title: "家用版可否參加"
+            desc: "主辦者可選擇「家用版可否參加」。功能不變，只是明示能否參加。"
+            media: {type: video, src: sa-home.mp4, poster: sa-home.jpg}
+          - title: "家用版標記與完整留言"
+            list:
+              - "排名表等會顯示「家用版」標記"
+              - "投稿的留言可完整顯示，不再省略"
+            media: {type: image, src: sa-ranking.jpg}
+      - heading: "主畫面小工具"
+        items:
+          - title: "iPhone 主畫面小工具"
+            list:
+              - "支援小、中兩種尺寸"
+              - "此功能仍是原型，之後會持續改善"
+              - "回報錯誤時可附加 4 張圖片與 1 段影片（60 秒以內），也放上了本帳號的連結"
+            media: {type: video, src: widget.mp4, poster: widget.jpg}
+      - heading: "小幅改善與修正"
+        items:
+          - title: "Tier表的未通關篩選"
+            desc: "Tier表新增只顯示未通關的篩選。"
+            media: {type: video, src: tier-uncleared.mp4, poster: tier-uncleared.jpg}
+          - title: "判定調整與 Hi-Speed 的預設值"
+            list:
+              - "判定調整與 Hi-Speed 的預設值改為依 GF/DM、SP/DP 分開"
+              - "修正為 SDVX 判定調整可用 1ms 為單位變更"
+              - "修正各機種的同步與顯示問題（部分僅到取得調查用記錄為止）"
+            media: {type: video, src: play-setup.mp4, poster: play-setup.jpg}
+- id: "2026-10-25"
+  kind: release
+  version: "1.2.20261025"
+  date: "2026-10-24"
+  ja:
+    title: "プッシュ通知に対応し、課題の受け付けと返信を改善しました"
+    sections:
+      - heading: "プッシュ通知"
+        items:
+          - title: "プッシュ通知に対応"
+            list:
+              - "課題・フレンド申請・スコアタ・新曲の通知に対応しました"
+              - "スコアタの終了前の通知は、n日前や曜日・時刻で設定できます"
+              - "新曲とスコアタの通知は、機種ごとに設定できます"
+              - "アプリ内の通知も、個別にオンオフできます"
+            media: {type: video, src: push.mp4, poster: push.jpg}
+      - heading: "課題"
+        items:
+          - title: "一言を返す"
+            desc: "課題を受け取る・断る・達成したときに、一言を返せます。"
+            media: {type: video, src: ch-reply.mp4, poster: ch-reply.jpg}
+          - title: "受け付けを止める"
+            desc: "課題の受け付けを、曲・機種・全体で止められます。止める理由も設定できます。"
+            media: {type: video, src: ch-stop.mp4, poster: ch-stop.jpg}
+          - title: "投げる曲の並べ替え"
+            desc: "課題を投げる曲を並べ替えられます。"
+            media: {type: video, src: ch-sort.mp4, poster: ch-sort.jpg}
+      - heading: "スコアタの管理"
+        items:
+          - title: "主催者がスコアを直せる"
+            list:
+              - "主催者が、提出されたスコアを直せます"
+              - "直すときに一言を添えて、参加者に知らせることもできます"
+              - "通しの提出画像を、参加者一覧から確認できます"
+              - "その他、軽微な不具合も直しました"
+            media: {type: video, src: sa-admin.mp4, poster: sa-admin.jpg}
+      - heading: "その他の改善と修正"
+        items:
+          - title: "前回差分とPUC狙いなど"
+            list:
+              - "全機種で、前回差分の取りこぼしを直しました"
+              - "SDVXで、PUC狙いを切り替えられます"
+              - "DDRの譜面ビューアのクラップを直しました"
+              - "GITADORAで、達成率100%の取り込みを直しました"
+              - "意見フォームを、アプリ内から送れます"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  en:
+    title: "Push notifications, and better challenge acceptance and replies"
+    sections:
+      - heading: "Push notifications"
+        items:
+          - title: "Push notifications"
+            list:
+              - "Notifications for challenges, friend requests, Score Attacks and new songs"
+              - "Set notifications before a Score Attack ends by days before, day of week and time"
+              - "Set new song and Score Attack notifications per game"
+              - "Turn in-app notifications on or off one by one"
+            media: {type: video, src: push.mp4, poster: push.jpg}
+      - heading: "Challenges"
+        items:
+          - title: "Reply with a short message"
+            desc: "Reply with a short message when you accept, decline or achieve a challenge."
+            media: {type: video, src: ch-reply.mp4, poster: ch-reply.jpg}
+          - title: "Stop accepting challenges"
+            desc: "Stop accepting challenges per song, per game or entirely, and set a reason."
+            media: {type: video, src: ch-stop.mp4, poster: ch-stop.jpg}
+          - title: "Sort songs to send"
+            desc: "Sort the songs you send as challenges."
+            media: {type: video, src: ch-sort.mp4, poster: ch-sort.jpg}
+      - heading: "Managing Score Attacks"
+        items:
+          - title: "Hosts can correct scores"
+            list:
+              - "The host can correct submitted scores"
+              - "The host can also notify the participant with a short message when correcting"
+              - "Check run submission images from the participant list"
+              - "Fixed other small bugs"
+            media: {type: video, src: sa-admin.mp4, poster: sa-admin.jpg}
+      - heading: "Other improvements and fixes"
+        items:
+          - title: "Since last sync, PUC targets and more"
+            list:
+              - "Fixed records missed by since-last-sync for all games"
+              - "Switch PUC targeting on SDVX"
+              - "Fixed the clap in the DDR chart viewer"
+              - "Fixed importing 100% achievement rates in GITADORA"
+              - "Send the feedback form from inside the app"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  ko:
+    title: "푸시 알림에 대응하고, 과제 수락과 답장을 개선했습니다"
+    sections:
+      - heading: "푸시 알림"
+        items:
+          - title: "푸시 알림 지원"
+            list:
+              - "과제·친구 신청·스코어 어택·신곡 알림에 대응했습니다"
+              - "스코어 어택 종료 전 알림은 n일 전이나 요일·시각으로 설정할 수 있습니다"
+              - "신곡과 스코어 어택 알림은 기종별로 설정할 수 있습니다"
+              - "앱 내 알림도 개별로 켜고 끌 수 있습니다"
+            media: {type: video, src: push.mp4, poster: push.jpg}
+      - heading: "과제"
+        items:
+          - title: "한마디 답장"
+            desc: "과제를 받거나 거절하거나 달성했을 때 한마디를 답장할 수 있습니다."
+            media: {type: video, src: ch-reply.mp4, poster: ch-reply.jpg}
+          - title: "수락 중지"
+            desc: "과제 수락을 곡·기종·전체 단위로 멈출 수 있고, 멈추는 이유도 설정할 수 있습니다."
+            media: {type: video, src: ch-stop.mp4, poster: ch-stop.jpg}
+          - title: "보낼 곡 정렬"
+            desc: "과제로 보낼 곡을 정렬할 수 있습니다."
+            media: {type: video, src: ch-sort.mp4, poster: ch-sort.jpg}
+      - heading: "스코어 어택 관리"
+        items:
+          - title: "주최자가 스코어 수정"
+            list:
+              - "주최자가 제출된 스코어를 수정할 수 있습니다"
+              - "수정할 때 한마디를 붙여 참가자에게 알릴 수도 있습니다"
+              - "연속 플레이 제출 이미지를 참가자 목록에서 확인할 수 있습니다"
+              - "그 밖의 작은 문제도 고쳤습니다"
+            media: {type: video, src: sa-admin.mp4, poster: sa-admin.jpg}
+      - heading: "그 밖의 개선과 수정"
+        items:
+          - title: "지난 동기화 이후와 PUC 목표 등"
+            list:
+              - "모든 기종에서 지난 동기화 이후의 누락을 고쳤습니다"
+              - "SDVX에서 PUC 목표를 전환할 수 있습니다"
+              - "DDR 채보 뷰어의 클랩을 고쳤습니다"
+              - "GITADORA에서 달성률 100% 가져오기를 고쳤습니다"
+              - "의견 양식을 앱 안에서 보낼 수 있습니다"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  zh:
+    title: "支援推播通知，並改善課題的接受與回覆"
+    sections:
+      - heading: "推播通知"
+        items:
+          - title: "支援推播通知"
+            list:
+              - "支援課題、好友申請、分數挑戰與新曲的通知"
+              - "分數挑戰結束前的通知可依 n 天前、星期與時刻設定"
+              - "新曲與分數挑戰的通知可依機種設定"
+              - "App 內通知也能逐項開關"
+            media: {type: video, src: push.mp4, poster: push.jpg}
+      - heading: "課題"
+        items:
+          - title: "回覆一句話"
+            desc: "接受、拒絕或達成課題時，可以回覆一句話。"
+            media: {type: video, src: ch-reply.mp4, poster: ch-reply.jpg}
+          - title: "停止接受課題"
+            desc: "可依樂曲、機種或全部停止接受課題，也能設定停止的理由。"
+            media: {type: video, src: ch-stop.mp4, poster: ch-stop.jpg}
+          - title: "排序要送出的樂曲"
+            desc: "可排序要作為課題送出的樂曲。"
+            media: {type: video, src: ch-sort.mp4, poster: ch-sort.jpg}
+      - heading: "分數挑戰的管理"
+        items:
+          - title: "主辦者可修正分數"
+            list:
+              - "主辦者可修正提交的分數"
+              - "修正時也能附上一句話通知參加者"
+              - "可從參加者列表確認連續遊玩的提交圖片"
+              - "也修正了其他小問題"
+            media: {type: video, src: sa-admin.mp4, poster: sa-admin.jpg}
+      - heading: "其他改善與修正"
+        items:
+          - title: "上次同步後與 PUC 目標等"
+            list:
+              - "修正所有機種上次同步後的遺漏"
+              - "SDVX 可切換 PUC 目標"
+              - "修正 DDR 譜面檢視器的拍手音"
+              - "修正 GITADORA 達成率 100% 的匯入"
+              - "可在 App 內送出意見表單"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+- id: "2026-10-24"
+  kind: release
+  version: "1.2.20261024"
+  date: "2026-10-23"
+  ja:
+    title: "SDVXの判定調整の目盛を、正しいmsで表示するようにしました"
+    sections:
+      - heading: "不具合の修正"
+        items:
+          - title: "SDVXの判定ズレの目盛"
+            games: [SDVX]
+            desc: "SDVXで、判定ズレの1目盛を2msとしていた不具合を直しました。正しくは1目盛＝4msです。"
+  en:
+    title: "SDVX timing steps now show the correct ms"
+    sections:
+      - heading: "Bug fixes"
+        items:
+          - title: "SDVX timing offset steps"
+            games: [SDVX]
+            desc: "Fixed SDVX treating one timing offset step as 2 ms. One step is actually 4 ms."
+  ko:
+    title: "SDVX 판정 조정 눈금을 올바른 ms로 표시합니다"
+    sections:
+      - heading: "버그 수정"
+        items:
+          - title: "SDVX 판정 오프셋 눈금"
+            games: [SDVX]
+            desc: "SDVX에서 판정 오프셋 1눈금을 2ms로 다루던 문제를 고쳤습니다. 올바르게는 1눈금 = 4ms입니다."
+  zh:
+    title: "SDVX 判定調整的刻度改以正確的 ms 顯示"
+    sections:
+      - heading: "錯誤修正"
+        items:
+          - title: "SDVX 判定偏移的刻度"
+            games: [SDVX]
+            desc: "修正 SDVX 將判定偏移 1 格當作 2ms 的問題。正確為 1 格 = 4ms。"
+- id: "2026-10-23"
+  kind: release
+  version: "1.2.20261023"
+  date: "2026-10-21"
+  ja:
+    title: "統計を作り直して「得意度」を追加し、楽曲詳細を4つのタブにしました"
+    sections:
+      - heading: "統計"
+        items:
+          - title: "得意度と偏差値"
+            list:
+              - "偏差値とは別に、自分の相対的な得意・苦手が分かる「得意度」を追加しました"
+              - "得意度は、同じレベルの他の譜面での自分の成績から予想スコアを出し、実際の点数と比べる指標です。50が予想どおり、70以上が得意、30以下が苦手です"
+              - "偏差値の計算方法を正しました（上がります）"
+              - "曲一覧の並べ替えと、得意度での弱点分析にも対応しました"
+              - "SDVXは、EXスコアの計算にも対応しています"
+            media: {type: video, src: stats.mp4, poster: stats.jpg}
+      - heading: "楽曲詳細"
+        items:
+          - title: "4つのタブに整理"
+            list:
+              - "「概要」「比較」「スコア履歴」「その他」の4タブに整理しました"
+              - "偏差値の比較バーとスコア履歴を見やすくしました"
+            media: {type: video, src: detail-tabs.mp4, poster: detail-tabs.jpg}
+          - title: "攻略情報を共有"
+            desc: "譜面ごとの攻略情報や感想を、ほかの利用者と共有できます。"
+            media: {type: video, src: notes.mp4, poster: notes.jpg}
+      - heading: "スコアタ"
+        items:
+          - title: "通しのルール"
+            desc: "3〜4曲を1回の通しで競うルールを追加しました。"
+            media: {type: video, src: sa-run.mp4, poster: sa-run.jpg}
+          - title: "リザルト写真からスコアを読み取る"
+            desc: "リザルト写真からスコアを読み取り、自動で補完します。精度は確認していますが、ミスがあまりに多いなどあれば報告をお願いします。"
+            media: {type: video, src: sa-ocr.mp4, poster: sa-ocr.jpg}
+      - heading: "Tier表と成長の目標"
+        items:
+          - title: "ポップンのTier表と目標"
+            games: ["pop'n"]
+            list:
+              - "Tier表を「全曲」「最初から」「解禁」で絞り込めます"
+              - "目標などに、銅◆・銅★・銀◆・銀★を足しました"
+            media: {type: video, src: popn-tier.mp4, poster: popn-tier.jpg}
+          - title: "達成率で目標を決める"
+            desc: "成長の目標を、達成率（％）でも設定できます。"
+            media: {type: video, src: goal-rate.mp4, poster: goal-rate.jpg}
+      - heading: "その他の改善と修正"
+        items:
+          - title: "リンクと判定調整など"
+            list:
+              - "プロフィールに、SNSなどのリンクを最大5件登録できます"
+              - "SDVXの判定調整を、目盛とmsで併記します"
+              - "シート操作・課題通知・CSVの不具合を直しました"
+              - "一部のクラッシュを直しました"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  en:
+    title: "Rebuilt statistics with \"Strength\", and song details in 4 tabs"
+    sections:
+      - heading: "Statistics"
+        items:
+          - title: "Strength and T-score"
+            list:
+              - "Added \"Strength\", separate from the T-score, which shows what you're relatively good or bad at"
+              - "Strength predicts your score from your results on other charts of the same level and compares it with your actual score. 50 is as predicted, 70 or more is a strength, 30 or less a weakness"
+              - "Corrected how the T-score is calculated (it goes up)"
+              - "Song list sorting and weakness analysis by Strength are also supported"
+              - "For SDVX, EX score calculation is supported too"
+            media: {type: video, src: stats.mp4, poster: stats.jpg}
+      - heading: "Song details"
+        items:
+          - title: "Organized into 4 tabs"
+            list:
+              - "Organized into 4 tabs: Overview, Compare, Score history and Other"
+              - "The T-score comparison bar and score history are easier to read"
+            media: {type: video, src: detail-tabs.mp4, poster: detail-tabs.jpg}
+          - title: "Share strategy notes"
+            desc: "Share strategy and impressions for each chart with other users."
+            media: {type: video, src: notes.mp4, poster: notes.jpg}
+      - heading: "Score Attack"
+        items:
+          - title: "Run rule"
+            desc: "Added a rule where you compete on 3 to 4 songs in a single run."
+            media: {type: video, src: sa-run.mp4, poster: sa-run.jpg}
+          - title: "Read scores from result photos"
+            desc: "Scores are read from result photos and filled in automatically. Accuracy has been checked, but please report it if mistakes are too frequent."
+            media: {type: video, src: sa-ocr.mp4, poster: sa-ocr.jpg}
+      - heading: "Tier List and growth goals"
+        items:
+          - title: "pop'n Tier List and goals"
+            games: ["pop'n"]
+            list:
+              - "Filter the Tier List by \"All songs\", \"From the start\" and \"Unlocked\""
+              - "Added bronze ◆, bronze ★, silver ◆ and silver ★ to goals and more"
+            media: {type: video, src: popn-tier.mp4, poster: popn-tier.jpg}
+          - title: "Goals by achievement rate"
+            desc: "Growth goals can also be set by achievement rate (%)."
+            media: {type: video, src: goal-rate.mp4, poster: goal-rate.jpg}
+      - heading: "Other improvements and fixes"
+        items:
+          - title: "Links, timing and more"
+            list:
+              - "Add up to 5 links, such as social media, to your profile"
+              - "SDVX timing adjustment shows both steps and ms"
+              - "Fixed problems with sheet controls, challenge notifications and CSV"
+              - "Fixed some crashes"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  ko:
+    title: "통계를 다시 만들어 '강점도'를 추가하고, 곡 상세를 4개 탭으로 정리했습니다"
+    sections:
+      - heading: "통계"
+        items:
+          - title: "강점도와 T점수"
+            list:
+              - "T점수와 별도로, 자신의 상대적인 강점·약점을 알 수 있는 '강점도'를 추가했습니다"
+              - "강점도는 같은 레벨의 다른 채보 성적으로 예상 스코어를 내고 실제 점수와 비교하는 지표입니다. 50은 예상대로, 70 이상은 강점, 30 이하는 약점입니다"
+              - "T점수 계산 방법을 바로잡았습니다(올라갑니다)"
+              - "곡 목록 정렬과 강점도로 보는 약점 분석에도 대응했습니다"
+              - "SDVX는 EX 스코어 계산에도 대응합니다"
+            media: {type: video, src: stats.mp4, poster: stats.jpg}
+      - heading: "곡 상세"
+        items:
+          - title: "4개 탭으로 정리"
+            list:
+              - "'개요' '비교' '스코어 이력' '기타' 4개 탭으로 정리했습니다"
+              - "T점수 비교 막대와 스코어 이력을 보기 쉽게 했습니다"
+            media: {type: video, src: detail-tabs.mp4, poster: detail-tabs.jpg}
+          - title: "공략 정보 공유"
+            desc: "채보별 공략 정보와 감상을 다른 이용자와 공유할 수 있습니다."
+            media: {type: video, src: notes.mp4, poster: notes.jpg}
+      - heading: "스코어 어택"
+        items:
+          - title: "연속 플레이 규칙"
+            desc: "3~4곡을 한 번에 이어서 겨루는 규칙을 추가했습니다."
+            media: {type: video, src: sa-run.mp4, poster: sa-run.jpg}
+          - title: "리절트 사진에서 스코어 읽기"
+            desc: "리절트 사진에서 스코어를 읽어 자동으로 채웁니다. 정확도는 확인했지만, 실수가 너무 많으면 알려 주세요."
+            media: {type: video, src: sa-ocr.mp4, poster: sa-ocr.jpg}
+      - heading: "티어표와 성장 목표"
+        items:
+          - title: "팝픈 티어표와 목표"
+            games: ["pop'n"]
+            list:
+              - "티어표를 '전곡' '처음부터' '해금'으로 좁힐 수 있습니다"
+              - "목표 등에 동◆·동★·은◆·은★을 추가했습니다"
+            media: {type: video, src: popn-tier.mp4, poster: popn-tier.jpg}
+          - title: "달성률로 목표 정하기"
+            desc: "성장 목표를 달성률(%)로도 설정할 수 있습니다."
+            media: {type: video, src: goal-rate.mp4, poster: goal-rate.jpg}
+      - heading: "그 밖의 개선과 수정"
+        items:
+          - title: "링크와 판정 조정 등"
+            list:
+              - "프로필에 SNS 등의 링크를 최대 5개 등록할 수 있습니다"
+              - "SDVX 판정 조정을 눈금과 ms로 함께 표시합니다"
+              - "시트 조작·과제 알림·CSV 문제를 고쳤습니다"
+              - "일부 앱 종료 문제를 고쳤습니다"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+  zh:
+    title: "重新製作統計並新增「擅長度」，樂曲詳情改為 4 個分頁"
+    sections:
+      - heading: "統計"
+        items:
+          - title: "擅長度與 T分數"
+            list:
+              - "在 T分數之外，新增可看出自己相對擅長與不擅長的「擅長度」"
+              - "擅長度是依自己在同等級其他譜面的成績算出預測分數，再與實際分數比較的指標。50 為符合預測，70 以上為擅長，30 以下為不擅長"
+              - "修正 T分數的計算方式（數值會上升）"
+              - "也支援樂曲一覽的排序與以擅長度進行的弱點分析"
+              - "SDVX 也支援 EX 分數的計算"
+            media: {type: video, src: stats.mp4, poster: stats.jpg}
+      - heading: "樂曲詳情"
+        items:
+          - title: "整理為 4 個分頁"
+            list:
+              - "整理為「概要」「比較」「分數履歷」「其他」4 個分頁"
+              - "T分數的比較條與分數履歷更容易閱讀"
+            media: {type: video, src: detail-tabs.mp4, poster: detail-tabs.jpg}
+          - title: "分享攻略資訊"
+            desc: "可與其他使用者分享各譜面的攻略資訊與感想。"
+            media: {type: video, src: notes.mp4, poster: notes.jpg}
+      - heading: "分數挑戰"
+        items:
+          - title: "連續遊玩規則"
+            desc: "新增以一次連續遊玩 3～4 首競賽的規則。"
+            media: {type: video, src: sa-run.mp4, poster: sa-run.jpg}
+          - title: "從結算照片讀取分數"
+            desc: "會從結算照片讀取分數並自動填入。已確認過精度，若錯誤太多請回報。"
+            media: {type: video, src: sa-ocr.mp4, poster: sa-ocr.jpg}
+      - heading: "Tier表與成長目標"
+        items:
+          - title: "pop'n 的 Tier表與目標"
+            games: ["pop'n"]
+            list:
+              - "Tier表可依「全曲」「初期」「解禁」篩選"
+              - "目標等新增銅◆、銅★、銀◆、銀★"
+            media: {type: video, src: popn-tier.mp4, poster: popn-tier.jpg}
+          - title: "以達成率設定目標"
+            desc: "成長目標也能以達成率（％）設定。"
+            media: {type: video, src: goal-rate.mp4, poster: goal-rate.jpg}
+      - heading: "其他改善與修正"
+        items:
+          - title: "連結與判定調整等"
+            list:
+              - "個人檔案最多可登錄 5 個社群等連結"
+              - "SDVX 的判定調整同時顯示刻度與 ms"
+              - "修正面板操作、課題通知與 CSV 的問題"
+              - "修正部分當機問題"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+- id: "2026-10-14"
+  kind: release
+  version: "1.2.20261014"
+  date: "2026-10-14"
+  ja:
+    title: "SDVXのエフェクトレーダーを作り直し、小数レベルのTier表に対応しました"
+    sections:
+      - heading: "SDVXのエフェクトレーダー"
+        items:
+          - title: "画面録画から推定する方法へ"
+            games: [SDVX]
+            desc: "1次情報の怪しいデータを入れてしまっていたため完全に取り除き、画面録画から推定する方法に変えました。レベル17以上はすべて計算しました。レベル16以下は要望に応じて対応する方針とし、まずは削除します。"
+            media: {type: video, src: radar.mp4, poster: radar.jpg}
+          - title: "推定方法と注意"
+            games: [SDVX]
+            list:
+              - "推定方法は画像のとおりです"
+              - "レーダー値は目安です。相対的な弱点分析に使ってください（プレイヤーレーダーも同じです）"
+              - "レーダーは手動で更新するため、楽曲マスタより後に随時追加します"
+            media: {type: image, src: radar-method.jpg}
+      - heading: "Tier表"
+        items:
+          - title: "小数レベルと並べ替え"
+            list:
+              - "SDVX・GITADORA のTier表で、18.0や18.1などの小数レベルごとに表示できます。カスタムTierを作るときも、複数の小数レベルを指定できます"
+              - "Tier表の並べ替えに「スコア順」を足し、これまでの「Tier順」「レベル順」と合わせて選べます"
+              - "ジャケットの表示サイズの切り替えや、EXスコア表示のUIも調整しました"
+            media: {type: video, src: tier-decimal.mp4, poster: tier-decimal.jpg}
+      - heading: "課題とスコアタ"
+        items:
+          - title: "課題にコメント"
+            list:
+              - "課題を送るときに、28字までのコメントを添えられます"
+              - "「投げた課題」で、受け取り・達成の状況を確認できます"
+              - "新しく作った「達成した課題」で、受け取った時点からのスコアの更新前後を比べられます"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "課題とスコアタのUI"
+            list:
+              - "ホームの課題一覧で目標値を直接変えられます。送り主の表示は残したまま、レイアウトをコンパクトにしました"
+              - "スコアタのリストに楽曲数を表示し、手動のスコア登録欄のUIも改善しました"
+            media: {type: video, src: challenge-ui.mp4, poster: challenge-ui.jpg}
+      - heading: "GITADORA"
+        items:
+          - title: "Gt+Ba とデータ書き出し"
+            games: [GITADORA]
+            list:
+              - "ギタフリの楽曲一覧に「Gt+Ba」を足し、両パートの譜面を同時に確認できます"
+              - "データの書き出し項目を増やしました"
+              - "前回差分同期で、一部のプレーを取りこぼす不具合を直しました"
+      - heading: "その他の改善と修正"
+        items:
+          - title: "プロフィールの公開範囲など"
+            list:
+              - "プロフィールの項目ごとに公開範囲を設定できます"
+              - "SDVXの前回差分同期で、未プレイの譜面が表示される不具合を直しました"
+              - "フレンドに抜かれた楽曲の表示のUIを調整しました"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+  en:
+    title: "A rebuilt SDVX effect radar, and Tier Lists by decimal level"
+    sections:
+      - heading: "SDVX effect radar"
+        items:
+          - title: "Estimated from screen recordings"
+            games: [SDVX]
+            desc: "Data of doubtful primary origin had been included, so it was removed completely and replaced with estimates from screen recordings. All charts at level 17 and above are calculated. Level 16 and below will be added on request, and are removed for now."
+            media: {type: video, src: radar.mp4, poster: radar.jpg}
+          - title: "Method and notes"
+            games: [SDVX]
+            list:
+              - "The estimation method is shown in the image"
+              - "Radar values are a guide. Use them for relative weakness analysis (the same goes for the player radar)"
+              - "The radar is updated by hand, so it's added after the song master as it goes"
+            media: {type: image, src: radar-method.jpg}
+      - heading: "Tier List"
+        items:
+          - title: "Decimal levels and sorting"
+            list:
+              - "SDVX and GITADORA Tier Lists can show each decimal level, such as 18.0 or 18.1. Custom tiers can also use several decimal levels"
+              - "Added \"Score\" to Tier List sorting, alongside \"Tier\" and \"Level\""
+              - "Adjusted switching jacket size and the EX score display"
+            media: {type: video, src: tier-decimal.mp4, poster: tier-decimal.jpg}
+      - heading: "Challenges and Score Attack"
+        items:
+          - title: "Comments on challenges"
+            list:
+              - "Add a comment of up to 28 characters when sending a challenge"
+              - "Check whether challenges you sent were received or achieved under \"Sent challenges\""
+              - "The new \"Achieved challenges\" compares your score before and after, from when you received it"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "Challenge and Score Attack UI"
+            list:
+              - "Change target values directly in the home challenge list. The layout is more compact while still showing the sender"
+              - "The Score Attack list shows the number of songs, and the manual score entry UI is improved"
+            media: {type: video, src: challenge-ui.mp4, poster: challenge-ui.jpg}
+      - heading: "GITADORA"
+        items:
+          - title: "Gt+Ba and data export"
+            games: [GITADORA]
+            list:
+              - "Added \"Gt+Ba\" to the GuitarFreaks song list, so you can check both parts' charts at once"
+              - "More items in data export"
+              - "Fixed some plays being missed by differential sync"
+      - heading: "Other improvements and fixes"
+        items:
+          - title: "Profile visibility and more"
+            list:
+              - "Set visibility for each profile item"
+              - "Fixed unplayed charts appearing after SDVX differential sync"
+              - "Adjusted the UI for songs where friends overtook you"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+  ko:
+    title: "SDVX 이펙트 레이더를 다시 만들고, 소수 레벨 티어표에 대응했습니다"
+    sections:
+      - heading: "SDVX 이펙트 레이더"
+        items:
+          - title: "화면 녹화로 추정하는 방식으로"
+            games: [SDVX]
+            desc: "1차 정보가 의심스러운 데이터를 넣고 있었기 때문에 완전히 제거하고, 화면 녹화로 추정하는 방식으로 바꿨습니다. 레벨 17 이상은 모두 계산했습니다. 레벨 16 이하는 요청에 따라 대응하기로 하고 우선 삭제합니다."
+            media: {type: video, src: radar.mp4, poster: radar.jpg}
+          - title: "추정 방법과 주의 사항"
+            games: [SDVX]
+            list:
+              - "추정 방법은 이미지와 같습니다"
+              - "레이더 값은 기준입니다. 상대적인 약점 분석에 활용해 주세요(플레이어 레이더도 같습니다)"
+              - "레이더는 수동으로 갱신하므로 곡 마스터보다 나중에 수시로 추가합니다"
+            media: {type: image, src: radar-method.jpg}
+      - heading: "티어표"
+        items:
+          - title: "소수 레벨과 정렬"
+            list:
+              - "SDVX·GITADORA 티어표에서 18.0, 18.1 등 소수 레벨별로 표시할 수 있습니다. 커스텀 티어를 만들 때도 여러 소수 레벨을 지정할 수 있습니다"
+              - "티어표 정렬에 '스코어순'을 추가해 기존 '티어순' '레벨순'과 함께 고를 수 있습니다"
+              - "재킷 표시 크기 전환과 EX 스코어 표시 UI도 조정했습니다"
+            media: {type: video, src: tier-decimal.mp4, poster: tier-decimal.jpg}
+      - heading: "과제와 스코어 어택"
+        items:
+          - title: "과제에 코멘트"
+            list:
+              - "과제를 보낼 때 28자까지 코멘트를 붙일 수 있습니다"
+              - "'보낸 과제'에서 수령·달성 상황을 확인할 수 있습니다"
+              - "새로 만든 '달성한 과제'에서 받은 시점부터의 스코어 갱신 전후를 비교할 수 있습니다"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "과제와 스코어 어택 UI"
+            list:
+              - "홈의 과제 목록에서 목표값을 바로 바꿀 수 있습니다. 보낸 사람 표시는 유지한 채 레이아웃을 간결하게 했습니다"
+              - "스코어 어택 목록에 곡 수를 표시하고, 수동 스코어 등록란 UI도 개선했습니다"
+            media: {type: video, src: challenge-ui.mp4, poster: challenge-ui.jpg}
+      - heading: "GITADORA"
+        items:
+          - title: "Gt+Ba와 데이터 내보내기"
+            games: [GITADORA]
+            list:
+              - "기타프릭스 곡 목록에 'Gt+Ba'를 추가해 두 파트의 채보를 동시에 확인할 수 있습니다"
+              - "데이터 내보내기 항목을 늘렸습니다"
+              - "지난 동기화 이후 동기화에서 일부 플레이를 놓치던 문제를 고쳤습니다"
+      - heading: "그 밖의 개선과 수정"
+        items:
+          - title: "프로필 공개 범위 등"
+            list:
+              - "프로필 항목마다 공개 범위를 설정할 수 있습니다"
+              - "SDVX 지난 동기화 이후 동기화에서 플레이하지 않은 채보가 표시되던 문제를 고쳤습니다"
+              - "친구에게 추월당한 곡 표시 UI를 조정했습니다"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+  zh:
+    title: "重新製作 SDVX 效果雷達，Tier表支援小數等級"
+    sections:
+      - heading: "SDVX 效果雷達"
+        items:
+          - title: "改為由錄影推估"
+            games: [SDVX]
+            desc: "由於先前放入了一手來源可疑的資料，現已完全移除，改為由畫面錄影推估。等級 17 以上已全部計算。等級 16 以下將視需求處理，先行刪除。"
+            media: {type: video, src: radar.mp4, poster: radar.jpg}
+          - title: "推估方法與注意事項"
+            games: [SDVX]
+            list:
+              - "推估方法如圖片所示"
+              - "雷達值僅供參考，請用於相對的弱點分析（玩家雷達也一樣）"
+              - "雷達以手動更新，會在樂曲資料之後陸續加入"
+            media: {type: image, src: radar-method.jpg}
+      - heading: "Tier表"
+        items:
+          - title: "小數等級與排序"
+            list:
+              - "SDVX、GITADORA 的 Tier表可依 18.0、18.1 等小數等級顯示。製作自訂 Tier 時也能指定多個小數等級"
+              - "Tier表排序新增「分數」，可與原本的「Tier」「等級」一起選擇"
+              - "也調整了封面顯示大小的切換與 EX 分數顯示的 UI"
+            media: {type: video, src: tier-decimal.mp4, poster: tier-decimal.jpg}
+      - heading: "課題與分數挑戰"
+        items:
+          - title: "課題附上留言"
+            list:
+              - "送出課題時可附上 28 字以內的留言"
+              - "可在「送出的課題」確認對方是否收到、是否達成"
+              - "新設的「已達成的課題」可比較從收到時起分數更新前後的差異"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "課題與分數挑戰的 UI"
+            list:
+              - "可在首頁的課題列表直接修改目標值，保留送出者顯示的同時讓版面更精簡"
+              - "分數挑戰列表顯示樂曲數，並改善手動登錄分數欄的 UI"
+            media: {type: video, src: challenge-ui.mp4, poster: challenge-ui.jpg}
+      - heading: "GITADORA"
+        items:
+          - title: "Gt+Ba 與資料匯出"
+            games: [GITADORA]
+            list:
+              - "GuitarFreaks 樂曲一覽新增「Gt+Ba」，可同時確認兩個聲部的譜面"
+              - "增加資料匯出的項目"
+              - "修正上次同步後同步會漏掉部分遊玩的問題"
+      - heading: "其他改善與修正"
+        items:
+          - title: "個人檔案的公開範圍等"
+            list:
+              - "可依個人檔案的項目設定公開範圍"
+              - "修正 SDVX 上次同步後同步會顯示未遊玩譜面的問題"
+              - "調整被好友超越的樂曲顯示 UI"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+- id: "2026-10-12"
+  kind: release
+  version: "1.2.20261012"
+  date: "2026-10-12"
+  ja:
+    title: "ポップンクラスの計算方式を直し、1台で複数のKONAMI IDを持てるようにしました"
+    sections:
+      - heading: "ポップンクラス"
+        items:
+          - title: "計算方式の見直し"
+            games: ["pop'n"]
+            desc: "計算式が間違っていたことが分かったため、画像のとおり直し、ポップンクラスのずれを解消しました。"
+            media: {type: image, src: popn-class.jpg}
+      - heading: "アカウントとフレンド"
+        items:
+          - title: "複数のKONAMI IDと複数の端末"
+            list:
+              - "1台で複数のKONAMI IDを持ち、記録をアカウント別に管理できます"
+              - "逆に、同じフレンドコードを複数の端末で使えます"
+              - "フレンドの上限を100人に広げ、ランキングや詳細表示、一覧の操作を改善しました"
+            media: {type: video, src: accounts.mp4, poster: accounts.jpg}
+      - heading: "SDVX"
+        items:
+          - title: "スコア表示と目標"
+            games: [SDVX]
+            list:
+              - "スコア表示を「通常」「EX」「MAX-」から選べます"
+              - "MAX-の表示と並べ替えにも対応しました"
+              - "目標を設定するとき、Lv15以下も選べます"
+            media: {type: video, src: sdvx-score.mp4, poster: sdvx-score.jpg}
+      - heading: "ポップン"
+        items:
+          - title: "目標ハイスピとROOF・SUD"
+            games: ["pop'n"]
+            list:
+              - "設定の「プレイ環境」で目標ハイスピを設定すると、楽曲詳細の画面で、それに合うROOFの値とハイスピ設定を見られます"
+              - "ソフラン楽曲も、SUDの自動計算に対応しました"
+            media: {type: video, src: popn-hs.mp4, poster: popn-hs.jpg}
+      - heading: "同期と目標"
+        items:
+          - title: "同期結果と楽曲フィルタ"
+            desc: "同期結果の画面や楽曲フィルタの表示と操作を改善しました。"
+          - title: "目標"
+            list:
+              - "目標の期限に「期限なし」を足しました"
+              - "目標値の操作や、過去の日付からVFの目標を設定したときの処理を改善しました"
+      - heading: "不具合の修正"
+        items:
+          - title: "不具合の修正"
+            list:
+              - "同期が失敗しないように直しました（加入コースの判定や、同期結果の画面の表示も含みます）"
+              - "大会の説明文で、改行が正しく反映されない"
+              - "目標が二重に作られる"
+  en:
+    title: "Corrected the pop'n class formula, and several KONAMI IDs on one device"
+    sections:
+      - heading: "pop'n class"
+        items:
+          - title: "A corrected formula"
+            games: ["pop'n"]
+            desc: "The formula turned out to be wrong, so it was corrected as shown in the image, which fixes pop'n class mismatches."
+            media: {type: image, src: popn-class.jpg}
+      - heading: "Accounts and friends"
+        items:
+          - title: "Several KONAMI IDs and devices"
+            list:
+              - "Keep several KONAMI IDs on one device and manage records per account"
+              - "Conversely, use the same friend code on several devices"
+              - "Raised the friend limit to 100, and improved rankings, details and list handling"
+            media: {type: video, src: accounts.mp4, poster: accounts.jpg}
+      - heading: "SDVX"
+        items:
+          - title: "Score display and goals"
+            games: [SDVX]
+            list:
+              - "Choose the score display from \"Normal\", \"EX\" and \"MAX-\""
+              - "MAX- also works for display and sorting"
+              - "Goals can now use Lv15 and below"
+            media: {type: video, src: sdvx-score.mp4, poster: sdvx-score.jpg}
+      - heading: "pop'n"
+        items:
+          - title: "Target hi-speed, ROOF and SUD"
+            games: ["pop'n"]
+            list:
+              - "Set a target hi-speed under \"Play setup\" in settings, and song details show the matching ROOF value and hi-speed setting"
+              - "Automatic SUD calculation now works for songs with speed changes too"
+            media: {type: video, src: popn-hs.mp4, poster: popn-hs.jpg}
+      - heading: "Sync and goals"
+        items:
+          - title: "Sync results and song filters"
+            desc: "Improved the display and controls of the sync results screen and song filters."
+          - title: "Goals"
+            list:
+              - "Added \"No deadline\" to goal deadlines"
+              - "Improved editing goal values and setting a VF goal from a past date"
+      - heading: "Bug fixes"
+        items:
+          - title: "Bug fixes"
+            list:
+              - "Fixed sync failures (including the course check and the sync results screen)"
+              - "Line breaks in tournament descriptions weren't shown correctly"
+              - "Goals could be created twice"
+  ko:
+    title: "팝픈 클래스 계산 방식을 고치고, 한 기기에서 여러 KONAMI ID를 쓸 수 있게 했습니다"
+    sections:
+      - heading: "팝픈 클래스"
+        items:
+          - title: "계산 방식 재검토"
+            games: ["pop'n"]
+            desc: "계산식이 잘못된 것을 알게 되어 이미지와 같이 고쳤고, 팝픈 클래스 어긋남을 해소했습니다."
+            media: {type: image, src: popn-class.jpg}
+      - heading: "계정과 친구"
+        items:
+          - title: "여러 KONAMI ID와 여러 기기"
+            list:
+              - "한 기기에서 여러 KONAMI ID를 갖고 기록을 계정별로 관리할 수 있습니다"
+              - "반대로 같은 친구 코드를 여러 기기에서 쓸 수 있습니다"
+              - "친구 상한을 100명으로 늘리고, 랭킹·상세 표시·목록 조작을 개선했습니다"
+            media: {type: video, src: accounts.mp4, poster: accounts.jpg}
+      - heading: "SDVX"
+        items:
+          - title: "스코어 표시와 목표"
+            games: [SDVX]
+            list:
+              - "스코어 표시를 '일반' 'EX' 'MAX-' 중에서 고를 수 있습니다"
+              - "MAX- 표시와 정렬에도 대응했습니다"
+              - "목표 설정 시 Lv15 이하도 고를 수 있습니다"
+            media: {type: video, src: sdvx-score.mp4, poster: sdvx-score.jpg}
+      - heading: "팝픈"
+        items:
+          - title: "목표 하이스피드와 ROOF·SUD"
+            games: ["pop'n"]
+            list:
+              - "설정의 '플레이 환경'에서 목표 하이스피드를 정하면, 곡 상세 화면에서 그에 맞는 ROOF 값과 하이스피드 설정을 볼 수 있습니다"
+              - "소프란 곡도 SUD 자동 계산에 대응했습니다"
+            media: {type: video, src: popn-hs.mp4, poster: popn-hs.jpg}
+      - heading: "동기화와 목표"
+        items:
+          - title: "동기화 결과와 곡 필터"
+            desc: "동기화 결과 화면과 곡 필터의 표시·조작을 개선했습니다."
+          - title: "목표"
+            list:
+              - "목표 기한에 '기한 없음'을 추가했습니다"
+              - "목표값 조작과, 과거 날짜부터 VF 목표를 설정할 때의 처리를 개선했습니다"
+      - heading: "버그 수정"
+        items:
+          - title: "버그 수정"
+            list:
+              - "동기화가 실패하지 않도록 고쳤습니다(가입 코스 판정과 동기화 결과 화면 표시 포함)"
+              - "대회 설명문에서 줄바꿈이 제대로 반영되지 않던 문제"
+              - "목표가 두 번 만들어지던 문제"
+  zh:
+    title: "修正 pop'n class 的計算方式，並可在 1 台裝置保有多個 KONAMI ID"
+    sections:
+      - heading: "pop'n class"
+        items:
+          - title: "重新檢視計算方式"
+            games: ["pop'n"]
+            desc: "發現計算式有誤，已依圖片修正，解決 pop'n class 的偏差。"
+            media: {type: image, src: popn-class.jpg}
+      - heading: "帳號與好友"
+        items:
+          - title: "多個 KONAMI ID 與多台裝置"
+            list:
+              - "1 台裝置可保有多個 KONAMI ID，並依帳號管理記錄"
+              - "反過來，同一個好友碼也能在多台裝置使用"
+              - "好友上限擴大為 100 人，並改善排名、詳細顯示與列表操作"
+            media: {type: video, src: accounts.mp4, poster: accounts.jpg}
+      - heading: "SDVX"
+        items:
+          - title: "分數顯示與目標"
+            games: [SDVX]
+            list:
+              - "分數顯示可從「一般」「EX」「MAX-」選擇"
+              - "也支援 MAX- 的顯示與排序"
+              - "設定目標時也能選 Lv15 以下"
+            media: {type: video, src: sdvx-score.mp4, poster: sdvx-score.jpg}
+      - heading: "pop'n"
+        items:
+          - title: "目標 Hi-Speed 與 ROOF、SUD"
+            games: ["pop'n"]
+            list:
+              - "在設定的「遊玩環境」設定目標 Hi-Speed 後，樂曲詳情畫面會顯示相應的 ROOF 值與 Hi-Speed 設定"
+              - "變速樂曲也支援 SUD 自動計算"
+            media: {type: video, src: popn-hs.mp4, poster: popn-hs.jpg}
+      - heading: "同步與目標"
+        items:
+          - title: "同步結果與樂曲篩選"
+            desc: "改善同步結果畫面與樂曲篩選的顯示與操作。"
+          - title: "目標"
+            list:
+              - "目標期限新增「無期限」"
+              - "改善目標值的操作，以及從過去日期設定 VF 目標時的處理"
+      - heading: "錯誤修正"
+        items:
+          - title: "錯誤修正"
+            list:
+              - "修正同步失敗的問題（包含加入課程的判定與同步結果畫面的顯示）"
+              - "大會說明文的換行沒有正確反映"
+              - "目標會重複建立"
+- id: "2026-10-08"
+  kind: release
+  version: "1.2.20261008"
+  date: "2026-10-09"
+  ja:
+    title: "プロフィールの保存直後にアプリが落ちる不具合を修正しました"
+    sections:
+      - heading: "不具合の修正"
+        items:
+          - title: "プロフィールの保存でクラッシュ"
+            desc: "プロフィールの編集で「保存」を押したあと、すぐに「好きな譜面」などのボタンを押すと、保存が終わったときにアプリが落ちていました。プロフィールを設定できるすべての版で起きていた不具合です。"
+  en:
+    title: "Fixed a crash right after saving your profile"
+    sections:
+      - heading: "Bug fixes"
+        items:
+          - title: "Crash when saving a profile"
+            desc: "If you pressed a button such as \"Favorite charts\" right after pressing \"Save\" while editing your profile, the app crashed when saving finished. This affected every version with profiles."
+  ko:
+    title: "프로필 저장 직후 앱이 종료되던 문제를 고쳤습니다"
+    sections:
+      - heading: "버그 수정"
+        items:
+          - title: "프로필 저장 시 앱 종료"
+            desc: "프로필 편집에서 '저장'을 누른 직후 '좋아하는 채보' 등의 버튼을 누르면, 저장이 끝날 때 앱이 종료되었습니다. 프로필을 설정할 수 있는 모든 버전에서 발생한 문제입니다."
+  zh:
+    title: "修正儲存個人檔案後 App 當機的問題"
+    sections:
+      - heading: "錯誤修正"
+        items:
+          - title: "儲存個人檔案時當機"
+            desc: "編輯個人檔案時按下「儲存」後，若立刻按下「喜歡的譜面」等按鈕，儲存完成時 App 會當機。所有可設定個人檔案的版本都有這個問題。"
+- id: "2026-10-07"
+  kind: release
+  version: "1.2.20261007"
+  date: "2026-10-08"
+  ja:
+    title: "別のKONAMI IDでの同期と、フレンドのみのスコアタに対応しました"
+    sections:
+      - heading: "KONAMI ID"
+        items:
+          - title: "別のKONAMI IDで同期できる"
+            desc: "異なるKONAMI IDで同期できない問題を解消しました。ただし、このアプリは今のところ「1端末1ID」で動いています。複数の端末で同じIDの情報を見ることや、1つの端末で複数のアカウントの情報を見ることはできません。これは今後解決します。"
+      - heading: "SDVX"
+        items:
+          - title: "おすすめとEXスコアの並べ替え"
+            games: [SDVX]
+            list:
+              - "おすすめ機能（スコアで伸ばせる）の対象と目標を、利用者の実力に合わせて見直しました"
+              - "楽曲一覧の並べ替えに「EXスコア順」と「EXスコア率順」を足しました"
+            media: {type: video, src: sdvx.mp4, poster: sdvx.jpg}
+      - heading: "ポップンと GITADORA"
+        items:
+          - title: "メダル順の並べ替え"
+            games: ["pop'n"]
+            desc: "ポップンの楽曲一覧の並べ替えに「メダル順」を足しました。"
+            media: {type: video, src: popn-medal.mp4, poster: popn-medal.jpg}
+          - title: "ポップンクラスと skill"
+            games: ["pop'n", GITADORA]
+            desc: "ポップンクラスのずれを一部改善しました。GITADORA も同じ種類の不具合を一部直しました。"
+      - heading: "スコアタとTier表"
+        items:
+          - title: "フレンドのみで開催"
+            desc: "スコアタを「フレンドのみ」でも開催できます。"
+            media: {type: video, src: sa-friends.mp4, poster: sa-friends.jpg}
+          - title: "課題曲から楽曲詳細へ"
+            desc: "スコアタの課題曲を選ぶと、楽曲詳細の画面が開きます。"
+            media: {type: video, src: sa-song.mp4, poster: sa-song.jpg}
+          - title: "Tierの色を変えられる"
+            desc: "カスタムTier表で、Tierの色を変えられます。"
+            media: {type: video, src: tier-color.mp4, poster: tier-color.jpg}
+      - heading: "軽微な改善と不具合の修正"
+        items:
+          - title: "軽微な改善と不具合の修正"
+            list:
+              - "フレンドの記録が無い機種の表示"
+              - "楽曲フィルタのフレンドタブのUIと動き"
+              - "目標管理画面のレーダーと属性別推移カードの表示、編集中のUIと動き"
+              - "Discordへ画像を送るときの動き"
+  en:
+    title: "Sync with a different KONAMI ID, and friends-only Score Attacks"
+    sections:
+      - heading: "KONAMI ID"
+        items:
+          - title: "Sync with a different KONAMI ID"
+            desc: "Fixed syncing with a different KONAMI ID. Note that the app currently runs on \"one ID per device\": you can't view the same ID on several devices, or several accounts on one device. This will be solved later."
+      - heading: "SDVX"
+        items:
+          - title: "Recommendations and EX score sorting"
+            games: [SDVX]
+            list:
+              - "Reworked the targets and goals of recommendations (raise by score) to match each player's skill"
+              - "Added \"EX score\" and \"EX score rate\" to song list sorting"
+            media: {type: video, src: sdvx.mp4, poster: sdvx.jpg}
+      - heading: "pop'n and GITADORA"
+        items:
+          - title: "Sort by medal"
+            games: ["pop'n"]
+            desc: "Added \"Medal\" to pop'n song list sorting."
+            media: {type: video, src: popn-medal.mp4, poster: popn-medal.jpg}
+          - title: "pop'n class and skill"
+            games: ["pop'n", GITADORA]
+            desc: "Partly fixed pop'n class mismatches, and partly fixed the same kind of problem in GITADORA."
+      - heading: "Score Attack and Tier List"
+        items:
+          - title: "Friends-only events"
+            desc: "Host a Score Attack for friends only."
+            media: {type: video, src: sa-friends.mp4, poster: sa-friends.jpg}
+          - title: "From challenge songs to song details"
+            desc: "Selecting a Score Attack challenge song opens its song details."
+            media: {type: video, src: sa-song.mp4, poster: sa-song.jpg}
+          - title: "Change tier colors"
+            desc: "Change the color of each tier in a custom Tier List."
+            media: {type: video, src: tier-color.mp4, poster: tier-color.jpg}
+      - heading: "Small improvements and bug fixes"
+        items:
+          - title: "Small improvements and bug fixes"
+            list:
+              - "Display of games with no friend records"
+              - "UI and behavior of the friends tab in song filters"
+              - "Display of the radar and per-attribute trend cards on the goals screen, and the UI and behavior while editing"
+              - "Behavior when sending images to Discord"
+  ko:
+    title: "다른 KONAMI ID로 동기화할 수 있게 하고, 친구 한정 스코어 어택을 열 수 있게 했습니다"
+    sections:
+      - heading: "KONAMI ID"
+        items:
+          - title: "다른 KONAMI ID로 동기화"
+            desc: "다른 KONAMI ID로 동기화할 수 없던 문제를 해결했습니다. 다만 이 앱은 현재 '1기기 1ID'로 운영됩니다. 여러 기기에서 같은 ID의 정보를 보거나, 한 기기에서 여러 계정의 정보를 볼 수는 없습니다. 이는 앞으로 해결합니다."
+      - heading: "SDVX"
+        items:
+          - title: "추천과 EX 스코어 정렬"
+            games: [SDVX]
+            list:
+              - "추천 기능(스코어로 올릴 수 있는 곡)의 대상과 목표를 이용자의 실력에 맞게 재검토했습니다"
+              - "곡 목록 정렬에 'EX 스코어순'과 'EX 스코어율순'을 추가했습니다"
+            media: {type: video, src: sdvx.mp4, poster: sdvx.jpg}
+      - heading: "팝픈과 GITADORA"
+        items:
+          - title: "메달순 정렬"
+            games: ["pop'n"]
+            desc: "팝픈 곡 목록 정렬에 '메달순'을 추가했습니다."
+            media: {type: video, src: popn-medal.mp4, poster: popn-medal.jpg}
+          - title: "팝픈 클래스와 skill"
+            games: ["pop'n", GITADORA]
+            desc: "팝픈 클래스 어긋남을 일부 개선했습니다. GITADORA도 같은 종류의 문제를 일부 고쳤습니다."
+      - heading: "스코어 어택과 티어표"
+        items:
+          - title: "친구 한정으로 개최"
+            desc: "스코어 어택을 '친구 한정'으로도 열 수 있습니다."
+            media: {type: video, src: sa-friends.mp4, poster: sa-friends.jpg}
+          - title: "과제곡에서 곡 상세로"
+            desc: "스코어 어택 과제곡을 고르면 곡 상세 화면이 열립니다."
+            media: {type: video, src: sa-song.mp4, poster: sa-song.jpg}
+          - title: "티어 색 변경"
+            desc: "커스텀 티어표에서 티어 색을 바꿀 수 있습니다."
+            media: {type: video, src: tier-color.mp4, poster: tier-color.jpg}
+      - heading: "작은 개선과 버그 수정"
+        items:
+          - title: "작은 개선과 버그 수정"
+            list:
+              - "친구 기록이 없는 기종의 표시"
+              - "곡 필터 친구 탭의 UI와 동작"
+              - "목표 관리 화면의 레이더와 속성별 추이 카드 표시, 편집 중 UI와 동작"
+              - "Discord로 이미지를 보낼 때의 동작"
+  zh:
+    title: "可用不同的 KONAMI ID 同步，並可舉辦僅限好友的分數挑戰"
+    sections:
+      - heading: "KONAMI ID"
+        items:
+          - title: "可用不同的 KONAMI ID 同步"
+            desc: "解決無法用不同 KONAMI ID 同步的問題。不過，本 App 目前以「1 台裝置 1 個 ID」運作，無法在多台裝置查看同一 ID 的資訊，也無法在 1 台裝置查看多個帳號的資訊。這點之後會解決。"
+      - heading: "SDVX"
+        items:
+          - title: "推薦與 EX 分數排序"
+            games: [SDVX]
+            list:
+              - "依使用者實力重新調整推薦功能（可用分數提升）的對象與目標"
+              - "樂曲一覽排序新增「EX 分數」與「EX 分數率」"
+            media: {type: video, src: sdvx.mp4, poster: sdvx.jpg}
+      - heading: "pop'n 與 GITADORA"
+        items:
+          - title: "依獎牌排序"
+            games: ["pop'n"]
+            desc: "pop'n 樂曲一覽排序新增「獎牌」。"
+            media: {type: video, src: popn-medal.mp4, poster: popn-medal.jpg}
+          - title: "pop'n class 與 skill"
+            games: ["pop'n", GITADORA]
+            desc: "部分改善 pop'n class 的偏差。GITADORA 也修正了部分同類問題。"
+      - heading: "分數挑戰與 Tier表"
+        items:
+          - title: "僅限好友舉辦"
+            desc: "分數挑戰也能以「僅限好友」舉辦。"
+            media: {type: video, src: sa-friends.mp4, poster: sa-friends.jpg}
+          - title: "從課題曲到樂曲詳情"
+            desc: "選擇分數挑戰的課題曲後，會開啟樂曲詳情畫面。"
+            media: {type: video, src: sa-song.mp4, poster: sa-song.jpg}
+          - title: "可變更 Tier 顏色"
+            desc: "自訂 Tier表可變更各 Tier 的顏色。"
+            media: {type: video, src: tier-color.mp4, poster: tier-color.jpg}
+      - heading: "小幅改善與錯誤修正"
+        items:
+          - title: "小幅改善與錯誤修正"
+            list:
+              - "沒有好友記錄的機種的顯示"
+              - "樂曲篩選好友分頁的 UI 與動作"
+              - "目標管理畫面的雷達與各屬性變化卡片的顯示，以及編輯中的 UI 與動作"
+              - "傳送圖片到 Discord 時的動作"
+- id: "2026-10-03"
+  kind: release
+  version: "1.2.20261003"
+  date: "2026-10-02"
+  ja:
+    title: "GITADORA の skill とポップンクラスのずれを修正しました"
+    sections:
+      - heading: "不具合の修正"
+        items:
+          - title: "GITADORA の skill がずれる"
+            games: [GITADORA]
+            desc: "ギターとドラムを両方同期すると、別の曲の記録を取り込んでしまうことがありました。同期を続けていただいた皆様の記録から分かった、skill がずれる原因の1つです。"
+          - title: "ポップンクラスがずれる"
+            games: ["pop'n"]
+            list:
+              - "一部の曲を照合できていませんでした"
+              - "イージー・アシストのクリアを、未クリアとして計算していました"
+              - "端数処理もまだ違いそうなため、同期のときに、計算に使った今作の記録を送るようにしました。更新後も同期を続けていただけると助かります"
+  en:
+    title: "Fixed GITADORA skill and pop'n class mismatches"
+    sections:
+      - heading: "Bug fixes"
+        items:
+          - title: "GITADORA skill didn't match"
+            games: [GITADORA]
+            desc: "Syncing both guitar and drums could import another song's record. This is one cause of skill mismatches, found from the records of everyone who kept syncing."
+          - title: "pop'n class didn't match"
+            games: ["pop'n"]
+            list:
+              - "Some songs couldn't be matched"
+              - "Clears with EASY or ASSIST were counted as not cleared"
+              - "Rounding may still differ, so sync now sends the current-version records used in the calculation. Please keep syncing after updating"
+  ko:
+    title: "GITADORA skill과 팝픈 클래스 어긋남을 고쳤습니다"
+    sections:
+      - heading: "버그 수정"
+        items:
+          - title: "GITADORA skill이 어긋나는 문제"
+            games: [GITADORA]
+            desc: "기타와 드럼을 모두 동기화하면 다른 곡의 기록을 가져오는 경우가 있었습니다. 동기화를 계속해 주신 여러분의 기록으로 알게 된, skill이 어긋나는 원인 중 하나입니다."
+          - title: "팝픈 클래스가 어긋나는 문제"
+            games: ["pop'n"]
+            list:
+              - "일부 곡을 대조하지 못했습니다"
+              - "이지·어시스트 클리어를 미클리어로 계산했습니다"
+              - "반올림 처리도 아직 다를 수 있어, 동기화할 때 계산에 쓴 이번 작품 기록을 보내도록 했습니다. 업데이트 후에도 동기화를 계속해 주시면 도움이 됩니다"
+  zh:
+    title: "修正 GITADORA skill 與 pop'n class 的偏差"
+    sections:
+      - heading: "錯誤修正"
+        items:
+          - title: "GITADORA 的 skill 有偏差"
+            games: [GITADORA]
+            desc: "同時同步吉他與鼓時，有時會匯入其他樂曲的記錄。這是從持續同步的各位的記錄中找出的 skill 偏差原因之一。"
+          - title: "pop'n class 有偏差"
+            games: ["pop'n"]
+            list:
+              - "部分樂曲無法比對"
+              - "將 EASY、ASSIST 通關算成未通關"
+              - "尾數處理可能仍有差異，因此同步時會送出計算所用的本作記錄。更新後也請繼續同步"
+- id: "2026-10-02"
+  kind: release
+  version: "1.2.20261002"
+  date: "2026-09-30"
+  ja:
+    title: "判定調整を「音」と「描画」に分け、ハイスピを譜面ごとに残せます"
+    sections:
+      - heading: "判定調整とハイスピ"
+        items:
+          - title: "音・描画・ハイスピを譜面ごとに"
+            desc: "判定調整を「音」と「描画」に分け、ハイスピを譜面ごとにメモできます。ハイスピの設定事故が起きないよう、既定値からハイスピを変えている譜面は、数字を反転・太字にして目立たせています。"
+            media: {type: video, src: timing.mp4, poster: timing.jpg}
+      - heading: "成果画像"
+        items:
+          - title: "「プレーした曲」でも出せる"
+            games: [DDR, GITADORA]
+            desc: "成果画像の表示形式の右端に「更新／プレー」の切り替えを置きました。自己ベストでなくても、その日一番良かったスコアを載せられます。"
+            media: {type: video, src: result-played.mp4, poster: result-played.jpg}
+      - heading: "スコアタ"
+        items:
+          - title: "コメントを残せる"
+            desc: "参加中のスコアタにコメントを残せます。開催中に書いたコメントは、ランキングやスコアタの結果画像で、自分の名前の下に表示されます。"
+            media: {type: video, src: sa-comment.mp4, poster: sa-comment.jpg}
+      - heading: "ログインと初期値"
+        items:
+          - title: "起動時にログインをチェックする"
+            desc: "設定に「起動時にログインをチェックする」を足しました。オンにすると、アプリの起動時に公式サイトのログインを確かめ、ログアウトの頻度を減らせます。アプリを1日に1回以上開く必要があるため、初期設定はオフです。"
+          - title: "対象レベルの初期値"
+            desc: "各機能の対象レベルの初期値は固定でしたが、初回同期のときに、プレー回数の多いレベル帯に合わせるようにしました。すでに使っている方は、フィルタなどを手で設定してください。"
+      - heading: "不具合の修正"
+        items:
+          - title: "不具合の修正"
+            list:
+              - "フレンドに課題を送るとき、プレイしていない機種へ送れないようにしました"
+              - "設定のチュートリアルが再生されない"
+              - "共有画像で、壁紙が上部に写らない"
+              - "共有画像を作るとき、特定の条件でアプリが落ちる"
+              - "DDRの譜面再生で、初回だけクラップ音が遅れる"
+              - "GITADORAで、公式の曲一覧の一部の曲が曲データと結び付かない"
+              - "ポップンクラスの計算を修正しました"
+              - "ポップンの一部の譜面の難易度を修正しました"
+  en:
+    title: "Timing split into audio and visual, and hi-speed memos per chart"
+    sections:
+      - heading: "Timing and hi-speed"
+        items:
+          - title: "Audio, visual and hi-speed per chart"
+            desc: "Timing adjustment is split into audio and visual, and you can note your hi-speed for each chart. To prevent hi-speed mistakes, charts where hi-speed differs from your default show the number inverted and in bold."
+            media: {type: video, src: timing.mp4, poster: timing.jpg}
+      - heading: "Result images"
+        items:
+          - title: "Also by songs you played"
+            games: [DDR, GITADORA]
+            desc: "A switch between \"Updated\" and \"Played\" now sits at the right end of the result image format. You can show the day's best score even if it isn't a personal best."
+            media: {type: video, src: result-played.mp4, poster: result-played.jpg}
+      - heading: "Score Attack"
+        items:
+          - title: "Leave a comment"
+            desc: "Leave a comment on a Score Attack you've joined. Comments written while it's running appear under your name in the rankings and result images."
+            media: {type: video, src: sa-comment.mp4, poster: sa-comment.jpg}
+      - heading: "Login and defaults"
+        items:
+          - title: "Check login at startup"
+            desc: "Added \"Check login at startup\" to settings. When on, the app checks your official site login at startup, so you get logged out less often. It's off by default, since you need to open the app at least once a day."
+          - title: "Default target level"
+            desc: "The default target level for features used to be fixed. It now matches the level range you play most, at your first sync. If you already use the app, please set filters and such by hand."
+      - heading: "Bug fixes"
+        items:
+          - title: "Bug fixes"
+            list:
+              - "You can no longer send a challenge to a friend for a game they don't play"
+              - "The tutorial in settings didn't play"
+              - "The wallpaper didn't appear at the top of share images"
+              - "The app crashed under certain conditions when making a share image"
+              - "In DDR chart playback, the clap sound was late the first time only"
+              - "In GITADORA, some songs in the official song list weren't linked to song data"
+              - "Fixed the pop'n class calculation"
+              - "Fixed the difficulty of some pop'n charts"
+  ko:
+    title: "판정 조정을 '소리'와 '표시'로 나누고, 하이스피드를 채보마다 메모할 수 있게 했습니다"
+    sections:
+      - heading: "판정 조정과 하이스피드"
+        items:
+          - title: "소리·표시·하이스피드를 채보마다"
+            desc: "판정 조정을 '소리'와 '표시'로 나누고, 하이스피드를 채보마다 메모할 수 있습니다. 하이스피드 설정 실수가 없도록, 기본값에서 하이스피드를 바꾼 채보는 숫자를 반전·굵게 표시해 눈에 띄게 했습니다."
+            media: {type: video, src: timing.mp4, poster: timing.jpg}
+      - heading: "성과 이미지"
+        items:
+          - title: "'플레이한 곡'으로도 출력"
+            games: [DDR, GITADORA]
+            desc: "성과 이미지 표시 형식의 오른쪽 끝에 '갱신/플레이' 전환을 두었습니다. 자기 최고 기록이 아니어도 그날 가장 좋았던 스코어를 실을 수 있습니다."
+            media: {type: video, src: result-played.mp4, poster: result-played.jpg}
+      - heading: "스코어 어택"
+        items:
+          - title: "코멘트 남기기"
+            desc: "참가 중인 스코어 어택에 코멘트를 남길 수 있습니다. 개최 중에 쓴 코멘트는 랭킹과 결과 이미지에서 자신의 이름 아래에 표시됩니다."
+            media: {type: video, src: sa-comment.mp4, poster: sa-comment.jpg}
+      - heading: "로그인과 초기값"
+        items:
+          - title: "시작 시 로그인 확인"
+            desc: "설정에 '시작 시 로그인 확인'을 추가했습니다. 켜면 앱을 시작할 때 공식 사이트 로그인을 확인해 로그아웃 빈도를 줄일 수 있습니다. 앱을 하루에 한 번 이상 열어야 하므로 기본값은 꺼짐입니다."
+          - title: "대상 레벨 초기값"
+            desc: "각 기능의 대상 레벨 초기값이 고정이었지만, 첫 동기화 때 플레이 횟수가 많은 레벨대에 맞추도록 했습니다. 이미 사용 중인 분은 필터 등을 직접 설정해 주세요."
+      - heading: "버그 수정"
+        items:
+          - title: "버그 수정"
+            list:
+              - "친구에게 과제를 보낼 때, 플레이하지 않는 기종으로는 보낼 수 없게 했습니다"
+              - "설정의 튜토리얼이 재생되지 않던 문제"
+              - "공유 이미지에서 배경화면이 위쪽에 나오지 않던 문제"
+              - "공유 이미지를 만들 때 특정 조건에서 앱이 종료되던 문제"
+              - "DDR 채보 재생에서 처음에만 클랩 소리가 늦던 문제"
+              - "GITADORA에서 공식 곡 목록의 일부 곡이 곡 데이터와 연결되지 않던 문제"
+              - "팝픈 클래스 계산을 수정했습니다"
+              - "팝픈 일부 채보의 난이도를 수정했습니다"
+  zh:
+    title: "判定調整分為「聲音」與「畫面」，並可依譜面記錄 Hi-Speed"
+    sections:
+      - heading: "判定調整與 Hi-Speed"
+        items:
+          - title: "依譜面記錄聲音、畫面與 Hi-Speed"
+            desc: "判定調整分為「聲音」與「畫面」，並可依譜面記錄 Hi-Speed。為避免 Hi-Speed 設定失誤，Hi-Speed 與預設值不同的譜面會以反白粗體顯示數字。"
+            media: {type: video, src: timing.mp4, poster: timing.jpg}
+      - heading: "成果圖片"
+        items:
+          - title: "也能以「遊玩過的歌曲」輸出"
+            games: [DDR, GITADORA]
+            desc: "在成果圖片顯示格式的右端加入「更新／遊玩」切換。即使不是自己的最佳成績，也能放上當天最好的分數。"
+            media: {type: video, src: result-played.mp4, poster: result-played.jpg}
+      - heading: "分數挑戰"
+        items:
+          - title: "可留下留言"
+            desc: "可在參加中的分數挑戰留下留言。舉辦期間寫的留言，會顯示在排名與結果圖片中自己的名字下方。"
+            media: {type: video, src: sa-comment.mp4, poster: sa-comment.jpg}
+      - heading: "登入與初始值"
+        items:
+          - title: "啟動時檢查登入"
+            desc: "在設定中新增「啟動時檢查登入」。開啟後，App 啟動時會確認官方網站的登入狀態，減少被登出的次數。由於需要每天至少開啟一次 App，預設為關閉。"
+          - title: "對象等級的初始值"
+            desc: "各功能對象等級的初始值原本是固定的，現在會在首次同步時配合遊玩次數最多的等級帶。已在使用的人請手動設定篩選等。"
+      - heading: "錯誤修正"
+        items:
+          - title: "錯誤修正"
+            list:
+              - "向好友送出課題時，無法再送往對方沒有遊玩的機種"
+              - "設定中的教學無法播放"
+              - "分享圖片上方不會顯示桌布"
+              - "製作分享圖片時，特定條件下 App 會當機"
+              - "DDR 譜面播放時，只有第一次拍手音會延遲"
+              - "GITADORA 官方樂曲一覽中部分樂曲無法與樂曲資料對應"
+              - "修正 pop'n class 的計算"
+              - "修正部分 pop'n 譜面的難度"
+- id: "2026-09-22"
+  kind: release
+  version: "1.2.20260922"
+  date: "2026-09-22"
+  ja:
+    title: "スコアタの開催まわりを改善し、ポップンの差分同期を直しました"
+    sections:
+      - heading: "改善"
+        items:
+          - title: "スコアタとフレンド"
+            list:
+              - "スコアタの開催まわりの動きを改善しました（再承認、自動確定など）"
+              - "ポップンでも、フレンドのポップンクラス対象楽曲を見られます"
+      - heading: "不具合の修正"
+        items:
+          - title: "ポップンの差分同期"
+            games: ["pop'n"]
+            desc: "ポップンの差分同期が正しく動いていませんでした。ポップンのプレー履歴は、ボルテと同じく楽曲単位で最近プレイした曲が出る仕様なのに、DDRと同じロジックを使っていたのが原因です。ポップンクラスがずれる要因の一つでした。"
+          - title: "Tier表の機種の名前"
+            desc: "Tier表で機種を切り替えると、別の機種の名前が表示される不具合を直しました。"
+  en:
+    title: "Improved hosting Score Attacks, and fixed pop'n differential sync"
+    sections:
+      - heading: "Improvements"
+        items:
+          - title: "Score Attack and friends"
+            list:
+              - "Improved how hosting a Score Attack works (re-approval, automatic finalization and more)"
+              - "pop'n can now show a friend's pop'n class songs too"
+      - heading: "Bug fixes"
+        items:
+          - title: "pop'n differential sync"
+            games: ["pop'n"]
+            desc: "pop'n differential sync wasn't working correctly. Like SDVX, pop'n's play history lists recently played songs per song, but the app used the same logic as DDR. This was one cause of pop'n class mismatches."
+          - title: "Game name in the Tier List"
+            desc: "Fixed the Tier List showing another game's name after switching games."
+  ko:
+    title: "스코어 어택 개최 기능을 개선하고, 팝픈 차분 동기화를 고쳤습니다"
+    sections:
+      - heading: "개선"
+        items:
+          - title: "스코어 어택과 친구"
+            list:
+              - "스코어 어택 개최 관련 동작을 개선했습니다(재승인, 자동 확정 등)"
+              - "팝픈에서도 친구의 팝픈 클래스 대상곡을 볼 수 있습니다"
+      - heading: "버그 수정"
+        items:
+          - title: "팝픈 차분 동기화"
+            games: ["pop'n"]
+            desc: "팝픈 차분 동기화가 제대로 작동하지 않았습니다. 팝픈의 플레이 이력은 SDVX처럼 곡 단위로 최근 플레이한 곡이 나오는 사양인데, DDR과 같은 로직을 쓰고 있었던 것이 원인입니다. 팝픈 클래스가 어긋나는 원인 중 하나였습니다."
+          - title: "티어표의 기종 이름"
+            desc: "티어표에서 기종을 바꾸면 다른 기종의 이름이 표시되던 문제를 고쳤습니다."
+  zh:
+    title: "改善分數挑戰的舉辦功能，並修正 pop'n 差分同步"
+    sections:
+      - heading: "改善"
+        items:
+          - title: "分數挑戰與好友"
+            list:
+              - "改善舉辦分數挑戰相關的動作（重新核准、自動確定等）"
+              - "pop'n 也能查看好友的 pop'n class 對象樂曲"
+      - heading: "錯誤修正"
+        items:
+          - title: "pop'n 差分同步"
+            games: ["pop'n"]
+            desc: "pop'n 的差分同步沒有正確運作。pop'n 的遊玩履歷和 SDVX 一樣，是以樂曲為單位顯示最近遊玩的歌曲，卻使用了與 DDR 相同的邏輯。這是 pop'n class 偏差的原因之一。"
+          - title: "Tier表的機種名稱"
+            desc: "修正在 Tier表切換機種後，會顯示其他機種名稱的問題。"
+- id: "2026-09-21"
+  kind: release
+  version: "1.2.20260921"
+  date: "2026-09-20"
+  ja:
+    title: "ポップンクラスのずれを直し、フレンドとプロフィールまわりを改善しました"
+    sections:
+      - heading: "ポップンクラス"
+        items:
+          - title: "ポップンクラスが合わない不具合"
+            games: ["pop'n"]
+            list:
+              - "ポップンの同期で、ポップンクラスが公式HPの値と合わない不具合に対応しました（今回で完全には直らない可能性があります）"
+              - "歴代の記録の方が高い場合に、データを取得していませんでした"
+              - "リリース後、最初のポップンの差分同期では全件同期が走ります"
+      - heading: "フレンドとプロフィール"
+        items:
+          - title: "ランキングとフレンド申請"
+            list:
+              - "Skill などのランキングを見られます（プロフィールを公開していないユーザーの名前は表示されません）"
+              - "フレンド一覧のUIを改善しました"
+              - "プロフィールからフレンド申請するUIを改善しました"
+              - "楽曲詳細の画面のUIを改善しました"
+      - heading: "画像の共有"
+        items:
+          - title: "X への共有"
+            desc: "おそらく X 側の仕様変更で、画像の共有が一時的にうまくいかなかったのを直しました。これまでは webview 経由で使いづらかったのが、アプリに移れるようになりました。"
+  en:
+    title: "Fixed pop'n class mismatches, and improved friends and profiles"
+    sections:
+      - heading: "pop'n class"
+        items:
+          - title: "pop'n class didn't match"
+            games: ["pop'n"]
+            list:
+              - "Fixed pop'n class not matching the official site after syncing pop'n (this may not fully fix it)"
+              - "Data wasn't fetched when your all-time record was higher"
+              - "After this release, your first pop'n differential sync runs as a full sync"
+      - heading: "Friends and profiles"
+        items:
+          - title: "Rankings and friend requests"
+            list:
+              - "See rankings for skill and more (names of users without a public profile aren't shown)"
+              - "Improved the friend list UI"
+              - "Improved the UI for sending friend requests from a profile"
+              - "Improved the song details UI"
+      - heading: "Sharing images"
+        items:
+          - title: "Sharing to X"
+            desc: "Fixed image sharing, which briefly stopped working, probably because of a change on X's side. It used to go through a webview and was awkward; now it opens the app."
+  ko:
+    title: "팝픈 클래스 어긋남을 고치고, 친구와 프로필을 개선했습니다"
+    sections:
+      - heading: "팝픈 클래스"
+        items:
+          - title: "팝픈 클래스가 맞지 않는 문제"
+            games: ["pop'n"]
+            list:
+              - "팝픈 동기화에서 팝픈 클래스가 공식 사이트 값과 맞지 않는 문제에 대응했습니다(이번에 완전히 해결되지 않을 수도 있습니다)"
+              - "역대 기록이 더 높을 때 데이터를 가져오지 않았습니다"
+              - "릴리스 후 첫 팝픈 차분 동기화는 전체 동기화로 진행됩니다"
+      - heading: "친구와 프로필"
+        items:
+          - title: "랭킹과 친구 신청"
+            list:
+              - "Skill 등의 랭킹을 볼 수 있습니다(프로필을 공개하지 않은 사용자의 이름은 표시되지 않습니다)"
+              - "친구 목록 UI를 개선했습니다"
+              - "프로필에서 친구 신청하는 UI를 개선했습니다"
+              - "곡 상세 화면 UI를 개선했습니다"
+      - heading: "이미지 공유"
+        items:
+          - title: "X로 공유"
+            desc: "아마도 X 측의 사양 변경으로 이미지 공유가 일시적으로 잘 되지 않던 것을 고쳤습니다. 지금까지는 webview를 거쳐 다소 불편했지만, 이제 앱으로 이동할 수 있습니다."
+  zh:
+    title: "修正 pop'n class 的偏差，並改善好友與個人檔案"
+    sections:
+      - heading: "pop'n class"
+        items:
+          - title: "pop'n class 對不上"
+            games: ["pop'n"]
+            list:
+              - "處理 pop'n 同步後 pop'n class 與官方網站數值對不上的問題（這次可能無法完全修好）"
+              - "歷代記錄較高時，沒有取得資料"
+              - "發布後第一次 pop'n 差分同步會執行全部同步"
+      - heading: "好友與個人檔案"
+        items:
+          - title: "排名與好友申請"
+            list:
+              - "可查看 Skill 等排名（未公開個人檔案的使用者不會顯示名稱）"
+              - "改善好友列表的 UI"
+              - "改善從個人檔案申請好友的 UI"
+              - "改善樂曲詳情畫面的 UI"
+      - heading: "分享圖片"
+        items:
+          - title: "分享到 X"
+            desc: "修正可能因 X 方面規格變更而暫時無法分享圖片的問題。過去必須經由 webview，不太好用，現在可以直接跳到 App。"
+- id: "2026-09-18"
+  kind: release
+  version: "1.2.20260918"
+  date: "2026-09-17"
+  ja:
+    title: "スコアアタックとプロフィールを追加しました"
+    sections:
+      - heading: "スコアアタック"
+        items:
+          - title: "スコアタを開催できる"
+            list:
+              - "バナー画像（任意）・参加条件・機種・課題曲などを指定し、期間制のスコアタを開催できます"
+              - "DDR（通常スコア）・GITADORA は差分同期で自動登録されます（手動登録も可）"
+              - "DDR（EX）・SDVX・pop'n は手動登録が必要で、リザルト画像の提出が必須です"
+            media: {type: video, src: score-attack.mp4, poster: score-attack.jpg}
+          - title: "主催者の承認"
+            list:
+              - "リザルト画像は主催者の承認が必要です。主催者が画像と提出スコアを照合して承認すると、スコアが確定します"
+              - "リザルト画像は終了後2日で削除されるため、承認は早めに行ってください"
+            media: {type: video, src: sa-approve.mp4, poster: sa-approve.jpg}
+          - title: "結果画像"
+            desc: "スコアタが終了すると、参加者向けと主催者向けの2種類の結果画像を作れます。"
+            media: {type: video, src: sa-result.mp4, poster: sa-result.jpg}
+          - title: "データの保持と複数機種"
+            list:
+              - "スコアタのデータは終了後30日で消え、復元できなくなります。結果画像はお手元に保存してください"
+              - "複数機種をまたいだスコアタも開催できます。その場合、満点比の百分率で正規化した記録で順位を決めます"
+          - title: "その他"
+            list:
+              - "スコアタは全体公開のみです。参加条件は、skill などの指標値でだけ制限できます"
+              - "SDVXを含む大会に参加すると、差分同期が「直近100曲のプレー履歴を確認する」動きに変わります"
+      - heading: "プロフィール"
+        items:
+          - title: "プロフィールを作れる"
+            list:
+              - "一言、好きな譜面・苦手な譜面、ウィジェットなどを設定できます"
+              - "各機種のプレイ傾向や選曲ランキング（一部のみ）を自動で表示します（SDVXは、もう一度全曲の詳細同期が必要です）"
+              - "得意譜面には、相対的にスコアの高い譜面を自動で表示します"
+              - "プロフィールは画像で出力できます"
+              - "公開設定は、一括でも個別でも表示・非表示を切り替えられます"
+              - "フレンド追加画面に、プロフィールを公開しているユーザーが一覧で出ます。これまでより他のプレイヤーに見つかりやすくなります"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+      - heading: "楽曲詳細と譜面確認"
+        items:
+          - title: "楽曲の読み方"
+            desc: "楽曲詳細の画面から、各楽曲の読み方を確認できます。英語の読みは、発音記号を表しきれないため参考です。"
+          - title: "譜面確認の速度表記"
+            games: [DDR]
+            desc: "DDRの譜面確認ビューアの速度表記を改善し、すぐに倍速や1/2倍速にできます（数字は実際の筐体の速度とは異なります）。"
+            media: {type: image, src: ddr-speed.jpg}
+      - heading: "統計"
+        items:
+          - title: "ランク区分と偏差値"
+            list:
+              - "統計情報などのランク区分で、偏りを考えて SDVX のインペリアルⅠを4分割、Ⅱを2分割しました"
+              - "外れ値などの影響で極端に低くなる偏差値を、表示しないようにしました"
+      - heading: "軽微な改善"
+        items:
+          - title: "ホームと同期"
+            list:
+              - "設定から、ホーム画面で非表示にする項目を選べます"
+              - "同期したときに、ライバルのスコアを抜いたことが分かるようにしました"
+              - "クイック同期の表記を改善しました（動きは変えていません）"
+              - "今日の成果で、課題曲だけを表示できます"
+          - title: "Tier表・弱点分析・検索"
+            list:
+              - "Tier表の動き（画像の読み込み速度）を改善しました"
+              - "「弱点分析」で対象レベルを絞り込めます"
+              - "楽曲検索で、ポップンのジャンル名を検索できます"
+      - heading: "不具合の修正"
+        items:
+          - title: "同期漏れなど"
+            list:
+              - "ポップンの楽曲同期漏れ：差分同期で、歴代記録の更新の有無だけを見ていた"
+              - "GITADORAの楽曲同期漏れ：考えられる対策を行いました。根本の要因は特定できておらず、引き続き見ていきます"
+              - "DDRの譜面再生で、クラップ音がずれることがある"
+              - "iOSでヘルスケア連携ができない"
+  en:
+    title: "Score Attack and profiles"
+    sections:
+      - heading: "Score Attack"
+        items:
+          - title: "Host a Score Attack"
+            list:
+              - "Set a banner image (optional), entry conditions, game and challenge songs, and host a Score Attack for a set period"
+              - "DDR (normal score) and GITADORA are registered automatically by differential sync (manual registration also works)"
+              - "DDR (EX), SDVX and pop'n need manual registration with a result screenshot"
+            media: {type: video, src: score-attack.mp4, poster: score-attack.jpg}
+          - title: "Approval by the host"
+            list:
+              - "Result screenshots need the host's approval. The score is final once the host checks the screenshot against the submitted score and approves it"
+              - "Result screenshots are deleted 2 days after the end, so approve them early"
+            media: {type: video, src: sa-approve.mp4, poster: sa-approve.jpg}
+          - title: "Result images"
+            desc: "When a Score Attack ends, you can make two kinds of result images: one for participants and one for the host."
+            media: {type: video, src: sa-result.mp4, poster: sa-result.jpg}
+          - title: "Data retention and multiple games"
+            list:
+              - "Score Attack data is deleted 30 days after the end and can't be restored. Save the result images yourself"
+              - "You can also host a Score Attack across several games. Rankings then use records normalized as a percentage of the maximum score"
+          - title: "Other notes"
+            list:
+              - "Score Attacks are public only. Entry conditions can only use metrics such as skill"
+              - "Joining a tournament that includes SDVX changes differential sync to check the play history of the latest 100 songs"
+      - heading: "Profiles"
+        items:
+          - title: "Make a profile"
+            list:
+              - "Set a short message, favorite and weak charts, widgets and more"
+              - "Your play tendencies and song rankings (partly) for each game appear automatically (SDVX needs a full detailed sync again)"
+              - "Charts where your score is relatively high appear automatically as your strong charts"
+              - "Export your profile as an image"
+              - "Show or hide items all at once or one by one"
+              - "The add-friend screen lists users with public profiles, so other players can find you more easily"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+      - heading: "Song details and chart viewer"
+        items:
+          - title: "How to read song titles"
+            desc: "Check how each song title is read from the song details screen. English readings are only a reference, since phonetic symbols can't be shown fully."
+          - title: "Speed display in the chart viewer"
+            games: [DDR]
+            desc: "The DDR chart viewer shows speed more clearly, and you can switch to double or half speed right away (the numbers differ from the actual cabinet speed)."
+            media: {type: image, src: ddr-speed.jpg}
+      - heading: "Statistics"
+        items:
+          - title: "Rank ranges and T-scores"
+            list:
+              - "To account for skew, SDVX Imperial I is split into 4 and Imperial II into 2 in rank ranges for statistics"
+              - "T-scores that become extremely low because of outliers are no longer shown"
+      - heading: "Small improvements"
+        items:
+          - title: "Home and sync"
+            list:
+              - "Choose items to hide on the home screen from settings"
+              - "Sync now tells you when you've beaten a rival's score"
+              - "Improved the wording of Quick sync (its behavior is unchanged)"
+              - "Show only challenge songs in today's results"
+          - title: "Tier List, weakness analysis and search"
+            list:
+              - "Tier Lists load images faster"
+              - "Narrow weakness analysis by level"
+              - "Song search finds pop'n genre names"
+      - heading: "Bug fixes"
+        items:
+          - title: "Missed syncs and more"
+            list:
+              - "pop'n songs missed in sync: differential sync only checked whether all-time records had changed"
+              - "GITADORA songs missed in sync: we applied the fixes we could think of, but the root cause isn't identified yet, so we keep monitoring"
+              - "The clap sound in DDR chart playback could be out of sync"
+              - "Health integration didn't work on iOS"
+  ko:
+    title: "스코어 어택과 프로필을 추가했습니다"
+    sections:
+      - heading: "스코어 어택"
+        items:
+          - title: "스코어 어택 개최"
+            list:
+              - "배너 이미지(선택)·참가 조건·기종·과제곡 등을 지정해 기간제 스코어 어택을 열 수 있습니다"
+              - "DDR(일반 스코어)·GITADORA는 차분 동기화로 자동 등록됩니다(수동 등록도 가능)"
+              - "DDR(EX)·SDVX·pop'n은 수동 등록이 필요하며, 리절트 이미지 제출이 필수입니다"
+            media: {type: video, src: score-attack.mp4, poster: score-attack.jpg}
+          - title: "주최자 승인"
+            list:
+              - "리절트 이미지는 주최자 승인이 필요합니다. 주최자가 이미지와 제출 스코어를 대조해 승인하면 스코어가 확정됩니다"
+              - "리절트 이미지는 종료 2일 후 삭제되므로 승인은 빨리 해 주세요"
+            media: {type: video, src: sa-approve.mp4, poster: sa-approve.jpg}
+          - title: "결과 이미지"
+            desc: "스코어 어택이 끝나면 참가자용과 주최자용, 두 종류의 결과 이미지를 만들 수 있습니다."
+            media: {type: video, src: sa-result.mp4, poster: sa-result.jpg}
+          - title: "데이터 보존과 여러 기종"
+            list:
+              - "스코어 어택 데이터는 종료 30일 후 삭제되어 복원할 수 없습니다. 결과 이미지는 직접 저장해 주세요"
+              - "여러 기종에 걸친 스코어 어택도 열 수 있습니다. 이 경우 만점 대비 백분율로 정규화한 기록으로 순위를 정합니다"
+          - title: "그 밖에"
+            list:
+              - "스코어 어택은 전체 공개만 가능하며, 참가 조건은 skill 등 지표값으로만 제한할 수 있습니다"
+              - "SDVX가 포함된 대회에 참가하면 차분 동기화가 '최근 100곡의 플레이 이력을 확인하는' 동작으로 바뀝니다"
+      - heading: "프로필"
+        items:
+          - title: "프로필 만들기"
+            list:
+              - "한마디, 좋아하는 채보·어려운 채보, 위젯 등을 설정할 수 있습니다"
+              - "각 기종의 플레이 경향과 선곡 랭킹(일부)을 자동으로 표시합니다(SDVX는 전곡 상세 동기화를 다시 해야 합니다)"
+              - "잘하는 채보에는 상대적으로 스코어가 높은 채보를 자동으로 표시합니다"
+              - "프로필을 이미지로 내보낼 수 있습니다"
+              - "공개 설정은 일괄로도 개별로도 표시·숨김을 바꿀 수 있습니다"
+              - "친구 추가 화면에 프로필을 공개한 사용자가 목록으로 나와, 다른 플레이어가 찾기 쉬워집니다"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+      - heading: "곡 상세와 채보 확인"
+        items:
+          - title: "곡명 읽는 법"
+            desc: "곡 상세 화면에서 각 곡의 읽는 법을 확인할 수 있습니다. 영어 읽기는 발음 기호를 다 표현할 수 없어 참고용입니다."
+          - title: "채보 확인의 속도 표기"
+            games: [DDR]
+            desc: "DDR 채보 확인 뷰어의 속도 표기를 개선해 바로 배속이나 1/2배속으로 바꿀 수 있습니다(숫자는 실제 기체 속도와 다릅니다)."
+            media: {type: image, src: ddr-speed.jpg}
+      - heading: "통계"
+        items:
+          - title: "랭크 구분과 T점수"
+            list:
+              - "통계 정보 등의 랭크 구분에서 편중을 고려해 SDVX 임페리얼 Ⅰ을 4분할, Ⅱ를 2분할했습니다"
+              - "이상값 등의 영향으로 극단적으로 낮아지는 T점수는 표시하지 않습니다"
+      - heading: "작은 개선"
+        items:
+          - title: "홈과 동기화"
+            list:
+              - "설정에서 홈 화면에 숨길 항목을 고를 수 있습니다"
+              - "동기화할 때 라이벌 스코어를 넘으면 알 수 있게 했습니다"
+              - "빠른 동기화의 표기를 개선했습니다(동작은 바꾸지 않았습니다)"
+              - "오늘의 성과에서 과제곡만 표시할 수 있습니다"
+          - title: "티어표·약점 분석·검색"
+            list:
+              - "티어표 동작(이미지 로딩 속도)을 개선했습니다"
+              - "'약점 분석'에서 대상 레벨을 좁힐 수 있습니다"
+              - "곡 검색에서 팝픈의 장르명을 검색할 수 있습니다"
+      - heading: "버그 수정"
+        items:
+          - title: "동기화 누락 등"
+            list:
+              - "팝픈 곡 동기화 누락: 차분 동기화에서 역대 기록의 갱신 여부만 보고 있었습니다"
+              - "GITADORA 곡 동기화 누락: 생각할 수 있는 대책을 적용했지만 근본 원인을 특정하지 못해 계속 지켜보고 있습니다"
+              - "DDR 채보 재생에서 클랩 소리가 어긋나는 경우가 있던 문제"
+              - "iOS에서 헬스케어 연동이 되지 않던 문제"
+  zh:
+    title: "新增分數挑戰與個人檔案"
+    sections:
+      - heading: "分數挑戰"
+        items:
+          - title: "可舉辦分數挑戰"
+            list:
+              - "可指定橫幅圖片（可選）、參加條件、機種、課題曲等，舉辦限定期間的分數挑戰"
+              - "DDR（一般分數）與 GITADORA 會透過差分同步自動登錄（也可手動登錄）"
+              - "DDR（EX）、SDVX、pop'n 需手動登錄，且必須提交結算畫面圖片"
+            media: {type: video, src: score-attack.mp4, poster: score-attack.jpg}
+          - title: "主辦者核准"
+            list:
+              - "結算圖片需要主辦者核准。主辦者比對圖片與提交的分數並核准後，分數即確定"
+              - "結算圖片會在結束 2 天後刪除，請盡早核准"
+            media: {type: video, src: sa-approve.mp4, poster: sa-approve.jpg}
+          - title: "結果圖片"
+            desc: "分數挑戰結束後，可製作參加者用與主辦者用兩種結果圖片。"
+            media: {type: video, src: sa-result.mp4, poster: sa-result.jpg}
+          - title: "資料保存與跨機種"
+            list:
+              - "分數挑戰的資料會在結束 30 天後刪除且無法復原，請自行保存結果圖片"
+              - "也可舉辦跨多個機種的分數挑戰，此時以滿分比例的百分率正規化後的記錄決定名次"
+          - title: "其他"
+            list:
+              - "分數挑戰只能全體公開，參加條件只能用 skill 等指標值限制"
+              - "參加包含 SDVX 的大會後，差分同步會改為「確認最近 100 首的遊玩履歷」"
+      - heading: "個人檔案"
+        items:
+          - title: "可建立個人檔案"
+            list:
+              - "可設定一句話、喜歡與不擅長的譜面、小工具等"
+              - "自動顯示各機種的遊玩傾向與選曲排名（部分）（SDVX 需要再做一次全曲詳細同步）"
+              - "擅長譜面會自動顯示分數相對較高的譜面"
+              - "個人檔案可輸出為圖片"
+              - "公開設定可一次或逐項切換顯示與隱藏"
+              - "新增好友畫面會列出公開個人檔案的使用者，比以前更容易被其他玩家找到"
+            media: {type: video, src: profile.mp4, poster: profile.jpg}
+      - heading: "樂曲詳情與譜面確認"
+        items:
+          - title: "樂曲的讀法"
+            desc: "可從樂曲詳情畫面確認各樂曲的讀法。英文讀法無法完全以音標表示，僅供參考。"
+          - title: "譜面確認的速度標示"
+            games: [DDR]
+            desc: "改善 DDR 譜面確認檢視器的速度標示，可立即切換為倍速或 1/2 倍速（數字與實際機台的速度不同）。"
+            media: {type: image, src: ddr-speed.jpg}
+      - heading: "統計"
+        items:
+          - title: "等級區分與 T分數"
+            list:
+              - "統計資訊等的等級區分考量偏差，將 SDVX 的 Imperial Ⅰ 分為 4 段、Ⅱ 分為 2 段"
+              - "因離群值等影響而極端偏低的 T分數不再顯示"
+      - heading: "小幅改善"
+        items:
+          - title: "首頁與同步"
+            list:
+              - "可從設定選擇首頁要隱藏的項目"
+              - "同步時若超越勁敵的分數，會讓你知道"
+              - "改善快速同步的標示（動作不變）"
+              - "今日成果可只顯示課題曲"
+          - title: "Tier表、弱點分析與搜尋"
+            list:
+              - "改善 Tier表的動作（圖片載入速度）"
+              - "「弱點分析」可篩選對象等級"
+              - "樂曲搜尋支援 pop'n 的類型名稱"
+      - heading: "錯誤修正"
+        items:
+          - title: "同步遺漏等"
+            list:
+              - "pop'n 樂曲同步遺漏：差分同步只檢查歷代記錄是否更新"
+              - "GITADORA 樂曲同步遺漏：已採取想得到的對策，但尚未找出根本原因，將持續觀察"
+              - "DDR 譜面播放時，拍手音有時會偏移"
+              - "iOS 無法連動健康 App"
+- id: "2026-09-11"
+  kind: release
+  version: "1.2.20260911"
+  date: "2026-09-11"
+  ja:
+    title: "1タップのクイック同期、ヘルスケア連動、リスト保存に対応しました"
+    sections:
+      - heading: "同期"
+        items:
+          - title: "1タップのクイック同期"
+            list:
+              - "ホームから「クイック同期」を選べます"
+              - "ログイン情報が期限切れのときだけ、アプリ内ブラウザでログイン画面が開きます"
+            media: {type: video, src: quick-sync.mp4, poster: quick-sync.jpg}
+          - title: "プレー履歴を残す"
+            games: [DDR, GITADORA, "pop'n"]
+            desc: "公式HPの「プレー履歴」を、アプリ内に少し多めに保存できます。公式HPにはDDRは直近50曲、他は20曲しか残らないため、こまめな同期（クイック同期）がおすすめです。"
+            media: {type: video, src: history.mp4, poster: history.jpg}
+      - heading: "ヘルスケア連動"
+        items:
+          - title: "体重とカロリーの推移"
+            games: [DDR]
+            list:
+              - "ヘルスケアの体重・カロリーの推移を表示します"
+              - "体重は公式HPに同期され、DDRのカロリーもアプリに表示されます"
+              - "手動入力もできますが、ヘルスケアと連動する体重計と活動量計の利用がおすすめです"
+              - "サーバーには保存しません"
+            media: {type: video, src: health.mp4, poster: health.jpg}
+      - heading: "DDRの譜面確認"
+        items:
+          - title: "FAの表示と空打ち"
+            games: [DDR]
+            list:
+              - "FAの表示を3段階（通常・細い・頭だけ）から選べます"
+              - "空打ちを足すモードを入れ、空打ちのリズムを記録できます"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "リスト保存"
+        items:
+          - title: "お気に入りをリスト保存に"
+            list:
+              - "リストを自分で作り、譜面ごとに登録できます"
+              - "これまでのお気に入りは、最初からあるリスト「お気に入り」に引き継がれます"
+              - "リスト管理の画面で、曲の並びも変えられます"
+            media: {type: video, src: lists.mp4, poster: lists.jpg}
+      - heading: "楽曲一覧とTier表"
+        items:
+          - title: "楽曲一覧を広く"
+            list:
+              - "下へスクロールすると上部の絞り込みが隠れ、一覧が広くなります"
+              - "上下に動かしたとき、最上部・最下部へ一気に送るボタンを表示します"
+            media: {type: video, src: song-list.mp4, poster: song-list.jpg}
+          - title: "今作と歴代、バージョンで絞り込み"
+            list:
+              - "pop'nの楽曲一覧・ポップンクラス対象楽曲などの表示を、今作の記録と歴代の記録で切り替えられます"
+              - "各機種で、バージョンで曲を絞り込めます"
+            media: {type: video, src: version.mp4, poster: version.jpg}
+          - title: "Tier表の区分タブと達成基準"
+            list:
+              - "DDR・pop'n・GITADORA のTier表に区分タブを置き、見たい区分だけを出せます"
+              - "カスタムTier表の達成基準に、任意のスコアを設定できます（あわせてUIも改善しました）"
+            media: {type: video, src: tier.mp4, poster: tier.jpg}
+      - heading: "その他の改善"
+        items:
+          - title: "並べ替えと放置曲"
+            list:
+              - "フレンドの並べ替えの動きを改善しました"
+              - "目標管理タブのウィジェットを並べ替えるときの動きを改善しました"
+              - "放置曲を90日・半年・1年で切り替えられます"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+          - title: "手動入力"
+            list:
+              - "楽曲詳細の画面から、スコアやグレードを手で入力できます"
+              - "DDRで、過去の体重を手で埋められます"
+      - heading: "不具合の修正"
+        items:
+          - title: "不具合の修正"
+            list:
+              - "GITADORAのデータ取得がうまくいかない"
+              - "メモ欄などがキーボードに隠れる"
+  en:
+    title: "One-tap Quick sync, Health integration and saved lists"
+    sections:
+      - heading: "Sync"
+        items:
+          - title: "One-tap Quick sync"
+            list:
+              - "Choose \"Quick sync\" from the home screen"
+              - "The in-app browser opens a login screen only when your login has expired"
+            media: {type: video, src: quick-sync.mp4, poster: quick-sync.jpg}
+          - title: "Keep your play history"
+            games: [DDR, GITADORA, "pop'n"]
+            desc: "The app can keep a little more of the official site's play history. The official site keeps only the latest 50 songs for DDR and 20 for the others, so sync often (use Quick sync)."
+            media: {type: video, src: history.mp4, poster: history.jpg}
+      - heading: "Health integration"
+        items:
+          - title: "Weight and calories over time"
+            games: [DDR]
+            list:
+              - "Shows your weight and calories over time from Health"
+              - "Your weight syncs to the official site, and DDR calories appear in the app"
+              - "You can enter values by hand, but a scale and activity tracker linked to Health are recommended"
+              - "Nothing is stored on the server"
+            media: {type: video, src: health.mp4, poster: health.jpg}
+      - heading: "DDR chart viewer"
+        items:
+          - title: "FA display and ghost steps"
+            games: [DDR]
+            list:
+              - "Choose from 3 FA displays (normal, thin, head only)"
+              - "A new mode adds ghost steps, so you can record their rhythm"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "Saved lists"
+        items:
+          - title: "Favorites become saved lists"
+            list:
+              - "Create your own lists and add charts to them"
+              - "Your previous favorites carry over to the default list \"Favorites\""
+              - "Reorder songs on the list management screen"
+            media: {type: video, src: lists.mp4, poster: lists.jpg}
+      - heading: "Song list and Tier List"
+        items:
+          - title: "More room for the song list"
+            list:
+              - "Scrolling down hides the filters at the top, giving the list more room"
+              - "When you scroll, buttons appear to jump to the top or bottom"
+            media: {type: video, src: song-list.mp4, poster: song-list.jpg}
+          - title: "Current and all-time, filter by version"
+            list:
+              - "For pop'n, switch the song list, pop'n class songs and more between this version's records and all-time records"
+              - "Filter songs by version for every game"
+            media: {type: video, src: version.mp4, poster: version.jpg}
+          - title: "Category tabs and goals in Tier Lists"
+            list:
+              - "Tier Lists for DDR, pop'n and GITADORA have category tabs, so you can show only the category you want"
+              - "Set any score as the goal of a custom Tier List (with an improved UI)"
+            media: {type: video, src: tier.mp4, poster: tier.jpg}
+      - heading: "Other improvements"
+        items:
+          - title: "Reordering and neglected songs"
+            list:
+              - "Improved reordering of friends"
+              - "Improved rearranging widgets on the goals tab"
+              - "Switch neglected songs between 90 days, half a year and a year"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+          - title: "Manual entry"
+            list:
+              - "Enter scores and grades by hand from the song details screen"
+              - "For DDR, fill in past weight by hand"
+      - heading: "Bug fixes"
+        items:
+          - title: "Bug fixes"
+            list:
+              - "GITADORA data was not fetched properly"
+              - "Memo fields and others were hidden behind the keyboard"
+  ko:
+    title: "원탭 빠른 동기화, 헬스케어 연동, 리스트 저장 지원"
+    sections:
+      - heading: "동기화"
+        items:
+          - title: "원탭 빠른 동기화"
+            list:
+              - "홈에서 '빠른 동기화'를 고를 수 있습니다"
+              - "로그인 정보가 만료됐을 때만 앱 내 브라우저에서 로그인 화면이 열립니다"
+            media: {type: video, src: quick-sync.mp4, poster: quick-sync.jpg}
+          - title: "플레이 이력 남기기"
+            games: [DDR, GITADORA, "pop'n"]
+            desc: "공식 사이트의 '플레이 이력'을 앱 안에 조금 더 많이 저장할 수 있습니다. 공식 사이트에는 DDR은 최근 50곡, 다른 기종은 20곡만 남으므로 자주 동기화(빠른 동기화)하는 것을 권장합니다."
+            media: {type: video, src: history.mp4, poster: history.jpg}
+      - heading: "헬스케어 연동"
+        items:
+          - title: "체중과 칼로리 추이"
+            games: [DDR]
+            list:
+              - "헬스케어의 체중·칼로리 추이를 표시합니다"
+              - "체중은 공식 사이트에 동기화되고, DDR 칼로리도 앱에 표시됩니다"
+              - "직접 입력도 가능하지만, 헬스케어와 연동되는 체중계와 활동량계를 권장합니다"
+              - "서버에는 저장하지 않습니다"
+            media: {type: video, src: health.mp4, poster: health.jpg}
+      - heading: "DDR 채보 확인"
+        items:
+          - title: "FA 표시와 빈 스텝"
+            games: [DDR]
+            list:
+              - "FA 표시를 3단계(일반·가늘게·머리만)에서 고를 수 있습니다"
+              - "빈 스텝을 더하는 모드를 넣어 빈 스텝 리듬을 기록할 수 있습니다"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "리스트 저장"
+        items:
+          - title: "즐겨찾기를 리스트 저장으로"
+            list:
+              - "리스트를 직접 만들고 채보마다 등록할 수 있습니다"
+              - "기존 즐겨찾기는 기본 리스트 '즐겨찾기'로 이어집니다"
+              - "리스트 관리 화면에서 곡 순서도 바꿀 수 있습니다"
+            media: {type: video, src: lists.mp4, poster: lists.jpg}
+      - heading: "곡 목록과 티어표"
+        items:
+          - title: "곡 목록을 넓게"
+            list:
+              - "아래로 스크롤하면 상단 필터가 숨겨져 목록이 넓어집니다"
+              - "위아래로 움직이면 맨 위·맨 아래로 한 번에 이동하는 버튼이 나옵니다"
+            media: {type: video, src: song-list.mp4, poster: song-list.jpg}
+          - title: "이번 작품과 역대, 버전으로 좁히기"
+            list:
+              - "pop'n의 곡 목록·팝픈 클래스 대상곡 등을 이번 작품 기록과 역대 기록으로 전환할 수 있습니다"
+              - "각 기종에서 버전으로 곡을 좁힐 수 있습니다"
+            media: {type: video, src: version.mp4, poster: version.jpg}
+          - title: "티어표의 구분 탭과 달성 기준"
+            list:
+              - "DDR·pop'n·GITADORA 티어표에 구분 탭을 두어 보고 싶은 구분만 표시할 수 있습니다"
+              - "커스텀 티어표의 달성 기준에 원하는 스코어를 설정할 수 있습니다(UI도 개선했습니다)"
+            media: {type: video, src: tier.mp4, poster: tier.jpg}
+      - heading: "그 밖의 개선"
+        items:
+          - title: "정렬과 방치곡"
+            list:
+              - "친구 정렬 동작을 개선했습니다"
+              - "목표 관리 탭의 위젯 재배치 동작을 개선했습니다"
+              - "방치곡 기준을 90일·반년·1년으로 바꿀 수 있습니다"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+          - title: "직접 입력"
+            list:
+              - "곡 상세 화면에서 스코어와 그레이드를 직접 입력할 수 있습니다"
+              - "DDR에서 과거 체중을 직접 채울 수 있습니다"
+      - heading: "버그 수정"
+        items:
+          - title: "버그 수정"
+            list:
+              - "GITADORA 데이터 수집이 잘 되지 않는 문제"
+              - "메모란 등이 키보드에 가려지는 문제"
+  zh:
+    title: "支援一鍵快速同步、健康 App 連動與清單儲存"
+    sections:
+      - heading: "同步"
+        items:
+          - title: "一鍵快速同步"
+            list:
+              - "可從首頁選擇「快速同步」"
+              - "只有登入資訊過期時，才會在 App 內瀏覽器開啟登入畫面"
+            media: {type: video, src: quick-sync.mp4, poster: quick-sync.jpg}
+          - title: "保留遊玩履歷"
+            games: [DDR, GITADORA, "pop'n"]
+            desc: "可在 App 內多保存一些官方網站的「遊玩履歷」。官方網站上 DDR 只保留最近 50 首、其他機種只保留 20 首，建議經常同步（使用快速同步）。"
+            media: {type: video, src: history.mp4, poster: history.jpg}
+      - heading: "健康 App 連動"
+        items:
+          - title: "體重與熱量的變化"
+            games: [DDR]
+            list:
+              - "顯示健康 App 中體重與熱量的變化"
+              - "體重會同步到官方網站，DDR 的熱量也會顯示在 App 中"
+              - "也可手動輸入，但建議使用與健康 App 連動的體重計與活動量計"
+              - "不會儲存在伺服器"
+            media: {type: video, src: health.mp4, poster: health.jpg}
+      - heading: "DDR 譜面確認"
+        items:
+          - title: "FA 顯示與空踩"
+            games: [DDR]
+            list:
+              - "FA 的顯示可從 3 種（一般、細、只有頭部）中選擇"
+              - "新增加入空踩的模式，可記錄空踩的節奏"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "清單儲存"
+        items:
+          - title: "我的最愛改為清單儲存"
+            list:
+              - "可自行建立清單，並依譜面登錄"
+              - "原本的我的最愛會延續到預設清單「我的最愛」"
+              - "可在清單管理畫面調整樂曲順序"
+            media: {type: video, src: lists.mp4, poster: lists.jpg}
+      - heading: "樂曲一覽與 Tier表"
+        items:
+          - title: "樂曲一覽更寬"
+            list:
+              - "向下捲動時，上方的篩選會隱藏，一覽變得更寬"
+              - "上下捲動時會顯示一鍵移到最上方或最下方的按鈕"
+            media: {type: video, src: song-list.mp4, poster: song-list.jpg}
+          - title: "本作與歷代、依版本篩選"
+            list:
+              - "pop'n 的樂曲一覽、pop'n class 對象樂曲等，可在本作記錄與歷代記錄間切換"
+              - "各機種都可依版本篩選樂曲"
+            media: {type: video, src: version.mp4, poster: version.jpg}
+          - title: "Tier表的區分分頁與達成基準"
+            list:
+              - "DDR、pop'n、GITADORA 的 Tier表加入區分分頁，可只顯示想看的區分"
+              - "自訂 Tier表的達成基準可設定任意分數（同時改善了 UI）"
+            media: {type: video, src: tier.mp4, poster: tier.jpg}
+      - heading: "其他改善"
+        items:
+          - title: "排序與久未遊玩的樂曲"
+            list:
+              - "改善好友排序的動作"
+              - "改善目標管理分頁重新排列小工具的動作"
+              - "久未遊玩的樂曲可在 90 天、半年、1 年之間切換"
+            media: {type: video, src: misc.mp4, poster: misc.jpg}
+          - title: "手動輸入"
+            list:
+              - "可從樂曲詳情畫面手動輸入分數與評價"
+              - "DDR 可手動補上過去的體重"
+      - heading: "錯誤修正"
+        items:
+          - title: "錯誤修正"
+            list:
+              - "GITADORA 資料無法順利取得"
+              - "備忘欄等被鍵盤遮住"
+- id: "2026-09-06"
+  kind: release
+  version: "1.2.20260906"
+  date: "2026-09-06"
+  ja:
+    title: "1.2.20260904 で起きていた同期の不具合を修正しました"
+    sections:
+      - heading: "不具合の修正"
+        items:
+          - title: "楽曲同期でデータを取り損ねる"
+            desc: "クリアランプが Failed 系の楽曲の取得に失敗していました。"
+          - title: "差分同期が全件取得に切り替わる"
+            desc: "直近のプレー回数が少なくても、差分同期に失敗して全件取得に切り替わっていました。レベルを指定した差分同期が同期時刻を保存しておらず、差分の起点にならないため、通算50プレー以上で全件取得（レベル指定）に切り替わっていました。"
+  en:
+    title: "Fixed sync problems in 1.2.20260904"
+    sections:
+      - heading: "Bug fixes"
+        items:
+          - title: "Song sync missed some data"
+            desc: "Songs whose clear lamp was in the Failed group could not be fetched."
+          - title: "Differential sync switched to fetching everything"
+            desc: "Even with few recent plays, differential sync failed and switched to fetching every song. Differential sync by level did not save the sync time, so it never became the starting point, and after 50 plays in total it switched to fetching everything (by level)."
+  ko:
+    title: "1.2.20260904에서 발생한 동기화 문제를 고쳤습니다"
+    sections:
+      - heading: "버그 수정"
+        items:
+          - title: "곡 동기화에서 데이터를 놓치는 문제"
+            desc: "클리어 램프가 Failed 계열인 곡을 가져오지 못했습니다."
+          - title: "차분 동기화가 전체 수집으로 바뀌는 문제"
+            desc: "최근 플레이 횟수가 적어도 차분 동기화에 실패해 전체 수집으로 바뀌었습니다. 레벨 지정 차분 동기화가 동기화 시각을 저장하지 않아 차분의 기점이 되지 못했고, 누적 50플레이 이상이면 전체 수집(레벨 지정)으로 바뀌었습니다."
+  zh:
+    title: "修正 1.2.20260904 發生的同步問題"
+    sections:
+      - heading: "錯誤修正"
+        items:
+          - title: "樂曲同步漏抓資料"
+            desc: "通關燈為 Failed 類的樂曲無法取得。"
+          - title: "差分同步切換為全部取得"
+            desc: "即使最近遊玩次數不多，差分同步也會失敗並切換為全部取得。指定等級的差分同步沒有儲存同步時間，無法成為差分的起點，累計 50 次遊玩以上就會切換為全部取得（指定等級）。"
 - id: "2026-09-04"
   kind: release
   version: "1.2.20260904"
@@ -276,6 +2636,254 @@
               - "GITADORA 等部分樂曲同步失敗"
               - "GITADORA 依 skill 排序時，不同難度的樂曲也會被聚在一起排序"
               - "變更好友顯示名稱後，仍以玩家名稱顯示"
+- id: "2026-08-28"
+  kind: release
+  version: "1.2.20260828"
+  date: "2026-08-26"
+  ja:
+    title: "自作Tier表とフレンド機能を追加し、Android版を公開しました"
+    sections:
+      - heading: "自作Tier表"
+        items:
+          - title: "自作Tier表を作れる"
+            desc: "これまでは統計情報から自動でTier表を作っていましたが、自分でTier表を作れるようになりました。"
+            media: {type: video, src: tier-make.mp4, poster: tier-make.jpg}
+          - title: "他のプレイヤーに共有"
+            desc: "作った表は他のプレイヤーに共有でき、Tier表の進捗が自動で埋まります。表を更新すると、他のプレイヤーにも日次で反映されます。"
+            media: {type: video, src: tier-share.mp4, poster: tier-share.jpg}
+          - title: "画像で出力"
+            desc: "共有コードを発行する画面から、作ったTier表を画像で出力できます。画面右上から出力すると、Tier表の達成度を反映した画像になります。"
+            media: {type: image, src: tier-image.jpg}
+      - heading: "フレンド"
+        items:
+          - title: "申請と承諾"
+            desc: "自分のデータの公開範囲を選び、フレンドコードや名前などから申請・承諾できます（最大50人）。これまでの設定は画面右上に移しました。"
+            media: {type: video, src: friend-basic.mp4, poster: friend-basic.jpg}
+          - title: "フレンドリスト"
+            list:
+              - "レベル別の勝敗・アクティビティ・抜かれた曲などを、フレンド横断で確認できます"
+              - "フレンドにタグを付けて、機種別に管理できます"
+              - "長押しで、ライバル／非表示の設定を切り替えられます"
+            media: {type: video, src: friend-list.mp4, poster: friend-list.jpg}
+          - title: "フレンド詳細"
+            list:
+              - "指標の比較や、相手の曲リストを見られます"
+              - "好きなレベルで勝敗を比べ、負けている譜面を確認できます"
+              - "期間のアクティビティ量を比べられます"
+              - "見られるのは、相手がフレンドに公開している項目だけです"
+            media: {type: video, src: friend-detail.mp4, poster: friend-detail.jpg}
+          - title: "楽曲一覧でライバルのスコア"
+            list:
+              - "楽曲一覧を詳細表示にすると、ライバルのスコアを一覧できます"
+              - "詳細画面では、全フレンドのスコアも見られます（非表示にしたフレンドは出ません）"
+            media: {type: video, src: friend-songs.mp4, poster: friend-songs.jpg}
+      - heading: "課題を投げる"
+        items:
+          - title: "フレンドに課題を投げる"
+            desc: "フレンドに課題楽曲を、目標水準とともに投げられます。課題が届くと、アプリ内に通知が出ます。"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "成果画像に課題の進捗"
+            desc: "課題の進捗を、その日の成果の出力画像に表示できます。"
+            media: {type: video, src: challenge-image.mp4, poster: challenge-image.jpg}
+      - heading: "細かな改善"
+        items:
+          - title: "判定メモと文字の見やすさ"
+            list:
+              - "DDRの判定メモで、参考値とプレイヤーの設定値を見分けやすくしました"
+              - "文字を読みやすくし、ジャケットの大きさや文字サイズを変えられるようにしました"
+            media: {type: video, src: ui-1.mp4, poster: ui-1.jpg}
+          - title: "共有画像と譜面確認"
+            list:
+              - "目標管理ダッシュボード（成長タブ）の共有画像で、背景の設定画面を見やすくしました"
+              - "DDRの譜面確認で、最後のスクロール速度を保つようにしました"
+            media: {type: video, src: ui-2.mp4, poster: ui-2.jpg}
+      - heading: "Android版"
+        items:
+          - title: "Google Play で公開"
+            desc: "この版から、Android版を Google Play で公開しました。クローズドテストに参加していた方は、ストアから自動で更新されるので、操作は要りません。"
+  en:
+    title: "Custom Tier Lists, friends, and the Android version on Google Play"
+    sections:
+      - heading: "Custom Tier Lists"
+        items:
+          - title: "Make your own Tier List"
+            desc: "Tier Lists used to be generated only from statistics. Now you can make your own."
+            media: {type: video, src: tier-make.mp4, poster: tier-make.jpg}
+          - title: "Share with other players"
+            desc: "Share your list with other players, and their progress fills in automatically. Updates to the list reach other players daily."
+            media: {type: video, src: tier-share.mp4, poster: tier-share.jpg}
+          - title: "Export as an image"
+            desc: "Export your Tier List as an image from the screen where you issue a share code. Exporting from the top right gives an image that reflects your progress on the list."
+            media: {type: image, src: tier-image.jpg}
+      - heading: "Friends"
+        items:
+          - title: "Requests and approval"
+            desc: "Choose what of your data to make public, then send or accept requests by friend code, name and more (up to 50 friends). The previous settings moved to the top right of the screen."
+            media: {type: video, src: friend-basic.mp4, poster: friend-basic.jpg}
+          - title: "Friend list"
+            list:
+              - "See wins and losses by level, activity and songs where you were overtaken, across all friends"
+              - "Tag friends to manage them by game"
+              - "Long-press to switch a friend to rival or hidden"
+            media: {type: video, src: friend-list.mp4, poster: friend-list.jpg}
+          - title: "Friend details"
+            list:
+              - "Compare metrics and see your friend's song list"
+              - "Compare wins and losses at any level and check the charts you're losing on"
+              - "Compare activity over a period"
+              - "You only see items your friend has made public to friends"
+            media: {type: video, src: friend-detail.mp4, poster: friend-detail.jpg}
+          - title: "Rival scores in the song list"
+            list:
+              - "Switch the song list to the detailed view to see your rivals' scores"
+              - "The details screen also shows all friends' scores (hidden friends are not shown)"
+            media: {type: video, src: friend-songs.mp4, poster: friend-songs.jpg}
+      - heading: "Send challenges"
+        items:
+          - title: "Send a challenge to a friend"
+            desc: "Send a friend a challenge song with a target. When a challenge arrives, you get an in-app notification."
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "Challenge progress in result images"
+            desc: "Show your challenge progress in the day's result image."
+            media: {type: video, src: challenge-image.mp4, poster: challenge-image.jpg}
+      - heading: "Small improvements"
+        items:
+          - title: "Timing memo and readability"
+            list:
+              - "In DDR timing memos, reference values and your own settings are easier to tell apart"
+              - "Text is easier to read, and you can change the jacket and text size"
+            media: {type: video, src: ui-1.mp4, poster: ui-1.jpg}
+          - title: "Share images and chart viewer"
+            list:
+              - "The background settings for goal dashboard (growth tab) share images are easier to see"
+              - "The DDR chart viewer keeps your last scroll speed"
+            media: {type: video, src: ui-2.mp4, poster: ui-2.jpg}
+      - heading: "Android"
+        items:
+          - title: "Now on Google Play"
+            desc: "From this version, the Android version is on Google Play. If you were in the closed test, the store updates the app automatically, so there's nothing to do."
+  ko:
+    title: "커스텀 티어표와 친구 기능 추가, Android 버전을 Google Play에 공개"
+    sections:
+      - heading: "커스텀 티어표"
+        items:
+          - title: "직접 티어표 만들기"
+            desc: "지금까지는 통계로 티어표를 자동으로 만들었지만, 이제 직접 티어표를 만들 수 있습니다."
+            media: {type: video, src: tier-make.mp4, poster: tier-make.jpg}
+          - title: "다른 플레이어와 공유"
+            desc: "만든 표를 다른 플레이어와 공유할 수 있고, 티어표 진행 상황이 자동으로 채워집니다. 표를 갱신하면 다른 플레이어에게도 매일 반영됩니다."
+            media: {type: video, src: tier-share.mp4, poster: tier-share.jpg}
+          - title: "이미지로 내보내기"
+            desc: "공유 코드를 발급하는 화면에서 만든 티어표를 이미지로 내보낼 수 있습니다. 화면 오른쪽 위에서 내보내면 티어표 달성도가 반영된 이미지가 됩니다."
+            media: {type: image, src: tier-image.jpg}
+      - heading: "친구"
+        items:
+          - title: "신청과 승인"
+            desc: "자신의 데이터 공개 범위를 고르고, 친구 코드나 이름 등으로 신청·승인할 수 있습니다(최대 50명). 기존 설정은 화면 오른쪽 위로 옮겼습니다."
+            media: {type: video, src: friend-basic.mp4, poster: friend-basic.jpg}
+          - title: "친구 목록"
+            list:
+              - "레벨별 승패·활동·추월당한 곡 등을 친구 전체에 걸쳐 확인할 수 있습니다"
+              - "친구에게 태그를 붙여 기종별로 관리할 수 있습니다"
+              - "길게 눌러 라이벌/숨김 설정을 바꿀 수 있습니다"
+            media: {type: video, src: friend-list.mp4, poster: friend-list.jpg}
+          - title: "친구 상세"
+            list:
+              - "지표 비교와 상대의 곡 목록을 볼 수 있습니다"
+              - "원하는 레벨에서 승패를 비교하고, 지고 있는 채보를 확인할 수 있습니다"
+              - "기간별 활동량을 비교할 수 있습니다"
+              - "상대가 친구에게 공개한 항목만 볼 수 있습니다"
+            media: {type: video, src: friend-detail.mp4, poster: friend-detail.jpg}
+          - title: "곡 목록에서 라이벌 스코어"
+            list:
+              - "곡 목록을 상세 표시로 하면 라이벌의 스코어를 한눈에 볼 수 있습니다"
+              - "상세 화면에서는 모든 친구의 스코어도 볼 수 있습니다(숨김 친구는 표시되지 않습니다)"
+            media: {type: video, src: friend-songs.mp4, poster: friend-songs.jpg}
+      - heading: "과제 보내기"
+        items:
+          - title: "친구에게 과제 보내기"
+            desc: "친구에게 과제곡을 목표 수준과 함께 보낼 수 있습니다. 과제가 도착하면 앱 안에 알림이 옵니다."
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "성과 이미지에 과제 진행 상황"
+            desc: "과제 진행 상황을 그날의 성과 이미지에 표시할 수 있습니다."
+            media: {type: video, src: challenge-image.mp4, poster: challenge-image.jpg}
+      - heading: "세세한 개선"
+        items:
+          - title: "판정 메모와 글자 가독성"
+            list:
+              - "DDR 판정 메모에서 참고값과 플레이어 설정값을 구분하기 쉽게 했습니다"
+              - "글자를 읽기 쉽게 하고, 재킷 크기와 글자 크기를 바꿀 수 있게 했습니다"
+            media: {type: video, src: ui-1.mp4, poster: ui-1.jpg}
+          - title: "공유 이미지와 채보 확인"
+            list:
+              - "목표 관리 대시보드(성장 탭) 공유 이미지의 배경 설정 화면을 보기 쉽게 했습니다"
+              - "DDR 채보 확인에서 마지막 스크롤 속도를 유지합니다"
+            media: {type: video, src: ui-2.mp4, poster: ui-2.jpg}
+      - heading: "Android 버전"
+        items:
+          - title: "Google Play에 공개"
+            desc: "이 버전부터 Android 버전을 Google Play에 공개했습니다. 비공개 테스트에 참여하신 분은 스토어에서 자동으로 업데이트되므로 따로 조작할 필요가 없습니다."
+  zh:
+    title: "新增自製 Tier表與好友功能，Android 版於 Google Play 上架"
+    sections:
+      - heading: "自製 Tier表"
+        items:
+          - title: "可自製 Tier表"
+            desc: "過去只依統計資訊自動製作 Tier表，現在可以自己製作。"
+            media: {type: video, src: tier-make.mp4, poster: tier-make.jpg}
+          - title: "分享給其他玩家"
+            desc: "製作的表可分享給其他玩家，Tier表的進度會自動填入。更新表格後，也會每日反映給其他玩家。"
+            media: {type: video, src: tier-share.mp4, poster: tier-share.jpg}
+          - title: "輸出為圖片"
+            desc: "可在發行分享碼的畫面將自製 Tier表輸出為圖片。從畫面右上角輸出時，會得到反映 Tier表達成度的圖片。"
+            media: {type: image, src: tier-image.jpg}
+      - heading: "好友"
+        items:
+          - title: "申請與同意"
+            desc: "選擇自己資料的公開範圍，即可透過好友碼或名稱等申請與同意（最多 50 人）。原本的設定移到畫面右上角。"
+            media: {type: video, src: friend-basic.mp4, poster: friend-basic.jpg}
+          - title: "好友列表"
+            list:
+              - "可橫跨所有好友確認各等級勝負、活動與被超越的樂曲等"
+              - "可為好友加上標籤，依機種管理"
+              - "長按即可切換勁敵／隱藏設定"
+            media: {type: video, src: friend-list.mp4, poster: friend-list.jpg}
+          - title: "好友詳情"
+            list:
+              - "可比較指標，並查看對方的樂曲列表"
+              - "可在任意等級比較勝負，確認自己落後的譜面"
+              - "可比較一段期間的活動量"
+              - "只能看到對方向好友公開的項目"
+            media: {type: video, src: friend-detail.mp4, poster: friend-detail.jpg}
+          - title: "在樂曲一覽查看勁敵分數"
+            list:
+              - "樂曲一覽切換為詳細顯示，即可一覽勁敵的分數"
+              - "詳情畫面也能看到所有好友的分數（隱藏的好友不會顯示）"
+            media: {type: video, src: friend-songs.mp4, poster: friend-songs.jpg}
+      - heading: "送出課題"
+        items:
+          - title: "向好友送出課題"
+            desc: "可將課題樂曲連同目標水準送給好友。收到課題時，App 內會出現通知。"
+            media: {type: video, src: challenge.mp4, poster: challenge.jpg}
+          - title: "成果圖片顯示課題進度"
+            desc: "可在當天的成果輸出圖片中顯示課題進度。"
+            media: {type: video, src: challenge-image.mp4, poster: challenge-image.jpg}
+      - heading: "細部改善"
+        items:
+          - title: "判定備忘與文字易讀性"
+            list:
+              - "DDR 判定備忘中，參考值與玩家設定值更容易區分"
+              - "提升文字易讀性，並可變更封面與文字大小"
+            media: {type: video, src: ui-1.mp4, poster: ui-1.jpg}
+          - title: "分享圖片與譜面確認"
+            list:
+              - "目標管理儀表板（成長分頁）分享圖片的背景設定畫面更容易看"
+              - "DDR 譜面確認會保持上次的捲動速度"
+            media: {type: video, src: ui-2.mp4, poster: ui-2.jpg}
+      - heading: "Android 版"
+        items:
+          - title: "於 Google Play 上架"
+            desc: "從這個版本起，Android 版於 Google Play 上架。參加過封閉測試的人會由商店自動更新，不需要任何操作。"
 - id: "2026-08-21"
   kind: release
   version: "1.2.20260821"
@@ -286,9 +2894,11 @@
       - heading: "GITADORA に対応"
         items:
           - title: "GF と DM を分けて記録"
+            games: [GITADORA]
             desc: "GF と DM のスコアを別々に管理できます。Tier表は、データが足りないため自動では作れません。"
             media: {type: image, src: gitadora-1.jpg}
           - title: "自己ベストの判定内訳を保存"
+            games: [GITADORA]
             desc: "差分同期のたびに、自己ベストの判定内訳を自動で保存します。譜面の確認は外部サイトへのリンクです。"
             media: {type: image, src: gitadora-2.jpg}
       - heading: "伸ばせる曲を絞り込む"
@@ -335,9 +2945,11 @@
       - heading: "GITADORA support"
         items:
           - title: "Separate records for GF and DM"
+            games: [GITADORA]
             desc: "GF and DM scores are managed separately. Tier Lists can't be generated automatically yet, because there isn't enough data."
             media: {type: image, src: gitadora-1.jpg}
           - title: "Judgement breakdown of personal bests"
+            games: [GITADORA]
             desc: "Each differential sync automatically saves the judgement breakdown of your personal bests. Chart previews link to an external site."
             media: {type: image, src: gitadora-2.jpg}
       - heading: "Find songs you can raise"
@@ -384,9 +2996,11 @@
       - heading: "GITADORA 지원"
         items:
           - title: "GF와 DM을 나누어 기록"
+            games: [GITADORA]
             desc: "GF와 DM의 스코어를 따로 관리할 수 있습니다. 티어표는 데이터가 부족해 아직 자동으로 만들 수 없습니다."
             media: {type: image, src: gitadora-1.jpg}
           - title: "자기 최고 기록의 판정 내역 저장"
+            games: [GITADORA]
             desc: "차분 동기화할 때마다 자기 최고 기록의 판정 내역을 자동으로 저장합니다. 보면 확인은 외부 사이트 링크입니다."
             media: {type: image, src: gitadora-2.jpg}
       - heading: "올릴 수 있는 곡 좁히기"
@@ -433,9 +3047,11 @@
       - heading: "支援 GITADORA"
         items:
           - title: "GF 與 DM 分開記錄"
+            games: [GITADORA]
             desc: "GF 與 DM 的分數可分開管理。Tier表因資料不足，目前無法自動產生。"
             media: {type: image, src: gitadora-1.jpg}
           - title: "儲存個人最佳的判定明細"
+            games: [GITADORA]
             desc: "每次差分同步時，自動儲存個人最佳的判定明細。譜面確認為外部網站的連結。"
             media: {type: image, src: gitadora-2.jpg}
       - heading: "篩選可提升的歌曲"
@@ -476,3 +3092,339 @@
               - "目標小工具的圖表文字不再重疊"
               - "改善小工具配置變更、歌曲列表顯示預設排序等變更配置的操作"
             media: {type: video, src: ui.mp4, poster: ui.jpg}
+- id: "2026-08-14"
+  kind: release
+  version: "1.1.20260814"
+  date: "2026-08-14"
+  ja:
+    title: "成長タブをダッシュボードにし、同期にレベル指定と前回差分を追加しました"
+    sections:
+      - heading: "判定ズレ"
+        items:
+          - title: "参考値を分布グラフに"
+            desc: "横軸は設定値（個別設定値 − 共通設定値）、縦軸はその値にしている人数です。皆の平均・中央値・人数を表示します。誰がどれくらいの判定調整をしているのかを参照できます。"
+            media: {type: video, src: offset.mp4, poster: offset.jpg}
+      - heading: "データ同期"
+        items:
+          - title: "レベル指定と前回差分"
+            list:
+              - "全曲同期のほかに、レベル指定・前回差分を追加しました"
+              - "前回差分では、SDVXは最大で直近100曲、DDRは最大で直近50プレイ（約12クレ）を取得できます"
+            media: {type: video, src: sync.mp4, poster: sync.jpg}
+      - heading: "共有画像"
+        items:
+          - title: "背景を編集できる"
+            list:
+              - "5種類の共有画像の背景を編集できます"
+              - "カスタム設定を5つ保存でき、背景色やぼかし、文字色などを調整できます"
+              - "写真も背景に設定できます（写真はバックアップされません）"
+            media: {type: video, src: share-bg.mp4, poster: share-bg.jpg}
+      - heading: "成長タブ"
+        items:
+          - title: "ウィジェットを並べるダッシュボード"
+            desc: "成長タブを、ウィジェットを並べるダッシュボードにしました。目標設定では、何を・どのレベルで・どこまで・どの期間で達成するのかを設定でき、1年の目標の進捗などを測れます（画像出力もできます）。"
+            media: {type: video, src: growth.mp4, poster: growth.jpg}
+  en:
+    title: "A growth tab dashboard, and sync by level or since last sync"
+    sections:
+      - heading: "Timing offset"
+        items:
+          - title: "Reference values as a distribution graph"
+            desc: "The horizontal axis is the setting (per-song value − common value) and the vertical axis is how many players use it. Shows everyone's average, median and count, so you can see how much others adjust their timing."
+            media: {type: video, src: offset.mp4, poster: offset.jpg}
+      - heading: "Data sync"
+        items:
+          - title: "By level and since last sync"
+            list:
+              - "Besides syncing all songs, you can now sync by level or since last sync"
+              - "Since last sync fetches up to the latest 100 songs for SDVX and up to the latest 50 plays (about 12 credits) for DDR"
+            media: {type: video, src: sync.mp4, poster: sync.jpg}
+      - heading: "Share images"
+        items:
+          - title: "Edit the background"
+            list:
+              - "Edit the background of the 5 kinds of share images"
+              - "Save up to 5 custom settings and adjust background color, blur, text color and more"
+              - "You can also use a photo as the background (photos are not backed up)"
+            media: {type: video, src: share-bg.mp4, poster: share-bg.jpg}
+      - heading: "Growth tab"
+        items:
+          - title: "A dashboard of widgets"
+            desc: "The growth tab is now a dashboard where you arrange widgets. In goal settings, choose what to reach, at which level, how far and by when, and track progress such as a one-year goal (you can also export it as an image)."
+            media: {type: video, src: growth.mp4, poster: growth.jpg}
+  ko:
+    title: "성장 탭을 대시보드로 바꾸고, 동기화에 레벨 지정과 지난 동기화 이후를 추가했습니다"
+    sections:
+      - heading: "판정 오프셋"
+        items:
+          - title: "참고값을 분포 그래프로"
+            desc: "가로축은 설정값(개별 설정값 − 공통 설정값), 세로축은 그 값으로 설정한 사람 수입니다. 모두의 평균·중앙값·인원을 표시해, 누가 어느 정도 판정을 조정하는지 참고할 수 있습니다."
+            media: {type: video, src: offset.mp4, poster: offset.jpg}
+      - heading: "데이터 동기화"
+        items:
+          - title: "레벨 지정과 지난 동기화 이후"
+            list:
+              - "전곡 동기화 외에 레벨 지정·지난 동기화 이후를 추가했습니다"
+              - "지난 동기화 이후는 SDVX는 최대 최근 100곡, DDR은 최대 최근 50플레이(약 12크레딧)를 가져옵니다"
+            media: {type: video, src: sync.mp4, poster: sync.jpg}
+      - heading: "공유 이미지"
+        items:
+          - title: "배경 편집"
+            list:
+              - "5종류의 공유 이미지 배경을 편집할 수 있습니다"
+              - "사용자 설정을 5개까지 저장하고 배경색·흐림·글자색 등을 조정할 수 있습니다"
+              - "사진도 배경으로 쓸 수 있습니다(사진은 백업되지 않습니다)"
+            media: {type: video, src: share-bg.mp4, poster: share-bg.jpg}
+      - heading: "성장 탭"
+        items:
+          - title: "위젯을 늘어놓는 대시보드"
+            desc: "성장 탭을 위젯을 배치하는 대시보드로 바꿨습니다. 목표 설정에서 무엇을·어느 레벨에서·어디까지·어느 기간에 달성할지 정할 수 있고, 1년 목표의 진행 상황 등을 확인할 수 있습니다(이미지 출력 가능)."
+            media: {type: video, src: growth.mp4, poster: growth.jpg}
+  zh:
+    title: "成長分頁改為儀表板，同步新增指定等級與上次同步後"
+    sections:
+      - heading: "判定偏移"
+        items:
+          - title: "參考值改為分布圖"
+            desc: "橫軸為設定值（個別設定值 − 共通設定值），縱軸為設定該值的人數。顯示大家的平均、中位數與人數，可參考其他人如何調整判定。"
+            media: {type: video, src: offset.mp4, poster: offset.jpg}
+      - heading: "資料同步"
+        items:
+          - title: "指定等級與上次同步後"
+            list:
+              - "除了全曲同步，新增指定等級與上次同步後"
+              - "上次同步後最多可取得 SDVX 最近 100 首、DDR 最近 50 次遊玩（約 12 道）"
+            media: {type: video, src: sync.mp4, poster: sync.jpg}
+      - heading: "分享圖片"
+        items:
+          - title: "可編輯背景"
+            list:
+              - "可編輯 5 種分享圖片的背景"
+              - "可儲存 5 組自訂設定，調整背景色、模糊、文字顏色等"
+              - "也可將照片設為背景（照片不會備份）"
+            media: {type: video, src: share-bg.mp4, poster: share-bg.jpg}
+      - heading: "成長分頁"
+        items:
+          - title: "排列小工具的儀表板"
+            desc: "成長分頁改為可排列小工具的儀表板。目標設定可指定要達成什麼、在哪個等級、到什麼程度、在多長期間內，並追蹤一年目標等的進度（也可輸出圖片）。"
+            media: {type: video, src: growth.mp4, poster: growth.jpg}
+- id: "2026-08-07"
+  kind: release
+  version: "1.1.20260807"
+  date: "2026-08-07"
+  ja:
+    title: "楽曲ジャケットの表示、判定ズレとメモの記録、配色テーマに対応しました"
+    sections:
+      - heading: "おすすめ楽曲"
+        items:
+          - title: "選び方を変えました"
+            desc: "これまでは、おすすめ楽曲にレベルの高い曲ばかりが上に来ていました。同じ実力帯の人のうち基準に到達している人が多い楽曲を選ぶなど、複数の観点から複合的に選ぶようにしました。"
+            media: {type: image, src: recommend.jpg}
+      - heading: "楽曲詳細"
+        items:
+          - title: "判定調整メモと任意メモ"
+            list:
+              - "判定調整メモは曲ごとの設定です。機種共通の既定値は設定画面から設定できます"
+              - "判定ズレの参考値を表示します。今は推測値ですが、利用者のデータが集まったら、ユーザー設定の平均値を表示します"
+              - "どちらもバックアップの対象です。任意メモはプライバシーに配慮し、暗号化したデータだけをサーバーに保存します。判定調整メモは統計用にデータを集めます"
+            media: {type: image, src: memo.jpg}
+      - heading: "デザイン"
+        items:
+          - title: "配色テーマを5種から選べる"
+            desc: "ダーク・ライトのほかに3種あります。ホームのセクション区切りなど、細かなデザインも見直しました。"
+            media: {type: image, src: theme.jpg}
+          - title: "楽曲ジャケットを表示"
+            desc: "楽曲ジャケットを表示するようにしました。解像度を下げて使っています。"
+      - heading: "その他の改善"
+        items:
+          - title: "検索と譜面確認"
+            list:
+              - "曲名・アーティストで検索できます"
+              - "DDRの譜面確認を改善しました"
+      - heading: "不具合の修正"
+        items:
+          - title: "不具合の修正"
+            list:
+              - "同名曲のスコアが取り込めない"
+              - "チュートリアルとバックアップ復元の不具合"
+  en:
+    title: "Song jackets, timing offset and memos, and color themes"
+    sections:
+      - heading: "Recommended songs"
+        items:
+          - title: "A new way of choosing"
+            desc: "Until now, recommended songs put high-level songs at the top. Songs are now chosen from several angles combined, such as favoring songs that many players in your skill range have reached the target on."
+            media: {type: image, src: recommend.jpg}
+      - heading: "Song details"
+        items:
+          - title: "Timing memo and free memo"
+            list:
+              - "The timing memo is set per song. The default for each game is set from the settings screen"
+              - "Shows a reference value for timing offset. It's an estimate for now; once enough user data is collected, it will show the average of users' settings"
+              - "Both are backed up. For privacy, only encrypted data of the free memo is stored on the server. Timing memos are collected for statistics"
+            media: {type: image, src: memo.jpg}
+      - heading: "Design"
+        items:
+          - title: "Choose from 5 color themes"
+            desc: "Besides dark and light, there are 3 more. Small design details, such as section dividers on the home screen, were also reworked."
+            media: {type: image, src: theme.jpg}
+          - title: "Song jackets"
+            desc: "Song jackets are now shown, at reduced resolution."
+      - heading: "Other improvements"
+        items:
+          - title: "Search and chart viewer"
+            list:
+              - "Search by song title or artist"
+              - "Improved the DDR chart viewer"
+      - heading: "Bug fixes"
+        items:
+          - title: "Bug fixes"
+            list:
+              - "Scores for songs with the same title could not be imported"
+              - "Problems with the tutorial and restoring backups"
+  ko:
+    title: "곡 재킷 표시, 판정 오프셋과 메모 기록, 색상 테마 지원"
+    sections:
+      - heading: "추천곡"
+        items:
+          - title: "고르는 방식을 바꿨습니다"
+            desc: "지금까지는 추천곡에 레벨이 높은 곡만 위에 왔습니다. 같은 실력대 중 기준에 도달한 사람이 많은 곡을 고르는 등, 여러 관점을 복합적으로 반영해 고르도록 바꿨습니다."
+            media: {type: image, src: recommend.jpg}
+      - heading: "곡 상세"
+        items:
+          - title: "판정 조정 메모와 자유 메모"
+            list:
+              - "판정 조정 메모는 곡마다 설정합니다. 기종 공통 기본값은 설정 화면에서 정할 수 있습니다"
+              - "판정 오프셋의 참고값을 표시합니다. 지금은 추정값이지만, 이용자 데이터가 모이면 사용자 설정의 평균값을 표시합니다"
+              - "둘 다 백업 대상입니다. 자유 메모는 개인정보를 고려해 암호화된 데이터만 서버에 저장합니다. 판정 조정 메모는 통계용으로 수집합니다"
+            media: {type: image, src: memo.jpg}
+      - heading: "디자인"
+        items:
+          - title: "색상 테마 5종 선택"
+            desc: "다크·라이트 외에 3종이 있습니다. 홈의 섹션 구분 등 세세한 디자인도 다시 손봤습니다."
+            media: {type: image, src: theme.jpg}
+          - title: "곡 재킷 표시"
+            desc: "곡 재킷을 표시하도록 했습니다. 해상도를 낮춰 사용합니다."
+      - heading: "그 밖의 개선"
+        items:
+          - title: "검색과 채보 확인"
+            list:
+              - "곡명·아티스트로 검색할 수 있습니다"
+              - "DDR 채보 확인을 개선했습니다"
+      - heading: "버그 수정"
+        items:
+          - title: "버그 수정"
+            list:
+              - "같은 이름의 곡 스코어를 가져오지 못하는 문제"
+              - "튜토리얼과 백업 복원 문제"
+  zh:
+    title: "支援顯示樂曲封面、記錄判定偏移與備忘，以及配色主題"
+    sections:
+      - heading: "推薦樂曲"
+        items:
+          - title: "改變了選曲方式"
+            desc: "過去推薦樂曲總是把高等級的曲子排在上面。現在會從多個角度綜合選曲，例如優先選擇同實力帶中達到基準的人較多的樂曲。"
+            media: {type: image, src: recommend.jpg}
+      - heading: "樂曲詳情"
+        items:
+          - title: "判定調整備忘與自由備忘"
+            list:
+              - "判定調整備忘是每首歌的設定。各機種共通的預設值可在設定畫面設定"
+              - "顯示判定偏移的參考值。目前是推測值，收集到足夠的使用者資料後，將顯示使用者設定的平均值"
+              - "兩者都在備份範圍內。自由備忘考量隱私，只在伺服器保存加密後的資料。判定調整備忘會作為統計資料收集"
+            media: {type: image, src: memo.jpg}
+      - heading: "設計"
+        items:
+          - title: "可從 5 種配色主題中選擇"
+            desc: "除了深色與淺色，另有 3 種。首頁的區塊分隔等細節設計也重新調整。"
+            media: {type: image, src: theme.jpg}
+          - title: "顯示樂曲封面"
+            desc: "開始顯示樂曲封面，並降低解析度使用。"
+      - heading: "其他改善"
+        items:
+          - title: "搜尋與譜面確認"
+            list:
+              - "可用曲名、藝人搜尋"
+              - "改善 DDR 譜面確認"
+      - heading: "錯誤修正"
+        items:
+          - title: "錯誤修正"
+            list:
+              - "無法匯入同名樂曲的分數"
+              - "教學與備份還原的問題"
+- id: "2026-07-31"
+  kind: release
+  version: "1.1.20260731"
+  date: "2026-07-31"
+  ja:
+    title: "データ同期の不具合を修正しました"
+    sections:
+      - heading: "不具合の修正"
+        items:
+          - title: "データ同期のエラー"
+            desc: "主に Android で起きていた、データ同期のエラーを修正しました。Android と iOS の実機で、修正できていることを確認しています。"
+  en:
+    title: "Fixed a data sync problem"
+    sections:
+      - heading: "Bug fixes"
+        items:
+          - title: "Data sync errors"
+            desc: "Fixed data sync errors that mainly occurred on Android. The fix was confirmed on real Android and iOS devices."
+  ko:
+    title: "데이터 동기화 문제를 고쳤습니다"
+    sections:
+      - heading: "버그 수정"
+        items:
+          - title: "데이터 동기화 오류"
+            desc: "주로 Android에서 발생하던 데이터 동기화 오류를 고쳤습니다. Android와 iOS 실기기에서 수정된 것을 확인했습니다."
+  zh:
+    title: "修正資料同步的問題"
+    sections:
+      - heading: "錯誤修正"
+        items:
+          - title: "資料同步錯誤"
+            desc: "修正主要發生在 Android 上的資料同步錯誤。已在 Android 與 iOS 實機上確認修正完成。"
+- id: "2026-07-27"
+  kind: release
+  version: "1.1.20260727"
+  date: "2026-07-30"
+  ja:
+    title: "DDR と SOUND VOLTEX のスコア管理アプリを公開しました"
+    sections:
+      - heading: "ALM4GEST を公開"
+        items:
+          - title: "できること"
+            desc: "課題を設定したり、その日の成果を1枚の画像に出力したり、自分の相対的な位置や、データから作ったTier表などを見られます。全機能を無料で提供しています。"
+            media: {type: video, src: launch.mp4, poster: launch.jpg}
+          - title: "iOS と Android"
+            desc: "iOS版は App Store で公開中です。Android版はクローズドテスト中で、テスターを募集しています。"
+  en:
+    title: "ALM4GEST is out: a score tracker for DDR and SOUND VOLTEX"
+    sections:
+      - heading: "ALM4GEST is out"
+        items:
+          - title: "What it does"
+            desc: "Set your own challenges, export each day's results as a single image, see where you stand against other players, browse data-driven Tier Lists, and more. Every feature is free."
+            media: {type: video, src: launch.mp4, poster: launch.jpg}
+          - title: "iOS and Android"
+            desc: "The iOS version is on the App Store. The Android version is in closed testing, and we're looking for testers."
+  ko:
+    title: "DDR과 SOUND VOLTEX 스코어 관리 앱 'ALM4GEST'를 공개했습니다"
+    sections:
+      - heading: "ALM4GEST 공개"
+        items:
+          - title: "할 수 있는 것"
+            desc: "과제를 설정하고, 그날의 성과를 한 장의 이미지로 내보내고, 자신의 상대적인 위치와 데이터로 만든 티어표 등을 볼 수 있습니다. 모든 기능을 무료로 제공합니다."
+            media: {type: video, src: launch.mp4, poster: launch.jpg}
+          - title: "iOS와 Android"
+            desc: "iOS 버전은 App Store에서 공개 중입니다. Android 버전은 비공개 테스트 중이며 테스터를 모집하고 있습니다."
+  zh:
+    title: "DDR 與 SOUND VOLTEX 的分數管理 App「ALM4GEST」正式公開"
+    sections:
+      - heading: "公開 ALM4GEST"
+        items:
+          - title: "可以做的事"
+            desc: "可設定課題、將當天的成果輸出成一張圖片，查看自己的相對位置，以及由資料製作的 Tier表等。所有功能皆免費提供。"
+            media: {type: video, src: launch.mp4, poster: launch.jpg}
+          - title: "iOS 與 Android"
+            desc: "iOS 版已在 App Store 上架。Android 版正在封閉測試中，並招募測試者。"
