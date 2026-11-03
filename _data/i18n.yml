@@ -26,15 +26,21 @@ urls:
   roadmap_en: https://app.notion.com/p/804682d933bb467e95cfbb5ffb097378
   release_ja: https://app.notion.com/p/3b00513fdbf88128990bcedae004017e
   release_en: https://app.notion.com/p/3b00513fdbf881eabaffcf5baf877f68
+  basic_course: https://p.eagate.573.jp/payment/p/api_csinfo.html?course=eaBASIC
 
 machines:
   - SOUND VOLTEX
   - DanceDanceRevolution
   - GITADORA
   - pop'n music
+  - beatmania IIDX
 
 ja:
+  course_note: ["スコアの取り込みには、", "e-amusementベーシックコース", "への加入が必要です。"]
+  theme_light: "ライトモードに切り替え"
+  theme_dark: "ダークモードに切り替え"
   releases:
+    more: "リリースノートをすべて見る"
     toc: "目次"
     title: "リリースノート"
     date_format: "%Y年%-m月%-d日"
@@ -50,7 +56,7 @@ ja:
     label: アプリの画面
     prev: 前の画面
     next: 次の画面
-    names: [ホーム, 楽曲, Tier表, 成長, 共有画像]
+    names: [ホーム, 楽曲, Tier表, 成長, 共有画像, フレンド]
   external: Notion で開く
   hero:
     # 連結して1文として表示する。要素の切れ目だけで折り返すため、
@@ -120,7 +126,11 @@ ja:
     delete: データ削除の申し込み
 
 en:
+  course_note: ["Importing scores requires an active ", "e-amusement Basic Course", " subscription."]
+  theme_light: "Switch to light mode"
+  theme_dark: "Switch to dark mode"
   releases:
+    more: "See all release notes"
     toc: "Contents"
     title: "Release notes"
     date_format: "%B %-d, %Y"
@@ -136,7 +146,7 @@ en:
     label: App screens
     prev: Previous screen
     next: Next screen
-    names: [Home, Songs, Tier List, Growth, Share image]
+    names: [Home, Songs, Tier List, Growth, Share image, Friends]
   external: Open in Notion
   hero:
     lead: An independently developed app that records and analyzes your scores in KONAMI's music games and helps you improve.
@@ -188,7 +198,11 @@ en:
     delete: Data deletion request
 
 ko:
+  course_note: ["스코어를 가져오려면 ", "e-amusement 베이직 코스", " 가입이 필요합니다."]
+  theme_light: "라이트 모드로 전환"
+  theme_dark: "다크 모드로 전환"
   releases:
+    more: "릴리스 노트 모두 보기"
     toc: "목차"
     title: "릴리스 노트"
     date_format: "%Y년 %-m월 %-d일"
@@ -204,7 +218,7 @@ ko:
     label: 앱 화면
     prev: 이전 화면
     next: 다음 화면
-    names: [홈, 곡, 티어표, 성장, 공유 이미지]
+    names: [홈, 곡, 티어표, 성장, 공유 이미지, 친구]
   external: Notion에서 열기
   hero:
     lead: 코나미의 음악 게임 스코어를 기록·분석하고 성장을 돕는, 개인이 개발한 스코어 관리 앱입니다.
@@ -256,7 +270,11 @@ ko:
     delete: 데이터 삭제 신청
 
 zh:
+  course_note: ["匯入成績需要加入", "e-amusement 基本課程", "。"]
+  theme_light: "切換為淺色模式"
+  theme_dark: "切換為深色模式"
   releases:
+    more: "查看所有版本說明"
     toc: "目錄"
     title: "版本說明"
     date_format: "%Y年%-m月%-d日"
@@ -272,7 +290,7 @@ zh:
     label: 應用程式畫面
     prev: 上一個畫面
     next: 下一個畫面
-    names: [首頁, 樂曲, Tier表, 成長, 分享圖片]
+    names: [首頁, 樂曲, Tier表, 成長, 分享圖片, 好友]
   external: 在 Notion 開啟
   hero:
     # 連結して1文として表示する（ja と同じ理由で文節ごとに分ける）

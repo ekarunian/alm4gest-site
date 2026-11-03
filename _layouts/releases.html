@@ -10,7 +10,7 @@ layout: default
     <h1 class="doc-title">{{ i.releases.title }}</h1>
     <ul class="release-list">
       {%- for r in list %}
-      <li><a href="{{ lang_prefix }}/releases/{{ r.id }}"><span class="release-date">{{ r.date | date: i.releases.date_format }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>
+      <li><a href="{{ lang_prefix }}/releases/{{ r.id }}"><span class="release-date">{{ r.date | date: i.releases.date_format }}</span><span class="release-ver">{{ r.version }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>
       {%- endfor %}
     </ul>
   </div>

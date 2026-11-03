@@ -23,8 +23,8 @@
     rows.forEach(function (r, j) {
       if (j === index) { r.setAttribute('aria-current', 'true'); } else { r.removeAttribute('aria-current'); }
     });
-    title.textContent = slides[index].dataset.title;
-    pos.textContent = String(index + 1);
+    title.textContent = slides[index].dataset.num + '\u3000' + slides[index].dataset.title;
+    pos.textContent = slides[index].dataset.num;
     // 狭い画面では枠が上に固定されるので、押した項目が隠れないよう枠の下へ寄せる
     if (!fromRow && narrow.matches) {
       rows[index].scrollIntoView({ block: 'nearest' });

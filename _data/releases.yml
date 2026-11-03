@@ -4,7 +4,7 @@
   version: "1.2.20260821"
   date: "2026-08-20"
   ja:
-    title: "1.2.20260821"
+    title: "GITADORA に対応し、伸ばせる曲を絞り込むフィルタを追加しました"
     sections:
       - heading: "GITADORA に対応"
         items:
@@ -53,7 +53,7 @@
               - "ウィジェットの配置変更や、楽曲一覧の表示プリセットの並べ替えなど、配置を変える操作を改善しました"
             media: {type: video, src: ui.mp4, poster: ui.jpg}
   en:
-    title: "1.2.20260821"
+    title: "GITADORA support, and filters to find songs you can raise"
     sections:
       - heading: "GITADORA support"
         items:
@@ -102,7 +102,7 @@
               - "Improved rearranging, such as moving widgets and reordering song list presets"
             media: {type: video, src: ui.mp4, poster: ui.jpg}
   ko:
-    title: "1.2.20260821"
+    title: "GITADORA 지원과, 올릴 수 있는 곡을 좁히는 필터 추가"
     sections:
       - heading: "GITADORA 지원"
         items:
@@ -151,7 +151,7 @@
               - "위젯 배치 변경, 곡 목록 표시 프리셋 순서 변경 등 배치를 바꾸는 조작을 개선했습니다"
             media: {type: video, src: ui.mp4, poster: ui.jpg}
   zh:
-    title: "1.2.20260821"
+    title: "支援 GITADORA，並新增篩選可提升歌曲的功能"
     sections:
       - heading: "支援 GITADORA"
         items:

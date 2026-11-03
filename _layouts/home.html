@@ -8,13 +8,12 @@ layout: default
 {%- if page.lang == 'ja' -%}
   {%- assign roadmap_url = u.roadmap_ja -%}
   {%- assign release_url = u.release_ja -%}
-  {%- assign shot_dir = 'ja' -%}
 {%- else -%}
   {%- assign roadmap_url = u.roadmap_en -%}
   {%- assign release_url = u.release_en -%}
-  {%- assign shot_dir = 'en' -%}
 {%- endif -%}
-{%- assign shot_files = '01_home,02_songs,03_tier,04_growth,05_share' | split: ',' -%}
+{%- assign shot_dir = page.lang -%}
+{%- assign shot_files = '01_home,02_detail_t1,03_tier,04_growth,05_share,06_friends' | split: ',' -%}
 
 <section class="hero">
   <div class="container">
@@ -49,6 +48,7 @@ layout: default
         </span>
       </p>
       <p class="hero-meta">{{ i.hero.meta }}</p>
+      <p class="hero-note">{{ i.course_note[0] }}<a href="{{ u.basic_course }}" target="_blank" rel="noopener">{{ i.course_note[1] }}</a>{{ i.course_note[2] }}</p>
     </div>
     <div class="hero-mock-wrap">
       <div class="shots" role="group" aria-roledescription="carousel" aria-label="{{ i.shots.label }}">
@@ -57,12 +57,9 @@ layout: default
           {%- for f in shot_files %}
           {%- assign name = i.shots.names[forloop.index0] %}
           <li class="shots-slide" id="shot-{{ forloop.index }}">
-            <div class="phone">
-              <img class="hero-mock" src="/assets/img/shots/{{ shot_dir }}/{{ f }}.webp"
-                   alt="{{ i.logo_alt }} — {{ name }}" width="358" height="778"
-                   {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
-              <span class="phone-island" aria-hidden="true"></span>
-            </div>
+            <img class="hero-shot" src="/assets/img/shots/store/{{ shot_dir }}/{{ f }}.webp"
+                 alt="{{ i.logo_alt }} — {{ name }}" width="752" height="1633"
+                 {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
             <span class="shots-caption">{{ name }}</span>
           </li>
           {%- endfor %}
@@ -104,43 +101,19 @@ layout: default
   </div>
 </section>
 
-<section class="section download" id="download">
-  <div class="container">
-    <div class="section-head reveal">
-      <h2 class="en">{{ i.download.en }}</h2>
-      {%- if i.download.sub != "" %}<span class="sub">{{ i.download.sub }}</span>{% endif %}
-    </div>
-
-    <p>
-      <span class="store-badges">
-        <a href="{{ u.appstore }}" target="_blank" rel="noopener">
-          <img class="badge-store badge-appstore" src="/assets/img/badge-appstore-{{ page.lang }}.svg" alt="{{ i.hero.appstore_alt }}" height="40">
-        </a>
-        <a href="{{ u.playstore }}" target="_blank" rel="noopener">
-          <img class="badge-store badge-googleplay" src="/assets/img/badge-googleplay-{{ page.lang }}.png" alt="{{ i.hero.playstore_alt }}" height="40">
-        </a>
-      </span>
-    </p>
-  </div>
-</section>
-
 <section class="section" id="development">
   <div class="container">
     <div class="section-head reveal">
       <h2 class="en">{{ i.development.en }}</h2>
       {%- if i.development.sub != "" %}<span class="sub">{{ i.development.sub }}</span>{% endif %}
     </div>
-    <div class="links-grid">
-      <a class="link-card reveal" href="{{ roadmap_url }}" target="_blank" rel="noopener">
-        <h3>{{ i.development.roadmap_title }}</h3>
-        <p>{{ i.development.roadmap_body }}</p>
-        <span class="external">{{ i.external }} ↗</span>
-      </a>
-      <a class="link-card reveal" href="{{ lang_prefix }}/releases/">
-        <h3>{{ i.development.release_title }}</h3>
-        <p>{{ i.development.release_body }}</p>
-      </a>
-    </div>
+    {%- assign rel = site.data.releases | sort: "date" | reverse -%}
+    <ul class="release-list reveal">
+      {%- for r in rel limit: 3 %}
+      <li><a href="{{ lang_prefix }}/releases/{{ r.id }}"><span class="release-date">{{ r.date | date: i.releases.date_format }}</span><span class="release-ver">{{ r.version }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    <p class="release-more reveal"><a href="{{ lang_prefix }}/releases/">{{ i.releases.more }} →</a></p>
   </div>
 </section>
 
