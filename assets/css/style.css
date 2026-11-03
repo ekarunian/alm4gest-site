@@ -1333,7 +1333,3 @@ html[lang="ko"] .hero-lead {
 @media (max-width: 859px) {
   .lang-drop > summary { width: auto; gap: 6px; padding: 0 10px; }
 }
-/* ストア用の画像（端末枠とコピー入り）をそのまま見せる */
-.hero-shot { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 0 0 1px var(--hairline), 0 18px 40px rgba(0, 0, 0, 0.35); }
-@media (max-width: 859px) { .hero-shot { border-radius: 16px; } }
-@media (min-width: 860px) { .shots { width: 340px; } }

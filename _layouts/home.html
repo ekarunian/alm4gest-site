@@ -57,9 +57,12 @@ layout: default
           {%- for f in shot_files %}
           {%- assign name = i.shots.names[forloop.index0] %}
           <li class="shots-slide" id="shot-{{ forloop.index }}">
-            <img class="hero-shot" src="/assets/img/shots/store/{{ shot_dir }}/{{ f }}.webp"
-                 alt="{{ i.logo_alt }} — {{ name }}" width="752" height="1633"
-                 {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+            <div class="phone">
+              <img class="hero-mock" src="/assets/img/shots/store/{{ shot_dir }}/{{ f }}.webp"
+                   alt="{{ i.logo_alt }} — {{ name }}" width="358" height="778"
+                   {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+              <span class="phone-island" aria-hidden="true"></span>
+            </div>
             <span class="shots-caption">{{ name }}</span>
           </li>
           {%- endfor %}
