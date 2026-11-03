@@ -1,5 +1,6 @@
 // リリースノート: 左の項目と右の枠の画面を1対1でつなぐ。
 // 項目を押すとその画面に切り替わり、表示中の画面の項目を強調する。JSが無ければ1枚目だけが見える。
+// スマホでは枠を固定せず、選んだ項目のすぐ下へ移す。枠の大きさは小・標準・大から選べ、選択は端末に残す。
 (function () {
   'use strict';
   var root = document.querySelector('[data-release]');
@@ -9,38 +10,39 @@
   var title = root.querySelector('[data-rv-title]');
   var pos = root.querySelector('[data-rv-pos]');
   var viewer = root.querySelector('.rv');
+  var col = viewer.closest('.release-viewer-col');
+  var sizeBtns = Array.prototype.slice.call(root.querySelectorAll('[data-rv-size]'));
   var index = 0;
   var narrow = window.matchMedia('(max-width: 859px)');
-  var col = viewer.closest('.release-viewer-col');
-  // スマホでの枠の出し方の試作（?mobile=inline: 選んだ項目の下に開く／?mobile=mini: 小さい固定枠＋押すと全画面）
-  var trial = new URLSearchParams(location.search).get('mobile');
-  if (trial) root.setAttribute('data-mobile', trial);
-
-  // inline: 枠を選んだ項目の直後へ移す。押した項目が画面上で動かないよう、移した分だけ戻す
-  function place(fromRow) {
-    if (!(narrow.matches && root.dataset.mobile === 'inline')) {
-      if (col.parentNode !== root) root.appendChild(col);
-      return;
-    }
-    var row = rows[index], before = row.getBoundingClientRect().top;
-    if (row.nextElementSibling !== col) row.after(col);
-    if (fromRow) window.scrollBy(0, row.getBoundingClientRect().top - before);
-  }
+  var SIZE_KEY = 'alm4gest-rv-size';
 
   // 句読点で区切った塊が1行に収まらない時、語の途中で折れないよう、文節の切れ目（助詞の後に漢字・カタカナ・英数字・括弧が来る所）だけを折り返し位置にする。
   // 送り仮名（選び方・見た目・並べ替え）の後では折らない
   var HIRA = /[にをはがでとのへもやらどてし]/;
-  var HEAD = /[\u4e00-\u9fff\u3005\u30a0-\u30ffA-Za-z0-9\uff10-\uff19\u300c\u300e\uff08(]/;
+  var HEAD = /[一-鿿々゠-ヿA-Za-z0-9０-９「『（(]/;
   document.querySelectorAll('.release .nb').forEach(function (el) {
     var t = el.textContent, out = '';
     for (var k = 0; k < t.length; k++) {
-      if (k > 0 && HIRA.test(t[k - 1]) && HEAD.test(t[k])) out += '\u200b';
+      if (k > 0 && HIRA.test(t[k - 1]) && HEAD.test(t[k])) out += '​';
       out += t[k];
     }
     if (out !== t) { el.textContent = out; el.classList.add('nb-phrase'); }
   });
 
-  function show(i, fromRow) {
+  // スマホ: 枠を選んだ項目の直後へ移す。基準にした要素が画面上で動かないよう、移した分だけ戻す。PC: 枠を元の列へ戻す
+  function place(anchor) {
+    if (!narrow.matches) {
+      if (col.parentNode !== root) root.appendChild(col);
+      return;
+    }
+    var row = rows[index];
+    if (row.nextElementSibling === col) return;
+    var before = anchor ? anchor.getBoundingClientRect().top : 0;
+    row.after(col);
+    if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - before);
+  }
+
+  function show(i, anchor) {
     index = (i + slides.length) % slides.length;
     slides.forEach(function (s, j) {
       var on = j === index;
@@ -51,59 +53,53 @@
     rows.forEach(function (r, j) {
       if (j === index) { r.setAttribute('aria-current', 'true'); } else { r.removeAttribute('aria-current'); }
     });
-    title.textContent = slides[index].dataset.num + '\u3000' + slides[index].dataset.title;
+    title.textContent = slides[index].dataset.num + '　' + slides[index].dataset.title;
     pos.textContent = slides[index].dataset.num;
-    place(fromRow);
-    // 狭い画面では枠が上に固定されるので、項目が枠の裏や画面の下に隠れたら、項目の頭を枠のすぐ下へ合わせる
-    if (!fromRow && narrow.matches) {
-      syncStick();
-      var r = rows[index].getBoundingClientRect();
-      if (r.top < stick() || r.bottom > window.innerHeight) {
-        rows[index].scrollIntoView({ block: 'start' });
-      }
-    }
+    place(anchor);
   }
 
-  // 固定された枠の下端（ヘッダーの高さ＋枠の高さ）。見出しや項目の止まる位置に使う
-  function stick() {
-    if (narrow.matches && root.dataset.mobile === 'inline') return document.querySelector('.site-header').offsetHeight;
-    return (parseFloat(getComputedStyle(col).top) || 0) + col.offsetHeight;
+  function setSize(z) {
+    root.dataset.rvSize = z;
+    sizeBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.rvSize === z)); });
   }
-  function syncStick() {
-    // ページ全体の scroll-padding-top（ヘッダー分）に足される値なので、その分を引く
-    var pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
-    root.closest('.release').style.setProperty('--rv-stick', (narrow.matches ? stick() - pad : 0) + 'px');
-  }
-  place(false);
-  // mini: 小さい枠を押すと全画面で開き、暗い所を押すと閉じる
-  col.addEventListener('click', function (e) {
-    if (!(narrow.matches && root.dataset.mobile === 'mini')) return;
-    var full = root.classList.contains('rv-full');
-    if (!full && e.target.closest('.rv-body')) { e.preventDefault(); root.classList.add('rv-full'); }
-    else if (full && e.target === col) { root.classList.remove('rv-full'); }
+  var saved = null;
+  try { saved = localStorage.getItem(SIZE_KEY); } catch (e) {}
+  setSize(saved === 's' || saved === 'l' ? saved : 'm');
+  sizeBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      setSize(b.dataset.rvSize);
+      try { localStorage.setItem(SIZE_KEY, b.dataset.rvSize); } catch (e) {}
+    });
   });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') root.classList.remove('rv-full'); });
-  syncStick();
-  window.addEventListener('resize', syncStick);
-  window.addEventListener('load', syncStick);
 
+  place(null);
+  narrow.addEventListener('change', function () { place(null); });
+
+  // 項目を押した時は、押した項目を画面上で動かさない
   rows.forEach(function (r, j) {
-    r.addEventListener('click', function (e) { e.preventDefault(); show(j, true); });
+    r.addEventListener('click', function (e) { e.preventDefault(); show(j, r); });
   });
+  // 矢印で送った時は、枠が次の項目の下へ移るので、その項目が画面の上側に来るよう寄せる
   root.querySelectorAll('[data-rv-dir]').forEach(function (b) {
-    b.addEventListener('click', function () { show(index + Number(b.dataset.rvDir)); });
+    b.addEventListener('click', function () {
+      show(index + Number(b.dataset.rvDir), null);
+      if (narrow.matches) {
+        var r = rows[index].getBoundingClientRect();
+        var head = document.querySelector('.site-header').offsetHeight;
+        if (r.top < head || r.top > window.innerHeight * 0.5) rows[index].scrollIntoView({ block: 'start' });
+      }
+    });
   });
   viewer.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') show(index - 1);
-    if (e.key === 'ArrowRight') show(index + 1);
+    if (e.key === 'ArrowLeft') show(index - 1, null);
+    if (e.key === 'ArrowRight') show(index + 1, null);
   });
-  // 目次から見出しへ飛んだら、その見出しの最初の項目を表示する
+  // 目次から見出しへ飛んだら、その見出しの最初の項目を表示する（枠を先に移してから飛ぶ）
   document.querySelectorAll('.release-toc a').forEach(function (a) {
     a.addEventListener('click', function () {
       var sec = document.querySelector(a.getAttribute('href'));
-      syncStick();
       var first = sec && sec.querySelector('.release-row');
-      if (first) show(Number(first.dataset.idx), true);
+      if (first) show(Number(first.dataset.idx), null);
     });
   });
 })();
