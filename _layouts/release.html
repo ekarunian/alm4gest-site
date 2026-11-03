@@ -7,50 +7,63 @@ layout: default
 {%- assign lang_prefix = "" -%}
 {%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
 {%- assign base = site.release_media_base | append: '/' | append: r.id | append: '/' -%}
+{%- assign total = 0 -%}{%- for s in t.sections -%}{%- assign total = total | plus: s.items.size -%}{%- endfor -%}
 <article class="doc release">
   <div class="container">
     <p class="release-meta"><a href="{{ lang_prefix }}/releases/">{{ i.releases.title }}</a><span>{{ r.date | date: i.releases.date_format }}</span></p>
     <h1 class="doc-title">{{ t.title }}</h1>
-    <div class="doc-body">
-      <p>{{ t.intro }}</p>
-      <ul class="release-summary">
-        {%- for s in t.summary %}<li>{{ s }}</li>{% endfor %}
-      </ul>
-      {%- for it in t.items %}
-      <section class="release-item">
-        <div class="release-text">
-        <h2>{{ it.heading }}</h2>
-        {%- if it.body %}<p>{{ it.body }}</p>{% endif %}
-        {%- if it.list %}<ol>{% for li in it.list %}<li>{{ li }}</li>{% endfor %}</ol>{% endif %}
-        </div>
-        {%- assign sid = 'r' | append: forloop.index -%}
-        <div class="shots release-shots" role="group" aria-roledescription="carousel" aria-label="{{ it.heading | escape }}">
-          <p class="visually-hidden" aria-live="polite" data-shots-status></p>
-          <ul class="shots-track">
-            {%- for m in it.media %}
-            <li class="shots-slide" id="{{ sid }}-{{ forloop.index }}">
-              {%- if m.type == 'video' %}
-              <video controls playsinline muted preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.heading | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
-              {%- else %}
-              <img src="{{ base }}{{ m.src }}" alt="{{ it.heading | escape }}" loading="lazy">
-              {%- endif %}
-            </li>
-            {%- endfor %}
-          </ul>
-          {%- if it.media.size > 1 %}
-          <div class="shots-nav">
-            <button type="button" class="shots-arrow" data-shots-dir="-1" aria-label="{{ i.shots.prev }}" hidden><svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M8.5 1L1.5 8l7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
-            <div class="shots-dots">
-              {%- for m in it.media %}
-              <a class="shots-dot" href="#{{ sid }}-{{ forloop.index }}" aria-label="{{ forloop.index }} / {{ forloop.length }}"{% if forloop.first %} aria-current="true"{% endif %}><span></span></a>
-              {%- endfor %}
+
+    <nav class="release-toc" aria-label="{{ i.releases.toc }}">
+      <ol>
+        {%- for s in t.sections %}
+        <li><a href="#sec-{{ forloop.index }}">{{ s.heading }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+
+    <div class="release-body" data-release>
+      <div class="release-items">
+        {%- assign k = 0 -%}
+        {%- for s in t.sections %}
+        <section class="release-sec" id="sec-{{ forloop.index }}">
+          <h2>{{ s.heading }}</h2>
+          {%- for it in s.items %}
+          <a class="release-row" href="#v-{{ k }}" data-idx="{{ k }}"{% if k == 0 %} aria-current="true"{% endif %}>
+            <span class="release-row-title">{{ it.title }}</span>
+            {%- if it.desc %}<span class="release-row-desc">{{ it.desc }}</span>{% endif %}
+            {%- if it.list %}<span class="release-row-list">{% for li in it.list %}<span>{{ li }}</span>{% endfor %}</span>{% endif %}
+          </a>
+          {%- assign k = k | plus: 1 -%}
+          {%- endfor %}
+        </section>
+        {%- endfor %}
+      </div>
+
+      <div class="release-viewer-col">
+        <div class="rv" id="release-viewer" role="group" aria-roledescription="carousel">
+          <div class="rv-frame">
+            <div class="rv-bar"><span class="rv-title" data-rv-title>{{ t.sections[0].items[0].title }}</span></div>
+            <div class="rv-body">
+              {%- assign k = 0 -%}
+              {%- for s in t.sections %}{%- for it in s.items %}
+              {%- assign m = it.media %}
+              <figure class="rv-slide" id="v-{{ k }}" data-idx="{{ k }}" data-title="{{ it.title | escape }}"{% unless k == 0 %} hidden{% endunless %}>
+                {%- if m.type == 'video' %}
+                <video playsinline muted loop controls preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.title | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
+                {%- else %}
+                <img src="{{ base }}{{ m.src }}" alt="{{ it.title | escape }}"{% unless k == 0 %} loading="lazy"{% endunless %}>
+                {%- endif %}
+              </figure>
+              {%- assign k = k | plus: 1 -%}
+              {%- endfor %}{%- endfor %}
             </div>
-            <button type="button" class="shots-arrow" data-shots-dir="1" aria-label="{{ i.shots.next }}" hidden><svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M1.5 1l7 7-7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
           </div>
-          {%- endif %}
+          <button type="button" class="rv-nav rv-prev" data-rv-dir="-1" aria-label="{{ i.shots.prev }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+          <button type="button" class="rv-nav rv-next" data-rv-dir="1" aria-label="{{ i.shots.next }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+          <p class="rv-count" aria-live="polite"><span data-rv-pos>1</span> / {{ total }}</p>
         </div>
-      </section>
-      {%- endfor %}
+      </div>
     </div>
   </div>
 </article>
+<script src="/assets/js/release.js" defer></script>

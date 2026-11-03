@@ -35,6 +35,7 @@ machines:
 
 ja:
   releases:
+    toc: "目次"
     title: "リリースノート"
     date_format: "%Y年%-m月%-d日"
   og_locale: ja_JP
@@ -120,6 +121,7 @@ ja:
 
 en:
   releases:
+    toc: "Contents"
     title: "Release notes"
     date_format: "%B %-d, %Y"
   og_locale: en_US
@@ -187,6 +189,7 @@ en:
 
 ko:
   releases:
+    toc: "목차"
     title: "릴리스 노트"
     date_format: "%Y년 %-m월 %-d일"
   og_locale: ko_KR
@@ -254,6 +257,7 @@ ko:
 
 zh:
   releases:
+    toc: "目錄"
     title: "版本說明"
     date_format: "%Y年%-m月%-d日"
   og_locale: zh_TW
