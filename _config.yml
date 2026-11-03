@@ -2,6 +2,9 @@ title: ALM4GEST
 url: https://alm4gest.com
 encoding: utf-8
 
+# リリースノートの画像・動画の置き場。R2 へ上げたらその公開URLに差し替える。
+release_media_base: /assets/release-media
+
 # 既定は日本語・文書レイアウト。言語別ディレクトリで lang を上書きする。
 defaults:
   - scope:

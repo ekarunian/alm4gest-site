@@ -31,8 +31,12 @@ machines:
   - SOUND VOLTEX
   - DanceDanceRevolution
   - GITADORA
+  - pop'n music
 
 ja:
+  releases:
+    title: "リリースノート"
+    date_format: "%Y年%-m月%-d日"
   og_locale: ja_JP
   html_lang: ja
   site_title: ALM4GEST
@@ -115,6 +119,9 @@ ja:
     delete: データ削除の申し込み
 
 en:
+  releases:
+    title: "Release notes"
+    date_format: "%B %-d, %Y"
   og_locale: en_US
   html_lang: en
   site_title: ALM4GEST
@@ -179,6 +186,9 @@ en:
     delete: Data deletion request
 
 ko:
+  releases:
+    title: "릴리스 노트"
+    date_format: "%Y년 %-m월 %-d일"
   og_locale: ko_KR
   html_lang: ko
   site_title: ALM4GEST
@@ -243,6 +253,9 @@ ko:
     delete: 데이터 삭제 신청
 
 zh:
+  releases:
+    title: "版本說明"
+    date_format: "%Y年%-m月%-d日"
   og_locale: zh_TW
   html_lang: zh-Hant
   site_title: ALM4GEST

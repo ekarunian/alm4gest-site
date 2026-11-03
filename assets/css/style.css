@@ -1225,3 +1225,21 @@ html[lang="ko"] .hero-lead {
     padding: 10px 12px;
   }
 }
+
+/* リリースノート */
+.release-meta { display: flex; gap: 16px; margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+.release-meta a { color: var(--accent); }
+.release .doc-body > p:first-child { font-size: 16px; color: var(--text); }
+.release-summary { padding: 18px 20px 18px 2.2em !important; border: 1px solid var(--card-border); border-radius: 12px; background: var(--card); }
+.release-item h2 { margin-top: 56px; }
+.release-media { display: grid; gap: 16px; margin: 20px 0 0; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: start; }
+.release-media--1 { grid-template-columns: minmax(0, 322px); }
+.release-media img, .release-media video { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--card-border); background: var(--card); }
+.release-media--2 { max-width: 660px; }
+.release-list { list-style: none; margin: 0; padding: 0; }
+.release-list li { border-top: 1px solid var(--hairline); }
+.release-list li:last-child { border-bottom: 1px solid var(--hairline); }
+.release-list a { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 20px 4px; color: var(--text); text-decoration: none; }
+.release-list a:hover .release-name { color: var(--accent); }
+.release-date { color: var(--muted); font-size: 14px; min-width: 10em; }
+.release-name { font-weight: 700; color: var(--heading); }

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{%- assign r = site.data.releases | where: "id", page.release_id | first -%}
+{%- assign t = r[page.lang] -%}
+{%- assign i = site.data.i18n[page.lang] -%}
+{%- assign lang_prefix = "" -%}
+{%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
+{%- assign base = site.release_media_base | append: '/' | append: r.id | append: '/' -%}
+<article class="doc release">
+  <div class="container">
+    <p class="release-meta"><a href="{{ lang_prefix }}/releases/">{{ i.releases.title }}</a><span>{{ r.date | date: i.releases.date_format }}</span></p>
+    <h1 class="doc-title">{{ t.title }}</h1>
+    <div class="doc-body">
+      <p>{{ t.intro }}</p>
+      <ul class="release-summary">
+        {%- for s in t.summary %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+      {%- for it in t.items %}
+      <section class="release-item">
+        <h2>{{ it.heading }}</h2>
+        {%- if it.body %}<p>{{ it.body }}</p>{% endif %}
+        {%- if it.list %}<ol>{% for li in it.list %}<li>{{ li }}</li>{% endfor %}</ol>{% endif %}
+        <div class="release-media release-media--{{ it.media.size }}">
+          {%- for m in it.media %}
+          {%- if m.type == 'video' %}
+          <video controls playsinline muted preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.heading | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
+          {%- else %}
+          <img src="{{ base }}{{ m.src }}" alt="{{ it.heading | escape }}" loading="lazy">
+          {%- endif %}
+          {%- endfor %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
+  </div>
+</article>

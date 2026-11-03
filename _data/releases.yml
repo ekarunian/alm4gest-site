@@ -1,0 +1,181 @@
+# リリースノートの正本。X の告知（予告①〜⑦と公開時の投稿）を書き写し、未来形を過去形にしただけ。
+# 画像・動画は site.release_media_base/<id>/ に置く（id はフォルダ名）。
+- id: "2026-08-21"
+  version: "1.2.20260821"
+  date: "2026-08-20"
+  ja:
+    title: "1.2.20260821 リリースノート"
+    intro: "予定より1日早いですが、システムテストが完了したのでリリースしました。"
+    summary:
+      - "GITADORA に対応"
+      - "VOLFORCEやSkill 等を伸ばせる曲を絞り込めるフィルタ追加"
+      - "種々のUI改善"
+    items:
+      - heading: "GITADORAに対応しました"
+        body: "GFとDMとで分けてスコア管理が可能です。"
+        list:
+          - "tier表はデータが不十分で自動出力出来ません"
+          - "差分同期で自己ベストの判定内訳が自動保存されます"
+          - "譜面確認は外部サイトへのリンクです"
+        media: [{type: image, src: gitadora-1.jpg}, {type: image, src: gitadora-2.jpg}]
+      - heading: "Tier表の見た目と不具合を改善しました"
+        list:
+          - "Tier表作成時のレベル・指標・区分のUIを改善"
+          - "Tier表に自分のスコアとグレード等を表示"
+          - "SDVX等の曲数が多い画像出力でアプリが落ちる不具合(画像容量を削減)"
+        media: [{type: video, src: tier.mp4, poster: tier.jpg}]
+      - heading: "以下2つのフィルタ機能を追加しました"
+        list:
+          - "伸びしろ: スコア等を伸ばせばSkill(FlareSkill, VOLFORCE等)の枠に入る曲のフィルタ"
+          - "(DDRのみ)GP先行配信の対象曲で、通常解禁されていない曲を除くフィルタ"
+        media: [{type: video, src: filter.mp4, poster: filter.jpg}]
+      - heading: "楽曲詳細画面の機能追加"
+        list:
+          - "同ランク帯の中央値や上位10%スコアを表示し、自分との差分が表示されます（データ母数が少なく、SDVXのみで機能しています）"
+          - "自分のスコア履歴の数値が表示されます"
+        media: [{type: image, src: detail-1.jpg}, {type: image, src: detail-2.jpg}]
+      - heading: "同期時に「昨日の成果」が選べます"
+        body: "これによって、プレイ当日に前回までの同期忘れに気づいても、プレイ前に「昨日の成果」で同期すれば、プレイ後に「今日の成果」でその日の成果だけを作成することが可能です。"
+        media: [{type: image, src: sync-yesterday.jpg}]
+      - heading: "共有画像出力UIの統一、その他UIの改善を行いました(Part1)"
+        list:
+          - "機能ごとにバラバラだった画像出力の見た目を揃えました（右上のアイコンを選択）"
+          - "メインコンテンツが広く見えるよう、上部のUI配置を調整しました。"
+        media: [{type: video, src: share-image.mp4, poster: share-image.jpg}]
+      - heading: "その他UIの改善を行いました(Part2)"
+        list:
+          - "目標ウィジェットのグラフ表示を改善し、文字の重なりを解消しました"
+          - "ウィジェット配置変更、楽曲一覧表示プリセットの並び順など、配置変更系の動作を改善しました"
+        media: [{type: video, src: ui.mp4, poster: ui.jpg}]
+  en:
+    title: "1.2.20260821 Release notes"
+    intro: "This release came out one day earlier than planned, because system testing was complete."
+    summary:
+      - "Added support for GITADORA"
+      - "Added a filter that narrows down songs that can raise VOLFORCE, Skill and more"
+      - "Various UI improvements"
+    items:
+      - heading: "Added support for GITADORA"
+        body: "Scores can be managed separately for GF and DM."
+        list:
+          - "Tier Lists can't be generated automatically, because there isn't enough data"
+          - "Differential sync automatically saves the judgement breakdown of your personal bests"
+          - "Chart previews are links to an external site"
+        media: [{type: image, src: gitadora-1.jpg}, {type: image, src: gitadora-2.jpg}]
+      - heading: "Improved the look of the Tier List and fixed bugs"
+        list:
+          - "Improved the UI for level, metric and category when creating a Tier List"
+          - "The Tier List now shows your own score, grade and more"
+          - "Fixed a bug where the app crashed when exporting images with many songs, such as SDVX (reduced the image size)"
+        media: [{type: video, src: tier.mp4, poster: tier.jpg}]
+      - heading: "Added the following 2 filters"
+        list:
+          - "Room to grow: songs that would enter your Skill slots (FlareSkill, VOLFORCE, etc.) if you raise their score"
+          - "(DDR only) Excludes songs in GP early access that haven't been unlocked normally"
+        media: [{type: video, src: filter.mp4, poster: filter.jpg}]
+      - heading: "New features on the song detail screen"
+        list:
+          - "Shows the median and top 10% scores of players in the same rank range, and your difference from them (works only for SDVX, because there isn't enough data yet)"
+          - "Shows the numbers in your score history"
+        media: [{type: image, src: detail-1.jpg}, {type: image, src: detail-2.jpg}]
+      - heading: "You can now choose \"Yesterday's results\" when syncing"
+        body: "Even if you notice on the day of play that you forgot to sync last time, you can sync with \"Yesterday's results\" before playing, then create only that day's results with \"Today's results\" after playing."
+        media: [{type: image, src: sync-yesterday.jpg}]
+      - heading: "Unified the share image UI and made other UI improvements (Part 1)"
+        list:
+          - "Image exports, which looked different for each feature, now share one look (tap the icon at the top right)"
+          - "Adjusted the layout of the top UI so the main content has more room"
+        media: [{type: video, src: share-image.mp4, poster: share-image.jpg}]
+      - heading: "Other UI improvements (Part 2)"
+        list:
+          - "Improved the graph in the goal widget and fixed overlapping text"
+          - "Improved rearranging actions, such as moving widgets and ordering song list presets"
+        media: [{type: video, src: ui.mp4, poster: ui.jpg}]
+  ko:
+    title: "1.2.20260821 릴리스 노트"
+    intro: "예정보다 하루 이르지만, 시스템 테스트가 끝나서 릴리스했습니다."
+    summary:
+      - "GITADORA 지원"
+      - "VOLFORCE·Skill 등을 올릴 수 있는 곡을 좁히는 필터 추가"
+      - "여러 UI 개선"
+    items:
+      - heading: "GITADORA 지원을 추가했습니다"
+        body: "GF와 DM을 나누어 스코어를 관리할 수 있습니다."
+        list:
+          - "티어표는 데이터가 부족해 자동으로 만들 수 없습니다"
+          - "차분 동기화로 자기 최고 기록의 판정 내역이 자동 저장됩니다"
+          - "보면 확인은 외부 사이트로 연결됩니다"
+        media: [{type: image, src: gitadora-1.jpg}, {type: image, src: gitadora-2.jpg}]
+      - heading: "티어표의 디자인과 버그를 개선했습니다"
+        list:
+          - "티어표 작성 시 레벨·지표·구분 UI 개선"
+          - "티어표에 자신의 스코어와 그레이드 등을 표시"
+          - "SDVX 등 곡 수가 많은 이미지를 내보낼 때 앱이 종료되던 버그 수정(이미지 용량 절감)"
+        media: [{type: video, src: tier.mp4, poster: tier.jpg}]
+      - heading: "다음 2가지 필터를 추가했습니다"
+        list:
+          - "성장 여지: 스코어 등을 올리면 Skill(FlareSkill, VOLFORCE 등) 대상에 들어가는 곡의 필터"
+          - "(DDR 한정) 선행 플레이 대상곡 중 일반 해금되지 않은 곡을 제외하는 필터"
+        media: [{type: video, src: filter.mp4, poster: filter.jpg}]
+      - heading: "곡 상세 화면 기능 추가"
+        list:
+          - "같은 랭크대의 중앙값과 상위 10% 스코어, 자신과의 차이를 표시합니다(데이터가 적어 SDVX에서만 작동합니다)"
+          - "자신의 스코어 이력 수치를 표시합니다"
+        media: [{type: image, src: detail-1.jpg}, {type: image, src: detail-2.jpg}]
+      - heading: "동기화 시 '어제의 성과'를 선택할 수 있습니다"
+        body: "플레이 당일에 지난번 동기화를 잊은 것을 알아차려도, 플레이 전에 '어제의 성과'로 동기화하면 플레이 후 '오늘의 성과'로 그날의 성과만 만들 수 있습니다."
+        media: [{type: image, src: sync-yesterday.jpg}]
+      - heading: "공유 이미지 UI 통일과 기타 UI 개선(Part1)"
+        list:
+          - "기능마다 달랐던 이미지 내보내기의 모양을 통일했습니다(오른쪽 위 아이콘 선택)"
+          - "메인 콘텐츠가 넓게 보이도록 상단 UI 배치를 조정했습니다"
+        media: [{type: video, src: share-image.mp4, poster: share-image.jpg}]
+      - heading: "기타 UI 개선(Part2)"
+        list:
+          - "목표 위젯의 그래프 표시를 개선하고 글자 겹침을 해소했습니다"
+          - "위젯 배치 변경, 곡 목록 표시 프리셋 순서 등 배치 변경 동작을 개선했습니다"
+        media: [{type: video, src: ui.mp4, poster: ui.jpg}]
+  zh:
+    title: "1.2.20260821 版本說明"
+    intro: "比預定早了一天，因為系統測試已完成，所以已經發布。"
+    summary:
+      - "支援 GITADORA"
+      - "新增可篩選出能提升 VOLFORCE、Skill 等的歌曲的篩選"
+      - "多項 UI 改善"
+    items:
+      - heading: "已支援 GITADORA"
+        body: "可將 GF 與 DM 分開管理分數。"
+        list:
+          - "Tier表因資料不足，無法自動產生"
+          - "差分同步會自動儲存個人最佳的判定明細"
+          - "譜面確認為外部網站的連結"
+        media: [{type: image, src: gitadora-1.jpg}, {type: image, src: gitadora-2.jpg}]
+      - heading: "改善了 Tier表的外觀與錯誤"
+        list:
+          - "改善建立 Tier表時等級・指標・分類的 UI"
+          - "Tier表上會顯示自己的分數與評級等"
+          - "修正 SDVX 等歌曲數多的圖片輸出時 App 會當機的錯誤（縮減圖片容量）"
+        media: [{type: video, src: tier.mp4, poster: tier.jpg}]
+      - heading: "新增以下 2 種篩選"
+        list:
+          - "提升空間：只要提升分數等就能進入 Skill（FlareSkill、VOLFORCE 等）名額的歌曲的篩選"
+          - "（僅 DDR）在搶先遊玩對象曲中，排除尚未一般解禁的歌曲的篩選"
+        media: [{type: video, src: filter.mp4, poster: filter.jpg}]
+      - heading: "歌曲詳細畫面新增功能"
+        list:
+          - "顯示同等級區間的中位數與前 10% 分數，以及與自己的差距（資料量少，目前僅 SDVX 可用）"
+          - "顯示自己分數紀錄的數值"
+        media: [{type: image, src: detail-1.jpg}, {type: image, src: detail-2.jpg}]
+      - heading: "同步時可選擇「昨天的成果」"
+        body: "即使在遊玩當天才發現忘了上次同步，只要在遊玩前以「昨天的成果」同步，遊玩後就能以「今天的成果」只製作當天的成果。"
+        media: [{type: image, src: sync-yesterday.jpg}]
+      - heading: "統一分享圖片輸出 UI，並改善其他 UI（Part1）"
+        list:
+          - "統一了各功能各不相同的圖片輸出外觀（選擇右上角的圖示）"
+          - "調整上方 UI 配置，讓主要內容看起來更寬"
+        media: [{type: video, src: share-image.mp4, poster: share-image.jpg}]
+      - heading: "其他 UI 改善（Part2）"
+        list:
+          - "改善目標小工具的圖表顯示，解決文字重疊"
+          - "改善小工具配置變更、歌曲列表顯示預設的排列順序等配置變更相關操作"
+        media: [{type: video, src: ui.mp4, poster: ui.jpg}]

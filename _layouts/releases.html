@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- assign i = site.data.i18n[page.lang] -%}
+{%- assign lang_prefix = "" -%}
+{%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
+{%- assign list = site.data.releases | sort: "date" | reverse -%}
+<article class="doc release">
+  <div class="container">
+    <h1 class="doc-title">{{ i.releases.title }}</h1>
+    <ul class="release-list">
+      {%- for r in list %}
+      <li><a href="{{ lang_prefix }}/releases/{{ r.id }}"><span class="release-date">{{ r.date | date: i.releases.date_format }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</article>

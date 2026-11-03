@@ -3,6 +3,8 @@ layout: default
 ---
 {%- assign i = site.data.i18n[page.lang] -%}
 {%- assign u = site.data.i18n.urls -%}
+{%- assign lang_prefix = "" -%}
+{%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
 {%- if page.lang == 'ja' -%}
   {%- assign roadmap_url = u.roadmap_ja -%}
   {%- assign release_url = u.release_ja -%}
@@ -134,10 +136,9 @@ layout: default
         <p>{{ i.development.roadmap_body }}</p>
         <span class="external">{{ i.external }} ↗</span>
       </a>
-      <a class="link-card reveal" href="{{ release_url }}" target="_blank" rel="noopener">
+      <a class="link-card reveal" href="{{ lang_prefix }}/releases/">
         <h3>{{ i.development.release_title }}</h3>
         <p>{{ i.development.release_body }}</p>
-        <span class="external">{{ i.external }} ↗</span>
       </a>
     </div>
   </div>
