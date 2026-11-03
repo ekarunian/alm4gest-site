@@ -96,22 +96,26 @@ layout: default
         {%- assign m = it.media %}
         <li class="rs-slide{% unless m %} rs-slide-text{% endunless %}" data-sec="{{ sn }}">
           <h2 class="rs-title"><span class="rs-num">{{ sn }}-{{ forloop.index }}</span><span>{{ it.title }}</span></h2>
+          <div class="rs-text">
+            {%- if it.desc %}<p class="release-row-desc">{% include jp.html text=it.desc %}</p>{% endif %}
+            {%- if it.list %}<p class="release-row-list">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}
+          </div>
           {%- if m %}
-          <div class="rs-media">
+          <div class="rs-media" role="button" tabindex="0" aria-label="{{ i.blog.zoom }}" data-rs-zoom>
             {%- if m.type == 'video' %}
-            <video playsinline muted loop controls preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.title | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
+            <video playsinline muted loop preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.title | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
             {%- else %}
             <img src="{{ base }}{{ m.src }}" alt="{{ it.title | escape }}" loading="lazy">
             {%- endif %}
           </div>
           {%- endif %}
-          <div class="rs-text">
-            {%- if it.desc %}<p class="release-row-desc">{% include jp.html text=it.desc %}</p>{% endif %}
-            {%- if it.list %}<p class="release-row-list">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}
-          </div>
         </li>
         {%- endfor %}{%- endfor %}
       </ol>
+      <div class="rs-zoom" data-rs-zoom-layer hidden>
+        <button type="button" class="rs-zoom-close" aria-label="{{ i.blog.close }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <div class="rs-zoom-body"></div>
+      </div>
       <div class="rs-nav">
         <button type="button" class="rs-arrow" data-rs-dir="-1" aria-label="{{ i.shots.prev }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
         <div class="rs-dots">

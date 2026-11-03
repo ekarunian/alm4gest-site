@@ -1285,10 +1285,17 @@ html[lang="ko"] .hero-lead {
   .rs-slide { flex: 0 0 calc(100vw - 58px); box-sizing: border-box; display: flex; flex-direction: column; min-height: 0; padding: 14px 16px 16px; border: 1px solid var(--hairline); border-radius: 18px; background: var(--card); scroll-snap-align: center; scroll-snap-stop: always; }
   .rs-title { flex: none; display: flex; gap: 10px; margin: 0 0 12px; font-size: 16px; line-height: 1.45; color: var(--heading); }
   .rs-num { flex: none; color: var(--accent); font-variant-numeric: tabular-nums; }
-  .rs-media { flex: 1; min-height: 0; display: flex; justify-content: center; margin: 0 0 12px; }
+  .rs-media { flex: 1; min-height: 0; display: flex; justify-content: center; margin: 12px 0 0; cursor: zoom-in; -webkit-tap-highlight-color: transparent; }
   .rs-media img, .rs-media video { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; border: 1px solid var(--hairline); border-radius: 10px; background: #04060f; }
   .rs-text { flex: none; max-height: 40%; overflow-y: auto; font-size: 14px; }
   .rs-slide-text .rs-text { flex: 1; max-height: none; }
+  .rs-zoom { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 56px 12px 20px; background: rgba(2, 4, 12, 0.94); }
+  .rs-zoom[hidden] { display: none; }
+  .rs-zoom-body { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+  .rs-zoom-body img, .rs-zoom-body video { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 10px; }
+  .rs-zoom-close { position: absolute; top: 10px; right: 12px; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 50%; background: rgba(255, 255, 255, 0.08); color: #fff; cursor: pointer; }
+  .rs-zoom-close svg { width: 20px; height: 20px; }
+  html.rs-zoom-open, html.rs-zoom-open body { overflow: hidden; }
   .rs-text p { margin: 0; }
   .rs-text .release-row-desc, .rs-text .release-row-list > span { margin-top: 0; padding-left: 0; }
   .rs-text .release-row-list > span { padding-left: 1em; }

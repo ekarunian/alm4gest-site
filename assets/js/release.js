@@ -105,6 +105,33 @@
       });
     });
     mark(0);
+
+    // 画面をタップすると、画面いっぱいに広げて見せる（動画は操作バー付き）。背景か×で閉じる
+    var layer = rs.querySelector('[data-rs-zoom-layer]');
+    var body = layer.querySelector('.rs-zoom-body');
+    var close = function () {
+      if (layer.hidden) return;
+      layer.hidden = true;
+      body.innerHTML = '';
+      document.documentElement.classList.remove('rs-zoom-open');
+    };
+    var open = function (box) {
+      var src = box.querySelector('img, video');
+      var el = src.cloneNode(true);
+      if (el.tagName === 'VIDEO') { el.controls = true; el.muted = true; el.loop = true; el.setAttribute('playsinline', ''); el.preload = 'auto'; }
+      body.appendChild(el);
+      layer.hidden = false;
+      document.documentElement.classList.add('rs-zoom-open');
+      if (el.tagName === 'VIDEO') el.play().catch(function () {});
+      layer.querySelector('.rs-zoom-close').focus();
+    };
+    rs.querySelectorAll('[data-rs-zoom]').forEach(function (box) {
+      box.addEventListener('click', function () { open(box); });
+      box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(box); } });
+    });
+    layer.addEventListener('click', function (e) { if (e.target === layer || e.target === body || e.target.closest('.rs-zoom-close')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    narrow.addEventListener('change', close);
   }
 
   // 目次（PC）: その見出しの最初の項目を表示する。スマホでは目次の代わりに見出しのタブを使う

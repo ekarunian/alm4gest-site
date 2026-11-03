@@ -42,6 +42,8 @@ ja:
   blog:
     more: "記事をすべて見る"
     toc: "目次"
+    zoom: "拡大して見る"
+    close: "閉じる"
     title: "記事"
     kinds: { release: "リリースノート", tech: "技術記事" }
     date_format: "%Y年%-m月%-d日"
@@ -133,6 +135,8 @@ en:
   blog:
     more: "See all posts"
     toc: "Contents"
+    zoom: "View larger"
+    close: "Close"
     title: "Blog"
     kinds: { release: "Release notes", tech: "Tech article" }
     date_format: "%B %-d, %Y"
@@ -206,6 +210,8 @@ ko:
   blog:
     more: "모든 글 보기"
     toc: "목차"
+    zoom: "크게 보기"
+    close: "닫기"
     title: "블로그"
     kinds: { release: "릴리스 노트", tech: "기술 글" }
     date_format: "%Y년 %-m월 %-d일"
@@ -279,6 +285,8 @@ zh:
   blog:
     more: "查看所有文章"
     toc: "目錄"
+    zoom: "放大檢視"
+    close: "關閉"
     title: "部落格"
     kinds: { release: "版本說明", tech: "技術文章" }
     date_format: "%Y年%-m月%-d日"
