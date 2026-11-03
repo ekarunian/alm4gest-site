@@ -1,0 +1,116 @@
+id: "2026-07-27"
+kind: release
+version: "1.1.20260727"
+date: "2026-07-30"
+ja:
+  title: "SOUND VOLTEX と DanceDanceRevolution のスコア管理アプリ、ALM4GEST を公開しました"
+  lead: "SOUND VOLTEX と DanceDanceRevolution の非公式スコア管理アプリ、ALM4GEST を公開しました。"
+  sections:
+    - heading: "スコアの取り込み"
+      items:
+        - title: "e-amusement から取り込む"
+          desc: "e-amusement のログインで、スコア・クリアランプ・EXスコア・プレー日を取り込みます。手入力でも記録できます。"
+    - heading: "同じレベルの中での位置と難しさ"
+      items:
+        - title: "同レベル帯での位置"
+          desc: "全プレイヤー統計と比べた偏差値を譜面ごとに出します。同じレベルの中で自分がどこにいるかが数字で分かります。"
+        - title: "Tier表"
+          desc: "実際のクリア率とスコア分布から難易度序列を作ります。公式レベルが同じでも、難しさは同じではありません。"
+    - heading: "おすすめ楽曲と弱点分析"
+      items:
+        - title: "おすすめ楽曲"
+          desc: "伸びしろのある譜面、しばらく触れていない放置曲、苦手な要素に合った練習曲を出します。"
+    - heading: "成長の記録と共有"
+      items:
+        - title: "成長のグラフ"
+          desc: "VOLFORCE・フレアスキルの推移と、グレードとクリアランプの分布をグラフにします。"
+        - title: "画像にして X へ共有"
+          desc: "成果・Tier表・成長グラフは、画像にして X へ共有できます。"
+    - heading: "DDR 譜面のプレビュー"
+      items:
+        - title: "速度変更と区間リピート"
+          desc: "DDR の譜面を、速度変更・区間リピートつきで再生できます。対応楽曲は順次追加します。"
+en:
+  title: "ALM4GEST, a score tracker for SOUND VOLTEX and DanceDanceRevolution, is out"
+  lead: "ALM4GEST, an unofficial score tracker for SOUND VOLTEX and DanceDanceRevolution, is now available."
+  sections:
+    - heading: "Score import"
+      items:
+        - title: "Import from e-amusement"
+          desc: "Sign in with e-amusement to import your scores, clear lamps, EX scores and play dates. You can also enter records by hand."
+    - heading: "Where you stand, and how hard charts are"
+      items:
+        - title: "Where you stand at your level"
+          desc: "The app computes a T-score for every chart against all-player statistics, so you can see where you sit among people playing the same level."
+        - title: "Tier List"
+          desc: "Difficulty rankings are built from real clear rates and score distributions. Two charts at the same official level are rarely equally hard."
+    - heading: "Recommended songs and weak points"
+      items:
+        - title: "Recommended songs"
+          desc: "Surfaces charts with room to grow, songs you have been neglecting, and practice picks matched to your weak points."
+    - heading: "Growth records and sharing"
+      items:
+        - title: "Growth charts"
+          desc: "Tracks VOLFORCE and flare skill over time, along with your grade and clear lamp distributions."
+        - title: "Share an image to X"
+          desc: "Results, Tier Lists and growth charts can be turned into a single image and posted to X."
+    - heading: "DDR chart preview"
+      items:
+        - title: "Speed changes and section repeat"
+          desc: "Plays back DDR charts with speed changes and section repeat. More songs are being added."
+ko:
+  title: "SOUND VOLTEX와 DanceDanceRevolution 스코어 관리 앱 ALM4GEST 공개"
+  lead: "SOUND VOLTEX와 DanceDanceRevolution의 비공식 스코어 관리 앱, ALM4GEST를 공개했습니다."
+  sections:
+    - heading: "스코어 가져오기"
+      items:
+        - title: "e-amusement에서 가져오기"
+          desc: "e-amusement에 로그인하면 스코어·클리어 램프·EX 스코어·플레이 날짜를 가져옵니다. 수동으로도 기록할 수 있습니다."
+    - heading: "같은 레벨 안에서의 위치와 난이도"
+      items:
+        - title: "같은 레벨대에서의 위치"
+          desc: "전체 플레이어 통계와 비교한 T점수를 채보마다 계산합니다. 같은 레벨 안에서 자신이 어디쯤인지 숫자로 알 수 있습니다."
+        - title: "티어표"
+          desc: "실제 클리어율과 스코어 분포로 난이도 서열을 만듭니다. 공식 레벨이 같아도 난이도가 같은 것은 아닙니다."
+    - heading: "추천 곡과 약점 분석"
+      items:
+        - title: "추천 곡"
+          desc: "성장 여지가 있는 채보, 한동안 플레이하지 않은 방치곡, 약한 요소에 맞는 연습곡을 보여 줍니다."
+    - heading: "성장 기록과 공유"
+      items:
+        - title: "성장 그래프"
+          desc: "VOLFORCE·플레어 스킬의 추이와 그레이드·클리어 램프 분포를 그래프로 보여 줍니다."
+        - title: "이미지로 X에 공유"
+          desc: "성과·티어표·성장 그래프를 이미지로 만들어 X에 공유할 수 있습니다."
+    - heading: "DDR 채보 미리보기"
+      items:
+        - title: "속도 변경과 구간 반복"
+          desc: "DDR 채보를 속도 변경·구간 반복과 함께 재생할 수 있습니다. 대상 곡은 순차적으로 추가합니다."
+zh:
+  title: "SOUND VOLTEX 與 DanceDanceRevolution 的分數管理 App「ALM4GEST」正式推出"
+  lead: "SOUND VOLTEX 與 DanceDanceRevolution 的非官方分數管理 App「ALM4GEST」正式推出。"
+  sections:
+    - heading: "匯入分數"
+      items:
+        - title: "從 e-amusement 匯入"
+          desc: "登入 e-amusement 即可匯入分數・通關燈號・EX 分數・遊玩日期。也可以手動輸入紀錄。"
+    - heading: "同等級中的位置與難度"
+      items:
+        - title: "同等級區間中的位置"
+          desc: "以全體玩家統計為基準，算出每個譜面的T分數。能以數字得知自己在同一等級中的位置。"
+        - title: "Tier表"
+          desc: "依實際通關率與分數分布建立難度排序。即使官方等級相同，難度也不盡相同。"
+    - heading: "推薦樂曲與弱點分析"
+      items:
+        - title: "推薦樂曲"
+          desc: "列出有提升空間的譜面、一段時間沒碰的放置曲，以及符合不擅長要素的練習曲。"
+    - heading: "成長紀錄與分享"
+      items:
+        - title: "成長圖表"
+          desc: "將 VOLFORCE・Flare Skill 的變化，以及評級與通關燈號的分布製成圖表。"
+        - title: "製成圖片分享到 X"
+          desc: "成果・Tier表・成長圖表可製成圖片分享到 X。"
+    - heading: "DDR 譜面預覽"
+      items:
+        - title: "變速與區段重複"
+          desc: "可以變速、區段重複播放 DDR 譜面。對應樂曲將陸續增加。"

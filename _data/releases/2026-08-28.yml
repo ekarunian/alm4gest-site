@@ -1,0 +1,267 @@
+id: "2026-08-28"
+kind: release
+version: "1.2.20260828"
+date: "2026-08-26"
+ja:
+  title: "フレンドとスコアを比べる機能、フレンドへの課題、自作のTier表を追加しました"
+  sections:
+    - heading: "フレンド"
+      items:
+        - title: "フレンド一覧"
+          desc: "フレンドコードを発行し、相手に申請・承認してもらうとつながります。下タブの5つ目が「フレンド」になりました。一覧には、選んだ機種での勝ち負けと、相手に抜かれた曲が並びます。相手ごとに呼び名とタグを付けられ、タグで一覧を絞り込めます。"
+          media: {type: image, src: "ba8aa786-490b-4e0b-8a22-8fceefd03169.webp"}
+        - title: "相手1人との比較"
+          desc: "相手を1人開くと、中核指標の差・レーダー軸ごとの勝敗・EXスコア・負けている譜面・抜かれた曲を1画面で見られます。"
+          media: {type: image, src: "0dcb5b71-9c74-4efd-86f1-0a4acba51b51.webp"}
+        - title: "公開範囲"
+          desc: "出す情報は自分で選べます。機種ごとに、スコア・クリアランプ・中核指標・プレー回数などの項目を1つずつ選びます。何も出さないままつながることもできます。"
+          media: {type: image, src: "e900debc-91f6-4ae1-9360-5cf798101abe.webp"}
+        - title: "相手の扱い"
+          desc: "1人ごとに「通常」「ライバル」「スコア非表示」から1つを選べます。ライバルは楽曲一覧とホームで比べる相手になります。スコア非表示にすると、その人の点を自分の画面に出しません。"
+          media: {type: image, src: "de6d79f4-adc0-45c1-9e7c-d468bb939256.webp"}
+    - heading: "課題の受け渡し"
+      items:
+        - title: "フレンドに課題を投げる"
+          desc: "曲別詳細・フレンドの画面・抜かれた曲の一覧から、相手へ課題を投げられます。届いた課題はホームに出ます。目標に「EXスコア」「任意のスコア」「ライバルを超える」を足しました。曲を選ぶ画面はジャケット付きの一覧になり、レベルで絞り込めて、自分の記録も見えます。"
+          media: {type: image, src: "85398cc6-5ce3-47f6-9920-f7f98948964e.webp"}
+        - title: "成果画像に課題の進捗"
+          desc: "同期のあとに出る成果画像で、課題にしている曲を先にまとめ、達成した曲に印を付けます。投げてくれた相手の名前と目標も並びます。達成していない課題も同じ節に出るので、抱えている課題を1枚で見られます。GITADORA は、その期間に実際に取った達成率も出ます。"
+          media: {type: image, src: "677dedb3-bf93-4218-86a3-7e61b523d73b.webp"}
+    - heading: "自作のTier表"
+      items:
+        - title: "統計Tierとカスタムの切り替え"
+          desc: "Tier表の画面で「統計Tier」と「カスタムTier」を切り替えられます。カスタムTierでは自分の表を作れます。作った表は8桁のコードで配れます。受け取った側はコードを入れるだけで取り込め、元の表が更新されると1日1回だけ追随します。"
+          media: {type: image, src: "91b700b1-cc37-42cc-8541-80c3d179bd11.webp"}
+        - title: "表の編集"
+          desc: "段の名前を決めて、譜面をつかんで置けます。統計Tierや既存の表から複製して作ることもできます。"
+          media: {type: image, src: "aa6373d6-f1d6-4bbc-a86a-ad5be853706c.webp"}
+    - heading: "表示"
+      items:
+        - title: "文字とジャケットの大きさ"
+          desc: "文字色を濃くしました。文字の大きさとジャケットの大きさを、設定の「表示」から選べます。"
+        - title: "タブレットと折りたたみ端末"
+          desc: "中身を横に間延びさせず、スマホと同じ幅で中央に描くようにしました。"
+    - heading: "DDR の譜面確認"
+      items:
+        - title: "譜面確認の改善"
+          list:
+            - "曲を変えても、譜面が流れる速さが変わらないようにしました"
+            - "端末をマナーモードにしていても、クラップ音を鳴らせるようにしました"
+            - "判定メモを譜面確認の下に戻し、参考値と自分の設定値を見分けられるようにしました"
+    - heading: "そのほかの改善"
+      items:
+        - title: "細かな改善"
+          list:
+            - "楽曲一覧の2行目に、カテゴリ・最終プレー日・IN30 を出すようにしました"
+            - "曲別詳細の上部を作り直しました"
+            - "Tier表のタイルに難易度とレベルを併記しました"
+            - "課題を設定する手順は、どの段階でも左上の矢印で戻れます"
+            - "目標管理ダッシュボード（成長タブ）の共有画像の背景をすりガラス調にして見やすくし、共有画面から背景の編集へそのまま移れるようにしました"
+    - heading: "同期と記録の不具合修正"
+      items:
+        - title: "同期と記録"
+          desc: "どれも、利用者側での操作は要りません。"
+          list:
+            - "1件も取れずに終わった同期を「成功」と呼ばず、理由を出して失敗として返すようにしました"
+            - "公式サイトの1日の取得上限に当たった回に、専用の案内を出すようにしました"
+            - "クラウドのバックアップに、公開範囲の選択、フレンドごとの設定、DDR のワークアウトの日数・累計プレー回数・ARENA POWER の履歴を入れました"
+            - "端末の時計が先へ狂っている間も、前回差分の同期が正しく働くようにしました"
+            - "配信データの取得に失敗した時に、楽曲一覧が読み込み中のまま止まることがあったのを直しました"
+en:
+  title: "Compare scores with friends, send them challenges, and build your own Tier Lists"
+  sections:
+    - heading: "Friends"
+      items:
+        - title: "Friend list"
+          desc: "Issue a friend code, then send or accept a request to connect. The fifth tab at the bottom is now Friends. The list shows wins and losses for the game you picked, plus the songs where they passed you. You can give each friend a nickname and tags, and filter the list by tag."
+          media: {type: image, src: "15d88955-8c6a-441c-abff-6db594d89f25.webp"}
+        - title: "One friend at a glance"
+          desc: "Open one person to see the core metric gap, wins and losses per radar axis, EX score, the charts you are behind on, and the songs they passed you on, all on one screen."
+          media: {type: image, src: "dea8772b-2873-4b73-88a4-bdb84998cf6b.webp"}
+        - title: "Visibility"
+          desc: "You decide what you share. Pick each item per game, such as score, clear lamp, core metric and play count. You can also stay connected while sharing nothing at all."
+          media: {type: image, src: "66bb8fc3-8197-4b1b-8bd0-69583c6fd14d.webp"}
+        - title: "Normal, Rival, or Scores hidden"
+          desc: "Set each friend to one of Normal, Rival, or Scores hidden. A Rival is the person you are compared against in the song list and on Home. Scores hidden keeps their numbers off your screen."
+          media: {type: image, src: "ee8801ae-fd10-4ea7-aefb-9ede36a4fdaa.webp"}
+    - heading: "Challenges"
+      items:
+        - title: "Send a challenge to a friend"
+          desc: "Send a challenge from song details, a friend's page, or the list of songs they passed you on. Challenges you receive show up on Home. Goals now include EX score, any score you type in, and beating a rival. The song picker is a list with jackets, filters by level, and shows your own record."
+          media: {type: image, src: "971df893-1980-4704-827b-e98f12257085.webp"}
+        - title: "Challenge progress in result images"
+          desc: "The result image after a sync groups your challenge songs first and marks the ones you cleared, with the name of the person who sent each one and the goal. Challenges you have not cleared appear in the same section, so one image shows everything you are working on. For GITADORA it also shows the achievement rate you actually scored during the period."
+          media: {type: image, src: "995e8ad4-4d2a-4243-a0f2-3b9e12ae6262.webp"}
+    - heading: "Custom Tier Lists"
+      items:
+        - title: "Statistical Tier and Custom Tier"
+          desc: "The Tier List screen now switches between Statistical Tier and Custom Tier. On the custom side you build your own table. Share it with an 8-digit code: whoever receives it just enters the code, and the copy follows the original once a day when the author updates it."
+          media: {type: image, src: "7097b46d-9144-400a-8dc3-5f43c2942439.webp"}
+        - title: "Editing a table"
+          desc: "Name each row and drag charts into place. You can also start by duplicating a Statistical Tier or an existing table."
+          media: {type: image, src: "e7c12a99-9a10-466f-97c3-c50573c6ba97.webp"}
+    - heading: "Display"
+      items:
+        - title: "Text and jacket size"
+          desc: "Text colour is darker. Text size and jacket size can now be chosen from Display in Settings."
+          media: {type: image, src: "c83c5728-92be-4fb3-8675-ef5d8a292eb3.webp"}
+        - title: "Tablets and foldables"
+          desc: "The layout no longer stretches sideways; it is drawn centred at phone width."
+    - heading: "DDR chart preview"
+      items:
+        - title: "Chart preview improvements"
+          list:
+            - "The chart scrolls at the same speed when you switch songs"
+            - "The clap sound plays even with the device on silent"
+            - "The judge-timing memo is back under the chart preview, and the reference value is now easy to tell apart from your own setting"
+    - heading: "Other improvements"
+      items:
+        - title: "Smaller improvements"
+          list:
+            - "The second line of the song list now shows category, last played, and IN30"
+            - "The song details header was rebuilt"
+            - "Tier List tiles now show difficulty and level together"
+            - "Every step of setting a challenge can be backed out of with the arrow at the top left"
+            - "Share images on the goal dashboard (Growth tab) have a frosted background for readability, and you can jump straight from a share screen into editing that background"
+    - heading: "Sync and record fixes"
+      items:
+        - title: "Sync and records"
+          desc: "Nothing to do on your side."
+          list:
+            - "A sync that fetched nothing is no longer reported as a success. It now returns a reason and fails"
+            - "Hitting the official site's daily fetch limit now shows a dedicated message"
+            - "Cloud backups now carry your visibility choices, your per-friend settings, DDR workout days, lifetime play counts, and ARENA POWER history"
+            - "\"Since last sync\" now works correctly even while the device clock is running ahead"
+            - "Fixed the song list getting stuck on loading when a data fetch failed"
+ko:
+  title: "친구와 스코어 비교, 친구에게 과제 보내기, 직접 만드는 티어표 추가"
+  sections:
+    - heading: "친구"
+      items:
+        - title: "친구 목록"
+          desc: "친구 코드를 발급하고, 상대가 신청・승인하면 연결됩니다. 하단 탭의 5번째가 「친구」가 되었습니다. 목록에는 선택한 기종에서의 승패와 상대에게 추월당한 곡이 나열됩니다. 상대마다 호칭과 태그를 붙일 수 있고, 태그로 목록을 좁힐 수 있습니다."
+          media: {type: image, src: "15d88955-8c6a-441c-abff-6db594d89f25.webp"}
+        - title: "상대 1명과의 비교"
+          desc: "상대 1명을 열면 핵심 지표 차이・레이더 축별 승패・EX 스코어・지고 있는 채보・추월당한 곡을 한 화면에서 볼 수 있습니다."
+          media: {type: image, src: "dea8772b-2873-4b73-88a4-bdb84998cf6b.webp"}
+        - title: "공개 범위"
+          desc: "공개할 정보는 직접 고릅니다. 기종별로 스코어・클리어 램프・핵심 지표・플레이 횟수 등의 항목을 하나씩 선택합니다. 아무것도 공개하지 않고 연결할 수도 있습니다."
+          media: {type: image, src: "66bb8fc3-8197-4b1b-8bd0-69583c6fd14d.webp"}
+        - title: "상대의 취급"
+          desc: "1명마다 「일반」「라이벌」「점수 숨김」 중 하나를 선택할 수 있습니다. 라이벌은 곡 목록과 홈에서 비교하는 상대가 됩니다. 점수 숨김으로 하면 그 사람의 점수를 내 화면에 표시하지 않습니다."
+          media: {type: image, src: "ee8801ae-fd10-4ea7-aefb-9ede36a4fdaa.webp"}
+    - heading: "과제 주고받기"
+      items:
+        - title: "친구에게 과제 보내기"
+          desc: "곡 상세・친구 화면・추월당한 곡 목록에서 상대에게 과제를 보낼 수 있습니다. 받은 과제는 홈에 표시됩니다. 목표에 「EX 스코어」「임의의 스코어」「라이벌 넘기」를 추가했습니다. 곡을 고르는 화면은 재킷이 붙은 목록이 되었고, 레벨로 좁힐 수 있으며 내 기록도 보입니다."
+          media: {type: image, src: "971df893-1980-4704-827b-e98f12257085.webp"}
+        - title: "성과 이미지의 과제 진행"
+          desc: "동기화 후 나오는 성과 이미지에서 과제로 삼은 곡을 먼저 모으고, 달성한 곡에 표시를 붙입니다. 과제를 보낸 상대의 이름과 목표도 함께 표시됩니다. 달성하지 못한 과제도 같은 구역에 나오므로, 안고 있는 과제를 한 장으로 볼 수 있습니다. GITADORA는 그 기간에 실제로 기록한 달성률도 표시됩니다."
+          media: {type: image, src: "995e8ad4-4d2a-4243-a0f2-3b9e12ae6262.webp"}
+    - heading: "직접 만드는 티어표"
+      items:
+        - title: "통계 Tier와 커스텀 Tier 전환"
+          desc: "티어표 화면에서 「통계 Tier」와 「커스텀 Tier」를 전환할 수 있습니다. 커스텀 Tier에서는 나만의 표를 만들 수 있습니다. 만든 표는 8자리 코드로 공유합니다. 받는 쪽은 코드를 입력하기만 하면 가져올 수 있고, 원래 표가 갱신되면 하루 1번 따라갑니다."
+          media: {type: image, src: "7097b46d-9144-400a-8dc3-5f43c2942439.webp"}
+        - title: "표 편집"
+          desc: "단의 이름을 정하고, 채보를 끌어다 놓을 수 있습니다. 통계 Tier나 기존 표를 복제해서 만들 수도 있습니다."
+          media: {type: image, src: "e7c12a99-9a10-466f-97c3-c50573c6ba97.webp"}
+    - heading: "표시"
+      items:
+        - title: "글자와 재킷 크기"
+          desc: "글자색을 진하게 했습니다. 글자 크기와 재킷 크기를 설정의 「표시」에서 선택할 수 있습니다."
+          media: {type: image, src: "c83c5728-92be-4fb3-8675-ef5d8a292eb3.webp"}
+        - title: "태블릿과 폴더블"
+          desc: "화면을 가로로 늘리지 않고, 스마트폰과 같은 폭으로 가운데에 그리도록 했습니다."
+    - heading: "DDR 보면 확인"
+      items:
+        - title: "보면 확인 개선"
+          list:
+            - "곡을 바꿔도 채보가 흐르는 속도가 변하지 않도록 했습니다"
+            - "기기가 무음 모드여도 클랩음을 낼 수 있도록 했습니다"
+            - "판정 메모를 보면 확인 아래로 되돌리고, 참고값과 내 설정값을 구분할 수 있게 했습니다"
+    - heading: "그 밖의 개선"
+      items:
+        - title: "세부 개선"
+          list:
+            - "곡 목록의 2번째 줄에 카테고리・최종 플레이일・IN30을 표시합니다"
+            - "곡 상세의 상단을 새로 만들었습니다"
+            - "티어표 타일에 난이도와 레벨을 함께 표시합니다"
+            - "과제를 설정하는 단계는 어느 단계에서든 왼쪽 위 화살표로 돌아갈 수 있습니다"
+            - "목표 관리 대시보드(성장 탭)의 공유 이미지 배경을 반투명 유리 느낌으로 바꿔 보기 쉽게 하고, 공유 화면에서 배경 편집으로 바로 이동할 수 있게 했습니다"
+    - heading: "동기화와 기록 문제 수정"
+      items:
+        - title: "동기화와 기록"
+          desc: "모두 사용자 쪽에서 할 조작은 없습니다."
+          list:
+            - "한 건도 가져오지 못한 동기화를 「성공」으로 처리하지 않고, 이유를 표시해 실패로 돌려줍니다"
+            - "공식 사이트의 하루 취득 상한에 걸렸을 때 전용 안내를 표시합니다"
+            - "클라우드 백업에 공개 범위 선택, 친구별 설정, DDR 워크아웃 일수・누적 플레이 횟수・ARENA POWER 이력을 넣었습니다"
+            - "기기 시계가 앞서 있는 동안에도 「지난 동기화 이후」 동기화가 올바르게 작동하도록 했습니다"
+            - "데이터 취득에 실패했을 때 곡 목록이 로딩 중인 채로 멈추는 경우가 있던 문제를 수정했습니다"
+zh:
+  title: "可與好友比較分數、向好友發送課題，並可自行建立 Tier表"
+  sections:
+    - heading: "好友"
+      items:
+        - title: "好友列表"
+          desc: "發行好友代碼，由對方申請・承認後即可連結。下方第 5 個分頁改為「好友」。列表會列出所選機種的勝負，以及被對方超越的樂曲。可為每位好友設定稱呼與標籤，並以標籤篩選列表。"
+          media: {type: image, src: "15d88955-8c6a-441c-abff-6db594d89f25.webp"}
+        - title: "與單一好友比較"
+          desc: "開啟一位好友，即可在同一畫面查看核心指標差距、各雷達軸勝負、EX 分數、落後的譜面與被超越的樂曲。"
+          media: {type: image, src: "dea8772b-2873-4b73-88a4-bdb84998cf6b.webp"}
+        - title: "公開範圍"
+          desc: "公開哪些資訊由自己決定。可依機種逐項選擇分數・通關燈・核心指標・遊玩次數等項目。也可以完全不公開而保持連結。"
+          media: {type: image, src: "66bb8fc3-8197-4b1b-8bd0-69583c6fd14d.webp"}
+        - title: "對方的設定"
+          desc: "每位好友可從「一般」「對手」「隱藏分數」中選擇一種。對手會成為樂曲一覽與首頁中比較的對象。設為隱藏分數後，不會在自己的畫面顯示對方的分數。"
+          media: {type: image, src: "ee8801ae-fd10-4ea7-aefb-9ede36a4fdaa.webp"}
+    - heading: "課題的往來"
+      items:
+        - title: "向好友發送課題"
+          desc: "可從樂曲詳細、好友畫面、被超越的樂曲列表向對方發送課題。收到的課題會顯示在首頁。目標新增「EX 分數」「任意分數」「超越對手」。選曲畫面改為附封面圖的列表，可依等級篩選，也能看到自己的記錄。"
+          media: {type: image, src: "971df893-1980-4704-827b-e98f12257085.webp"}
+        - title: "成果圖片顯示課題進度"
+          desc: "同步後的成果圖片會先彙整課題樂曲，並在達成的樂曲加上標記，同時列出發送課題的對方名稱與目標。未達成的課題也會出現在同一區塊，一張圖即可看到手上所有課題。GITADORA 還會顯示該期間實際取得的達成率。"
+          media: {type: image, src: "995e8ad4-4d2a-4243-a0f2-3b9e12ae6262.webp"}
+    - heading: "自行建立 Tier表"
+      items:
+        - title: "切換統計 Tier 與自訂 Tier"
+          desc: "Tier表畫面可切換「統計 Tier」與「自訂 Tier」。在自訂 Tier 中可建立自己的表。建立的表可用 8 位數代碼分享。接收方只要輸入代碼即可匯入，原始表更新時每天跟進 1 次。"
+          media: {type: image, src: "7097b46d-9144-400a-8dc3-5f43c2942439.webp"}
+        - title: "編輯表格"
+          desc: "可為每一段命名，並把譜面拖放到位置上。也可以複製統計 Tier 或既有的表來建立。"
+          media: {type: image, src: "e7c12a99-9a10-466f-97c3-c50573c6ba97.webp"}
+    - heading: "顯示"
+      items:
+        - title: "文字與封面圖大小"
+          desc: "文字顏色加深。文字大小與封面圖大小可從設定的「顯示」選擇。"
+          media: {type: image, src: "c83c5728-92be-4fb3-8675-ef5d8a292eb3.webp"}
+        - title: "平板與折疊機"
+          desc: "畫面不再橫向拉伸，改以與手機相同的寬度置中顯示。"
+    - heading: "DDR 譜面確認"
+      items:
+        - title: "譜面確認的改善"
+          list:
+            - "切換樂曲後，譜面的流速保持不變"
+            - "裝置在靜音模式下也能播放拍手音"
+            - "判定備忘移回譜面確認下方，並可區分參考值與自己的設定值"
+    - heading: "其他改善"
+      items:
+        - title: "細部改善"
+          list:
+            - "樂曲一覽第 2 行顯示分類、最後遊玩日與 IN30"
+            - "重新製作樂曲詳細的上方區塊"
+            - "Tier表的方塊同時標示難度與等級"
+            - "設定課題的每個步驟都能用左上角的箭頭返回"
+            - "目標管理儀表板（成長頁籤）的分享圖片背景改為毛玻璃風格，更易閱讀，並可從分享畫面直接進入背景編輯"
+    - heading: "同步與記錄的問題修正"
+      items:
+        - title: "同步與記錄"
+          desc: "以下皆不需要使用者操作。"
+          list:
+            - "一首都沒取得的同步不再視為「成功」，會顯示原因並以失敗回傳"
+            - "達到官方網站每日取得上限時，會顯示專用說明"
+            - "雲端備份新增公開範圍的選擇、每位好友的設定，以及 DDR 的 Workout 天數・累計遊玩次數・ARENA POWER 紀錄"
+            - "裝置時鐘快於實際時間時，「上次同步後」同步也能正確運作"
+            - "修正資料取得失敗時，樂曲一覽有時停在載入中的問題"

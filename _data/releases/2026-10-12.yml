@@ -1,0 +1,336 @@
+id: "2026-10-12"
+kind: release
+version: "1.2.20261012"
+date: "2026-10-12"
+ja:
+  title: "1台で複数の KONAMI ID、複数の端末で同じフレンドコードを使えるようにし、設定画面と同期を見直しました"
+  lead: "1台での複数アカウント利用と、複数の端末での同じフレンドコード利用に対応しました。あわせてフレンド上限の引き上げ、設定や入力画面の改善、機種別機能の更新、同期と各種不具合の修正を行いました。"
+  sections:
+    - heading: "アカウントとフレンド"
+      items:
+        - title: "1台で複数の KONAMI ID"
+          desc: "1台の端末で複数の KONAMI ID を持てるようにしました。記録はアカウントごとに分かれます。"
+          media: {type: image, src: "629b5286-12f1-4119-95d5-8b6fb2fe4922.webp"}
+        - title: "フレンド詳細の勝ち負け"
+          desc: "フレンド詳細で、「勝っている譜面」と「負けている譜面」を左右に並べて表示します。"
+          media: {type: image, src: "672a121a-34fa-4b00-9b97-eaa3ea9418aa.webp"}
+        - title: "フレンドコードとフレンド一覧"
+          list:
+            - "同じフレンドコードを複数の端末で使えるように変更。端末ごとに「この端末だけやめる」を選べます"
+            - "フレンドの登録上限を50人から100人に拡大"
+            - "フレンド一覧の並べ替えは長押しで始まるように変更。軽いスワイプはスクロールになります"
+            - "フレンドのランキングで、人数が多いと一部の人が表示されなかった不具合を修正"
+    - heading: "設定と入力"
+      items:
+        - title: "ハイスピードと判定調整"
+          list:
+            - "判定調整とハイスピードの目盛の設定を機種ごとに分離"
+            - "DDR を除き、ハイスピードの変更ボタンを±1や±10などの刻みで操作できるように変更"
+            - "判定調整のボタンの形をハイスピードのボタンと統一"
+            - "設定画面の行間を詰め、機種の見出しを大きく表示"
+            - "数値の入力欄で数字キーボードを表示"
+          media: {type: image, src: "3dad7b12-3fb1-4945-b92a-74513f685c54.webp"}
+    - heading: "目標と同期"
+      items:
+        - title: "目標の設定"
+          list:
+            - "期限に「期限なし」を追加"
+            - "目標値の±ボタンで、切りのよい数値（9,980,000など）に正しく揃うように修正"
+            - "VF 目標は、設定した日付の値を起点に表示。二度押しで目標が重複して作られないように修正"
+          media: {type: image, src: "815c0742-52d6-46b9-b7c8-75cd00ce8382.webp"}
+        - title: "同期"
+          list:
+            - "複数機種をまとめて同期するとき、プレイ履歴の無い機種があっても同期全体が失敗しないように修正"
+            - "加入コースの状態を確かめてから未加入の表示を出すように修正"
+            - "同期結果の画面で、今回の同期の対象外だった機種の前回の結果を表示しないように変更"
+    - heading: "SDVX"
+      items:
+        - title: "スコア表示に「MAX-」"
+          desc: "スコアの表示形式をプルダウン（「通常」「EX」「MAX-」）で選ぶ方式にしました。MAX- の表示と並べ替えに対応し、前回の選択を保持します。"
+          media: {type: image, src: "84e9a6ca-1a8e-4f02-8dac-8ece7f651e36.webp"}
+        - title: "そのほかの変更"
+          list:
+            - "レベル別到達の画面で、最上段のレベルを選べるように変更"
+            - "同名曲（カバー曲など）で、別の曲の EX 理論値・ノーツ数・レーダーが表示されていた不具合を修正"
+            - "楽曲「Air」の読み仮名を修正"
+    - heading: "pop'n"
+      items:
+        - title: "楽曲詳細のハイスピードと SUD+"
+          list:
+            - "楽曲詳細で、ハイスピード・ROOF・SUDDEN・HIDDEN の設定値を表にまとめて表示"
+            - "SUD を押すと、譜面の BPM に合わせた SUD+ の値を計算して入れられるように変更（ソフラン曲で使えます。合わせる BPM は譜面ごとに保存）"
+          media: {type: image, src: "4eeebad6-11b0-4648-b9ce-4ce054176ede.webp"}
+        - title: "ポップンクラスと同期"
+          list:
+            - "ポップンクラスの計算方式を見直し、公式の値と一致する人が増えました"
+            - "同期結果の画面にポップンクラスの増減を表示"
+            - "メモ欄に譜面ごとの HIDDEN と SUDDEN の値を記録できるように変更"
+            - "全曲同期で、公式の楽曲一覧に出ない曲も詳細ページから取り込むように変更"
+    - heading: "GITADORA"
+      items:
+        - title: "手動入力と同期の修正"
+          list:
+            - "手動入力で、達成率が空欄でも記録を保存できるように変更"
+            - "前回差分の同期で、進み具合の表示が途中のページで止まって見えていた不具合を修正"
+            - "（CLASSIC）譜面をスキルの計算・対象曲・おすすめから外し、公式の一覧と一致するように修正"
+    - heading: "全般の改善と不具合修正"
+      items:
+        - title: "レベルの「全選択」「全解除」"
+          desc: "楽曲一覧のフィルタで、レベルの選択に「全選択」「全解除」を追加しました。"
+          media: {type: image, src: "3923a3a8-eba9-4a8d-b12e-b1a3718f1064.webp"}
+        - title: "不具合の修正"
+          desc: "大会の説明文に改行を入れると、大会の開催や編集ができなかった不具合を修正しました。次の場合にアプリが落ちる不具合も直しました。"
+          list:
+            - "ファイル選択を二重に開いたとき"
+            - "フレンド申請を同時に保存したとき"
+            - "背景写真が消えていたとき"
+            - "ヘルスケアの読み取りに失敗したとき"
+en:
+  title: "Multiple KONAMI IDs on one device, one friend code on multiple devices, and reworked settings and sync"
+  lead: "This release expands account and friend management, refines settings and input behavior, improves goal tracking and sync stability, updates game-specific features, and fixes crashes."
+  sections:
+    - heading: "Accounts and friends"
+      items:
+        - title: "Multiple KONAMI IDs on one device"
+          desc: "You can use multiple KONAMI ID accounts on one device. Records are kept separate for each account."
+          media: {type: image, src: "629b5286-12f1-4119-95d5-8b6fb2fe4922.webp"}
+        - title: "Wins and losses in friend details"
+          desc: "Friend details show winning and losing charts side by side."
+          media: {type: image, src: "672a121a-34fa-4b00-9b97-eaa3ea9418aa.webp"}
+        - title: "Friend codes and friend list"
+          list:
+            - "One friend code can be used across multiple devices, and each device can choose \"Stop using on this device\""
+            - "The friend limit increased from 50 to 100"
+            - "Reordering the friend list now starts with a long press; a light swipe scrolls the list"
+            - "Fixed some users disappearing from friend rankings when the friend list was large"
+    - heading: "Settings and input"
+      items:
+        - title: "Hi-speed and judge timing"
+          list:
+            - "Judge timing and hi-speed steps are set per game"
+            - "Hi-speed buttons change values in steps such as ±1 and ±10, except in DDR"
+            - "Judge timing buttons now look like the hi-speed buttons"
+            - "Settings rows are more compact, and game headings are larger"
+            - "Number fields open the numeric keyboard"
+          media: {type: image, src: "3dad7b12-3fb1-4945-b92a-74513f685c54.webp"}
+    - heading: "Goals and sync"
+      items:
+        - title: "Setting goals"
+          list:
+            - "Goals can be created without a deadline"
+            - "Fixed goal ± buttons not landing on round values such as 9,980,000"
+            - "VOLFORCE goals start from the value on the creation date, and double-tapping no longer creates duplicate goals"
+          media: {type: image, src: "815c0742-52d6-46b9-b7c8-75cd00ce8382.webp"}
+        - title: "Sync"
+          list:
+            - "Syncing multiple games no longer fails entirely if one game has no play data"
+            - "\"Not subscribed\" appears only after your course status has been checked"
+            - "Sync results no longer show previous results for games not included in the current sync"
+    - heading: "SDVX"
+      items:
+        - title: "MAX- score display"
+          desc: "Choose the score display from a dropdown with Normal, EX and MAX-. MAX- works for display and sorting, and your last choice is kept."
+          media: {type: image, src: "84e9a6ca-1a8e-4f02-8dac-8ece7f651e36.webp"}
+        - title: "Other changes"
+          list:
+            - "Level reach lets you select a level directly in the top row"
+            - "Fixed songs with the same title, such as covers, showing another song's EX max, note count and radar"
+            - "Corrected the reading for the song \"Air\""
+    - heading: "pop'n music"
+      items:
+        - title: "Hi-speed and SUD+ in song details"
+          list:
+            - "Song details show hi-speed, ROOF, SUDDEN and HIDDEN settings together in one table"
+            - "Tapping SUD calculates and fills in the SUD+ value for the chart's BPM. For songs with tempo changes, the BPM you choose is saved per chart"
+          media: {type: image, src: "4eeebad6-11b0-4648-b9ce-4ce054176ede.webp"}
+        - title: "pop'n class and sync"
+          list:
+            - "pop'n class calculation was revised, so it matches official values for more players"
+            - "Sync results show changes in pop'n class"
+            - "Chart memos can record HIDDEN and SUDDEN values"
+            - "Full sync also imports songs missing from the official song list via their detail pages"
+    - heading: "GITADORA"
+      items:
+        - title: "Manual entry and sync fixes"
+          list:
+            - "Manual entries can be saved with an empty achievement rate"
+            - "Fixed the \"Since last sync\" progress display appearing stuck on a middle page"
+            - "(CLASSIC) charts are excluded from skill calculation, target songs and recommendations, matching the official list"
+    - heading: "General improvements and fixes"
+      items:
+        - title: "\"Select all\" and \"Clear all\" for levels"
+          desc: "Song list level filters now include \"Select all\" and \"Clear all\"."
+          media: {type: image, src: "3923a3a8-eba9-4a8d-b12e-b1a3718f1064.webp"}
+        - title: "Bug fixes"
+          desc: "Fixed Score Attacks that couldn't be hosted or edited when the description contained line breaks. Also fixed crashes caused by:"
+          list:
+            - "Opening the file picker twice"
+            - "Saving friend requests at the same time"
+            - "Deleted background photos"
+            - "Failing to read Health data"
+ko:
+  title: "한 기기에서 여러 KONAMI ID, 여러 기기에서 같은 친구 코드 사용, 설정 화면과 동기화 개선"
+  lead: "한 기기에서 여러 계정을 쓰고, 여러 기기에서 같은 친구 코드를 쓸 수 있게 했습니다. 아울러 친구 상한 확대, 설정과 입력 화면 개선, 기종별 기능 업데이트, 동기화와 각종 버그 수정을 진행했습니다."
+  sections:
+    - heading: "계정과 친구"
+      items:
+        - title: "한 기기에서 여러 KONAMI ID"
+          desc: "한 기기에서 여러 KONAMI ID를 가질 수 있게 했습니다. 기록은 계정별로 나뉩니다."
+          media: {type: image, src: "629b5286-12f1-4119-95d5-8b6fb2fe4922.webp"}
+        - title: "친구 상세의 승패"
+          desc: "친구 상세에서 「이기고 있는 채보」와 「지고 있는 채보」를 좌우로 나란히 표시합니다."
+          media: {type: image, src: "672a121a-34fa-4b00-9b97-eaa3ea9418aa.webp"}
+        - title: "친구 코드와 친구 목록"
+          list:
+            - "같은 친구 코드를 여러 기기에서 쓸 수 있도록 변경. 기기마다 「이 기기에서만 그만두기」를 고를 수 있습니다"
+            - "친구 등록 상한을 50명에서 100명으로 확대"
+            - "친구 목록의 순서 변경은 길게 눌러 시작하도록 변경. 가벼운 스와이프는 스크롤로 처리합니다"
+            - "친구 랭킹에서 인원이 많으면 일부 사용자가 표시되지 않던 문제를 수정"
+    - heading: "설정과 입력"
+      items:
+        - title: "하이스피드와 판정 조정"
+          list:
+            - "판정 조정과 하이스피드의 눈금 설정을 기종별로 분리"
+            - "DDR을 제외하고, 하이스피드 변경 버튼을 ±1이나 ±10 등의 단위로 조작할 수 있도록 변경"
+            - "판정 조정 버튼 모양을 하이스피드 버튼과 통일"
+            - "설정 화면의 행 간격을 줄이고 기종 제목을 크게 표시"
+            - "숫자 입력란에서 숫자 키보드를 표시"
+          media: {type: image, src: "3dad7b12-3fb1-4945-b92a-74513f685c54.webp"}
+    - heading: "목표와 동기화"
+      items:
+        - title: "목표 설정"
+          list:
+            - "기한에 「기한 없음」을 추가"
+            - "목표값의 ± 버튼으로 딱 떨어지는 수치(9,980,000 등)에 바르게 맞춰지도록 수정"
+            - "VF 목표는 설정한 날짜의 값을 기점으로 표시하고, 두 번 눌러도 목표가 중복으로 만들어지지 않도록 수정"
+          media: {type: image, src: "815c0742-52d6-46b9-b7c8-75cd00ce8382.webp"}
+        - title: "동기화"
+          list:
+            - "여러 기종을 한꺼번에 동기화할 때, 플레이 기록이 없는 기종이 있어도 동기화 전체가 실패하지 않도록 수정"
+            - "가입 코스 상태를 확인한 뒤에 미가입 표시를 하도록 수정"
+            - "동기화 결과 화면에서 이번 동기화 대상이 아닌 기종의 이전 결과를 표시하지 않도록 변경"
+    - heading: "SDVX"
+      items:
+        - title: "점수 표시에 「MAX-」"
+          desc: "점수 표시 형식을 풀다운(「일반」「EX」「MAX-」)에서 고르도록 했습니다. MAX- 표시와 정렬에 대응하며, 이전 선택을 유지합니다."
+          media: {type: image, src: "84e9a6ca-1a8e-4f02-8dac-8ece7f651e36.webp"}
+        - title: "그 밖의 변경"
+          list:
+            - "레벨별 도달 화면에서 맨 위 단의 레벨을 선택할 수 있도록 변경"
+            - "같은 이름의 곡(커버곡 등)에서 다른 곡의 EX 이론값·노트 수·레이더가 표시되던 문제를 수정"
+            - "곡 「Air」의 읽는 법을 수정"
+    - heading: "pop'n"
+      items:
+        - title: "곡 상세의 하이스피드와 SUD+"
+          list:
+            - "곡 상세에서 하이스피드·ROOF·SUDDEN·HIDDEN 설정값을 표로 모아 표시"
+            - "SUD를 누르면 채보의 BPM에 맞춘 SUD+ 값을 계산해 넣을 수 있도록 변경(소프란 곡에서 사용 가능. 맞출 BPM은 채보별로 저장)"
+          media: {type: image, src: "4eeebad6-11b0-4648-b9ce-4ce054176ede.webp"}
+        - title: "pop'n 클래스와 동기화"
+          list:
+            - "pop'n 클래스 계산 방식을 재검토해, 공식 값과 일치하는 사용자가 늘었습니다"
+            - "동기화 결과 화면에 pop'n 클래스 증감을 표시"
+            - "메모란에 채보별 HIDDEN과 SUDDEN 값을 기록할 수 있도록 변경"
+            - "전곡 동기화에서 공식 곡 목록에 나오지 않는 곡도 상세 페이지에서 가져오도록 변경"
+    - heading: "GITADORA"
+      items:
+        - title: "수동 입력과 동기화 수정"
+          list:
+            - "수동 입력에서 달성률이 빈칸이어도 기록을 저장할 수 있도록 변경"
+            - "「지난 동기화 이후」 동기화에서 진행 상황 표시가 중간 페이지에서 멈춘 것처럼 보이던 문제를 수정"
+            - "(CLASSIC) 채보를 스킬 계산·대상곡·추천에서 제외해 공식 목록과 일치하도록 수정"
+    - heading: "전반적인 개선과 버그 수정"
+      items:
+        - title: "레벨 「전체 선택」「전체 해제」"
+          desc: "곡 목록 필터의 레벨 선택에 「전체 선택」「전체 해제」를 추가했습니다."
+          media: {type: image, src: "3923a3a8-eba9-4a8d-b12e-b1a3718f1064.webp"}
+        - title: "버그 수정"
+          desc: "스코어 어택 설명에 줄바꿈을 넣으면 스코어 어택을 열거나 편집할 수 없던 문제를 수정했습니다. 다음 경우에 앱이 종료되던 문제도 수정했습니다."
+          list:
+            - "파일 선택을 두 번 열었을 때"
+            - "친구 신청을 동시에 저장했을 때"
+            - "배경 사진이 사라졌을 때"
+            - "건강 데이터 읽기에 실패했을 때"
+zh:
+  title: "一台裝置可使用多個 KONAMI ID、一組好友代碼可在多台裝置使用，並改善設定畫面與同步"
+  lead: "支援在一台裝置使用多個帳號，以及在多台裝置使用同一組好友代碼。同時提高好友上限、改善設定與輸入畫面、更新各機種功能，並修正同步與多項問題。"
+  sections:
+    - heading: "帳號與好友"
+      items:
+        - title: "一台裝置使用多個 KONAMI ID"
+          desc: "一台裝置可以擁有多個 KONAMI ID，紀錄依帳號分開保存。"
+          media: {type: image, src: "629b5286-12f1-4119-95d5-8b6fb2fe4922.webp"}
+        - title: "好友詳細的勝負"
+          desc: "好友詳細畫面會左右並排顯示「領先的譜面」與「落後的譜面」。"
+          media: {type: image, src: "672a121a-34fa-4b00-9b97-eaa3ea9418aa.webp"}
+        - title: "好友代碼與好友清單"
+          list:
+            - "同一組好友代碼可在多台裝置使用，每台裝置可選擇「僅停用此裝置」"
+            - "好友登錄上限由 50 人提高至 100 人"
+            - "好友清單的排序改為長按開始，輕滑會當作捲動"
+            - "修正好友排行榜在人數多時部分使用者未顯示的問題"
+    - heading: "設定與輸入"
+      items:
+        - title: "高速與判定調整"
+          list:
+            - "判定調整與高速的刻度設定依機種分開"
+            - "除 DDR 外，高速的變更按鈕可用 ±1、±10 等刻度操作"
+            - "判定調整按鈕的形狀與高速按鈕統一"
+            - "縮小設定畫面的行距，放大機種標題"
+            - "數值輸入欄會顯示數字鍵盤"
+          media: {type: image, src: "3dad7b12-3fb1-4945-b92a-74513f685c54.webp"}
+    - heading: "目標與同步"
+      items:
+        - title: "目標設定"
+          list:
+            - "期限新增「無期限」"
+            - "修正目標值 ± 按鈕無法正確對齊整數值（如 9,980,000）的問題"
+            - "VF 目標以設定日期的數值為起點顯示，並修正連按兩下會重複建立目標的問題"
+          media: {type: image, src: "815c0742-52d6-46b9-b7c8-75cd00ce8382.webp"}
+        - title: "同步"
+          list:
+            - "一次同步多個機種時，即使含有未遊玩的機種，也不會讓整個同步失敗"
+            - "確認訂閱方案狀態後才顯示未訂閱"
+            - "同步結果畫面不再顯示本次未同步機種的上次結果"
+    - heading: "SDVX"
+      items:
+        - title: "分數顯示新增「MAX-」"
+          desc: "分數顯示形式改為從下拉選單（「一般」「EX」「MAX-」）選擇。支援 MAX- 的顯示與排序，並保留上次的選擇。"
+          media: {type: image, src: "84e9a6ca-1a8e-4f02-8dac-8ece7f651e36.webp"}
+        - title: "其他變更"
+          list:
+            - "等級別達成畫面可選擇最上方一列的等級"
+            - "修正同名樂曲（翻唱曲等）顯示其他樂曲的 EX 理論值、物件數與雷達的問題"
+            - "修正樂曲「Air」的讀音"
+    - heading: "pop'n"
+      items:
+        - title: "樂曲詳細的 HS 與 SUD+"
+          list:
+            - "樂曲詳細以表格整合顯示 HS、ROOF、SUDDEN、HIDDEN 的設定值"
+            - "按下 SUD 即可依譜面 BPM 計算並填入 SUD+ 的值（可用於變速曲，對齊的 BPM 依譜面保存）"
+          media: {type: image, src: "4eeebad6-11b0-4648-b9ce-4ce054176ede.webp"}
+        - title: "pop'n 等級與同步"
+          list:
+            - "重新調整 pop'n 等級的計算方式，與官方數值一致的使用者增加"
+            - "同步結果畫面顯示 pop'n 等級的增減"
+            - "備忘欄可依譜面記錄 HIDDEN 與 SUDDEN 的值"
+            - "全曲同步時，官方樂曲清單中未顯示的樂曲也會從詳細頁面讀入"
+    - heading: "GITADORA"
+      items:
+        - title: "手動輸入與同步的修正"
+          list:
+            - "手動輸入時，達成率空白也能保存紀錄"
+            - "修正「上次同步後」同步時，進度顯示看起來停在中途頁面的問題"
+            - "將（CLASSIC）譜面排除於技能計算、對象曲與推薦之外，與官方清單一致"
+    - heading: "整體改善與錯誤修正"
+      items:
+        - title: "等級的「全選」「全部取消」"
+          desc: "樂曲一覽篩選的等級選擇新增「全選」「全部取消」。"
+          media: {type: image, src: "3923a3a8-eba9-4a8d-b12e-b1a3718f1064.webp"}
+        - title: "錯誤修正"
+          desc: "修正分數挑戰說明含有換行時無法舉辦或編輯分數挑戰的問題。另修正以下情況 App 會當機的問題。"
+          list:
+            - "重複開啟檔案選擇時"
+            - "同時保存好友申請時"
+            - "背景照片已消失時"
+            - "讀取健康資料失敗時"

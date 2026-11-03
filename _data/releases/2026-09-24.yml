@@ -1,0 +1,276 @@
+id: "2026-09-24"
+kind: release
+version: "1.2.20260924"
+date: "2026-09-25"
+ja:
+  title: "Tier表を全幅にし、成長ボードの共有で枠を選べるようにし、pop'n music に今作の切り替えを付けました"
+  sections:
+    - heading: "Tier表"
+      items:
+        - title: "全幅の格子と達成の帯"
+          desc: "見出しをジャケットの上の1行へ移し、格子を全幅の8列（pop'n music は4列）にしました。達成の帯は指標の行の空きに張り、「n / m譜面達成」と出します。"
+          media: {type: image, src: "4dcc904c-44e6-4569-95ab-d01d2c9b99e2.webp"}
+    - heading: "楽曲一覧と楽曲詳細"
+      items:
+        - title: "楽曲一覧"
+          desc: "行の余白を詰め、ジャケットを 36pt から 40pt に大きくしました。詳細行の偏差値は「偏差値 全体N」の順に出します。"
+          media: {type: image, src: "148197be-685c-4d3b-bb1c-cc2a8a4b0570.webp"}
+        - title: "楽曲詳細"
+          desc: "個人差カードを偏差値の上へ移し、全体偏差値を末尾の1行にしました。GITADORA の判定内訳は1行に収めました。"
+          media: {type: image, src: "2296591f-2e2a-40dd-a2bd-8dbdc1e38b01.webp"}
+    - heading: "成長ボード"
+      items:
+        - title: "空のボードに見本"
+          desc: "空のボードに見本を入れ、始めるボタンを下に固定しました。プリセットで始めると目標シートが開きます。"
+          list:
+            - "折れ線の凡例の右端に増分（例：▲0.759 90日前比）を表示"
+            - "プレー回数の週の棒に月日を表示"
+          media: {type: image, src: "c25f074b-7922-40b7-a454-df0463b9cf56.webp"}
+        - title: "共有する枠を選ぶ"
+          desc: "共有はプレビューへ直行し、チェックと並べ替えで画像に入れる枠を選べます。"
+          media: {type: image, src: "00607435-c9bc-4840-82b5-b096e61a8700.webp"}
+        - title: "目標"
+          list:
+            - "平均の目標の必要ペースを、週あたりの合計（週N点分／週N%分）で表示"
+            - "目標を達成した日を残して表示"
+    - heading: "pop'n music"
+      items:
+        - title: "手入力に「今作」の切り替え"
+          desc: "手入力に「今作」の切り替えを付けました。外した記録は歴代だけに入り、ポップンクラスには数えません。"
+        - title: "ホームに公式の段位章"
+          desc: "ホームの成果の行に、公式の段位章を出します。"
+          media: {type: image, src: "42204c06-1825-4251-a6ce-ef4b1eb3eee7.webp"}
+    - heading: "フレンド"
+      items:
+        - title: "ギタドラIDで探す"
+          desc: "フレンドをギタドラIDでも探せるようにしました。"
+        - title: "フレンドの画面"
+          list:
+            - "期間を月で開きます"
+            - "比べる数字は多いほうだけ太字にします"
+            - "アイコン画像が読めないときは、空の丸ではなく頭文字を出します"
+          media: {type: image, src: "6032c18d-9827-4963-a8dc-8c679f72a95a.webp"}
+    - heading: "大会"
+      items:
+        - title: "一覧と作成"
+          list:
+            - "終了した大会の一覧を、開いた瞬間に表示"
+            - "満点の無い課題曲では、満点比の大会を作れないように変更"
+    - heading: "画面の見た目の見直し"
+      items:
+        - title: "見た目を整えた画面"
+          desc: "設定（プレイ環境・表示・公開範囲・プロフィール編集・テーマ選択）、お知らせ、大会作成、スコアタのルール、弱点分析、カスタムTier表の作成、VOLFORCE対象楽曲一覧、統計情報シート、共有画像の背景の見た目を整えました。"
+          media: {type: image, src: "142f4104-c7e6-47bb-9270-908f83b40122.webp"}
+    - heading: "そのほかの修正"
+      items:
+        - title: "不具合修正と表示の改善"
+          list:
+            - "スコア履歴の最新の点が右端で切れていたのを修正"
+            - "分布の推移で点が1つだけのとき、その日の位置に柱を表示"
+            - "クリア状況を送っていない相手のクリア状況を出さないように変更"
+            - "通信に失敗したときの表示と再試行を、プロフィール・成長・公開範囲などで統一"
+            - "共有画像にジャケットが出ないことがあったのを修正"
+en:
+  title: "Full-width Tier List, choosing panels when sharing the growth board, and a current-version switch for pop'n music"
+  sections:
+    - heading: "Full-width Tier List"
+      items:
+        - title: "Full-width grid and achievement band"
+          desc: "The heading moved to one line above the jackets, and the grid is now full width with 8 columns (4 on pop'n music). The achievement band sits in the empty space of the index row and reads \"n / m charts achieved\"."
+          media: {type: image, src: "4dcc904c-44e6-4569-95ab-d01d2c9b99e2.webp"}
+    - heading: "Song list and song detail"
+      items:
+        - title: "Song list"
+          desc: "Rows are tighter, and jackets grew from 36pt to 40pt. T-scores in detail rows read \"T-score: overall N\"."
+          media: {type: image, src: "148197be-685c-4d3b-bb1c-cc2a8a4b0570.webp"}
+        - title: "Song detail"
+          desc: "The variance card moved above the T-scores, and the overall T-score is now a single line at the end. GITADORA's judgement breakdown fits on one line."
+          media: {type: image, src: "2296591f-2e2a-40dd-a2bd-8dbdc1e38b01.webp"}
+    - heading: "Growth board"
+      items:
+        - title: "A sample on an empty board"
+          desc: "An empty board now shows a sample, and the start button is pinned to the bottom. Starting from a preset opens the goal sheet."
+          list:
+            - "Line charts show the change at the right end of the legend (e.g. ▲0.759 vs 90 days ago)"
+            - "The weekly play-count bars show the date"
+          media: {type: image, src: "c25f074b-7922-40b7-a454-df0463b9cf56.webp"}
+        - title: "Choose panels to share"
+          desc: "Share goes straight to the preview, where you check the panels to include in the image and reorder them."
+          media: {type: image, src: "00607435-c9bc-4840-82b5-b096e61a8700.webp"}
+        - title: "Goals"
+          list:
+            - "The pace needed for an average goal is shown as a weekly total (N pts or N% per week)"
+            - "The day you reached a goal is now kept and shown"
+    - heading: "pop'n music"
+      items:
+        - title: "\"This version\" switch in manual entry"
+          desc: "Manual entry has a \"This version\" switch. Records with it off go into all-time only and do not count toward Pop'n class."
+        - title: "Official dan badge on Home"
+          desc: "The results row on Home shows the official dan badge."
+          media: {type: image, src: "42204c06-1825-4251-a6ce-ef4b1eb3eee7.webp"}
+    - heading: "Friends"
+      items:
+        - title: "Find friends by GITADORA ID"
+          desc: "You can now find friends by GITADORA ID too."
+        - title: "Friend screen"
+          list:
+            - "Opens on a monthly period"
+            - "Only the higher of the compared numbers is bold"
+            - "When an icon image cannot be loaded, the initial is shown instead of an empty circle"
+          media: {type: image, src: "6032c18d-9827-4963-a8dc-8c679f72a95a.webp"}
+    - heading: "Score Attacks"
+      items:
+        - title: "List and creation"
+          list:
+            - "The list of finished Score Attacks now appears as soon as you open it"
+            - "You can no longer create a percent-of-max Score Attack with challenge songs that have no max score"
+    - heading: "A visual refresh"
+      items:
+        - title: "Refreshed screens"
+          desc: "Settings (Play setup, Display, Visibility, Edit profile, Theme), Notices, creating a Score Attack, Score Attack rules, Weakness Analysis, creating a custom Tier List, VOLFORCE target songs, the Stats sheet and share-image backgrounds got a visual refresh."
+          media: {type: image, src: "142f4104-c7e6-47bb-9270-908f83b40122.webp"}
+    - heading: "Other fixes"
+      items:
+        - title: "Fixes and display improvements"
+          list:
+            - "Fixed the latest point in the score history being cut off at the right edge"
+            - "When the distribution history has only one point, a bar now stands at that day"
+            - "Clear status is no longer shown for players who have not sent theirs"
+            - "Error messages and retry after a failed connection are now consistent across Profile, Growth, Visibility and more"
+            - "Fixed jackets sometimes missing from share images"
+ko:
+  title: "티어표 전체 폭, 성장 보드 공유에서 칸 선택, pop'n music 이번 작 전환 추가"
+  sections:
+    - heading: "티어표"
+      items:
+        - title: "전체 폭 격자와 달성 띠"
+          desc: "제목을 재킷 위 한 줄로 옮기고, 격자를 전체 폭 8열(pop'n music은 4열)로 바꿨습니다. 달성 띠는 지표 행의 빈 곳에 붙이고 「n / m채보 달성」으로 표시합니다."
+          media: {type: image, src: "4dcc904c-44e6-4569-95ab-d01d2c9b99e2.webp"}
+    - heading: "곡 목록과 곡 상세"
+      items:
+        - title: "곡 목록"
+          desc: "행의 여백을 줄이고 재킷을 36pt에서 40pt로 키웠습니다. 상세 행의 T점수는 「T점수 전체N」 순으로 표시합니다."
+          media: {type: image, src: "148197be-685c-4d3b-bb1c-cc2a8a4b0570.webp"}
+        - title: "곡 상세"
+          desc: "개인차 카드를 T점수 위로 옮기고, 전체 T점수를 맨 끝 한 줄로 바꿨습니다. GITADORA의 판정 내역은 한 줄에 담았습니다."
+          media: {type: image, src: "2296591f-2e2a-40dd-a2bd-8dbdc1e38b01.webp"}
+    - heading: "성장 보드"
+      items:
+        - title: "빈 보드에 견본"
+          desc: "빈 보드에 견본을 넣고, 시작 버튼을 아래에 고정했습니다. 프리셋으로 시작하면 목표 시트가 열립니다."
+          list:
+            - "꺾은선 범례 오른쪽 끝에 증분(예: ▲0.759 90일 전 대비) 표시"
+            - "플레이 횟수의 주별 막대에 월일 표시"
+          media: {type: image, src: "c25f074b-7922-40b7-a454-df0463b9cf56.webp"}
+        - title: "공유할 칸 고르기"
+          desc: "공유는 바로 미리보기로 이동하며, 체크와 순서 변경으로 이미지에 넣을 칸을 고를 수 있습니다."
+          media: {type: image, src: "00607435-c9bc-4840-82b5-b096e61a8700.webp"}
+        - title: "목표"
+          list:
+            - "평균 목표의 필요 페이스를 주당 합계(주 N점분／주 N%분)로 표시"
+            - "목표를 달성한 날짜를 기록해 표시"
+    - heading: "pop'n music"
+      items:
+        - title: "수동 입력에 「이번 작」 전환"
+          desc: "수동 입력에 「이번 작」 전환을 추가했습니다. 끈 기록은 역대에만 들어가고 pop'n 클래스에는 세지 않습니다."
+        - title: "홈에 공식 단위 배지"
+          desc: "홈의 성과 행에 공식 단위 배지를 표시합니다."
+          media: {type: image, src: "42204c06-1825-4251-a6ce-ef4b1eb3eee7.webp"}
+    - heading: "친구"
+      items:
+        - title: "GITADORA ID로 찾기"
+          desc: "친구를 GITADORA ID로도 찾을 수 있게 했습니다."
+        - title: "친구 화면"
+          list:
+            - "기간을 월 단위로 엽니다"
+            - "비교하는 숫자는 큰 쪽만 굵게 표시합니다"
+            - "아이콘 이미지를 읽지 못할 때는 빈 원 대신 머리글자를 표시합니다"
+          media: {type: image, src: "6032c18d-9827-4963-a8dc-8c679f72a95a.webp"}
+    - heading: "스코어 어택"
+      items:
+        - title: "목록과 작성"
+          list:
+            - "종료된 스코어 어택 목록을 여는 즉시 표시"
+            - "만점이 없는 과제곡으로는 만점 비율 스코어 어택을 만들 수 없도록 변경"
+    - heading: "화면 모양 다듬기"
+      items:
+        - title: "모양을 다듬은 화면"
+          desc: "설정(플레이 환경·표시·공개 범위·프로필 편집·테마 선택), 공지, 스코어 어택 작성, 스코어 어택 규칙, 약점 분석, 커스텀 티어표 작성, VOLFORCE 대상곡 목록, 통계 정보 시트, 공유 이미지 배경의 모양을 다듬었습니다."
+          media: {type: image, src: "142f4104-c7e6-47bb-9270-908f83b40122.webp"}
+    - heading: "그 밖의 수정"
+      items:
+        - title: "오류 수정과 표시 개선"
+          list:
+            - "스코어 이력의 최신 점이 오른쪽 끝에서 잘리던 문제 수정"
+            - "분포 추이에서 점이 하나뿐일 때 그날 위치에 막대를 표시"
+            - "클리어 상황을 보내지 않은 상대의 클리어 상황을 표시하지 않도록 변경"
+            - "통신 실패 시 표시와 재시도를 프로필·성장·공개 범위 등에서 통일"
+            - "공유 이미지에 재킷이 표시되지 않을 때가 있던 문제 수정"
+zh:
+  title: "Tier表改為全寬，分享成長看板時可選擇區塊，pop'n music 新增本作切換"
+  sections:
+    - heading: "Tier表"
+      items:
+        - title: "全寬格線與達成橫條"
+          desc: "標題移到封面上方的一行，格線改為全寬 8 欄（pop'n music 為 4 欄）。達成橫條放在指標列的空白處，以「n / m譜面達成」顯示。"
+          media: {type: image, src: "4dcc904c-44e6-4569-95ab-d01d2c9b99e2.webp"}
+    - heading: "樂曲一覽與樂曲詳細"
+      items:
+        - title: "樂曲一覽"
+          desc: "縮小列的留白，封面從 36pt 放大為 40pt。詳細列的T分數以「T分數 整體N」的順序顯示。"
+          media: {type: image, src: "148197be-685c-4d3b-bb1c-cc2a8a4b0570.webp"}
+        - title: "樂曲詳細"
+          desc: "個人差卡片移到T分數上方，整體T分數改為最後一行。GITADORA 的判定明細收在一行內。"
+          media: {type: image, src: "2296591f-2e2a-40dd-a2bd-8dbdc1e38b01.webp"}
+    - heading: "成長看板"
+      items:
+        - title: "空白看板顯示範例"
+          desc: "空白看板放入範例，開始按鈕固定在下方。以預設開始時會開啟目標面板。"
+          list:
+            - "折線圖例右端顯示增減（例：▲0.759 與 90 天前比）"
+            - "遊玩次數的每週長條顯示月日"
+          media: {type: image, src: "c25f074b-7922-40b7-a454-df0463b9cf56.webp"}
+        - title: "選擇要分享的區塊"
+          desc: "分享會直接進入預覽，可用勾選與排序選擇要放入圖片的區塊。"
+          media: {type: image, src: "00607435-c9bc-4840-82b5-b096e61a8700.webp"}
+        - title: "目標"
+          list:
+            - "平均目標所需的進度，以每週合計（每週 N 分／每週 N%）顯示"
+            - "保留並顯示達成目標的日期"
+    - heading: "pop'n music"
+      items:
+        - title: "手動輸入新增「本作」切換"
+          desc: "手動輸入新增「本作」切換。關閉時的紀錄只計入歷代，不計入 pop'n 等級。"
+        - title: "首頁顯示官方段位徽章"
+          desc: "首頁的成果列會顯示官方段位徽章。"
+          media: {type: image, src: "42204c06-1825-4251-a6ce-ef4b1eb3eee7.webp"}
+    - heading: "好友"
+      items:
+        - title: "用 GITADORA ID 搜尋"
+          desc: "可用 GITADORA ID 搜尋好友。"
+        - title: "好友畫面"
+          list:
+            - "期間以月開啟"
+            - "比較的數字只將較大者設為粗體"
+            - "無法讀取頭像圖片時，顯示名字的首字而非空白圓形"
+          media: {type: image, src: "6032c18d-9827-4963-a8dc-8c679f72a95a.webp"}
+    - heading: "分數挑戰"
+      items:
+        - title: "列表與建立"
+          list:
+            - "已結束分數挑戰的列表在開啟時立即顯示"
+            - "沒有滿分的課題曲無法建立滿分比例的分數挑戰"
+    - heading: "畫面外觀調整"
+      items:
+        - title: "調整外觀的畫面"
+          desc: "調整了設定（遊玩環境・顯示・公開範圍・編輯個人資料・主題選擇）、公告、建立分數挑戰、分數挑戰規則、弱點分析、建立自訂 Tier表、VOLFORCE 對象樂曲一覽、統計資訊面板、分享圖片背景的外觀。"
+          media: {type: image, src: "142f4104-c7e6-47bb-9270-908f83b40122.webp"}
+    - heading: "其他修正"
+      items:
+        - title: "問題修正與顯示改善"
+          list:
+            - "修正分數紀錄最新一點在右端被截斷的問題"
+            - "分布推移只有一個點時，在該日位置顯示柱狀"
+            - "不再顯示未提供通關狀況之對象的通關狀況"
+            - "統一個人資料、成長、公開範圍等畫面通訊失敗時的顯示與重試"
+            - "修正分享圖片有時未顯示封面的問題"

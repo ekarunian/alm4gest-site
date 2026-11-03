@@ -1,0 +1,156 @@
+id: "2026-09-21"
+kind: release
+version: "1.2.20260921"
+date: "2026-09-20"
+ja:
+  title: "フレンドに順位タブを追加し、pop'n の楽曲詳細で歴代と今作を並べ、iPhone の画像共有の不具合を修正しました"
+  sections:
+    - heading: "フレンド"
+      items:
+        - title: "順位タブ"
+          desc: "自分と同じ機種のフレンドを、その機種の中核指標の高い順に並べます。自分が何番目かがその場で分かります。名前の右のひとことは、名前の残り幅いっぱいまで使って2行で出します。"
+          media: {type: "image", src: "cc2d1b1a-5e0d-4625-bf84-39a95ae3d6f0.webp"}
+        - title: "プロフィールからフレンド申請"
+          desc: "「フレンドを探す」で見つけた人のプロフィールを開いたまま、その画面から申請を送れます。"
+          media: {type: "image", src: "7d51f50c-8e62-4e71-991a-a1fce0846409.webp"}
+        - title: "フレンド一覧の行を作り直し"
+          desc: "機種の枠を幅の決まった2つに固定し、3つ目からは「+n」へ畳みます。機種の数が違っても行の形と高さが揃い、値の出る位置が行ごとに動かなくなりました。機種の色は左端の細い線だけが持ちます。"
+          media: {type: "image", src: "929e0aa9-fb66-422c-9513-eecd35f8f934.webp"}
+    - heading: "pop'n music"
+      items:
+        - title: "歴代と今作を並べて表示"
+          desc: "楽曲詳細で、pop'n の記録を歴代と今作の両方で見られます。歴代だけを見ている間に今作が消えていたのを直しました。記録の行は全機種で右の余白を詰め、スコアとクリアランプの札を大きくしました。"
+          media: {type: "image", src: "39d1215c-500c-4a24-9828-2039f9cf2b03.webp"}
+        - title: "帯が「不明」になる不具合を修正"
+          desc: "「同レベル帯と比べる」で自分の帯が出ず、「ランク不明」のまま扱われることがあったのを直しました。"
+        - title: "今作の記録"
+          list:
+            - "今作の記録が古いまま残り、ポップンクラスが低く出る不具合を修正しました"
+            - "全曲同期で、今作の記録を上限なしで取り直すようにしました"
+    - heading: "画面の表示"
+      items:
+        - title: "文字を大きくしても機種名が切れない"
+          desc: "端末の文字サイズを上げている時は、入りきる枠だけを出します。これまでは機種名が横に切れていました。"
+          media: {type: "image", src: "98071e0b-f2ff-48ce-9d79-4e3b206e32cf.webp"}
+        - title: "画面を横向きに"
+          desc: "向きの制限を外し、画面を横にできるようにしました。上下のシステムバーのアイコンの色も、選んでいるテーマに合わせます。"
+    - heading: "共有"
+      items:
+        - title: "iPhone の画像共有を修正"
+          desc: "9/18 ごろから、iPhone で画像を共有すると X アプリへ移ったあと添付に失敗していました。画像の渡し方を変えて直し、画像と文面の両方が入ります。"
+        - title: "プロフィールの共有文"
+          desc: "プロフィールの共有で、投稿文の1行目に画面名が入っていたのを外しました。"
+en:
+  title: "A Ranking tab in Friends, all-time and current-version records on pop'n, and a fix for image sharing on iPhone"
+  sections:
+    - heading: "Friends"
+      items:
+        - title: "Ranking tab"
+          desc: "Friends who play the same game as you are listed by that game's core index, highest first, so you can see where you stand at a glance. The tagline next to a name now uses the full remaining width and runs to two lines."
+          media: {type: "image", src: "e3cf0281-6fcf-4c49-9f65-c794e83d725d.webp"}
+        - title: "Send a friend request from a profile"
+          desc: "Open the profile of someone you found in Find friends and send the request from that same screen."
+          media: {type: "image", src: "71686ccb-beca-45df-9c4e-009f40c37cd7.webp"}
+        - title: "Rebuilt friend list rows"
+          desc: "Each row now has two fixed-width game slots, and a third game onwards folds into \"+n\". Rows keep the same shape and height however many games a player has, so the values always sit in the same place. The game colour is carried by the thin line on the left edge only."
+          media: {type: "image", src: "ff0b2d7a-4b14-4d27-ab81-60f348215bc0.webp"}
+    - heading: "pop'n music"
+      items:
+        - title: "All-time and current version side by side"
+          desc: "pop'n song details show both your all-time record and your current-version record. Previously the current-version record disappeared while you were looking at all-time. On every game the record rows use less padding on the right, and the score and lamp chips are larger."
+          media: {type: "image", src: "aa9dcef2-7799-4ced-8b07-644d894dd83a.webp"}
+        - title: "Fixed the band showing as unknown"
+          desc: "In \"Compare with your level band\", your own band sometimes did not appear and you were treated as unranked. This is fixed."
+        - title: "Current-version records"
+          list:
+            - "Fixed current-version records staying stale, which made the Pop'n Class read too low"
+            - "Full sync now refetches current-version records with no cap"
+    - heading: "Display"
+      items:
+        - title: "Game names no longer cut off at large text sizes"
+          desc: "On devices with a larger text size, only the slots that fit are shown. Game names used to be clipped horizontally."
+          media: {type: "image", src: "fbfd7188-473a-4373-934f-129701ad9962.webp"}
+        - title: "Landscape orientation"
+          desc: "The orientation lock is gone. The icons in the top and bottom system bars also follow the theme you picked."
+    - heading: "Sharing"
+      items:
+        - title: "Fixed image sharing on iPhone"
+          desc: "Since around 9/18, sharing an image on iPhone would hand off to the X app and then fail to attach it. The image is now passed differently, and both the image and the text come through."
+        - title: "Profile share text"
+          desc: "Removed the screen name from the first line of the profile share text."
+ko:
+  title: "친구 순위 탭 추가, pop'n 곡 상세에서 역대와 현재 버전 함께 표시, iPhone 이미지 공유 문제 수정"
+  sections:
+    - heading: "친구"
+      items:
+        - title: "순위 탭"
+          desc: "자신과 같은 기종의 친구를 그 기종의 핵심 지표가 높은 순으로 정렬합니다. 자신이 몇 번째인지 바로 알 수 있습니다. 이름 오른쪽의 한마디는 이름 옆 남은 폭을 모두 써서 2줄로 표시합니다."
+          media: {type: "image", src: "e3cf0281-6fcf-4c49-9f65-c794e83d725d.webp"}
+        - title: "프로필에서 친구 신청"
+          desc: "「친구 찾기」에서 찾은 사람의 프로필을 연 채로, 그 화면에서 신청을 보낼 수 있습니다."
+          media: {type: "image", src: "71686ccb-beca-45df-9c4e-009f40c37cd7.webp"}
+        - title: "친구 목록의 행을 다시 만듦"
+          desc: "기종 칸을 폭이 정해진 2개로 고정하고, 3번째부터는 「+n」으로 접습니다. 기종 수가 달라도 행의 모양과 높이가 같아지고, 값이 나오는 위치가 행마다 달라지지 않습니다. 기종 색은 왼쪽 끝의 가는 선으로만 나타냅니다."
+          media: {type: "image", src: "ff0b2d7a-4b14-4d27-ab81-60f348215bc0.webp"}
+    - heading: "pop'n music"
+      items:
+        - title: "역대와 현재 버전 함께 표시"
+          desc: "곡 상세에서 pop'n 기록을 역대와 현재 버전 양쪽으로 볼 수 있습니다. 역대만 보는 동안 현재 버전 기록이 사라지던 문제를 수정했습니다. 기록 행은 모든 기종에서 오른쪽 여백을 줄이고, 스코어와 클리어 램프 표시를 크게 했습니다."
+          media: {type: "image", src: "aa9dcef2-7799-4ced-8b07-644d894dd83a.webp"}
+        - title: "레벨대가 「불명」이 되는 문제 수정"
+          desc: "「같은 레벨대와 비교」에서 자신의 레벨대가 나오지 않고 「랭크 불명」으로 처리되던 문제를 수정했습니다."
+        - title: "현재 버전 기록"
+          list:
+            - "현재 버전 기록이 갱신되지 않아 팝픈 클래스가 낮게 나오는 문제를 수정했습니다"
+            - "전곡 동기화에서 현재 버전 기록을 상한 없이 다시 가져오도록 했습니다"
+    - heading: "화면 표시"
+      items:
+        - title: "글자를 크게 해도 기종명이 잘리지 않음"
+          desc: "기기의 글자 크기를 키운 경우 들어가는 칸만 표시합니다. 지금까지는 기종명이 가로로 잘렸습니다."
+          media: {type: "image", src: "fbfd7188-473a-4373-934f-129701ad9962.webp"}
+        - title: "가로 화면"
+          desc: "화면 방향 제한을 없애 가로로 쓸 수 있게 했습니다. 위아래 시스템 바의 아이콘 색도 선택한 테마에 맞춥니다."
+    - heading: "공유"
+      items:
+        - title: "iPhone 이미지 공유 수정"
+          desc: "9/18 무렵부터 iPhone에서 이미지를 공유하면 X 앱으로 넘어간 뒤 첨부에 실패했습니다. 이미지 전달 방식을 바꿔 수정했으며, 이미지와 글이 모두 들어갑니다."
+        - title: "프로필 공유 문구"
+          desc: "프로필 공유 시 게시글 첫 줄에 화면 이름이 들어가던 것을 없앴습니다."
+zh:
+  title: "好友新增排名分頁、pop'n 樂曲詳細同時顯示歷代與本作，並修正 iPhone 圖片分享問題"
+  sections:
+    - heading: "好友"
+      items:
+        - title: "排名分頁"
+          desc: "將與自己同機種的好友，依該機種的核心指標由高到低排列，立即知道自己排第幾。名字右側的一句話會用滿名字旁剩餘的寬度，以兩行顯示。"
+          media: {type: "image", src: "e3cf0281-6fcf-4c49-9f65-c794e83d725d.webp"}
+        - title: "從個人檔案送出好友邀請"
+          desc: "在「尋找好友」找到的人的個人檔案畫面上，可直接送出邀請。"
+          media: {type: "image", src: "71686ccb-beca-45df-9c4e-009f40c37cd7.webp"}
+        - title: "重製好友列表的列"
+          desc: "機種欄固定為寬度一定的 2 個，第 3 個起收合為「+n」。機種數量不同時，列的形狀與高度也一致，數值位置不會因列而移動。機種顏色只由左端的細線表示。"
+          media: {type: "image", src: "ff0b2d7a-4b14-4d27-ab81-60f348215bc0.webp"}
+    - heading: "pop'n music"
+      items:
+        - title: "同時顯示歷代與本作"
+          desc: "在樂曲詳細中，pop'n 的紀錄可同時查看歷代與本作。修正了只看歷代時本作紀錄消失的問題。所有機種的紀錄列都縮小了右側留白，並放大分數與通關燈號標籤。"
+          media: {type: "image", src: "aa9dcef2-7799-4ced-8b07-644d894dd83a.webp"}
+        - title: "修正區間顯示為「不明」的問題"
+          desc: "修正「與同等級區間比較」中未顯示自己的區間，而被當作「等級不明」的問題。"
+        - title: "本作紀錄"
+          list:
+            - "修正本作紀錄未更新導致 Pop'n Class 偏低的問題"
+            - "全曲同步時，會不設上限重新取得本作紀錄"
+    - heading: "畫面顯示"
+      items:
+        - title: "放大字體時機種名不再被切掉"
+          desc: "裝置放大字體時，只顯示放得下的欄位。先前機種名會被橫向切掉。"
+          media: {type: "image", src: "fbfd7188-473a-4373-934f-129701ad9962.webp"}
+        - title: "支援橫向畫面"
+          desc: "取消畫面方向限制，可橫向使用。上下系統列的圖示顏色也會配合所選的主題。"
+    - heading: "分享"
+      items:
+        - title: "修正 iPhone 圖片分享"
+          desc: "約從 9/18 起，在 iPhone 分享圖片時，轉到 X App 後會附加失敗。已改變圖片的傳遞方式修正，圖片與文字都會帶入。"
+        - title: "個人檔案分享文字"
+          desc: "分享個人檔案時，移除了貼文第 1 行的畫面名稱。"

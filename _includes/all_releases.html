@@ -1,0 +1,4 @@
+{%- comment -%} _data/releases/ の1版1ファイルを配列 all_releases にして、日付の新しい順に並べる {%- endcomment -%}
+{%- assign all_releases = "" | split: "" -%}
+{%- for p in site.data.releases -%}{%- assign all_releases = all_releases | push: p[1] -%}{%- endfor -%}
+{%- assign all_releases = all_releases | sort: "id" | reverse -%}

@@ -1,0 +1,272 @@
+id: "2026-08-14"
+kind: release
+version: "1.1.20260814"
+date: "2026-08-14"
+ja:
+  title: "成長タブを作り直し、共有画像の背景とお気に入りを追加しました"
+  sections:
+    - heading: "同期"
+      items:
+        - title: "同期の範囲を絞れる"
+          desc: "同期の取得オプションを4択にしました。毎回全曲を取り直さなくて済み、普段の同期が短くなります。頻繁に同期するなら「前回差分」がおすすめです。SDVX は最大で直近100曲、DDR は最大で直近50プレイをすぐに同期できます。DDR は、差分が50プレイに収まらない時は全曲の取得に切り替わります。"
+          list:
+            - "SDVX：通常スコアのみ（全曲）／EXスコアも取得（全曲）／EXスコアも取得（レベル指定）／EXスコアも取得（前回差分）"
+            - "DDR：概要取得（全曲）／詳細取得（全曲）／詳細取得（レベル指定）／詳細取得（前回差分）"
+          media: {type: image, src: "1753aa51-f16d-4bf4-8d2b-e8a276244171.webp"}
+    - heading: "成長タブ"
+      items:
+        - title: "機種ごとのボード"
+          desc: "成長タブが、好きなウィジェットを選んで並べるダッシュボードになりました。ボードは機種ごと（SDVX・DDR SP・DDR DP）に別々で、構成も並びも選んだ期間もそれぞれ設定できます。"
+          media: {type: image, src: "31b0021f-1699-4ac1-9e22-fea8a1117f78.webp"}
+        - title: "ウィジェットを追加"
+          desc: "ウィジェットには、目標を設定するものと、成長記録や活動記録を見えるようにするものがあります。見えるようにできる記録は次のとおりです。"
+          list:
+            - "VOLFORCE・フレアスキルの推移"
+            - "グレード分布、クリアランプ、フレアランク"
+            - "活動カレンダーと連続プレー"
+            - "レベル別到達、エフェクトレーダー、ARENA POWER"
+            - "フレアスキル対象曲、自己ベスト更新"
+            - "プレー回数、消費カロリー"
+          media: {type: image, src: "a2f08708-6a6d-4ad9-bae8-e4bc41661ac6.webp"}
+        - title: "ボードを画像で共有"
+          desc: "作ったダッシュボードは、表示したいウィジェットを選んで画像にできます。"
+          media: {type: image, src: "a399b7ec-457f-448d-a1fb-671fca05198b.webp"}
+        - title: "目標を設定"
+          desc: "「何の指標を」「どのレベルで」「どれくらい」「いつからいつまでの間に」達成するかを設定できます。"
+          media: {type: image, src: "b7e8a077-b0df-4efb-9b19-1e25f6a78f32.webp"}
+        - title: "目標のウィジェット"
+          desc: "計画に対する進みぐあいと着地の見込みが見えます。年始に今年の目標を設定しておけば、順調かどうかが一目で分かります。"
+          media: {type: image, src: "b3d51582-7cfc-4c3b-b035-2b8d97a78723.webp"}
+    - heading: "判定ズレ"
+      items:
+        - title: "分布のグラフで表示"
+          desc: "曲詳細の判定調整の参考値を、1行の平均値から分布のグラフに変えました。横軸は設定値、縦軸はその値にしている人数で、皆の平均・中央値・人数も併記します。設定する人が増えるほど、合わせどころがはっきりします。合わせる場所が分かれる曲もあるので、実際のプレー結果に合わせた微調整をおすすめします。"
+          media: {type: image, src: "3dfd6eb9-1179-4d7c-9628-785b9509ec6e.webp"}
+    - heading: "共有画像の背景"
+      items:
+        - title: "背景を選ぶ"
+          desc: "成果・Tier表・成長・対象楽曲・楽曲一覧の5種類の共有画像に、自分で選んだ背景を設定できます。既定のプリセットは、カラーテーマに対応した6種類から選べます。5種類の共有画像それぞれに別のテーマを設定できます。"
+          media: {type: image, src: "6e3e026d-6bbd-464d-8f70-448f776dd6a3.webp"}
+        - title: "背景を調整する"
+          desc: "カスタム設定を5つ保存でき、背景色・透過度・ぼかし・明るさ・コントラスト・文字色などを調整できます。背景色の代わりに、端末の写真を背景にすることもできます（写真はバックアップされません）。"
+          media: {type: image, src: "138fe9d4-900a-48b6-9abb-9397083513f1.webp"}
+    - heading: "楽曲一覧"
+      items:
+        - title: "お気に入り"
+          desc: "気になる曲に印を付けて、あとから絞り込めます。"
+          media: {type: image, src: "95c481a2-3a90-49d5-83d1-f9f51333a34e.webp"}
+        - title: "スコアのグレードで絞り込む"
+          desc: "フィルタにスコアグレードの節を足しました。クリアランプの絞り込みと同じ使い方です。"
+          media: {type: image, src: "e80c8d43-6fe0-4816-9bbd-b4b1cb2deb72.webp"}
+    - heading: "カラーテーマ"
+      items:
+        - title: "「ブロッサム」を追加"
+          desc: "ピンク系のカラーテーマ「ブロッサム」を追加し、カラーテーマが6種になりました。"
+          media: {type: image, src: "6b836dfc-e1ef-4cdc-90b8-0249a24b98fd.webp"}
+    - heading: "不具合の修正"
+      items:
+        - title: "深夜のプレーの日付"
+          desc: "成果の「1日」を午前5時区切りにしました。0時から5時までのプレーは前日の成果として出ます。同じ日に2回目以降の同期をしても、その日の成果が1枚にまとまります（複数枚に割れなくなりました）。"
+        - title: "その他"
+          desc: "細かい不具合を修正しました。"
+en:
+  title: "A rebuilt growth tab, backgrounds for shared images, and favorites"
+  sections:
+    - heading: "Sync"
+      items:
+        - title: "Narrow the sync range"
+          desc: "Sync now offers four options, so you no longer have to fetch every song each time and an everyday sync finishes sooner. If you sync often, use \"Since last sync\": it covers up to 100 recent songs on SDVX and up to 50 recent plays on DDR. On DDR, it switches to fetching all songs when the changes do not fit in 50 plays."
+          list:
+            - "SDVX: scores only (all songs) / with EX scores (all songs) / with EX scores (level range) / with EX scores (Since last sync)"
+            - "DDR: summary (all songs) / details (all songs) / details (level range) / details (Since last sync)"
+          media: {type: image, src: "48454f90-593e-42dc-bf31-0539dfbd0a37.webp"}
+    - heading: "Growth tab"
+      items:
+        - title: "A board for each game"
+          desc: "The growth tab is now a dashboard of widgets you pick and arrange. Boards are kept separately for each game (SDVX, DDR SP, DDR DP), each with its own widgets, its own order and its own period."
+          media: {type: image, src: "4638a18d-2e45-453e-9707-cdf1459e95f1.webp"}
+        - title: "Add widgets"
+          desc: "Widgets fall into two kinds: ones for setting a goal, and ones that visualize your growth and activity records. The records you can visualize are:"
+          list:
+            - "VOLFORCE and flare skill over time"
+            - "Grade distribution, clear lamps, flare ranks"
+            - "An activity calendar with play streaks"
+            - "Level-by-level progress, the effect radar, ARENA POWER"
+            - "Flare skill target songs, personal bests"
+            - "Play counts, calories burned"
+          media: {type: image, src: "c94f40c6-6f90-4ba9-875d-6c2a5a2f1344.webp"}
+        - title: "Share the board as an image"
+          desc: "You can turn a board into an image, choosing which widgets to include."
+          media: {type: image, src: "4e6a286f-fb4d-4492-be36-118986a004dd.webp"}
+        - title: "Set a goal"
+          desc: "Choose which metric, at which levels, how much, and between which two dates you want to reach it."
+          media: {type: image, src: "254231e6-ef11-47a5-98a0-0302d5f8588c.webp"}
+        - title: "The goal widget"
+          desc: "See how you're tracking against your plan, and where you'll land. Set your goal for the year in January and you can see at a glance whether you are on track."
+          media: {type: image, src: "30ebf361-0e80-4147-bdd5-58b7be106b27.webp"}
+    - heading: "Judge timing"
+      items:
+        - title: "A distribution chart"
+          desc: "The judge-timing reference value in song details changed from a single average line to a distribution chart. The x-axis is the value you would set, the y-axis is how many players use it, with the average, the median and the sample size alongside. The more people set a value, the clearer the sweet spot becomes. Some songs have more than one, so fine-tune from how your own plays actually go."
+          media: {type: image, src: "9f2a893e-cfc2-41a1-aeef-3ada43dadc40.webp"}
+    - heading: "Backgrounds for shared images"
+      items:
+        - title: "Choose a background"
+          desc: "All five kinds of shared image (results, Tier List, growth, target songs and the song list) can now use a background of your own choosing. The built-in presets give you six choices, matched to the color themes. Each of the five kinds can have its own theme."
+          media: {type: image, src: "f76e47ee-c83a-427a-b8a7-dfaee8832e7b.webp"}
+        - title: "Adjust the background"
+          desc: "You can save five custom settings, adjusting background color, opacity, blur, brightness, contrast, text color and more. Instead of a background color, you can use a photo from your device (photos are not backed up)."
+          media: {type: image, src: "467cf1ae-471f-4d81-a88e-ec02a62c8f0b.webp"}
+    - heading: "Song list"
+      items:
+        - title: "Favorites"
+          desc: "Mark the songs you care about and filter the list down to them later."
+          media: {type: image, src: "19b8b433-1e09-4721-a58b-fcc98203f432.webp"}
+        - title: "Filter by score grade"
+          desc: "The filter gained a score grade section. It works the same way as the clear lamp filter."
+          media: {type: image, src: "4a344038-f53b-49b3-bc59-1a17920d25b5.webp"}
+    - heading: "Color themes"
+      items:
+        - title: "Blossom added"
+          desc: "A pink theme, Blossom, has been added. There are now six color themes."
+          media: {type: image, src: "ee8b2342-4968-4002-8368-7c6baefeb905.webp"}
+    - heading: "Fixes"
+      items:
+        - title: "Late-night plays on the right day"
+          desc: "A results \"day\" now runs from 5 a.m., so plays between midnight and 5 a.m. count toward the previous day. Syncing a second time on the same day keeps that day's results as a single card instead of splitting them."
+        - title: "Other fixes"
+          desc: "Other small fixes."
+ko:
+  title: "성장 탭을 새로 만들고, 공유 이미지 배경과 즐겨찾기를 추가"
+  sections:
+    - heading: "동기화"
+      items:
+        - title: "동기화 범위 좁히기"
+          desc: "동기화 가져오기 옵션을 4가지로 했습니다. 매번 전곡을 다시 가져오지 않아도 되어 평소 동기화가 짧아집니다. 자주 동기화한다면 '지난 동기화 이후'를 추천합니다. SDVX는 최대 최근 100곡, DDR은 최대 최근 50플레이를 바로 동기화할 수 있습니다. DDR은 갱신분이 50플레이에 들어가지 않으면 전곡 가져오기로 전환됩니다."
+          list:
+            - "SDVX: 일반 스코어만(전곡) / EX 스코어도 가져오기(전곡) / EX 스코어도 가져오기(레벨 지정) / EX 스코어도 가져오기(지난 동기화 이후)"
+            - "DDR: 개요 가져오기(전곡) / 상세 가져오기(전곡) / 상세 가져오기(레벨 지정) / 상세 가져오기(지난 동기화 이후)"
+          media: {type: image, src: "48454f90-593e-42dc-bf31-0539dfbd0a37.webp"}
+    - heading: "성장 탭"
+      items:
+        - title: "기종별 보드"
+          desc: "성장 탭이 원하는 위젯을 골라 배치하는 대시보드가 되었습니다. 보드는 기종별(SDVX・DDR SP・DDR DP)로 따로 있으며, 구성・순서・선택한 기간을 각각 설정할 수 있습니다."
+          media: {type: image, src: "4638a18d-2e45-453e-9707-cdf1459e95f1.webp"}
+        - title: "위젯 추가"
+          desc: "위젯에는 목표를 설정하는 것과, 성장 기록이나 활동 기록을 보여 주는 것이 있습니다. 볼 수 있는 기록은 다음과 같습니다."
+          list:
+            - "VOLFORCE・플레어 스킬 추이"
+            - "그레이드 분포, 클리어 램프, 플레어 랭크"
+            - "활동 캘린더와 연속 플레이"
+            - "레벨별 도달, 이펙트 레이더, ARENA POWER"
+            - "플레어 스킬 대상곡, 자기 최고 기록 갱신"
+            - "플레이 횟수, 소비 칼로리"
+          media: {type: image, src: "c94f40c6-6f90-4ba9-875d-6c2a5a2f1344.webp"}
+        - title: "보드를 이미지로 공유"
+          desc: "만든 대시보드는 표시할 위젯을 골라 이미지로 만들 수 있습니다."
+          media: {type: image, src: "4e6a286f-fb4d-4492-be36-118986a004dd.webp"}
+        - title: "목표 설정"
+          desc: "'어떤 지표를' '어떤 레벨에서' '얼마나' '언제부터 언제까지' 달성할지 설정할 수 있습니다."
+          media: {type: image, src: "254231e6-ef11-47a5-98a0-0302d5f8588c.webp"}
+        - title: "목표 위젯"
+          desc: "계획 대비 진행 상황과 도달 전망을 볼 수 있습니다. 연초에 올해 목표를 설정해 두면 순조로운지 한눈에 알 수 있습니다."
+          media: {type: image, src: "30ebf361-0e80-4147-bdd5-58b7be106b27.webp"}
+    - heading: "판정 오차"
+      items:
+        - title: "분포 그래프로 표시"
+          desc: "곡 상세의 판정 조정 참고값을 한 줄의 평균값에서 분포 그래프로 바꿨습니다. 가로축은 설정값, 세로축은 그 값을 쓰는 인원이며, 전체 평균・중앙값・인원도 함께 표시합니다. 설정하는 사람이 늘수록 맞출 지점이 뚜렷해집니다. 맞출 지점이 나뉘는 곡도 있으니 실제 플레이 결과에 맞춘 미세 조정을 추천합니다."
+          media: {type: image, src: "9f2a893e-cfc2-41a1-aeef-3ada43dadc40.webp"}
+    - heading: "공유 이미지 배경"
+      items:
+        - title: "배경 고르기"
+          desc: "성과・티어표・성장・대상곡・곡 목록의 5종류 공유 이미지에 직접 고른 배경을 설정할 수 있습니다. 기본 프리셋은 컬러 테마에 대응한 6종류에서 고를 수 있습니다. 5종류 공유 이미지마다 각각 다른 테마를 설정할 수 있습니다."
+          media: {type: image, src: "f76e47ee-c83a-427a-b8a7-dfaee8832e7b.webp"}
+        - title: "배경 조정"
+          desc: "커스텀 설정을 5개 저장할 수 있으며, 배경색・투명도・흐림・밝기・대비・글자색 등을 조정할 수 있습니다. 배경색 대신 기기의 사진을 배경으로 쓸 수도 있습니다(사진은 백업되지 않습니다)."
+          media: {type: image, src: "467cf1ae-471f-4d81-a88e-ec02a62c8f0b.webp"}
+    - heading: "곡 목록"
+      items:
+        - title: "즐겨찾기"
+          desc: "신경 쓰이는 곡에 표시를 해 두고 나중에 좁혀 볼 수 있습니다."
+          media: {type: image, src: "19b8b433-1e09-4721-a58b-fcc98203f432.webp"}
+        - title: "스코어 등급으로 좁히기"
+          desc: "필터에 스코어 등급 항목을 추가했습니다. 클리어 램프로 좁히는 것과 같은 방식입니다."
+          media: {type: image, src: "4a344038-f53b-49b3-bc59-1a17920d25b5.webp"}
+    - heading: "컬러 테마"
+      items:
+        - title: "'블로섬' 추가"
+          desc: "핑크 계열 컬러 테마 '블로섬'을 추가해 컬러 테마가 6종류가 되었습니다."
+          media: {type: image, src: "ee8b2342-4968-4002-8368-7c6baefeb905.webp"}
+    - heading: "문제 수정"
+      items:
+        - title: "심야 플레이의 날짜"
+          desc: "성과의 '하루'를 오전 5시 기준으로 나눴습니다. 0시부터 5시까지의 플레이는 전날 성과로 표시됩니다. 같은 날 두 번 이상 동기화해도 그날의 성과가 한 장으로 정리됩니다(여러 장으로 나뉘지 않습니다)."
+        - title: "기타"
+          desc: "그 외 자잘한 문제를 수정했습니다."
+zh:
+  title: "重做成長分頁，並新增分享圖片背景與收藏"
+  sections:
+    - heading: "同步"
+      items:
+        - title: "縮小同步範圍"
+          desc: "同步的取得選項改為 4 種。不必每次重新取得全部樂曲，平時的同步會更快完成。經常同步的話，推薦使用「上次同步後」。SDVX 最多可立即同步最近 100 首，DDR 最多可立即同步最近 50 次遊玩。DDR 的更新超過 50 次遊玩時，會改為取得全部樂曲。"
+          list:
+            - "SDVX：僅一般分數（全部樂曲）／含 EX 分數（全部樂曲）／含 EX 分數（指定等級）／含 EX 分數（上次同步後）"
+            - "DDR：取得概要（全部樂曲）／取得詳細（全部樂曲）／取得詳細（指定等級）／取得詳細（上次同步後）"
+          media: {type: image, src: "48454f90-593e-42dc-bf31-0539dfbd0a37.webp"}
+    - heading: "成長分頁"
+      items:
+        - title: "各機種的看板"
+          desc: "成長分頁改為可自行挑選並排列小工具的儀表板。看板依機種（SDVX・DDR SP・DDR DP）分開，內容、排列與所選期間都可各自設定。"
+          media: {type: image, src: "4638a18d-2e45-453e-9707-cdf1459e95f1.webp"}
+        - title: "新增小工具"
+          desc: "小工具分為設定目標的，以及將成長紀錄與活動紀錄視覺化的。可視覺化的紀錄如下。"
+          list:
+            - "VOLFORCE・Flare Skill 的變化"
+            - "評級分布、通關燈號、Flare Rank"
+            - "活動日曆與連續遊玩"
+            - "各等級達成、效果雷達、ARENA POWER"
+            - "Flare Skill 對象曲、個人最佳更新"
+            - "遊玩次數、消耗卡路里"
+          media: {type: image, src: "c94f40c6-6f90-4ba9-875d-6c2a5a2f1344.webp"}
+        - title: "將看板分享為圖片"
+          desc: "建立的儀表板可選擇要顯示的小工具，輸出為圖片。"
+          media: {type: image, src: "4e6a286f-fb4d-4492-be36-118986a004dd.webp"}
+        - title: "設定目標"
+          desc: "可設定要在「哪個指標」「哪個等級」「達到多少」「從何時到何時」達成。"
+          media: {type: image, src: "254231e6-ef11-47a5-98a0-0302d5f8588c.webp"}
+        - title: "目標小工具"
+          desc: "能看見對照計畫的進度與預估達成情形。年初設定好今年的目標，就能一眼看出是否順利。"
+          media: {type: image, src: "30ebf361-0e80-4147-bdd5-58b7be106b27.webp"}
+    - heading: "判定偏移"
+      items:
+        - title: "以分布圖表顯示"
+          desc: "樂曲詳細中判定調整的參考值，從一行平均值改為分布圖表。橫軸是設定值，縱軸是使用該值的人數，並一併顯示大家的平均、中位數與人數。設定的人越多，最佳位置就越明確。也有最佳位置分散的樂曲，建議依實際遊玩結果微調。"
+          media: {type: image, src: "9f2a893e-cfc2-41a1-aeef-3ada43dadc40.webp"}
+    - heading: "分享圖片的背景"
+      items:
+        - title: "選擇背景"
+          desc: "成果、Tier表、成長、對象樂曲、樂曲一覽這 5 種分享圖片，都能設定自己選的背景。預設樣式有對應色彩主題的 6 種可選。5 種分享圖片可各自設定不同主題。"
+          media: {type: image, src: "f76e47ee-c83a-427a-b8a7-dfaee8832e7b.webp"}
+        - title: "調整背景"
+          desc: "可儲存 5 組自訂設定，調整背景色、透明度、模糊、亮度、對比、文字顏色等。也可以用裝置中的照片代替背景色（照片不會備份）。"
+          media: {type: image, src: "467cf1ae-471f-4d81-a88e-ec02a62c8f0b.webp"}
+    - heading: "樂曲一覽"
+      items:
+        - title: "收藏"
+          desc: "替在意的樂曲加上標記，之後可以篩選出來。"
+          media: {type: image, src: "19b8b433-1e09-4721-a58b-fcc98203f432.webp"}
+        - title: "依成績等級篩選"
+          desc: "篩選新增了成績等級的項目，用法與通關燈號篩選相同。"
+          media: {type: image, src: "4a344038-f53b-49b3-bc59-1a17920d25b5.webp"}
+    - heading: "色彩主題"
+      items:
+        - title: "新增「Blossom」"
+          desc: "新增粉紅色系的色彩主題「Blossom」，色彩主題共 6 種。"
+          media: {type: image, src: "ee8b2342-4968-4002-8368-7c6baefeb905.webp"}
+    - heading: "問題修正"
+      items:
+        - title: "深夜遊玩的日期"
+          desc: "成果的「一天」改以上午 5 點為分界。0 點到 5 點的遊玩會算進前一天的成果。同一天同步第 2 次以上，當天的成果也會整合成 1 張（不再分成多張）。"
+        - title: "其他"
+          desc: "其他細部問題修正。"

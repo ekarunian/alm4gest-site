@@ -1,0 +1,316 @@
+id: "2026-08-07"
+kind: release
+version: "1.1.20260807"
+date: "2026-08-07"
+ja:
+  title: "楽曲ジャケットと曲検索、配色テーマ、判定ズレの目安を追加しました"
+  sections:
+    - heading: "ジャケットと曲検索"
+      items:
+        - title: "楽曲ジャケットを表示"
+          desc: "曲の一覧・ホーム・曲詳細・Tier表に楽曲のジャケットを表示します。曲名だけを追うより、目当ての曲を早く見つけられます。共有画像（成果・Tier表・対象楽曲）もタイル表示になります。"
+          media: {type: image, src: "3f53a83a-d41f-4251-85c7-d74d6cfa4116.webp"}
+        - title: "曲を検索"
+          desc: "曲一覧の件数が出ている行の虫めがねを押すと、その行が検索の入力欄になります。曲名・アーティスト名・かな読み・ローマ字読みのどれでも、一部を入れれば絞り込めます。"
+          media: {type: image, src: "e7ba3dd6-df93-4be9-8b38-d2da7a1c4b25.webp"}
+    - heading: "配色と表示"
+      items:
+        - title: "配色テーマを5種類から選べる"
+          desc: "設定から、ダークとライトのほか3種類を合わせた5種類の配色を選べます。ホームの区切りも見直し、機種ごとの色で見分けやすくしました。"
+          media: {type: image, src: "2f46afe3-c41a-482a-b063-8b84da060d75.webp"}
+        - title: "Tier表の達成を明るさと印で表示"
+          desc: "達成した曲は暗く落としてチェックの印を付け、まだの曲はそのままの色で出します。色の違いだけに頼らず見分けられます。共有画像も同じ表現です。"
+          media: {type: image, src: "198b226b-fef5-41f7-a799-8b4729d9b84c.webp"}
+        - title: "クリアランプなどの配色を調整"
+          desc: "クリアランプ・フレアランク・SDVX のメダルなどの配色を見直し、種類の違いをひと目で見分けられるようにしました。S-PUC は白を基調にして PUC と区別しやすくしました。成長グラフの帯色も合わせて調整しました。"
+          media: {type: image, src: "0525eea8-a05c-40e4-936f-bba539a49cd1.webp"}
+    - heading: "判定調整"
+      items:
+        - title: "判定ズレの目安を曲ごとに表示"
+          desc: "曲詳細に、その曲で判定がどれだけ前後にずれるかの目安を出します。「合わせる」を押すと、その値が判定調整に入ります。いまは推測値で、その曲で判定調整を行った人が増えたら、みんなの平均へ切り替わります（どちらであるかは画面に出ます）。"
+          media: {type: image, src: "f4c86685-ac73-410b-b9ea-d9d8154015e3.webp"}
+        - title: "判定調整の値とメモを曲ごとに保存"
+          list:
+            - "判定調整は −／＋ ボタン（長押しで連続）。値は曲ごとで、SP/DP・全難易度で共通です"
+            - "設定画面に機種ごとの共通値を置きました。個別に設定した曲は、共通値を変えても変わりません"
+            - "メモは譜面ごとに50字まで"
+            - "どちらもバックアップ・エクスポートの対象で、同期で上書きされません。メモは暗号化された状態でバックアップされ、統計などには使いません"
+          media: {type: image, src: "6740bc85-b337-49ae-8519-d7168c63ff4d.webp"}
+    - heading: "おすすめとフレアスキル"
+      items:
+        - title: "おすすめに出る曲が難しすぎる問題を改善"
+          desc: "これまでは「上がり幅の大きい順」だけで並べていたため、レベルの高い曲ばかりが上に来ていました。今回から、同じくらいの実力の人のうち何割がその目標に届いているかを見て、多くの人が達成できている目標から順に出します。1曲を1行にまとめ、BEST30入りの条件はカテゴリ側へ寄せました。ふだんは上位2件で、右端の矢印を押すと5件まで開きます。"
+          list:
+            - "DDR の目標は「BEST30に入れる一番低いフレアランク」。すでに30曲に入っている曲は1段上、圏外の曲は数段ジャンプが目標です。レベルの低い曲でも、30曲に食い込めるなら候補に入ります"
+            - "SDVX の目標は「いまの VOLFORCE を更新できる、一番手前のグレード・メダル」です"
+            - "統計が足りない曲は、あなたの実績（同じレベル・同じフレアランク以上を何曲達成しているか）と、みんなの平均スコアの高さから、現実的な順に並べます"
+            - "カード内の5件は「今のランクを1段上げる」「最上段を仕上げる」「数段ジャンプで新しくランク入りさせる」が偏らないよう交互に選びます"
+          media: {type: image, src: "4862076f-4943-4948-bb66-cb2aba737a85.webp"}
+        - title: "フレアスキル対象楽曲を公式ページと同じ順番に"
+          desc: "ホームのフレアスキルから開く対象楽曲の一覧を、e-amusement のフレアスキルのページと同じ並び・同じ通し番号にしました。共有画像も同じ順番です。"
+          media: {type: image, src: "92c1982e-9732-4e62-9f08-9478b09fa5ef.webp"}
+    - heading: "DDR の譜面確認"
+      items:
+        - title: "矢印の配置（MIRROR など）を追加"
+          desc: "踏み方を事前に確かめられるよう、譜面確認に「矢印の配置」を足しました。選択肢は矢印そのものを左から並べて見せます。譜面確認の対象はレベル11以上にしました。"
+          list:
+            - "SINGLE は NORMAL・MIRROR・LEFT・RIGHT・SHUFFLE、DOUBLE は NORMAL・MIRROR（筐体で選べる範囲と同じ）"
+            - "SHUFFLE は筐体と同じ8通りから選びます"
+          media: {type: image, src: "1136e09e-7bd2-4fef-9b61-4e8fbfc0e9bf.webp"}
+        - title: "再生中にスクロール"
+          desc: "再生中に譜面をつかんで動かすとスクロールでき、指を離すと離した位置から再び再生します。"
+          media: {type: image, src: "243a5a36-f442-4d1e-9c3b-8fa6f53f6f30.webp"}
+    - heading: "同期と取り込みの修正"
+      items:
+        - title: "同名楽曲のスコアが取り込まれない問題を修正"
+          desc: "同じ曲名の楽曲（「朱と碧のランページ」とそのカバー版など）があると、曲を特定できずどちらのスコアも取り込まれないことがありました。DDR は曲ID、SDVX はアーティスト名で曲を特定し、確実に取り込むようにしました。"
+          media: {type: image, src: "3d995d6e-3593-4605-9024-530fdc321339.webp"}
+        - title: "同期しても何も取り込まれない問題を修正"
+          desc: "前回の同期が途中で失敗していると、次の同期が古い続きから再開して「0件」で終わり、それ以降どれだけ同期しても新しい記録が入らないことがありました。1日以上前の続きは捨てて、一覧の先頭から取り直すようにしました。"
+        - title: "期間の成果にプレーしていない曲が並ぶ問題を修正"
+          desc: "しばらく同期していなかったあとの同期で、まとめて入った過去の記録がすべて成果に並んでいました。1回の同期で初めて入る曲が多いときは、まとめて取り込んだものと判断して成果から外します。すでに取り込まれているぶんも、アプリ更新時に一度だけ直します。"
+    - heading: "チュートリアルとバックアップ"
+      items:
+        - title: "チュートリアルの表示崩れを修正"
+          list:
+            - "プリセットが多いとき、追加ボタンが画面の外へ出て押せず、先へ進めませんでした。説明する場所に合わせて横スクロールします"
+            - "Tier表の1ページ目で、説明がページ数の表示と重なっていました。重ならない位置に表示します"
+            - "説明の下端が画面の外へはみ出していました。画面内に収め、収まらないときはスクロールできる印を出します"
+          media: {type: image, src: "a1a40798-7f4d-424d-9d2e-ae164c7ab2c5.webp"}
+        - title: "復元するとプリセットが増える問題を修正"
+          desc: "バックアップから復元すると初期プリセットがすべて有効になり、プリセットが増え続けていました。復元時に追加ぶんを整理するようにしました。"
+          media: {type: image, src: "c8fb0a36-ae9a-4dde-a569-3cbc05a214ed.webp"}
+en:
+  title: "Song jackets, song search, color themes and a judge-timing reference"
+  sections:
+    - heading: "Jackets and song search"
+      items:
+        - title: "Song jackets"
+          desc: "Jackets are shown in the song list, on Home, in song details and in the Tier List. Looking for the art is faster than reading through titles. Shared images (results, Tier List, target songs) use tiles as well."
+          media: {type: image, src: "81755048-011f-4d52-a81f-9cb7857867a6.webp"}
+        - title: "Search for songs"
+          desc: "Tap the magnifier on the row that shows the song count, and that row becomes a search field. Type part of a title, an artist, a kana reading or a romaji reading to narrow the list."
+          media: {type: image, src: "5e018824-47c7-4905-b715-8fe835a5b525.webp"}
+    - heading: "Colors and display"
+      items:
+        - title: "Five color themes"
+          desc: "Pick the app's colors in Settings from five themes: dark, light and three more. The section dividers on Home were reworked so each game is marked with its own color."
+          media: {type: image, src: "b12a6a18-dc31-4e20-b965-09f962dfec3c.webp"}
+        - title: "Tier List achievement by brightness and a mark"
+          desc: "Songs you have achieved are dimmed and marked with a check; songs you have not are left at full color. You no longer have to rely on color alone. Shared images use the same treatment."
+          media: {type: image, src: "1d9ec1d0-ae32-4828-8ad2-625860e18728.webp"}
+        - title: "Clear lamp and medal colors"
+          desc: "Reworked the colors of clear lamps, flare ranks and SDVX medals so the tiers are easier to tell apart at a glance. S-PUC is now white-based and clearly distinct from PUC. The bands in the growth chart were adjusted to match."
+          media: {type: image, src: "cac5619e-9556-4b38-b675-5a537c4e9008.webp"}
+    - heading: "Judge offset"
+      items:
+        - title: "Judge-timing reference for each song"
+          desc: "Song details show how far the timing tends to sit ahead of or behind the judge timing on that song. Tap the apply button and the value goes into that song's judge offset. For now it shows an estimate; once more players have set their own offset on a song, it switches to their average. The screen tells you which one you are seeing."
+          media: {type: image, src: "2dcdc155-f353-4542-b521-1df2c58eac69.webp"}
+        - title: "Save a judge offset and a memo per song"
+          list:
+            - "Adjust the offset with the − / + buttons (hold to repeat). The value is per song, shared across SP/DP and all difficulties"
+            - "Settings has a default value per game. Songs you adjusted individually keep their own value when the default changes"
+            - "A memo holds up to 50 characters per chart"
+            - "Both are included in backups and exports, and are never overwritten by sync. Memos are backed up encrypted and are never used for statistics"
+          media: {type: image, src: "e1604fbf-6150-479d-af32-84d1774b9be7.webp"}
+    - heading: "Recommendations and Flare Skill"
+      items:
+        - title: "Recommendations no longer skew too hard"
+          desc: "Recommendations used to be sorted only by how much your rating could gain, so high-level charts crowded the top. They are now ranked by how many players at a similar skill level reach each goal, so goals many people achieve come first. Each song is now one row, and the BEST30 entry requirement moved to the category header. Two entries show by default; the arrow on the right expands to five."
+          list:
+            - "DDR: the goal is the lowest flare rank that gets a song into your BEST30. Songs already in the 30 aim one rank up; songs outside aim a jump of several ranks. Lower-level songs qualify when they can break into your 30"
+            - "SDVX: the goal is the nearest grade or medal that raises your current VOLFORCE"
+            - "Songs without enough statistics are ordered realistically, based on your own record (how many songs at the same level and flare rank or above you have achieved) and everyone's average score"
+            - "The five entries in the card alternate between \"raise a current rank by one\", \"finish off your top row\" and \"jump several ranks into a new spot\" so no single type dominates"
+          media: {type: image, src: "b296f813-abca-4729-b3ba-8a6a4ab0e378.webp"}
+        - title: "Flare Skill target songs follow the official page"
+          desc: "The target song list you open from Flare Skill on Home now uses the same order and numbering as the Flare Skill page on e-amusement. Shared images match it."
+          media: {type: image, src: "5f619ed8-2959-4dca-84fc-b00110e2c2a6.webp"}
+    - heading: "DDR chart viewer"
+      items:
+        - title: "MIRROR and other arrow placements"
+          desc: "The chart viewer gained an \"arrow placement\" option so you can check your footing in advance. Options are shown as the arrows themselves, left to right. The chart viewer now covers level 11 and up."
+          list:
+            - "SINGLE offers NORMAL, MIRROR, LEFT, RIGHT and SHUFFLE; DOUBLE offers NORMAL and MIRROR (the same range as the cab)"
+            - "With SHUFFLE you pick from the same 8 patterns as the cab"
+          media: {type: image, src: "e2d619f1-5736-44ac-b4e0-4df28529de6a.webp"}
+        - title: "Scroll while playing"
+          desc: "Drag the chart while it is playing to scroll it. Playback resumes from where you let go."
+          media: {type: image, src: "7d056a0a-d39a-42e7-9448-0edda9db3fcd.webp"}
+    - heading: "Sync and import fixes"
+      items:
+        - title: "Same-title songs now import"
+          desc: "When two songs shared the same title (such as \"朱と碧のランページ\" and its cover version), the app could not tell them apart and skipped both. Songs are now identified by song ID on DDR and by artist on SDVX, so their scores import reliably."
+          media: {type: image, src: "74314ba6-6b0c-42ae-825c-030f048744c4.webp"}
+        - title: "Fixed syncs that imported nothing"
+          desc: "If a previous sync had failed partway through, the next sync resumed from that stale position and finished with \"0 records\", after which no new results came in no matter how often you synced. A resume point older than a day is now discarded and the list is read again from the top."
+        - title: "Fixed period results listing songs you had not played"
+          desc: "After a long gap between syncs, every record that came in at once was listed as a result for that period. When many songs appear for the first time in a single sync, they are now treated as a catch-up import and left out of your results. Records already imported that way are corrected once, when you update the app."
+    - heading: "Tutorial and backup"
+      items:
+        - title: "Tutorial display fixes"
+          list:
+            - "With many presets, the add button could sit off screen and could not be tapped, so the tutorial could not proceed. The row now scrolls sideways to follow the step being explained"
+            - "On the first page of the Tier List tutorial, the explanation overlapped the page indicator. It now stays clear of it"
+            - "The bottom of the explanation could run off screen. It now fits on screen, or shows a scroll hint when it cannot"
+          media: {type: image, src: "63b0a401-846b-4ec6-9bf3-ad7d58a5f1b7.webp"}
+        - title: "Presets no longer multiply after a restore"
+          desc: "Restoring a backup re-enabled every default preset, so presets kept increasing. Extra presets are now cleaned up on restore."
+          media: {type: image, src: "231c8c62-4bf5-4bac-b44b-368bdf032b7b.webp"}
+ko:
+  title: "곡 재킷과 곡 검색, 컬러 테마, 판정 오차 참고값 추가"
+  sections:
+    - heading: "재킷과 곡 검색"
+      items:
+        - title: "곡 재킷 표시"
+          desc: "곡 목록·홈·곡 상세·티어표에 곡 재킷을 표시합니다. 곡명만 따라가는 것보다 원하는 곡을 빨리 찾을 수 있습니다. 공유 이미지(성과·티어표·대상 곡)도 타일로 표시됩니다."
+          media: {type: image, src: "81755048-011f-4d52-a81f-9cb7857867a6.webp"}
+        - title: "곡 검색"
+          desc: "곡 목록에서 곡 수가 표시된 줄의 돋보기를 누르면 그 줄이 검색 입력란이 됩니다. 곡명·아티스트명·가나 읽기·로마자 읽기 중 무엇이든 일부를 입력하면 좁힐 수 있습니다."
+          media: {type: image, src: "5e018824-47c7-4905-b715-8fe835a5b525.webp"}
+    - heading: "배색과 표시"
+      items:
+        - title: "컬러 테마 5종 선택"
+          desc: "설정에서 다크와 라이트 외 3종을 더한 5종의 배색을 고를 수 있습니다. 홈의 구분선도 다시 다듬어 기종별 색으로 구별하기 쉽게 했습니다."
+          media: {type: image, src: "b12a6a18-dc31-4e20-b965-09f962dfec3c.webp"}
+        - title: "티어표 달성을 밝기와 표시로 구분"
+          desc: "달성한 곡은 어둡게 하고 체크 표시를 붙이며, 아직인 곡은 원래 색으로 표시합니다. 색 차이에만 의존하지 않고 구별할 수 있습니다. 공유 이미지도 같은 표현입니다."
+          media: {type: image, src: "1d9ec1d0-ae32-4828-8ad2-625860e18728.webp"}
+        - title: "클리어 램프 등의 배색 조정"
+          desc: "클리어 램프·플레어 랭크·SDVX 메달 등의 배색을 다시 다듬어 종류 차이를 한눈에 구별할 수 있게 했습니다. S-PUC는 흰색을 기본으로 해 PUC와 구별하기 쉽게 했습니다. 성장 그래프의 띠 색도 함께 조정했습니다."
+          media: {type: image, src: "cac5619e-9556-4b38-b675-5a537c4e9008.webp"}
+    - heading: "판정 조정"
+      items:
+        - title: "곡별 판정 오차 참고값 표시"
+          desc: "곡 상세에 그 곡에서 판정이 앞뒤로 얼마나 어긋나는지의 참고값을 표시합니다. '맞추기'를 누르면 그 값이 판정 조정에 들어갑니다. 지금은 추정값이며, 그 곡에서 판정 조정을 한 사람이 늘어나면 모두의 평균으로 바뀝니다(어느 쪽인지는 화면에 표시됩니다)."
+          media: {type: image, src: "2dcdc155-f353-4542-b521-1df2c58eac69.webp"}
+        - title: "곡별로 판정 조정 값과 메모 저장"
+          list:
+            - "판정 조정은 −／＋ 버튼(길게 누르면 연속). 값은 곡별이며 SP/DP·전 난이도에서 공통입니다"
+            - "설정 화면에 기종별 공통값을 두었습니다. 개별로 설정한 곡은 공통값을 바꿔도 바뀌지 않습니다"
+            - "메모는 채보별 50자까지"
+            - "둘 다 백업·내보내기 대상이며 동기화로 덮어쓰이지 않습니다. 메모는 암호화된 상태로 백업되며 통계 등에는 쓰지 않습니다"
+          media: {type: image, src: "e1604fbf-6150-479d-af32-84d1774b9be7.webp"}
+    - heading: "추천과 플레어 스킬"
+      items:
+        - title: "추천 곡이 너무 어려운 문제 개선"
+          desc: "지금까지는 '상승 폭이 큰 순'으로만 정렬해 레벨 높은 곡만 위에 왔습니다. 이번부터 비슷한 실력의 사람 중 몇 할이 그 목표에 도달했는지를 보고, 많은 사람이 달성한 목표부터 순서대로 보여줍니다. 1곡을 1줄로 정리하고 BEST30 진입 조건은 카테고리 쪽으로 옮겼습니다. 평소에는 상위 2건이며, 오른쪽 끝 화살표를 누르면 5건까지 펼쳐집니다."
+          list:
+            - "DDR의 목표는 'BEST30에 들어가는 가장 낮은 플레어 랭크'. 이미 30곡 안에 든 곡은 1단계 위, 권외 곡은 여러 단계 점프가 목표입니다. 레벨이 낮은 곡도 30곡 안에 들 수 있으면 후보가 됩니다"
+            - "SDVX의 목표는 '지금의 VOLFORCE를 갱신할 수 있는 가장 가까운 그레이드·메달'입니다"
+            - "통계가 부족한 곡은 자신의 실적(같은 레벨·같은 플레어 랭크 이상을 몇 곡 달성했는지)과 모두의 평균 스코어 높이로 현실적인 순서로 정렬합니다"
+            - "카드 안의 5건은 '지금 랭크를 1단계 올리기' '최상단 마무리' '여러 단계 점프로 새로 랭크 진입'이 치우치지 않도록 번갈아 고릅니다"
+          media: {type: image, src: "b296f813-abca-4729-b3ba-8a6a4ab0e378.webp"}
+        - title: "플레어 스킬 대상 곡을 공식 페이지와 같은 순서로"
+          desc: "홈의 플레어 스킬에서 여는 대상 곡 목록을 e-amusement 플레어 스킬 페이지와 같은 순서·같은 일련번호로 했습니다. 공유 이미지도 같은 순서입니다."
+          media: {type: image, src: "5f619ed8-2959-4dca-84fc-b00110e2c2a6.webp"}
+    - heading: "DDR 채보 확인"
+      items:
+        - title: "화살표 배치(MIRROR 등) 추가"
+          desc: "밟는 법을 미리 확인할 수 있도록 채보 확인에 '화살표 배치'를 추가했습니다. 선택지는 화살표 자체를 왼쪽부터 나열해 보여줍니다. 채보 확인 대상은 레벨11 이상으로 했습니다."
+          list:
+            - "SINGLE은 NORMAL·MIRROR·LEFT·RIGHT·SHUFFLE, DOUBLE은 NORMAL·MIRROR(기체에서 고를 수 있는 범위와 같음)"
+            - "SHUFFLE은 기체와 같은 8가지 중에서 고릅니다"
+          media: {type: image, src: "e2d619f1-5736-44ac-b4e0-4df28529de6a.webp"}
+        - title: "재생 중 스크롤"
+          desc: "재생 중에 채보를 잡고 움직이면 스크롤할 수 있으며, 손가락을 떼면 뗀 위치부터 다시 재생합니다."
+          media: {type: image, src: "7d056a0a-d39a-42e7-9448-0edda9db3fcd.webp"}
+    - heading: "동기화와 가져오기 수정"
+      items:
+        - title: "곡명이 같은 곡의 스코어를 가져오지 못하는 문제 수정"
+          desc: "곡명이 같은 곡('朱と碧のランページ'와 그 커버 버전 등)이 있으면 곡을 특정하지 못해 양쪽 스코어 모두 가져오지 못하는 경우가 있었습니다. DDR은 곡 ID, SDVX는 아티스트명으로 곡을 특정해 확실히 가져오도록 했습니다."
+          media: {type: image, src: "74314ba6-6b0c-42ae-825c-030f048744c4.webp"}
+        - title: "동기화해도 아무것도 가져오지 않는 문제 수정"
+          desc: "지난 동기화가 도중에 실패하면 다음 동기화가 오래된 이어하기 지점부터 재개해 '0건'으로 끝나고, 그 뒤로는 아무리 동기화해도 새 기록이 들어오지 않는 경우가 있었습니다. 하루 이상 지난 이어하기 지점은 버리고 목록 처음부터 다시 가져옵니다."
+        - title: "기간의 성과에 플레이하지 않은 곡이 나오는 문제 수정"
+          desc: "한동안 동기화하지 않은 뒤의 동기화에서 한꺼번에 들어온 과거 기록이 모두 성과에 나열되었습니다. 1회 동기화에서 처음 들어오는 곡이 많으면 일괄 가져오기로 판단해 성과에서 제외합니다. 이미 가져온 분도 앱 업데이트 시 한 번만 바로잡습니다."
+    - heading: "튜토리얼과 백업"
+      items:
+        - title: "튜토리얼 표시 문제 수정"
+          list:
+            - "프리셋이 많으면 추가 버튼이 화면 밖으로 나가 누를 수 없어 진행할 수 없었습니다. 설명하는 위치에 맞춰 가로로 스크롤합니다"
+            - "티어표 1페이지에서 설명이 페이지 수 표시와 겹쳤습니다. 겹치지 않는 위치에 표시합니다"
+            - "설명의 아래쪽이 화면 밖으로 넘쳤습니다. 화면 안에 맞추고, 들어가지 않으면 스크롤할 수 있다는 표시를 냅니다"
+          media: {type: image, src: "63b0a401-846b-4ec6-9bf3-ad7d58a5f1b7.webp"}
+        - title: "복원하면 프리셋이 늘어나는 문제 수정"
+          desc: "백업에서 복원하면 초기 프리셋이 모두 활성화되어 프리셋이 계속 늘어났습니다. 복원 시 추가분을 정리하도록 했습니다."
+          media: {type: image, src: "231c8c62-4bf5-4bac-b44b-368bdf032b7b.webp"}
+zh:
+  title: "新增樂曲封面、樂曲搜尋、配色主題與判定偏移參考值"
+  sections:
+    - heading: "封面與樂曲搜尋"
+      items:
+        - title: "顯示樂曲封面"
+          desc: "在樂曲一覽、首頁、樂曲詳細與 Tier表中顯示樂曲封面。比起只看歌名，更快找到想找的樂曲。分享圖片（成果、Tier表、對象樂曲）也改為圖塊顯示。"
+          media: {type: image, src: "81755048-011f-4d52-a81f-9cb7857867a6.webp"}
+        - title: "搜尋樂曲"
+          desc: "按下樂曲一覽中顯示曲數那一列的放大鏡，該列就會變成搜尋欄。輸入歌名、樂手名、假名讀音或羅馬字讀音的一部分即可篩選。"
+          media: {type: image, src: "5e018824-47c7-4905-b715-8fe835a5b525.webp"}
+    - heading: "配色與顯示"
+      items:
+        - title: "可從5種配色主題中選擇"
+          desc: "在設定中，可從深色、淺色及另外3種，共5種配色中選擇。同時調整首頁的分隔，以各機種的顏色更容易區分。"
+          media: {type: image, src: "b12a6a18-dc31-4e20-b965-09f962dfec3c.webp"}
+        - title: "Tier表的達成以亮度與標記表示"
+          desc: "已達成的樂曲會變暗並加上勾選標記，未達成的樂曲維持原色。不只靠顏色差異也能區分。分享圖片也採用相同表現。"
+          media: {type: image, src: "1d9ec1d0-ae32-4828-8ad2-625860e18728.webp"}
+        - title: "調整通關燈等的配色"
+          desc: "重新調整通關燈、Flare 等級、SDVX 獎章等的配色，一眼就能分辨種類。S-PUC 改以白色為基調，更容易與 PUC 區分。成長圖表的色帶也一併調整。"
+          media: {type: image, src: "cac5619e-9556-4b38-b675-5a537c4e9008.webp"}
+    - heading: "判定調整"
+      items:
+        - title: "依樂曲顯示判定偏移參考值"
+          desc: "樂曲詳細會顯示該曲判定大約前後偏移多少的參考值。按下「套用」，該數值就會填入判定調整。目前顯示的是推測值，當調整過該曲判定的人變多後，會改為大家的平均值（畫面會標示是哪一種）。"
+          media: {type: image, src: "2dcdc155-f353-4542-b521-1df2c58eac69.webp"}
+        - title: "按樂曲儲存判定調整數值與備忘"
+          list:
+            - "判定調整用 −／＋ 按鈕（長按可連續）。數值按樂曲設定，SP/DP 與所有難度共用"
+            - "設定畫面可設定各機種的共用值。個別設定過的樂曲，即使變更共用值也不會改變"
+            - "備忘每個譜面最多50字"
+            - "兩者皆為備份與匯出的對象，不會被同步覆寫。備忘以加密狀態備份，不會用於統計等用途"
+          media: {type: image, src: "e1604fbf-6150-479d-af32-84d1774b9be7.webp"}
+    - heading: "推薦與 Flare Skill"
+      items:
+        - title: "改善推薦樂曲過難的問題"
+          desc: "過去只依「提升幅度大的順序」排列，導致上方都是高等級樂曲。這次改為觀察實力相近的玩家中有幾成達成該目標，從多數人能達成的目標依序顯示。每首歌整理成一行，BEST30 的進榜條件移到分類標題。平時顯示前2筆，按右端箭頭可展開到5筆。"
+          list:
+            - "DDR 的目標是「能進入 BEST30 的最低 Flare 等級」。已在30首內的樂曲目標是往上1級，榜外樂曲目標是跳升數級。等級較低的樂曲只要能擠進30首也會列入候選"
+            - "SDVX 的目標是「能更新目前 VOLFORCE 的最近一級評級或獎章」"
+            - "統計不足的樂曲，會依你的實績（同等級、同 Flare 等級以上已達成幾首）與大家平均分數的高低，以實際可行的順序排列"
+            - "卡片中的5筆會交替選出「目前等級往上1級」「完成最上層」「跳升數級新進榜」，避免偏向某一種"
+          media: {type: image, src: "b296f813-abca-4729-b3ba-8a6a4ab0e378.webp"}
+        - title: "Flare Skill 對象樂曲與官方頁面同順序"
+          desc: "從首頁 Flare Skill 開啟的對象樂曲一覽，改為與 e-amusement 的 Flare Skill 頁面相同的排列與流水號。分享圖片也是相同順序。"
+          media: {type: image, src: "5f619ed8-2959-4dca-84fc-b00110e2c2a6.webp"}
+    - heading: "DDR 譜面確認"
+      items:
+        - title: "新增箭頭配置（MIRROR 等）"
+          desc: "為了事先確認踩法，譜面確認新增了「箭頭配置」。選項以箭頭本身由左至右排列顯示。譜面確認的對象改為等級11以上。"
+          list:
+            - "SINGLE 為 NORMAL・MIRROR・LEFT・RIGHT・SHUFFLE，DOUBLE 為 NORMAL・MIRROR（與機台可選範圍相同）"
+            - "SHUFFLE 從與機台相同的8種中選擇"
+          media: {type: image, src: "e2d619f1-5736-44ac-b4e0-4df28529de6a.webp"}
+        - title: "播放中可捲動"
+          desc: "播放中抓住譜面拖動即可捲動，放開手指後會從放開的位置繼續播放。"
+          media: {type: image, src: "7d056a0a-d39a-42e7-9448-0edda9db3fcd.webp"}
+    - heading: "同步與匯入修正"
+      items:
+        - title: "修正同名樂曲成績無法匯入的問題"
+          desc: "有同名樂曲（如「朱と碧のランページ」與其翻唱版）時，無法辨識是哪一首，兩首的成績都可能無法匯入。現在 DDR 以樂曲 ID、SDVX 以樂手名辨識樂曲，確實匯入。"
+          media: {type: image, src: "74314ba6-6b0c-42ae-825c-030f048744c4.webp"}
+        - title: "修正同步後什麼都沒匯入的問題"
+          desc: "上次同步中途失敗時，下次同步會從舊的中斷處繼續並以「0筆」結束，之後無論同步幾次都不會匯入新成績。現在超過1天的中斷處會捨棄，從列表開頭重新取得。"
+        - title: "修正期間成果出現未遊玩樂曲的問題"
+          desc: "一段時間沒同步後再同步時，一次匯入的過去紀錄會全部列在成果中。單次同步中首次匯入的樂曲很多時，會判斷為補齊匯入並從成果中排除。已匯入的部分也會在更新 App 時修正一次。"
+    - heading: "教學導覽與備份"
+      items:
+        - title: "修正教學導覽的顯示問題"
+          list:
+            - "預設很多時，新增按鈕會跑到畫面外無法按下而無法繼續。現在會配合說明位置橫向捲動"
+            - "Tier表第1頁的說明與頁數顯示重疊。現在會顯示在不重疊的位置"
+            - "說明的下緣超出畫面。現在會收在畫面內，放不下時會顯示可捲動的標記"
+          media: {type: image, src: "63b0a401-846b-4ec6-9bf3-ad7d58a5f1b7.webp"}
+        - title: "修正還原後預設會增加的問題"
+          desc: "從備份還原時所有初始預設都會被啟用，預設數量不斷增加。現在還原時會整理多出的預設。"
+          media: {type: image, src: "231c8c62-4bf5-4bac-b44b-368bdf032b7b.webp"}

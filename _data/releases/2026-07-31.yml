@@ -1,0 +1,96 @@
+id: "2026-07-31"
+kind: release
+version: "1.1.20260731"
+date: "2026-07-31"
+ja:
+  title: "DDRの同期が最後まで完了しない問題ほかの不具合を修正し、同期を安定させました"
+  sections:
+    - heading: "不具合の修正"
+      items:
+        - title: "DDRのSP・DP同期"
+          desc: "プレー曲数が多いアカウントで、DDRのSP・DP同期が最後まで完了しないことがある問題を修正しました。"
+        - title: "アプリ切り替え時の同期"
+          desc: "同期中に他のアプリへ切り替えると、同期が失敗し続けることがある問題を修正しました。"
+    - heading: "同期の改善"
+      items:
+        - title: "中断後の再開"
+          desc: "同期が途中で中断しても、次回は続きから再開するようになりました。"
+        - title: "初回同期の進行状況"
+          desc: "初回同期でも、機種ごとの進行状況が表示されるようになりました。"
+        - title: "再ログインの案内"
+          desc: "ログインの有効期限が切れたときに、再ログインの案内を表示するようになりました。"
+        - title: "不安定な通信での同期"
+          desc: "通信が不安定な環境での同期失敗を減らしました。"
+    - heading: "DDRの譜面プレビュー"
+      items:
+        - title: "対象楽曲の追加"
+          desc: "DDRの譜面プレビュー対象楽曲を追加しました。"
+en:
+  title: "Fixed DDR sync failing to finish and other issues, and made sync more reliable"
+  sections:
+    - heading: "Bug fixes"
+      items:
+        - title: "DDR SP/DP sync"
+          desc: "Fixed an issue where DDR SP/DP sync could fail to finish for accounts with a large play history."
+        - title: "Sync after switching apps"
+          desc: "Fixed an issue where sync could keep failing after switching to another app."
+    - heading: "Sync improvements"
+      items:
+        - title: "Resume after interruption"
+          desc: "Sync now resumes from where it left off after an interruption."
+        - title: "Progress on first sync"
+          desc: "The first sync now shows per-game progress."
+        - title: "Expired login message"
+          desc: "A clear message now appears when your login session expires."
+        - title: "Unstable connections"
+          desc: "Improved sync reliability on unstable connections."
+    - heading: "DDR chart preview"
+      items:
+        - title: "More songs"
+          desc: "Added more DDR songs to chart preview."
+ko:
+  title: "DDR 동기화가 끝까지 완료되지 않는 문제 등을 수정하고, 동기화를 안정화했습니다"
+  sections:
+    - heading: "버그 수정"
+      items:
+        - title: "DDR SP·DP 동기화"
+          desc: "플레이 곡수가 많은 계정에서 DDR SP·DP 동기화가 끝까지 완료되지 않는 문제를 수정했습니다."
+        - title: "앱 전환 시 동기화"
+          desc: "동기화 중 다른 앱으로 전환하면 동기화가 계속 실패하는 문제를 수정했습니다."
+    - heading: "동기화 개선"
+      items:
+        - title: "중단 후 재개"
+          desc: "동기화가 중단되어도 다음에는 이어서 재개됩니다."
+        - title: "첫 동기화 진행 상황"
+          desc: "첫 동기화에서도 기종별 진행 상황이 표시됩니다."
+        - title: "재로그인 안내"
+          desc: "로그인 세션이 만료되면 재로그인 안내를 표시합니다."
+        - title: "불안정한 네트워크에서의 동기화"
+          desc: "불안정한 네트워크 환경에서의 동기화 실패를 줄였습니다."
+    - heading: "DDR 채보 미리보기"
+      items:
+        - title: "대상 곡 추가"
+          desc: "DDR 채보 미리보기 대상 곡을 추가했습니다."
+zh:
+  title: "修正 DDR 同步無法完成等問題，並讓同步更穩定"
+  sections:
+    - heading: "錯誤修正"
+      items:
+        - title: "DDR SP・DP 同步"
+          desc: "修正了遊玩曲數較多的帳號中，DDR SP・DP 同步無法完成的問題。"
+        - title: "切換應用程式時的同步"
+          desc: "修正了同步中切換到其他應用程式後，同步持續失敗的問題。"
+    - heading: "同步改善"
+      items:
+        - title: "中斷後繼續"
+          desc: "同步中斷後，下次會從中斷處繼續。"
+        - title: "首次同步的進度"
+          desc: "首次同步也會顯示各機種的進度。"
+        - title: "重新登入提示"
+          desc: "登入階段過期時會顯示重新登入的提示。"
+        - title: "網路不穩定時的同步"
+          desc: "減少了網路不穩定環境下的同步失敗。"
+    - heading: "DDR 譜面預覽"
+      items:
+        - title: "新增對應樂曲"
+          desc: "新增了 DDR 譜面預覽的對應樂曲。"

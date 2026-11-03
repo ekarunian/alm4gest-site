@@ -1,0 +1,256 @@
+id: "2026-10-14"
+kind: release
+version: "1.2.20261014"
+date: "2026-10-14"
+ja:
+  title: "SDVX のエフェクトレーダーを見直し、小数レベルのTier表と課題のコメントに対応しました"
+  lead: "SDVX のエフェクトレーダーの見直し、小数レベルに対応したTier表、課題へのコメントと達成のお知らせ、プロフィールの項目ごとの公開範囲、スコアタのスコア入力の刷新に加え、同期などの不具合を修正しました。"
+  sections:
+    - heading: "SDVX"
+      items:
+        - title: "エフェクトレーダーの見直し"
+          desc: "プレイヤーレーダーの計算を見直し、EXスコアと∇の小数レベルを反映して、ゲーム画面の値との差を縮めました。曲ごとのレーダー値は、ゲーム画面のキャプチャから求めた参考値に変わりました。新曲の値は反映まで日数がかかります。レベル16以下は未収録で、要望に応じて追加します。"
+          media: {type: video, src: "85a6d2ea-9151-45dc-8167-17c4a29a891a.mp4", poster: "85a6d2ea-9151-45dc-8167-17c4a29a891a.jpg"}
+        - title: "スコア欄の表示を統一"
+          desc: "対象楽曲の画面と共有画像のスコア欄を、曲一覧で選んだ表示（通常・EX・MAX-）に揃えました。"
+        - title: "前回差分の同期の不具合を修正"
+          desc: "前回差分の同期で、遊んでいない難易度が更新として表示される不具合を修正しました。"
+    - heading: "GITADORA"
+      items:
+        - title: "パート「Gt+Ba」を追加"
+          desc: "楽曲一覧のパートに「Gt+Ba」を追加し、ギターとベースを並べて表示します。"
+        - title: "JSON書き出しの項目を追加"
+          desc: "JSON書き出しに、パート・小数レベル・バージョン名と、遊んでいない譜面（NO PLAY）を加えました。"
+        - title: "前回差分の同期の不具合を修正"
+          desc: "前回差分の同期で、2ページ目以降のプレーを取りこぼす不具合を修正しました。"
+    - heading: "Tier表"
+      items:
+        - title: "小数レベルごとのTier表"
+          desc: "SDVX と GITADORA で、小数レベル（18.0・18.1など）ごとに段を分けたTier表に対応しました。選んでいるレベルの札をもう一度押すと小数の札に切り替わり、「‹ Lv18」でレベル全体に戻ります。カスタムTierを作るときも、同じレベル内の複数選択を含めて小数レベルを指定できます。"
+          media: {type: video, src: "40fcef8f-7c95-422a-a6f5-fa27089bf967.mp4", poster: "40fcef8f-7c95-422a-a6f5-fa27089bf967.jpg"}
+        - title: "段の中の並べ替え"
+          desc: "段の中の並び順を「Tier順」「レベル順」「スコア順」から選べます。EX表示のときは、ジャケットの下を MAX- 表記、右上を EXスコア率で表示します。"
+        - title: "ジャケットの大きさ"
+          desc: "Tier画面でだけ、ジャケットの表示サイズを切り替えられます。"
+        - title: "カスタムTierの作成ボタン"
+          desc: "カスタムTierの新規作成ボタンを、表名の行の「＋」に移しました。"
+    - heading: "課題"
+      items:
+        - title: "一言コメントと達成の知らせ"
+          desc: "課題を送るときに、28字までの一言コメントを添えられます。送った課題が受け取られたか、達成されたかを「投げた課題」に表示し、達成されると結果をお知らせで届けます。"
+          media: {type: video, src: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.mp4", poster: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.jpg"}
+        - title: "「達成した課題」タブ"
+          desc: "「達成した課題」タブを追加しました。スコアは、課題を受け取った時点からの「更新前 → 更新後」で表示します。"
+        - title: "ホームの課題一覧"
+          list:
+            - "課題曲一覧で目標を押すと、目標値を変えられます（送り主の表示はそのまま）"
+            - "目標を名前の下に置き、表示の行を短くしました"
+    - heading: "スコアタ"
+      items:
+        - title: "ドラム式のスコア入力"
+          desc: "スコア報告の欄を、満点から始まるドラム式（各桁を指で回す）に変えました。キーボードでも入力できます。"
+          media: {type: video, src: "9c15595b-a7f7-4f33-b660-51290a0ffff6.mp4", poster: "9c15595b-a7f7-4f33-b660-51290a0ffff6.jpg"}
+        - title: "提出が必要な曲数"
+          desc: "一覧の行に、提出が必要な曲数を表示します。"
+    - heading: "プロフィールとフレンド"
+      items:
+        - title: "項目ごとの公開範囲"
+          desc: "プロフィールの項目ごとに、公開範囲（全体・フレンド・非公開）を設定できます。公開範囲の表記は、アプリ全体で同じ絵と3語に揃えました。"
+          media: {type: video, src: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.mp4", poster: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.jpg"}
+        - title: "フレンドに抜かれた曲の不具合を修正"
+          desc: "フレンドに抜かれた楽曲で、相手の更新前スコアが表示されない不具合を修正しました。"
+    - heading: "全般の改善と不具合修正"
+      items:
+        - title: "同期の切り替え直後の表示"
+          desc: "同期のクイックと通常を切り替えた直後に、表示が一瞬元に戻る不具合を修正しました。"
+        - title: "共有画面の表示"
+          desc: "ホームの共有ボタンから開く画面に、記録が増えた機種だけを表示します。"
+en:
+  title: "Effect Radar rework, Tier Lists by decimal level, and messages on challenges"
+  lead: "This release reworks the SDVX Effect Radar, adds Tier Lists by decimal level, lets you add a message to challenges and get notified when they are completed, adds per-section visibility on profiles, renews Score Attack score entry, and fixes sync and other issues."
+  sections:
+    - heading: "SDVX"
+      items:
+        - title: "Effect Radar rework"
+          desc: "The player radar calculation now accounts for EX scores and ∇ decimal levels, bringing it closer to the in-game values. Per-song radar values are now reference values calculated from in-game screen captures. Values for new songs take a few days to appear. Lv16 and below are not included yet and will be added on request."
+          media: {type: video, src: "85a6d2ea-9151-45dc-8167-17c4a29a891a.mp4", poster: "85a6d2ea-9151-45dc-8167-17c4a29a891a.jpg"}
+        - title: "One score display"
+          desc: "The score column on target song screens and share images follows the display chosen in the song list (Normal, EX or MAX-)."
+        - title: "\"Since last sync\" fix"
+          desc: "Fixed \"Since last sync\" showing unplayed difficulties as updated."
+    - heading: "GITADORA"
+      items:
+        - title: "New \"Gt+Ba\" part"
+          desc: "Song list parts include \"Gt+Ba\", showing guitar and bass side by side."
+        - title: "More in JSON export"
+          desc: "JSON export now includes the part, decimal level, version name and unplayed charts (NO PLAY)."
+        - title: "\"Since last sync\" fix"
+          desc: "Fixed \"Since last sync\" missing plays on page 2 and later."
+    - heading: "Tier Lists"
+      items:
+        - title: "Tier Lists by decimal level"
+          desc: "SDVX and GITADORA Tier Lists can be split by decimal level (such as 18.0 and 18.1). Tap the selected level again to switch to decimal levels, and tap \"‹ Lv18\" to return to the whole level. Custom Tier Lists can also target decimal levels, including multiple selections within one level."
+          media: {type: video, src: "40fcef8f-7c95-422a-a6f5-fa27089bf967.mp4", poster: "40fcef8f-7c95-422a-a6f5-fa27089bf967.jpg"}
+        - title: "Sorting within a tier"
+          desc: "Charts within a tier can be sorted by tier, by level or by score. With EX display, the label under the jacket shows MAX- and the top right shows the EX score rate."
+        - title: "Jacket size"
+          desc: "Jacket size can be changed on the Tier screen."
+        - title: "New custom Tier List button"
+          desc: "The button for creating a custom Tier List moved to the \"+\" in the list name row."
+    - heading: "Challenges"
+      items:
+        - title: "Messages and completion notices"
+          desc: "Add a message of up to 28 characters when sending a challenge. \"Sent challenges\" shows whether each challenge was accepted and completed, and a notification arrives with the result when one is completed."
+          media: {type: video, src: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.mp4", poster: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.jpg"}
+        - title: "\"Completed challenges\" tab"
+          desc: "A new \"Completed challenges\" tab shows scores as \"before → after\", counted from when the challenge was accepted."
+        - title: "Home challenge list"
+          list:
+            - "Tap the goal to change it (the sender stays shown)"
+            - "The goal sits under the name, making each row shorter"
+    - heading: "Score Attack"
+      items:
+        - title: "Roller-style score entry"
+          desc: "Score entry uses a roller that starts at the max score. Spin each digit, or type with the keyboard."
+          media: {type: video, src: "9c15595b-a7f7-4f33-b660-51290a0ffff6.mp4", poster: "9c15595b-a7f7-4f33-b660-51290a0ffff6.jpg"}
+        - title: "Songs left to submit"
+          desc: "Each row in the list shows how many songs still need to be submitted."
+    - heading: "Profile and Friends"
+      items:
+        - title: "Visibility for each section"
+          desc: "Each profile section can be set to Everyone, Friends or Hidden. Visibility uses the same icons and three words across the app."
+          media: {type: video, src: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.mp4", poster: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.jpg"}
+        - title: "Friend score fix"
+          desc: "Fixed the friend's previous score not showing for songs where a friend passed you."
+    - heading: "General improvements and fixes"
+      items:
+        - title: "Display after switching sync"
+          desc: "Fixed the display briefly reverting right after switching between quick and normal sync."
+        - title: "Share screen"
+          desc: "The screen opened from the home share button shows only games with new records."
+ko:
+  title: "SDVX 이펙트 레이더 개선, 소수점 레벨 티어표, 과제 한마디 지원"
+  lead: "SDVX 이펙트 레이더 개선, 소수점 레벨별 티어표, 과제 한마디와 달성 알림, 프로필 항목별 공개 범위, 스코어 어택 스코어 입력 개편과 함께 동기화 등의 오류를 수정했습니다."
+  sections:
+    - heading: "SDVX"
+      items:
+        - title: "이펙트 레이더 개선"
+          desc: "플레이어 레이더 계산을 개선해 EX 스코어와 ∇의 소수점 레벨을 반영하고, 게임 화면 값과의 차이를 줄였습니다. 곡별 레이더 값은 게임 화면 캡처에서 구한 참고값으로 바뀌었습니다. 신곡 값은 반영까지 며칠이 걸립니다. 레벨 16 이하는 아직 수록되지 않았으며, 요청에 따라 추가합니다."
+          media: {type: video, src: "85a6d2ea-9151-45dc-8167-17c4a29a891a.mp4", poster: "85a6d2ea-9151-45dc-8167-17c4a29a891a.jpg"}
+        - title: "스코어 표시 통일"
+          desc: "대상 곡 화면과 공유 이미지의 스코어 칸을 곡 목록에서 선택한 표시(일반·EX·MAX-)로 통일했습니다."
+        - title: "「지난 동기화 이후」 오류 수정"
+          desc: "「지난 동기화 이후」로 동기화할 때 플레이하지 않은 난이도가 갱신으로 표시되던 오류를 수정했습니다."
+    - heading: "GITADORA"
+      items:
+        - title: "파트 「Gt+Ba」 추가"
+          desc: "곡 목록 파트에 「Gt+Ba」를 추가해 기타와 베이스를 나란히 표시합니다."
+        - title: "JSON 내보내기 항목 추가"
+          desc: "JSON 내보내기에 파트·소수점 레벨·버전명과 플레이하지 않은 채보(NO PLAY)을 추가했습니다."
+        - title: "「지난 동기화 이후」 오류 수정"
+          desc: "「지난 동기화 이후」로 동기화할 때 2페이지 이후의 플레이가 누락되던 오류를 수정했습니다."
+    - heading: "티어표"
+      items:
+        - title: "소수점 레벨별 티어표"
+          desc: "SDVX와 GITADORA에서 소수점 레벨(18.0, 18.1 등)별로 단을 나눈 티어표를 지원합니다. 선택 중인 레벨 버튼을 다시 누르면 소수점 버튼으로 바뀌고, 「‹ Lv18」로 레벨 전체로 돌아갑니다. 커스텀 티어를 만들 때도 같은 레벨 안의 복수 선택을 포함해 소수점 레벨을 지정할 수 있습니다."
+          media: {type: video, src: "40fcef8f-7c95-422a-a6f5-fa27089bf967.mp4", poster: "40fcef8f-7c95-422a-a6f5-fa27089bf967.jpg"}
+        - title: "단 안의 정렬"
+          desc: "단 안의 정렬 방식을 「Tier순」「레벨순」「스코어순」에서 고를 수 있습니다. EX 표시일 때는 재킷 아래에 MAX- 표기, 오른쪽 위에 EX 스코어율을 표시합니다."
+        - title: "재킷 크기"
+          desc: "티어 화면에서만 재킷 표시 크기를 바꿀 수 있습니다."
+        - title: "커스텀 티어 만들기 버튼"
+          desc: "커스텀 티어 새로 만들기 버튼을 표 이름 행의 「＋」로 옮겼습니다."
+    - heading: "과제"
+      items:
+        - title: "한마디와 달성 알림"
+          desc: "과제를 보낼 때 28자까지의 한마디를 덧붙일 수 있습니다. 보낸 과제의 수락 여부와 달성 여부를 「보낸 과제」에 표시하고, 달성하면 결과와 함께 알림으로 알려 줍니다."
+          media: {type: video, src: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.mp4", poster: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.jpg"}
+        - title: "「달성한 과제」 탭"
+          desc: "「달성한 과제」 탭을 추가했습니다. 스코어는 과제를 받은 시점부터의 「갱신 전 → 갱신 후」로 표시합니다."
+        - title: "홈의 과제 목록"
+          list:
+            - "과제곡 목록에서 목표를 누르면 목표값을 바꿀 수 있습니다(보낸 사람 표시는 유지)"
+            - "목표를 이름 아래에 두어 행을 짧게 했습니다"
+    - heading: "스코어 어택"
+      items:
+        - title: "드럼식 스코어 입력"
+          desc: "스코어 보고 칸을 만점에서 시작하는 드럼식(각 자릿수를 손가락으로 돌림)으로 바꿨습니다. 키보드로도 입력할 수 있습니다."
+          media: {type: video, src: "9c15595b-a7f7-4f33-b660-51290a0ffff6.mp4", poster: "9c15595b-a7f7-4f33-b660-51290a0ffff6.jpg"}
+        - title: "제출해야 할 곡 수"
+          desc: "목록의 각 행에 제출해야 할 곡 수를 표시합니다."
+    - heading: "프로필과 친구"
+      items:
+        - title: "항목별 공개 범위"
+          desc: "프로필 항목마다 공개 범위(전체·친구·비공개)를 설정할 수 있습니다. 공개 범위 표기는 앱 전체에서 같은 아이콘과 세 단어로 통일했습니다."
+          media: {type: video, src: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.mp4", poster: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.jpg"}
+        - title: "친구에게 추월당한 곡의 오류 수정"
+          desc: "친구에게 추월당한 곡에서 상대의 갱신 전 스코어가 표시되지 않던 오류를 수정했습니다."
+    - heading: "전반적인 개선과 오류 수정"
+      items:
+        - title: "동기화 전환 직후의 표시"
+          desc: "빠른 동기화와 일반 동기화를 전환한 직후 표시가 잠깐 원래대로 돌아가던 오류를 수정했습니다."
+        - title: "공유 화면"
+          desc: "홈의 공유 버튼으로 여는 화면에 기록이 늘어난 기종만 표시합니다."
+zh:
+  title: "重新調整 SDVX Effect Radar，支援小數點等級 Tier表與課題留言"
+  lead: "本次更新重新調整 SDVX 的 Effect Radar，新增依小數點等級分類的 Tier表、課題留言與達成通知、個人檔案各項目的公開範圍，並翻新分數挑戰的分數輸入，同時修正同步等問題。"
+  sections:
+    - heading: "SDVX"
+      items:
+        - title: "重新調整 Effect Radar"
+          desc: "重新調整玩家雷達的計算，反映 EX 分數與 ∇ 的小數點等級，縮小與遊戲畫面數值的差距。各曲雷達值改為由遊戲畫面截圖求得的參考值。新曲數值需數日才會反映。等級 16 以下尚未收錄，將依需求追加。"
+          media: {type: video, src: "85a6d2ea-9151-45dc-8167-17c4a29a891a.mp4", poster: "85a6d2ea-9151-45dc-8167-17c4a29a891a.jpg"}
+        - title: "統一分數欄顯示"
+          desc: "對象樂曲畫面與分享圖片的分數欄，統一為樂曲一覽中選擇的顯示方式（一般・EX・MAX-）。"
+        - title: "修正「上次同步後」的問題"
+          desc: "修正以「上次同步後」同步時，未遊玩的難度被顯示為已更新的問題。"
+    - heading: "GITADORA"
+      items:
+        - title: "新增「Gt+Ba」部位"
+          desc: "樂曲一覽的部位新增「Gt+Ba」，並排顯示吉他與貝斯。"
+        - title: "JSON 匯出新增項目"
+          desc: "JSON 匯出新增部位・小數點等級・版本名稱，以及未遊玩的譜面（NO PLAY）。"
+        - title: "修正「上次同步後」的問題"
+          desc: "修正以「上次同步後」同步時，遺漏第 2 頁以後遊玩紀錄的問題。"
+    - heading: "Tier表"
+      items:
+        - title: "依小數點等級分類的 Tier表"
+          desc: "SDVX 與 GITADORA 支援依小數點等級（18.0、18.1 等）分段的 Tier表。再次點選目前選擇的等級標籤即可切換為小數點標籤，點選「‹ Lv18」即可回到整個等級。建立自訂 Tier 時，也可指定小數點等級，包括在同一等級內複選。"
+          media: {type: video, src: "40fcef8f-7c95-422a-a6f5-fa27089bf967.mp4", poster: "40fcef8f-7c95-422a-a6f5-fa27089bf967.jpg"}
+        - title: "段內排序"
+          desc: "段內排序可選擇「Tier 順」「等級順」「分數順」。EX 顯示時，封面下方顯示 MAX- 標記，右上角顯示 EX 分數率。"
+        - title: "封面大小"
+          desc: "僅在 Tier 畫面可切換封面的顯示大小。"
+        - title: "自訂 Tier 建立按鈕"
+          desc: "自訂 Tier 的新建按鈕移至表名列的「＋」。"
+    - heading: "課題"
+      items:
+        - title: "一句留言與達成通知"
+          desc: "傳送課題時可附上最多 28 字的一句留言。「已傳送的課題」會顯示對方是否已接受與達成，達成時會連同結果以通知告知。"
+          media: {type: video, src: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.mp4", poster: "1d0364e1-ac2c-48d8-9486-4c530d7ee451.jpg"}
+        - title: "「已達成的課題」分頁"
+          desc: "新增「已達成的課題」分頁，分數以接受課題時起算的「更新前 → 更新後」顯示。"
+        - title: "首頁的課題列表"
+          list:
+            - "在課題曲列表點選目標即可變更目標值（保留傳送者顯示）"
+            - "目標移至名稱下方，縮短每列的顯示"
+    - heading: "分數挑戰"
+      items:
+        - title: "滾輪式分數輸入"
+          desc: "分數回報欄改為從滿分開始的滾輪式（以手指轉動每一位數），也可用鍵盤輸入。"
+          media: {type: video, src: "9c15595b-a7f7-4f33-b660-51290a0ffff6.mp4", poster: "9c15595b-a7f7-4f33-b660-51290a0ffff6.jpg"}
+        - title: "需提交的樂曲數"
+          desc: "列表的每一列會顯示需提交的樂曲數。"
+    - heading: "個人檔案與好友"
+      items:
+        - title: "依項目設定公開範圍"
+          desc: "個人檔案的每個項目都可設定公開範圍（全體・好友・不公開）。公開範圍的標示在整個 App 中統一為相同圖示與三個詞。"
+          media: {type: video, src: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.mp4", poster: "7d99185b-b612-4f8d-b3c6-1da831cf1c51.jpg"}
+        - title: "修正被好友超越樂曲的問題"
+          desc: "修正在被好友超越的樂曲中，未顯示對方更新前分數的問題。"
+    - heading: "整體改善與問題修正"
+      items:
+        - title: "切換同步後的顯示"
+          desc: "修正切換快速與一般同步後，顯示短暫恢復原狀的問題。"
+        - title: "分享畫面"
+          desc: "從首頁分享按鈕開啟的畫面，只顯示紀錄有增加的機種。"

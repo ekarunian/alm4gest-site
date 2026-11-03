@@ -1,0 +1,275 @@
+id: "2026-10-07"
+kind: release
+version: "1.2.20261007"
+date: "2026-10-08"
+ja:
+  title: "別の KONAMI ID での再ログインとスコアタのフレンド限定に対応し、EXスコア順の並べ替えを追加、ポップンクラスの数え方を公式に近づけました"
+  lead: "別の KONAMI ID での再ログインに対応し、スコアタのフレンド限定公開、SDVX と pop'n の機能改善、各種不具合の修正を行いました。"
+  sections:
+    - heading: "アカウントとデータ"
+      items:
+        - title: "別の KONAMI ID でログインし直す"
+          desc: "「別の KONAMI ID でログインし直す」を選ぶと、前のログイン情報を消してからログイン画面を開きます。前と違う ID でログインしたときは確認画面を出し、前の ID の記録をバックアップして復元コードを示してから、新しい ID の記録を取り込みます。前の端末でフレンドコードを使っていた方には、バックアップの復元でフレンドも引き継げることを案内します。"
+          list:
+            - "引き継ぐデータ：課題、目標、メモ、お気に入り、リスト、Tier表、フレンド"
+            - "未達成の課題曲と目標：新しい ID で最初に同期した数値を起点にします"
+          media: {type: image, src: "60e71393-5a9a-47ab-a325-62e26963cc3c.webp"}
+    - heading: "SDVX"
+      items:
+        - title: "おすすめ「スコアで伸ばせる」"
+          desc: "対象と目標を実力に合わせて見直しました。おすすめの行から課題に登録できます。クリアランプは、全件の一覧も開けます。"
+          list:
+            - "対象：プレー済みの譜面"
+            - "目標スコア：同じ VF 帯の中央値。中央値で VF が増えない譜面は、1つ上の帯の中央値"
+            - "並び順：必要な点差が小さい順"
+            - "各行に目標スコアを表示"
+          media: {type: image, src: "07ea8803-0568-4cc5-bca6-d9ac73792aea.webp"}
+        - title: "EXスコアの並べ替えと表示"
+          list:
+            - "楽曲一覧の並べ替えに「EXスコア順」と「EXスコア率順」を追加"
+            - "楽曲詳細の EXスコアに理論値と割合を表示"
+          media: {type: image, src: "5c9ff435-7a75-4d48-833f-20dc07d12419.webp"}
+    - heading: "pop'n"
+      items:
+        - title: "ポップンクラスの数え方"
+          desc: "集計のしかたを公式に近づけました。楽曲ごとの詳細ページは同期が終わった後に裏で読み込むので、同期の待ち時間は増えません。"
+          list:
+            - "同じ曲は HYPER と EX の両方を対象枠に含めて計算"
+            - "前回の同期後に1回だけ遊んだ譜面は、その回のスコアとメダルの組で計算（公式は1回のプレーのスコアとメダルを組にして数えていると見ています）"
+            - "最後に遊んだのが難易度改訂より前の譜面は、改訂前の難易度で計算"
+        - title: "メダル順の並べ替え"
+          desc: "楽曲一覧の並べ替えに「メダル順」を追加しました。銀菱や銅丸などのメダルの順に並びます。"
+          media: {type: image, src: "6833e726-a53d-4365-95a2-23aca08b2dfa.webp"}
+    - heading: "GITADORA"
+      items:
+        - title: "スキル値のずれを修正"
+          desc: "スキル値が公式とずれる不具合を直しました。LOVE♥SHINE の照合と、達成率100.00%の読み取りを正しく行います。"
+    - heading: "スコアタ"
+      items:
+        - title: "フレンドのみで開催"
+          desc: "スコアタを開くとき、「参加できる人」を「フレンドのみ」にできます。大会はフレンドの一覧にだけ表示され、参加者もフレンドに限られます。あわせて、課題曲を選ぶと曲の画面が開くようにしました。"
+          media: {type: image, src: "2d44b78e-eded-4bd9-bfb9-72c9b6f4cc90.webp"}
+    - heading: "フレンドと Tier表"
+      items:
+        - title: "フレンドの表示と楽曲フィルタ"
+          list:
+            - "フレンドの記録が無い機種では、勝敗と勝率を0ではなく「-」で表示"
+            - "楽曲一覧のフィルタで、フレンドの条件を「誰か1人にでも」「全員に」「ライバルに」から選ぶ方式に変更"
+            - "比較相手を選ぶボタンの大きさを、名前の長さにかかわらず統一"
+          media: {type: image, src: "05ae943f-b084-4a01-9133-15c76916a801.webp"}
+        - title: "Tier表の段の名前と色"
+          desc: "自作の Tier表で段の名前を選ぶと、名前と色を1つの画面で変えられます。色は色見本から選ぶことも、自由に指定することもできます。"
+          media: {type: image, src: "13990371-f0de-4b25-9b8a-3d4d7f6fa5cb.webp"}
+    - heading: "表示の改善と不具合修正"
+      items:
+        - title: "ホーム画面と成長ボード"
+          list:
+            - "ホーム画面の課題曲の表示を3行から2行に変更"
+            - "成長ボードの編集中は、右下に「完了」を常に表示し、右端にスクロール用の帯を重ねて表示"
+            - "成長ボードのレーダーと属性別推移で、数値がカードの外へはみ出す不具合を修正"
+          media: {type: image, src: "7496517e-8d8c-4d16-83cc-fa284365eb91.webp"}
+        - title: "Discord へ送る成果画像"
+          desc: "iPhone から Discord へ成果画像を送ると、書類として届いていた不具合を直しました。"
+en:
+  title: "Log in again with another KONAMI ID, friends-only Score Attacks, EX score sorting and pop'n class counting"
+  lead: "This update adds support for signing in with a different KONAMI ID, friends-only Score Attacks, game-specific calculation and recommendation updates, and bug fixes."
+  sections:
+    - heading: "Account and data"
+      items:
+        - title: "Log in again with another KONAMI ID"
+          desc: "Choosing \"Log in again with another KONAMI ID\" clears the previous login before opening the login screen. If you sign in with a different ID, a confirmation screen appears; the app backs up the previous ID's records, shows a recovery code, then imports the new ID's records. If you used a friend code on your previous device, the app tells you that restoring the backup also brings your friends over."
+          list:
+            - "Carried over: challenges, goals, memos, favorites, lists, Tier Lists and friends"
+            - "Unachieved challenge songs and goals start from the values of your first sync with the new ID"
+          media: {type: image, src: "60e71393-5a9a-47ab-a325-62e26963cc3c.webp"}
+    - heading: "SDVX"
+      items:
+        - title: "\"Improve by score\" recommendations"
+          desc: "Recommendations now pick played charts and set targets based on your skill. You can add a recommended chart to challenges from its row. Clear lamps also offer an option to open the full list."
+          list:
+            - "Target score: the median in the same VF band, or the median of the next band up if reaching the median doesn't raise your VF"
+            - "Order: smallest score gap first"
+            - "Each row shows its target score"
+          media: {type: image, src: "07ea8803-0568-4cc5-bca6-d9ac73792aea.webp"}
+        - title: "EX score sorting and display"
+          list:
+            - "Song list sort options now include \"EX score\" and \"EX score rate\""
+            - "Song details show the theoretical maximum EX score and the rate"
+          media: {type: image, src: "5c9ff435-7a75-4d48-833f-20dc07d12419.webp"}
+    - heading: "pop'n"
+      items:
+        - title: "How pop'n class is counted"
+          desc: "pop'n class calculation now follows the official rules more closely. Song detail pages load in the background after sync finishes, so syncing takes no longer."
+          list:
+            - "Songs with both HYPER and EX charts count both charts toward eligible slots"
+            - "Charts played only once since the last sync count with the score and medal from that play (we believe the official site pairs the score and medal of a single play)"
+            - "Charts last played before a level change count at the old level"
+        - title: "Sort by medal"
+          desc: "Song list sort options now include \"Medal\", ordering songs by medal, such as silver diamond and bronze circle."
+          media: {type: image, src: "6833e726-a53d-4365-95a2-23aca08b2dfa.webp"}
+    - heading: "GITADORA"
+      items:
+        - title: "Skill value fix"
+          desc: "Fixed skill values that differed from the official site. LOVE♥SHINE is now matched correctly, and 100.00% achievement rates are read correctly."
+    - heading: "Score Attacks"
+      items:
+        - title: "Friends-only Score Attacks"
+          desc: "When hosting a Score Attack, you can set \"Who can join\" to \"Friends only\". The Score Attack then appears only in your friends' lists, and only friends can join. Selecting a challenge song in a Score Attack now opens that song's page."
+          media: {type: image, src: "2d44b78e-eded-4bd9-bfb9-72c9b6f4cc90.webp"}
+    - heading: "Friends and Tier Lists"
+      items:
+        - title: "Friend display and song filters"
+          list:
+            - "Win, loss and win rate show \"-\" instead of 0 for games where a friend has no records"
+            - "Song list filters let you choose the friend condition from \"Any one\", \"Everyone\" or \"Rivals\""
+            - "Buttons for choosing who to compare with keep the same size regardless of name length"
+          media: {type: image, src: "05ae943f-b084-4a01-9133-15c76916a801.webp"}
+        - title: "Tier List row names and colors"
+          desc: "In your own Tier Lists, selecting a tier name opens one screen to edit its name and color. Pick a color from swatches or enter any color."
+          media: {type: image, src: "13990371-f0de-4b25-9b8a-3d4d7f6fa5cb.webp"}
+    - heading: "Display fixes and bug fixes"
+      items:
+        - title: "Home screen and growth board"
+          list:
+            - "Challenge songs on the home screen take 2 rows instead of 3"
+            - "While editing the growth board, \"Done\" stays at the bottom right, with a scroll strip over the right edge"
+            - "Numbers in the growth board's radar and attribute trends no longer spill outside the cards"
+          media: {type: image, src: "7496517e-8d8c-4d16-83cc-fa284365eb91.webp"}
+        - title: "Result images sent to Discord"
+          desc: "Fixed result images sent from iPhone to Discord arriving as documents."
+ko:
+  title: "다른 KONAMI ID로 다시 로그인, 친구 한정 스코어 어택, EX 스코어순 정렬 추가와 pop'n 클래스 계산 개선"
+  lead: "다른 KONAMI ID로 다시 로그인하는 기능, 스코어 어택의 친구 한정 공개, SDVX와 pop'n의 기능 개선, 각종 버그 수정을 진행했습니다."
+  sections:
+    - heading: "계정과 데이터"
+      items:
+        - title: "다른 KONAMI ID로 다시 로그인"
+          desc: "「다른 KONAMI ID로 다시 로그인」을 선택하면 이전 로그인 정보를 삭제한 뒤 로그인 화면을 엽니다. 이전과 다른 ID로 로그인하면 확인 화면을 표시하고, 이전 ID의 기록을 백업해 복원 코드를 보여 준 뒤 새 ID의 기록을 가져옵니다. 이전 기기에서 친구 코드를 사용했다면, 백업을 복원해 친구 정보도 이어받을 수 있다고 안내합니다."
+          list:
+            - "이어받는 데이터: 과제, 목표, 메모, 즐겨찾기, 리스트, 티어표, 친구"
+            - "미달성 과제곡과 목표: 새 ID로 처음 동기화한 수치를 기점으로 변경"
+          media: {type: image, src: "60e71393-5a9a-47ab-a325-62e26963cc3c.webp"}
+    - heading: "SDVX"
+      items:
+        - title: "추천 「스코어로 올리기」"
+          desc: "대상과 목표를 실력에 맞춰 다시 정했습니다. 추천 행에서 바로 과제로 등록할 수 있습니다. 클리어 램프는 전체 목록도 열 수 있습니다."
+          list:
+            - "대상: 플레이한 채보"
+            - "목표 스코어: 같은 VF대의 중앙값. 중앙값으로 VF가 오르지 않는 채보는 한 단계 위 대의 중앙값"
+            - "정렬: 필요한 점수 차가 작은 순"
+            - "각 행에 목표 스코어 표시"
+          media: {type: image, src: "07ea8803-0568-4cc5-bca6-d9ac73792aea.webp"}
+        - title: "EX 스코어 정렬과 표시"
+          list:
+            - "곡 목록 정렬에 「EX 스코어순」과 「EX 스코어율순」 추가"
+            - "곡 상세의 EX 스코어에 이론값과 비율 표시"
+          media: {type: image, src: "5c9ff435-7a75-4d48-833f-20dc07d12419.webp"}
+    - heading: "pop'n"
+      items:
+        - title: "pop'n 클래스 계산 방식"
+          desc: "집계 방식을 공식에 가깝게 했습니다. 곡별 상세 페이지는 동기화가 끝난 뒤 백그라운드에서 불러오므로 동기화 대기 시간은 늘지 않습니다."
+          list:
+            - "같은 곡은 HYPER와 EX 모두를 대상 범위에 포함해 계산"
+            - "지난 동기화 이후 한 번만 플레이한 채보는 그 회차의 스코어와 메달 조합으로 계산(공식은 한 번의 플레이의 스코어와 메달을 짝지어 세는 것으로 보고 있습니다)"
+            - "마지막 플레이가 난이도 개정 전인 채보는 개정 전 난이도로 계산"
+        - title: "메달순 정렬"
+          desc: "곡 목록 정렬에 「메달순」을 추가했습니다. 은색 마름모, 동색 동그라미 등 메달 순서로 정렬됩니다."
+          media: {type: image, src: "6833e726-a53d-4365-95a2-23aca08b2dfa.webp"}
+    - heading: "GITADORA"
+      items:
+        - title: "스킬 값 오차 수정"
+          desc: "스킬 값이 공식과 다르게 나오던 문제를 수정했습니다. LOVE♥SHINE의 대조와 달성률 100.00%의 읽기를 올바르게 처리합니다."
+    - heading: "스코어 어택"
+      items:
+        - title: "「친구만」으로 개최"
+          desc: "스코어 어택을 열 때 「참가할 수 있는 사람」을 「친구만」으로 설정할 수 있습니다. 스코어 어택은 친구 목록에만 표시되고 참가자도 친구로 한정됩니다. 과제곡을 선택하면 곡 화면이 열리도록 했습니다."
+          media: {type: image, src: "2d44b78e-eded-4bd9-bfb9-72c9b6f4cc90.webp"}
+    - heading: "친구와 티어표"
+      items:
+        - title: "친구 표시와 곡 필터"
+          list:
+            - "친구의 기록이 없는 기종에서는 승패와 승률을 0이 아닌 「-」로 표시"
+            - "곡 목록 필터의 친구 조건을 「누구 한 명이라도」「전원에게」「라이벌에게」 중에서 고르는 방식으로 변경"
+            - "비교 상대를 고르는 버튼 크기를 이름 길이와 상관없이 통일"
+          media: {type: image, src: "05ae943f-b084-4a01-9133-15c76916a801.webp"}
+        - title: "티어표 단의 이름과 색상"
+          desc: "직접 만든 티어표에서 단 이름을 선택하면 이름과 색상을 한 화면에서 바꿀 수 있습니다. 색상은 색상 견본에서 고르거나 자유롭게 지정할 수 있습니다."
+          media: {type: image, src: "13990371-f0de-4b25-9b8a-3d4d7f6fa5cb.webp"}
+    - heading: "표시 개선과 버그 수정"
+      items:
+        - title: "홈 화면과 성장 보드"
+          list:
+            - "홈 화면의 과제곡 표시를 3줄에서 2줄로 변경"
+            - "성장 보드 편집 중에는 화면 오른쪽 아래에 「완료」를 항상 표시하고, 오른쪽 끝에 스크롤용 띠를 겹쳐 표시"
+            - "성장 보드의 레이더와 속성별 추이에서 수치가 카드 밖으로 삐져나오던 문제를 수정"
+          media: {type: image, src: "7496517e-8d8c-4d16-83cc-fa284365eb91.webp"}
+        - title: "Discord로 보내는 성과 이미지"
+          desc: "iPhone에서 Discord로 성과 이미지를 보내면 문서로 도착하던 문제를 수정했습니다."
+zh:
+  title: "支援以其他 KONAMI ID 重新登入與僅限好友的分數挑戰，新增 EX 分數排序，並讓 pop'n 等級的計算更接近官方"
+  lead: "支援以其他 KONAMI ID 重新登入、分數挑戰僅限好友公開，改善 SDVX 與 pop'n 的功能，並修正多項問題。"
+  sections:
+    - heading: "帳號與資料"
+      items:
+        - title: "以其他 KONAMI ID 重新登入"
+          desc: "選擇「以其他 KONAMI ID 重新登入」後，會先刪除之前的登入資訊，再開啟登入畫面。以與之前不同的 ID 登入時會顯示確認畫面，備份之前 ID 的紀錄並提供復原碼後，再讀入新 ID 的紀錄。若在之前的裝置上使用過好友碼，會提示透過還原備份也能接續好友資訊。"
+          list:
+            - "接續的資料：課題、目標、備忘、我的最愛、清單、Tier表、好友"
+            - "未達成的課題曲與目標：改以新 ID 首次同步的數值為起點"
+          media: {type: image, src: "60e71393-5a9a-47ab-a325-62e26963cc3c.webp"}
+    - heading: "SDVX"
+      items:
+        - title: "推薦「以分數提升」"
+          desc: "依實力重新調整對象與目標。可從推薦的列直接登錄為課題。通關燈號也能開啟完整清單。"
+          list:
+            - "對象：已遊玩的譜面"
+            - "目標分數：同一 VF 區間的中位數。以中位數無法增加 VF 的譜面，則為上一個區間的中位數"
+            - "排列順序：所需分差由小到大"
+            - "每一列顯示目標分數"
+          media: {type: image, src: "07ea8803-0568-4cc5-bca6-d9ac73792aea.webp"}
+        - title: "EX 分數的排序與顯示"
+          list:
+            - "樂曲一覽的排序新增「EX 分數」與「EX 分數率」"
+            - "樂曲詳細的 EX 分數顯示理論值與比例"
+          media: {type: image, src: "5c9ff435-7a75-4d48-833f-20dc07d12419.webp"}
+    - heading: "pop'n"
+      items:
+        - title: "pop'n 等級的計算方式"
+          desc: "計算方式更接近官方規格。各樂曲的詳細頁面會在同步完成後於背景讀取，因此同步的等待時間不會增加。"
+          list:
+            - "同一首樂曲的 HYPER 與 EX 都納入對象名額計算"
+            - "上次同步後只玩過 1 次的譜面，以該次的分數與獎章組合計算（我們認為官方是將單次遊玩的分數與獎章配對計算）"
+            - "最後一次遊玩在難度調整前的譜面，以調整前的難度計算"
+        - title: "依獎章排序"
+          desc: "樂曲一覽的排序新增「獎章」，依銀菱形、銅圓形等獎章順序排列。"
+          media: {type: image, src: "6833e726-a53d-4365-95a2-23aca08b2dfa.webp"}
+    - heading: "GITADORA"
+      items:
+        - title: "修正技能值的偏差"
+          desc: "修正技能值與官方不一致的問題。現在能正確比對 LOVE♥SHINE，並正確讀取 100.00% 的達成率。"
+    - heading: "分數挑戰"
+      items:
+        - title: "僅限好友舉辦"
+          desc: "舉辦分數挑戰時，可將「可參加的人」設為「僅限好友」。分數挑戰只會顯示在好友的清單中，參加者也僅限好友。另外，選擇課題曲時會開啟該樂曲的畫面。"
+          media: {type: image, src: "2d44b78e-eded-4bd9-bfb9-72c9b6f4cc90.webp"}
+    - heading: "好友與 Tier表"
+      items:
+        - title: "好友顯示與樂曲篩選"
+          list:
+            - "在好友沒有紀錄的機種，勝負與勝率改顯示「-」而非 0"
+            - "樂曲一覽篩選中的好友條件，改為從「任一人」「所有人」「勁敵」中選擇"
+            - "選擇比較對象的按鈕大小統一，不受名稱長短影響"
+          media: {type: image, src: "05ae943f-b084-4a01-9133-15c76916a801.webp"}
+        - title: "Tier表段落的名稱與顏色"
+          desc: "在自製的 Tier表中選擇段落名稱，即可在同一個畫面變更名稱與顏色。顏色可從色票選擇，也能自由指定。"
+          media: {type: image, src: "13990371-f0de-4b25-9b8a-3d4d7f6fa5cb.webp"}
+    - heading: "顯示改善與錯誤修正"
+      items:
+        - title: "首頁與成長看板"
+          list:
+            - "首頁的課題曲顯示由 3 行改為 2 行"
+            - "編輯成長看板時，右下角固定顯示「完成」，並在右側邊緣疊加捲動用的條帶"
+            - "修正成長看板的雷達圖與屬性別推移中，數值超出卡片的問題"
+          media: {type: image, src: "7496517e-8d8c-4d16-83cc-fa284365eb91.webp"}
+        - title: "傳到 Discord 的成果圖片"
+          desc: "修正從 iPhone 將成果圖片傳到 Discord 時，以文件形式送達的問題。"

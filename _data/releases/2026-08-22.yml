@@ -1,0 +1,48 @@
+id: "2026-08-22"
+kind: release
+version: "1.2.20260822"
+date: "2026-08-21"
+ja:
+  title: "同期で1曲も読み取れなかったときに成功と表示していた問題ほかの不具合を修正しました"
+  sections:
+    - heading: "不具合の修正"
+      items:
+        - title: "0件の同期を成功と表示"
+          desc: "e-amusementの同期で1曲も読み取れなかったとき、「取得が完了しました・0件」と成功のように表示していました。ベーシックコースが有効でない・ログインが切れているなどの理由を判定し、失敗として理由を表示するようにしました。"
+        - title: "プレー記録の取りこぼし"
+          desc: "この0件を成功として扱っていたため、次の同期が前回との差分を取り違え、プレー記録を取りこぼすことがありました。"
+        - title: "SDVX・GITADORAだけの端末の統計"
+          desc: "SOUND VOLTEXまたはGITADORAだけを同期している端末で、スコアが統計に反映されていませんでした。"
+en:
+  title: "Fixed sync reporting success when nothing could be read, and other issues"
+  sections:
+    - heading: "Bug fixes"
+      items:
+        - title: "Empty sync shown as success"
+          desc: "Sync no longer reports \"Completed - 0 items\" when nothing could be read. It now checks why (Basic Course inactive, session expired, pages unreadable) and ends as a failure with the reason."
+        - title: "Missed plays"
+          desc: "Fixed plays being missed after such a run, which had been treated as a success and moved the sync baseline forward."
+        - title: "Statistics on SDVX- or GITADORA-only devices"
+          desc: "Fixed scores not reaching the statistics on devices that sync only SDVX or GITADORA."
+ko:
+  title: "한 곡도 읽지 못한 동기화를 성공으로 표시하던 문제 등을 수정했습니다"
+  sections:
+    - heading: "버그 수정"
+      items:
+        - title: "0건 동기화의 성공 표시"
+          desc: "e-amusement 동기화에서 한 곡도 읽지 못했을 때 「가져오기가 완료되었습니다·0건」으로 성공처럼 표시되던 문제를 수정했습니다. 베이직 코스 미유효·로그인 만료 등의 이유를 판별해 실패로 표시합니다."
+        - title: "플레이 기록 누락"
+          desc: "0건을 성공으로 처리해 다음 동기화가 이전과의 차이를 잘못 판단하고 플레이 기록을 놓치던 문제를 수정했습니다."
+        - title: "SDVX·GITADORA만 동기화하는 기기의 통계"
+          desc: "SOUND VOLTEX 또는 GITADORA만 동기화하는 기기에서 스코어가 통계에 반영되지 않던 문제를 수정했습니다."
+zh:
+  title: "修正同步一首都讀不到時仍顯示成功等問題"
+  sections:
+    - heading: "錯誤修正"
+      items:
+        - title: "0 筆同步顯示為成功"
+          desc: "e-amusement 同步一首都讀不到時，會顯示「取得完成・0 筆」如同成功。現在會判斷原因（基本課程未生效、登入失效等）並以失敗顯示原因。"
+        - title: "遊玩記錄遺漏"
+          desc: "修正將 0 筆視為成功，導致下次同步誤判差異而漏掉遊玩記錄的問題。"
+        - title: "僅同步 SDVX 或 GITADORA 的裝置的統計"
+          desc: "修正僅同步 SOUND VOLTEX 或 GITADORA 的裝置，成績未反映到統計的問題。"

@@ -1,0 +1,188 @@
+id: "2026-11-05"
+kind: release
+version: "1.3.20261105"
+date: "2026-11-03"
+ja:
+  title: "beatmania IIDX の同期の不具合を修正し、端末ごとのバックアップと Tier表の絞り込みを追加しました"
+  lead: "beatmania IIDX の同期が失敗する・終わらない不具合を修正し、端末ごとのバックアップ、Tier表の絞り込み、アプリ内通知の「すべて既読」などを追加しました。"
+  sections:
+    - heading: "同期"
+      items:
+        - title: "IIDX の同期の不具合を修正"
+          desc: "beatmania IIDX の同期が失敗する・終わらない不具合を修正しました。公式の曲詳細は1回のログインで約30曲を超えると返らなくなるため、曲詳細（MISS COUNT・選曲回数）は最近遊んだ曲だけを読み、返らなくなったら残りを次の同期で読みます。"
+        - title: "IIDX の同期を続きから再開"
+          desc: "beatmania IIDX で、止めた同期・止まった同期を続きから再開できます。「再開」の下の「最初からやり直す」で、最初から読み直せます。"
+        - title: "クイック同期が失敗したあと"
+          desc: "クイック同期が失敗したあとに同期を押すと、今の設定から組み直して同期するように修正しました。取る機種が無いときは同期シートを開きます。"
+    - heading: "バックアップと複数の端末"
+      items:
+        - title: "端末ごとのバックアップ"
+          list:
+            - "バックアップを端末ごとに保存します。戻すときに2台以上あれば、どの端末のバックアップを戻すかを機種名で選べます"
+            - "同期のあとに自動でバックアップします"
+            - "同じバックアップコードの端末どうしで、受けた課題・受け付け停止・お気に入りのリスト・手入力の記録・参加中のスコアタを揃えます"
+          media: {type: video, src: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.mp4", poster: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.jpg"}
+    - heading: "課題・スコアタ・通知"
+      items:
+        - title: "履歴の削除と通知の設定"
+          list:
+            - "送った課題の履歴を、行を左へスワイプして削除できます（返事待ちの課題は注意を表示）"
+            - "通しのスコアタに、一覧と詳細で「通し」の印を表示します"
+            - "アプリ内通知に「すべて既読」を追加しました。操作の要らない通知は、見たらホームの点が消えます"
+            - "投げた課題への返事の通知を、一言なし（既定オフ）と一言つき（既定オン）に分けて設定できます"
+          media: {type: video, src: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.mp4", poster: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.jpg"}
+    - heading: "楽曲一覧・Tier表"
+      items:
+        - title: "絞り込みと表示"
+          list:
+            - "楽曲一覧に「メモあり」の絞り込みを追加しました"
+            - "全体の上位にいる譜面は、偏差値の見出しに全体の順位を表示します"
+            - "Tier表：小数レベルや束ねた中の1レベル、全機種のバージョン（版のロゴで表示）で絞り込めます。絞った状態で画像を共有できます"
+            - "pop'n music：緑（EASY）・橙（ASSIST）のメダルを、絞り込み・統計・Tier表で銅（CLEAR）と別の段にしました"
+          media: {type: video, src: "1cbbc156-79eb-4938-a940-2db0446615cd.mp4", poster: "1cbbc156-79eb-4938-a940-2db0446615cd.jpg"}
+    - heading: "そのほか"
+      items:
+        - title: "成果画像の修正"
+          list:
+            - "ホームの成果の「画像で共有」で、見ている機種・日付の成果画像を出すように修正しました"
+            - "IIDX の成果画像の横幅をほかの機種と揃え、クリアランプが小さくなる不具合を修正しました"
+        - title: "初回起動の機種選択"
+          desc: "初回起動の機種選択を、ロゴと機種名の2列の札に変えました。"
+en:
+  title: "beatmania IIDX sync fixes, per-device backups, and Tier List filters"
+  lead: "This release fixes beatmania IIDX sync failing or never finishing, and adds per-device backups, new Tier List filters, \"Mark all read\" for in-app notifications and more."
+  sections:
+    - heading: "Sync"
+      items:
+        - title: "IIDX sync fixed"
+          desc: "Fixed beatmania IIDX sync failing or never finishing. The official site stops returning song details after about 30 songs per login, so song details (MISS COUNT and play count) are now read only for recently played songs, and any that are not returned are read on the next sync."
+        - title: "Resume an IIDX sync"
+          desc: "On beatmania IIDX, a stopped or interrupted sync now resumes where it left off. Tap \"Start over\" below \"Resume\" to read everything again from the beginning."
+        - title: "After a failed quick sync"
+          desc: "Fixed tapping Sync after a failed quick sync: it now rebuilds the sync from your current settings. If no game is set to sync, the sync sheet opens."
+    - heading: "Backups and multiple devices"
+      items:
+        - title: "Per-device backups"
+          list:
+            - "Backups are saved per device. When restoring, if there are backups from two or more devices, choose which one to restore by device model"
+            - "Your data is backed up automatically after each sync"
+            - "Devices that share the same backup code keep received challenges, challenge pauses, favorite lists, manually entered records and joined Score Attacks in step"
+          media: {type: video, src: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.mp4", poster: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.jpg"}
+    - heading: "Challenges, Score Attack and notifications"
+      items:
+        - title: "History and notification settings"
+          list:
+            - "Swipe a row left to delete it from your sent challenge history (a warning appears for challenges still awaiting a reply)"
+            - "Score Attacks that must be played in one run are marked \"One run\" in the list and details"
+            - "Added \"Mark all read\" to in-app notifications. Notifications that need no action clear the dot on Home once you have seen them"
+            - "Notifications for replies to challenges you sent can be set separately for replies without a comment (off by default) and with a comment (on by default)"
+          media: {type: video, src: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.mp4", poster: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.jpg"}
+    - heading: "Song list and Tier Lists"
+      items:
+        - title: "Filters and display"
+          list:
+            - "Added a \"Has notes\" filter to the song list"
+            - "Charts near the top overall show their overall rank next to the T-score heading"
+            - "Tier Lists: filter by decimal level, by a single level within a grouped range, and by version for every game (shown with version logos). You can share an image of the filtered list"
+            - "pop'n music: green (EASY) and orange (ASSIST) medals now have their own rows, separate from bronze (CLEAR), in filters, stats and Tier Lists"
+          media: {type: video, src: "1cbbc156-79eb-4938-a940-2db0446615cd.mp4", poster: "1cbbc156-79eb-4938-a940-2db0446615cd.jpg"}
+    - heading: "Other"
+      items:
+        - title: "Result image fixes"
+          list:
+            - "\"Share as image\" on Home results now shows the results for the game and date you are viewing"
+            - "IIDX result images are now the same width as other games, fixing clear lamps that appeared too small"
+        - title: "Game selection on first launch"
+          desc: "The game selection on first launch now shows two columns of cards with each game's logo and name."
+ko:
+  title: "beatmania IIDX 동기화 오류 수정, 기기별 백업과 티어표 필터 추가"
+  lead: "beatmania IIDX의 동기화가 실패하거나 끝나지 않는 오류를 수정하고, 기기별 백업, 티어표 필터, 앱 내 알림의 「모두 읽음」 등을 추가했습니다."
+  sections:
+    - heading: "동기화"
+      items:
+        - title: "IIDX 동기화 오류 수정"
+          desc: "beatmania IIDX의 동기화가 실패하거나 끝나지 않는 오류를 수정했습니다. 공식 사이트의 곡 상세는 한 번 로그인에 약 30곡을 넘으면 돌아오지 않기 때문에, 곡 상세(MISS COUNT・선곡 횟수)는 최근 플레이한 곡만 읽고, 돌아오지 않게 되면 나머지는 다음 동기화에서 읽습니다."
+        - title: "IIDX 동기화 이어서 재개"
+          desc: "beatmania IIDX에서 멈춘 동기화・중단된 동기화를 이어서 재개할 수 있습니다. 「재개」 아래의 「처음부터 다시」로 처음부터 다시 읽을 수 있습니다."
+        - title: "빠른 동기화 실패 후"
+          desc: "빠른 동기화가 실패한 뒤 동기화를 누르면 현재 설정으로 다시 구성해 동기화하도록 수정했습니다. 가져올 기종이 없으면 동기화 시트를 엽니다."
+    - heading: "백업과 여러 기기"
+      items:
+        - title: "기기별 백업"
+          list:
+            - "백업을 기기별로 저장합니다. 복원할 때 2대 이상이면 어느 기기의 백업을 복원할지 기기명으로 고를 수 있습니다"
+            - "동기화 후 자동으로 백업합니다"
+            - "같은 백업 코드의 기기끼리 받은 과제・접수 중지・즐겨찾기 목록・수동 기록・참가 중인 스코어 어택을 맞춥니다"
+          media: {type: video, src: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.mp4", poster: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.jpg"}
+    - heading: "과제・스코어 어택・알림"
+      items:
+        - title: "기록 삭제와 알림 설정"
+          list:
+            - "보낸 과제 기록을 행을 왼쪽으로 스와이프해 삭제할 수 있습니다(답장 대기 중인 과제는 주의를 표시)"
+            - "연속 플레이 스코어 어택에 목록과 상세에서 「연속 플레이」 표시를 합니다"
+            - "앱 내 알림에 「모두 읽음」을 추가했습니다. 조작이 필요 없는 알림은 확인하면 홈의 점이 사라집니다"
+            - "보낸 과제에 대한 답장 알림을 한마디 없음(기본 꺼짐)과 한마디 있음(기본 켜짐)으로 나눠 설정할 수 있습니다"
+          media: {type: video, src: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.mp4", poster: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.jpg"}
+    - heading: "곡 목록・티어표"
+      items:
+        - title: "필터와 표시"
+          list:
+            - "곡 목록에 「메모 있음」 필터를 추가했습니다"
+            - "전체 상위에 있는 채보는 T점수 제목에 전체 순위를 표시합니다"
+            - "티어표: 소수점 레벨, 묶인 레벨 중 하나, 전 기종 버전(버전 로고로 표시)으로 필터링할 수 있습니다. 필터링한 상태로 이미지를 공유할 수 있습니다"
+            - "pop'n music: 초록(EASY)・주황(ASSIST) 메달을 필터・통계・티어표에서 동메달(CLEAR)과 다른 단으로 분리했습니다"
+          media: {type: video, src: "1cbbc156-79eb-4938-a940-2db0446615cd.mp4", poster: "1cbbc156-79eb-4938-a940-2db0446615cd.jpg"}
+    - heading: "기타"
+      items:
+        - title: "성과 이미지 수정"
+          list:
+            - "홈 성과의 「이미지로 공유」에서 보고 있는 기종・날짜의 성과 이미지를 내도록 수정했습니다"
+            - "IIDX 성과 이미지의 가로 폭을 다른 기종과 맞춰, 클리어 램프가 작아지던 오류를 수정했습니다"
+        - title: "첫 실행 시 기종 선택"
+          desc: "첫 실행 시 기종 선택을 로고와 기종명이 있는 2열 카드로 바꿨습니다."
+zh:
+  title: "修正 beatmania IIDX 的同步問題，並新增依裝置備份與 Tier表篩選"
+  lead: "本次更新修正了 beatmania IIDX 同步失敗或無法結束的問題，並新增依裝置備份、Tier表篩選、應用程式內通知的「全部已讀」等。"
+  sections:
+    - heading: "同步"
+      items:
+        - title: "修正 IIDX 的同步問題"
+          desc: "修正了 beatmania IIDX 同步失敗或無法結束的問題。官方的曲目詳細在一次登入中超過約 30 首就不再回傳，因此曲目詳細（MISS COUNT・選曲次數）只讀取最近遊玩的曲目，不再回傳時，剩下的會在下次同步時讀取。"
+        - title: "IIDX 的同步可從中斷處繼續"
+          desc: "beatmania IIDX 中，手動停止或中途停止的同步，都能從中斷處繼續。點選「繼續」下方的「從頭開始」，可從頭重新讀取。"
+        - title: "快速同步失敗之後"
+          desc: "修正為快速同步失敗後按下同步時，會依目前的設定重新組合並同步。沒有要取得的機種時，會開啟同步面板。"
+    - heading: "備份與多台裝置"
+      items:
+        - title: "依裝置備份"
+          list:
+            - "依裝置分別儲存備份。還原時若有 2 台以上，可依機型名稱選擇要還原哪台裝置的備份"
+            - "同步後自動備份"
+            - "使用相同備份碼的裝置之間，同步收到的課題、暫停接受、收藏清單、手動紀錄與參加中的分數挑戰"
+          media: {type: video, src: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.mp4", poster: "384a2324-fe02-4bf9-8158-f43c0cc7edd5.jpg"}
+    - heading: "課題・分數挑戰・通知"
+      items:
+        - title: "刪除紀錄與通知設定"
+          list:
+            - "已送出的課題紀錄，可將該行向左滑動刪除（等待回覆的課題會顯示提醒）"
+            - "需連續遊玩的分數挑戰，會在列表與詳細中顯示「連續遊玩」標記"
+            - "應用程式內通知新增「全部已讀」。不需操作的通知，看過後首頁的圓點就會消失"
+            - "對已送出課題的回覆通知，可依無留言（預設關閉）與有留言（預設開啟）分別設定"
+          media: {type: video, src: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.mp4", poster: "1b8934e8-a748-444d-b81b-2fb1b9d5ecdd.jpg"}
+    - heading: "樂曲一覽・Tier表"
+      items:
+        - title: "篩選與顯示"
+          list:
+            - "樂曲一覽新增「有備註」篩選"
+            - "位於整體前段的譜面，會在T分數標題旁顯示整體排名"
+            - "Tier表：可依小數點等級、合併等級中的單一等級、所有機種的版本（以版本標誌顯示）篩選，並可在篩選後分享圖片"
+            - "pop'n music：綠色（EASY）・橙色（ASSIST）獎章在篩選、統計與 Tier表中，與銅獎章（CLEAR）分開成不同段"
+          media: {type: video, src: "1cbbc156-79eb-4938-a940-2db0446615cd.mp4", poster: "1cbbc156-79eb-4938-a940-2db0446615cd.jpg"}
+    - heading: "其他"
+      items:
+        - title: "成果圖片的修正"
+          list:
+            - "修正首頁成果的「以圖片分享」，改為輸出正在檢視的機種與日期的成果圖片"
+            - "IIDX 成果圖片的寬度與其他機種一致，修正通關燈號變小的問題"
+        - title: "首次啟動的機種選擇"
+          desc: "首次啟動的機種選擇，改為顯示標誌與機種名稱的 2 欄卡片。"

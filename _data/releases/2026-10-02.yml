@@ -1,0 +1,244 @@
+id: "2026-10-02"
+kind: release
+version: "1.2.20261002"
+date: "2026-09-30"
+ja:
+  title: "スコアタのコメント、譜面ごとの判定調整とハイスピ、成果画像の「プレーした曲」を追加しました"
+  sections:
+    - heading: "スコアタのコメント"
+      items:
+        - title: "コメントを残す"
+          desc: "参加中の大会の課題曲タブに「コメントを残す」を置きました。開催中に書いたコメントは、主催者の結果画像で総合ランキングの名前の下に載ります（41字まで）。"
+        - title: "ランキングにも表示"
+          desc: "アプリのランキング（総合）でも、名前の下にコメントが出ます。結果画像の画面の入力欄も「コメントを残す」にそろえました。"
+    - heading: "判定調整とハイスピ"
+      items:
+        - title: "判定調整を「音」と「描画」に分けました"
+          desc: "曲詳細の判定調整を「判定調整(音)」とし、DDR・SDVX・GITADORA では「判定調整(描画)」も譜面ごとに持てるようにしました。"
+        - title: "ハイスピを譜面ごとに"
+          desc: "ハイスピも譜面ごとに控えられます。既定値は設定画面で機種ごとに決め、既定と違う譜面は数字を反転・太字で出します。"
+    - heading: "成果画像"
+      items:
+        - title: "「プレーした曲」でも出せる（DDR・GITADORA）"
+          desc: "今日・昨日の成果画像の表示形式の右端に「更新／プレー」の切替を置きました。記録を更新していない譜面は、その日一番良かったスコアを載せます。記録の更新が無くプレーだけした日も、成果画像を開けます。"
+    - heading: "初期値と起動時のログイン"
+      items:
+        - title: "ふだん遊ぶレベルを初期値に"
+          desc: "楽曲タブの最初の絞り込み・レベルのプリセット・Tier表の最初の帯・スコア取得の対象レベルの初期値を、プレー回数の多いレベルの帯に合わせます。一度操作した画面は変わりません。"
+        - title: "起動時にログインをチェック"
+          desc: "設定のデータの一番上に「起動時にログインをチェックする」を足しました（既定はオフ）。オンにすると、アプリを開いたときに公式サイトのログインを確かめ、ヘルスケア連携中は体重も裏で送ります。"
+    - heading: "DDR の譜面再生"
+      items:
+        - title: "8曲を追加"
+          desc: "譜面再生できる曲を8曲増やしました。"
+          list:
+            - "ライアーダンサー"
+            - "オーバーライド"
+            - "テトリス"
+            - "燭"
+            - "New Nostalgy"
+            - "Make Mi Make Mi"
+            - "BUCHiAGE 祭 DANCE"
+            - "HYSTERIA 2001"
+        - title: "クラップ音の遅れを修正"
+          desc: "起動後の初回だけクラップ音が遅れる不具合を直しました。"
+    - heading: "GITADORA・pop'n を公式に合わせました"
+      items:
+        - title: "GITADORA の曲の照合"
+          desc: "公式の曲一覧の一部の曲が、曲データと結び付かなかった問題を直しました。"
+        - title: "pop'n"
+          list:
+            - "ポップンクラスの計算を公式に合わせました（60曲を合計してから切り捨て）"
+            - "公式の曲一覧に出ない曲も、最近プレーした曲・選曲TOP20から記録を取り込みます"
+            - "一部の譜面の難易度を公式の値に直しました"
+    - heading: "その他"
+      items:
+        - title: "改善"
+          list:
+            - "平均の目標の遅れ・先行を1行で出すようにしました（例：「▼67点遅れ (単曲2,680点)」）"
+            - "課題を送る相手を、相手が公開している機種（DDR SP・DP など）で絞るようにしました"
+            - "設定を開いたままチュートリアルの見返しで「設定」を選んでも、再生されるようにしました"
+        - title: "不具合の修正"
+          list:
+            - "フレアスキル対象楽曲など、帯に分けた共有画像で、壁紙が1本目の帯に写らない不具合を直しました"
+            - "楽曲一覧の共有画像で、全体偏差値の譜面があるとアプリが落ちる不具合を直しました"
+en:
+  title: "Score Attack comments, per-chart Judge Timing and Hi-Speed, and \"Played\" songs in result images"
+  sections:
+    - heading: "Score Attack comments"
+      items:
+        - title: "Leave a comment"
+          desc: "The Challenge songs tab of a Score Attack you have joined now has \"Leave a comment\". A comment written while the Score Attack is running appears under your name in the overall ranking on the host's result image (up to 41 characters)."
+        - title: "Shown in rankings too"
+          desc: "The in-app ranking (Overall) also shows the comment under your name. The input field on the result image screen is now labelled \"Leave a comment\" as well."
+    - heading: "Judge Timing and Hi-Speed"
+      items:
+        - title: "Judge Timing split into \"Audio\" and \"Visual\""
+          desc: "Judge Timing on song details is now \"Judge Timing (Audio)\", and on DDR, SDVX and GITADORA you can also keep \"Judge Timing (Visual)\" per chart."
+        - title: "Hi-Speed per chart"
+          desc: "Hi-Speed can be saved per chart too. Set the default for each game in Settings; charts that differ from the default show the number inverted and in bold."
+    - heading: "Result images"
+      items:
+        - title: "Show \"Played\" songs (DDR and GITADORA)"
+          desc: "The format picker for today's and yesterday's result images has an \"Updated / Played\" switch at the right end. Charts where you did not beat your record show your best score of the day. You can also open the result image on days when you only played and did not update any record."
+    - heading: "Defaults and login at launch"
+      items:
+        - title: "Defaults match the levels you play"
+          desc: "The first filter on the Songs tab, the level presets, the first band of the Tier List and the target levels for score fetching now start at the level band you play most. Screens you have already changed stay as they are."
+        - title: "Check login at launch"
+          desc: "\"Check login at launch\" is now at the top of Data in Settings (off by default). When it is on, the app checks your login to the official site when it opens, and sends your weight in the background while Health app sync is on."
+    - heading: "DDR chart playback"
+      items:
+        - title: "8 more songs"
+          desc: "Eight more songs can now be played back."
+          list:
+            - "ライアーダンサー"
+            - "オーバーライド"
+            - "テトリス"
+            - "燭"
+            - "New Nostalgy"
+            - "Make Mi Make Mi"
+            - "BUCHiAGE 祭 DANCE"
+            - "HYSTERIA 2001"
+        - title: "Clap sound lag fixed"
+          desc: "Fixed the clap sound lagging only on the first playback after launch."
+    - heading: "GITADORA and pop'n follow the official site"
+      items:
+        - title: "GITADORA song matching"
+          desc: "Fixed some songs on the official song list not matching the song data."
+        - title: "pop'n"
+          list:
+            - "pop'n class is now calculated the official way (the 60 songs are summed before rounding down)"
+            - "Records are imported from recently played songs and the top 20 song picks, even for songs missing from the official song list"
+            - "Corrected the difficulty of some charts to the official values"
+    - heading: "Other"
+      items:
+        - title: "Improvements"
+          list:
+            - "Being behind or ahead on an average goal now fits on one line, e.g. \"▼67 pts behind (2,680 per song)\""
+            - "When you send a challenge, the list of recipients is narrowed to the games they make public (DDR SP, DP and so on)"
+            - "Choosing \"Settings\" when replaying the tutorial now works even while Settings is open"
+        - title: "Fixes"
+          list:
+            - "Fixed the wallpaper not showing in the first band of banded share images such as Flare Skill target songs"
+            - "Fixed the app crashing when sharing a song list image that includes charts with an overall T-score"
+ko:
+  title: "스코어 어택 코멘트, 채보별 판정 조정과 하이스피드, 성과 이미지의 「플레이한 곡」 추가"
+  sections:
+    - heading: "스코어 어택 코멘트"
+      items:
+        - title: "코멘트 남기기"
+          desc: "참가 중인 스코어 어택의 과제곡 탭에 「코멘트 남기기」를 넣었습니다. 개최 중에 쓴 코멘트는 주최자의 결과 이미지에서 종합 랭킹의 이름 아래에 실립니다(41자까지)."
+        - title: "랭킹에도 표시"
+          desc: "앱의 랭킹(종합)에서도 이름 아래에 코멘트가 나옵니다. 결과 이미지 화면의 입력란도 「코멘트 남기기」로 맞췄습니다."
+    - heading: "판정 조정과 하이스피드"
+      items:
+        - title: "판정 조정을 「음」과 「화면」으로 분리"
+          desc: "곡 상세의 판정 조정을 「판정 조정(음)」으로 하고, DDR·SDVX·GITADORA에서는 「판정 조정(화면)」도 채보별로 가질 수 있게 했습니다."
+        - title: "하이스피드를 채보별로"
+          desc: "하이스피드도 채보별로 기록할 수 있습니다. 기본값은 설정 화면에서 기종별로 정하고, 기본값과 다른 채보는 숫자를 반전·굵게 표시합니다."
+    - heading: "성과 이미지"
+      items:
+        - title: "「플레이한 곡」으로도 만들기(DDR·GITADORA)"
+          desc: "오늘·어제의 성과 이미지 표시 형식 오른쪽 끝에 「갱신／플레이」 전환을 넣었습니다. 기록을 갱신하지 않은 채보는 그날 가장 좋았던 스코어를 싣습니다. 기록 갱신 없이 플레이만 한 날에도 성과 이미지를 열 수 있습니다."
+    - heading: "초기값과 실행 시 로그인"
+      items:
+        - title: "평소 플레이하는 레벨을 초기값으로"
+          desc: "곡 탭의 첫 필터·레벨 프리셋·티어표의 첫 구간·스코어 취득 대상 레벨의 초기값을, 플레이 횟수가 많은 레벨대에 맞춥니다. 한 번 조작한 화면은 바뀌지 않습니다."
+        - title: "실행 시 로그인 확인"
+          desc: "설정의 데이터 맨 위에 「실행 시 로그인 확인」을 추가했습니다(기본값은 끔). 켜면 앱을 열 때 공식 사이트 로그인을 확인하고, 건강 앱 연동 중에는 체중도 백그라운드에서 보냅니다."
+    - heading: "DDR 채보 재생"
+      items:
+        - title: "8곡 추가"
+          desc: "채보 재생할 수 있는 곡을 8곡 늘렸습니다."
+          list:
+            - "ライアーダンサー"
+            - "オーバーライド"
+            - "テトリス"
+            - "燭"
+            - "New Nostalgy"
+            - "Make Mi Make Mi"
+            - "BUCHiAGE 祭 DANCE"
+            - "HYSTERIA 2001"
+        - title: "클랩 소리 지연 수정"
+          desc: "실행 후 첫 재생에서만 클랩 소리가 늦던 문제를 고쳤습니다."
+    - heading: "GITADORA·pop'n을 공식에 맞춤"
+      items:
+        - title: "GITADORA 곡 대조"
+          desc: "공식 곡 목록의 일부 곡이 곡 데이터와 연결되지 않던 문제를 고쳤습니다."
+        - title: "pop'n"
+          list:
+            - "pop'n 클래스 계산을 공식에 맞췄습니다(60곡을 합계한 뒤 버림)"
+            - "공식 곡 목록에 나오지 않는 곡도, 최근 플레이한 곡·선곡 TOP20에서 기록을 가져옵니다"
+            - "일부 채보의 난이도를 공식 값으로 고쳤습니다"
+    - heading: "기타"
+      items:
+        - title: "개선"
+          list:
+            - "평균 목표의 뒤처짐·앞섬을 한 줄로 표시합니다(예: 「▼67점 뒤처짐 (단곡 2,680점)」)"
+            - "과제를 보낼 상대를, 상대가 공개한 기종(DDR SP·DP 등)으로 좁힙니다"
+            - "설정을 연 채로 튜토리얼 다시 보기에서 「설정」을 골라도 재생되도록 했습니다"
+        - title: "문제 수정"
+          list:
+            - "플레어 스킬 대상곡 등 구간별로 나눈 공유 이미지에서, 배경화면이 첫 구간에 나오지 않던 문제를 고쳤습니다"
+            - "곡 목록 공유 이미지에서 전체 T점수가 있는 채보가 있으면 앱이 종료되던 문제를 고쳤습니다"
+zh:
+  title: "新增分數挑戰留言、依譜面保存判定調整與 Hi-Speed，以及成果圖片的「遊玩過的曲目」"
+  sections:
+    - heading: "分數挑戰留言"
+      items:
+        - title: "留下留言"
+          desc: "參加中的分數挑戰的課題曲分頁新增「留下留言」。分數挑戰期間寫下的留言，會刊載在主辦者結果圖片的總排行榜名字下方（最多 41 字）。"
+        - title: "排行榜也會顯示"
+          desc: "App 內的排行榜（總合）也會在名字下方顯示留言。結果圖片畫面的輸入欄也統一為「留下留言」。"
+    - heading: "判定調整與 Hi-Speed"
+      items:
+        - title: "判定調整分為「音」與「畫面」"
+          desc: "樂曲詳細的判定調整改為「判定調整(音)」，DDR、SDVX、GITADORA 另可按譜面保存「判定調整(畫面)」。"
+        - title: "按譜面保存 Hi-Speed"
+          desc: "Hi-Speed 也能按譜面保存。預設值在設定畫面中依機種決定，與預設值不同的譜面會以反白、粗體顯示數字。"
+    - heading: "成果圖片"
+      items:
+        - title: "也能以「遊玩過的曲目」產生（DDR、GITADORA）"
+          desc: "今天、昨天的成果圖片在顯示形式右端新增「更新／遊玩」切換。未更新記錄的譜面，會刊載當天最好的分數。沒有更新記錄、只有遊玩的日子，也能開啟成果圖片。"
+    - heading: "初始值與啟動時登入"
+      items:
+        - title: "初始值配合平常遊玩的等級"
+          desc: "樂曲分頁的第一個篩選、等級預設、Tier表的第一個區段、分數取得的對象等級，初始值改為配合遊玩次數最多的等級區間。操作過一次的畫面不會改變。"
+        - title: "啟動時檢查登入"
+          desc: "在設定的資料最上方新增「啟動時檢查登入」（預設為關閉）。開啟後，App 啟動時會確認官方網站的登入狀態，健康 App 連動中也會在背景傳送體重。"
+    - heading: "DDR 譜面播放"
+      items:
+        - title: "新增 8 首"
+          desc: "可播放譜面的曲目增加了 8 首。"
+          list:
+            - "ライアーダンサー"
+            - "オーバーライド"
+            - "テトリス"
+            - "燭"
+            - "New Nostalgy"
+            - "Make Mi Make Mi"
+            - "BUCHiAGE 祭 DANCE"
+            - "HYSTERIA 2001"
+        - title: "修正拍手音延遲"
+          desc: "修正啟動後僅第一次播放時拍手音延遲的問題。"
+    - heading: "GITADORA、pop'n 改為依照官方"
+      items:
+        - title: "GITADORA 曲目對照"
+          desc: "修正官方樂曲列表中部分曲目無法與曲目資料對應的問題。"
+        - title: "pop'n"
+          list:
+            - "pop'n 等級的計算改為依照官方（60 首合計後再捨去小數）"
+            - "官方樂曲列表中沒有的曲目，也會從最近遊玩的曲目與選曲 TOP20 匯入記錄"
+            - "將部分譜面的難易度修正為官方數值"
+    - heading: "其他"
+      items:
+        - title: "改善"
+          list:
+            - "平均目標的落後與領先以一行顯示（例：「▼落後 67 分（單曲 2,680 分）」）"
+            - "發送課題時，對象會依對方公開的機種（DDR SP、DP 等）篩選"
+            - "在開著設定的狀態下，從教學回顧選擇「設定」也能播放"
+        - title: "問題修正"
+          list:
+            - "修正 Flare Skill 對象曲等分段的分享圖片中，桌布未顯示在第一段的問題"
+            - "修正樂曲一覽分享圖片中，含有整體T分數的譜面時 App 會關閉的問題"

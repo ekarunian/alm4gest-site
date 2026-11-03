@@ -1,0 +1,361 @@
+---
+id: '2026-08-21'
+kind: release
+version: 1.2.20260821
+date: '2026-08-20'
+ja:
+  title: GITADORA に対応し、伸ばせる曲を絞り込むフィルタを追加しました
+  sections:
+  - heading: GITADORA に対応
+    items:
+    - title: GF と DM を分けて記録
+      desc: GF と DM のスコアを別々に管理できます。
+      media:
+        type: image
+        src: gitadora-1.jpg
+    - title: 自己ベストの判定内訳を保存
+      desc: 差分同期のたびに、自己ベストの判定内訳を自動で保存します。譜面の確認は外部サイトへのリンクです。
+      media:
+        type: image
+        src: gitadora-2.jpg
+    - title: GITADORA の楽曲一覧
+      desc: GuitarFreaks と DrumMania のスコアを取り込めます。GF（GUITAR・BASS）と DM（DRUM）でタブが分かれ、それぞれの Skill を主指標として追えます。楽曲一覧・Tier表・成長タブ・共有画像・曲別詳細は、SDVX・DDR と同じ作りで使えます。楽曲一覧の GF タブでは Gt と Ba を切り替えられます。
+      media:
+        type: image
+        src: dc95f6a9-ee22-4ff1-bb86-21ecfa435d6f.webp
+  - heading: 伸ばせる曲を絞り込む
+    items:
+    - title: 2つのフィルタを追加
+      list:
+      - 伸びしろ：スコアを伸ばせば Skill（FlareSkill・VOLFORCE など）の対象に入る曲
+      - GP先行の除外（DDR のみ）：GP先行配信の対象曲のうち、通常解禁されていない曲を外す
+      media:
+        type: video
+        src: filter.mp4
+        poster: filter.jpg
+    - title: 伸びしろで残る曲
+      desc: 伸びしろは、その譜面を伸ばし切れば中核指標の枠に入り、かつ今の値より上がる曲だけを残します。指標は SDVX が VOLFORCE、DDR がフレアスキル、GITADORA が Skill で、3機種とも使えます。
+  - heading: 楽曲詳細
+    items:
+    - title: 一つ上の帯との差
+      desc: 同レベル帯偏差値のブロックに、自分・自分の帯の中央値・一つ上の帯の中央値の3点を並べ、一つ上の帯との差を表示します。印は丸・三角・四角の形で区別し、色だけに頼りません。
+    - title: スコア履歴の数値
+      desc: スコア履歴に、各回のスコアの数値を表示します。
+      media:
+        type: image
+        src: detail-1.jpg
+    - title: スコア履歴のグラフ
+      desc: スコア履歴の折れ線に、日付の目盛りと期間の切り替え（3ヶ月・1年・全期間）を加えました。記録の一覧は畳んだ状態で置いています。
+  - heading: 同期
+    items:
+    - title: "「昨日の成果」を選べる"
+      desc: プレイ当日に前回の同期忘れに気づいたら、プレイ前に「昨日の成果」で同期し、プレイ後に「今日の成果」で同期すると、その日の成果だけをまとめられます。
+      media:
+        type: image
+        src: sync-yesterday.jpg
+    - title: 記録する日付
+      desc: 同期した成果を、「今日のプレー」として記録するか、「前回同期から昨日までの成果」として記録するかを選べます。
+  - heading: Tier表と共有画像
+    items:
+    - title: Tier表
+      list:
+      - 作成時のレベル・指標・区分の選び方を改善
+      - 自分のスコアとグレードを表示
+      - 曲数が多い（SDVX など）画像の出力でアプリが落ちる不具合を修正。画像の容量を減らしました
+      media:
+        type: video
+        src: tier.mp4
+        poster: tier.jpg
+    - title: Tier表のセル
+      desc: セルの左上にクリアランプ・フレア・グレードの印を、中央下にスコアを表示します。
+    - title: 高難度の共有画像
+      desc: SDVX の Lv16〜18 で、Tier表の共有画像が作れなかった不具合を修正しました。
+    - title: 共有画像の見た目を統一
+      desc: 機能ごとに違っていた共有画像の見た目を揃えました。出力は右上のアイコンから。あわせて画面上部の配置を詰め、メインの表示を広くしました。
+      media:
+        type: video
+        src: share-image.mp4
+        poster: share-image.jpg
+    - title: 共有画像の5つの導線
+      desc: 成果・対象楽曲・楽曲一覧・Tier表・成長の5つの導線で、共有画像の見た目と操作を揃えました。
+  - heading: ウィジェットと配置変更
+    items:
+    - title: 目標ウィジェットと並べ替え
+      list:
+      - 目標ウィジェットのグラフで、文字が重ならないようにしました
+      - ウィジェットの配置変更や、楽曲一覧の表示プリセットの並べ替えなど、配置を変える操作を改善しました
+      media:
+        type: video
+        src: ui.mp4
+        poster: ui.jpg
+    - title: 成長タブのグラフ
+      desc: 目標ウィジェットの横軸に開始日と開始値を、凡例に着地見込みを表示します。集計の棒グラフでは、年をまたぐ月の表記を整えました。
+    - title: プリセットの並べ替え方
+      desc: プリセットを長押しして「並び順を変更」を選ぶと、プリセットが揺れて、つかんだまま左右へ動かせます。プリセット以外の場所をタップすると確定します。
+en:
+  title: GITADORA support, and filters to find songs you can raise
+  sections:
+  - heading: GITADORA support
+    items:
+    - title: Separate records for GF and DM
+      desc: GF and DM scores are managed separately.
+      media:
+        type: image
+        src: gitadora-1.jpg
+    - title: Judgement breakdown of personal bests
+      desc: Each incremental sync automatically saves the judgement breakdown of your personal bests. Chart previews link to an external site.
+      media:
+        type: image
+        src: gitadora-2.jpg
+    - title: GITADORA song list
+      desc: You can import your GuitarFreaks and DrumMania scores. GF (GUITAR / BASS) and DM (DRUM) get their own tabs, each tracking its own Skill as the core metric. The song list, Tier List, Growth tab, share images and song details work the same way they do for SDVX and DDR. In the song list, the GF tab switches between Gt and Ba.
+      media:
+        type: image
+        src: e3d6b3ac-4ed2-4e58-9f00-1cd1f574168b.webp
+  - heading: Find songs you can raise
+    items:
+    - title: Two new filters
+      list:
+      - 'Room to grow: songs that would enter your Skill slots (FlareSkill, VOLFORCE, etc.) if you raise their score'
+      - 'Exclude early access (DDR only): removes songs in GP early access that haven''t been unlocked normally'
+      media:
+        type: video
+        src: filter.mp4
+        poster: filter.jpg
+    - title: What "Room to grow" keeps
+      desc: Room to grow keeps only the charts that would enter your core-metric slots if you played them out, and that would also raise your current value. The metric is VOLFORCE on SDVX, Flare Skill on DDR and Skill on GITADORA, and it works on all three games.
+  - heading: Song details
+    items:
+    - title: Gap to the band above
+      desc: 'The same-level T-score block lines up three points: you, your band''s median and the median of the band above, and shows how far you are from that band. The marks are told apart by shape (circle, triangle, square), not by color alone.'
+    - title: Numbers in your score history
+      desc: Your score history now shows the score of each entry.
+      media:
+        type: image
+        src: detail-1.jpg
+    - title: Score history graph
+      desc: The score history line gained date labels and a range switch (3 months, 1 year, all time). The record list is collapsed by default.
+  - heading: Sync
+    items:
+    - title: Choose "Yesterday's results"
+      desc: If you notice on the day of play that you forgot to sync last time, sync with "Yesterday's results" before playing, then with "Today's results" after playing, to get only that day's results.
+      media:
+        type: image
+        src: sync-yesterday.jpg
+    - title: Which date results count as
+      desc: You can record a synced result either as "played today" or as "everything since the last sync up to yesterday".
+  - heading: Tier List and share images
+    items:
+    - title: Tier List
+      list:
+      - Easier selection of level, metric and category when creating one
+      - Shows your own score and grade
+      - Fixed a crash when exporting images with many songs (such as SDVX) by reducing the image size
+      media:
+        type: video
+        src: tier.mp4
+        poster: tier.jpg
+    - title: Tier List cells
+      desc: Each cell shows the clear lamp, flare or grade mark at the top left and your score at the bottom center.
+    - title: Share images on high levels
+      desc: Fixed Tier List share images not being produced for SDVX Lv16–18.
+    - title: One look for share images
+      desc: Share images, which looked different for each feature, now share one look. Export from the icon at the top right. The top of the screen is also more compact, giving the main content more room.
+      media:
+        type: video
+        src: share-image.mp4
+        poster: share-image.jpg
+    - title: Five share entry points
+      desc: 'Results, target songs, song list, Tier List and growth: all five share entry points now have one look and one set of controls.'
+  - heading: Widgets and rearranging
+    items:
+    - title: Goal widget and reordering
+      list:
+      - Text no longer overlaps in the goal widget's graph
+      - Improved rearranging, such as moving widgets and reordering song list presets
+      media:
+        type: video
+        src: ui.mp4
+        poster: ui.jpg
+    - title: Growth tab graphs
+      desc: The goal widget shows the start date and starting value on its axis, and the projected landing value in the legend. Monthly bars now label months that cross a year boundary correctly.
+    - title: How to reorder presets
+      desc: 'Long-press a preset and choose "Change order": the presets start to wobble and you can drag them left and right. Tap anywhere outside the presets to confirm.'
+ko:
+  title: GITADORA 지원과, 올릴 수 있는 곡을 좁히는 필터 추가
+  sections:
+  - heading: GITADORA 지원
+    items:
+    - title: GF와 DM을 나누어 기록
+      desc: GF와 DM의 스코어를 따로 관리할 수 있습니다.
+      media:
+        type: image
+        src: gitadora-1.jpg
+    - title: 자기 최고 기록의 판정 내역 저장
+      desc: 차분 동기화할 때마다 자기 최고 기록의 판정 내역을 자동으로 저장합니다. 보면 확인은 외부 사이트 링크입니다.
+      media:
+        type: image
+        src: gitadora-2.jpg
+    - title: GITADORA 곡 목록
+      desc: GuitarFreaks와 DrumMania의 스코어를 가져올 수 있습니다. GF(GUITAR·BASS)와 DM(DRUM)은 탭이 나뉘며, 각각의 Skill을 주요 지표로 확인할 수 있습니다. 곡 목록·티어표·성장 탭·공유 이미지·곡 상세는 SDVX·DDR과 같은 방식으로 쓸 수 있습니다. 곡 목록의 GF 탭에서는 Gt와 Ba를 전환할 수 있습니다.
+      media:
+        type: image
+        src: e3d6b3ac-4ed2-4e58-9f00-1cd1f574168b.webp
+  - heading: 올릴 수 있는 곡 좁히기
+    items:
+    - title: 필터 2가지 추가
+      list:
+      - '성장 여지: 스코어를 올리면 Skill(FlareSkill·VOLFORCE 등) 대상에 들어가는 곡'
+      - '선행 플레이 제외(DDR 한정): 선행 플레이 대상곡 중 일반 해금되지 않은 곡을 제외'
+      media:
+        type: video
+        src: filter.mp4
+        poster: filter.jpg
+    - title: 성장 여지로 남는 곡
+      desc: 성장 여지는 그 채보를 끝까지 올리면 핵심 지표의 대상에 들어가고, 지금 값보다 오르는 곡만 남깁니다. 지표는 SDVX가 VOLFORCE, DDR이 플레어 스킬, GITADORA가 Skill이며, 세 기종 모두에서 쓸 수 있습니다.
+  - heading: 곡 상세
+    items:
+    - title: 한 단계 위 구간과의 차이
+      desc: 같은 레벨대 T점수 블록에 자신·자기 구간의 중앙값·한 단계 위 구간의 중앙값 3점을 나란히 놓고, 한 단계 위 구간과의 차이를 표시합니다. 표시는 원·삼각형·사각형의 모양으로 구분해 색에만 의존하지 않습니다.
+    - title: 스코어 이력의 수치
+      desc: 스코어 이력에 각 회차의 스코어 수치를 표시합니다.
+      media:
+        type: image
+        src: detail-1.jpg
+    - title: 스코어 이력 그래프
+      desc: 스코어 이력 꺾은선에 날짜 눈금과 기간 전환(3개월·1년·전체 기간)을 추가했습니다. 기록 목록은 접힌 상태로 둡니다.
+  - heading: 동기화
+    items:
+    - title: "'어제의 성과' 선택"
+      desc: 플레이 당일에 지난번 동기화를 잊은 것을 알아차리면, 플레이 전에 '어제의 성과'로, 플레이 후에 '오늘의 성과'로 동기화해 그날의 성과만 정리할 수 있습니다.
+      media:
+        type: image
+        src: sync-yesterday.jpg
+    - title: 기록할 날짜
+      desc: 동기화한 성과를 '오늘의 플레이'로 기록할지, '지난 동기화부터 어제까지의 성과'로 기록할지 고를 수 있습니다.
+  - heading: 티어표와 공유 이미지
+    items:
+    - title: 티어표
+      list:
+      - 작성 시 레벨·지표·구분 선택 방식 개선
+      - 자신의 스코어와 그레이드 표시
+      - 곡 수가 많은(SDVX 등) 이미지를 내보낼 때 앱이 종료되던 문제를 이미지 용량을 줄여 수정
+      media:
+        type: video
+        src: tier.mp4
+        poster: tier.jpg
+    - title: 티어표 칸
+      desc: 각 칸의 왼쪽 위에 클리어 램프·플레어·그레이드 표시를, 가운데 아래에 스코어를 표시합니다.
+    - title: 고난도 공유 이미지
+      desc: SDVX Lv16~18에서 티어표 공유 이미지가 만들어지지 않던 문제를 수정했습니다.
+    - title: 공유 이미지 모양 통일
+      desc: 기능마다 달랐던 공유 이미지의 모양을 통일했습니다. 오른쪽 위 아이콘에서 내보냅니다. 화면 상단 배치도 줄여 메인 표시를 넓혔습니다.
+      media:
+        type: video
+        src: share-image.mp4
+        poster: share-image.jpg
+    - title: 공유 이미지의 5가지 진입점
+      desc: 성과·대상 곡·곡 목록·티어표·성장의 5가지 진입점에서 공유 이미지의 모양과 조작을 통일했습니다.
+  - heading: 위젯과 배치 변경
+    items:
+    - title: 목표 위젯과 순서 변경
+      list:
+      - 목표 위젯 그래프에서 글자가 겹치지 않게 했습니다
+      - 위젯 배치 변경, 곡 목록 표시 프리셋 순서 변경 등 배치를 바꾸는 조작을 개선했습니다
+      media:
+        type: video
+        src: ui.mp4
+        poster: ui.jpg
+    - title: 성장 탭 그래프
+      desc: 목표 위젯의 가로축에 시작일과 시작값을, 범례에 도달 전망을 표시합니다. 집계 막대그래프에서는 해를 넘기는 달의 표기를 정리했습니다.
+    - title: 프리셋 순서 바꾸는 법
+      desc: 프리셋을 길게 눌러 '순서 변경'을 고르면 프리셋이 흔들리고, 잡은 채로 좌우로 옮길 수 있습니다. 프리셋 이외의 곳을 탭하면 확정됩니다.
+zh:
+  title: 支援 GITADORA，並新增篩選可提升樂曲的功能
+  sections:
+  - heading: 支援 GITADORA
+    items:
+    - title: GF 與 DM 分開記錄
+      desc: GF 與 DM 的分數可分開管理。
+      media:
+        type: image
+        src: gitadora-1.jpg
+    - title: 儲存個人最佳的判定明細
+      desc: 每次差分同步時，自動儲存個人最佳的判定明細。譜面確認為外部網站的連結。
+      media:
+        type: image
+        src: gitadora-2.jpg
+    - title: GITADORA 樂曲一覽
+      desc: 可匯入 GuitarFreaks 與 DrumMania 的分數。GF（GUITAR・BASS）與 DM（DRUM）分為不同分頁，可分別以各自的 Skill 作為主要指標追蹤。樂曲一覽・Tier表・成長分頁・分享圖片・樂曲詳細，皆與 SDVX・DDR 以相同方式使用。樂曲一覽的 GF 分頁可切換 Gt 與 Ba。
+      media:
+        type: image
+        src: e3d6b3ac-4ed2-4e58-9f00-1cd1f574168b.webp
+  - heading: 篩選可提升的樂曲
+    items:
+    - title: 新增 2 種篩選
+      list:
+      - 提升空間：只要提升分數就能進入 Skill（FlareSkill・VOLFORCE 等）名額的樂曲
+      - 排除搶先遊玩（僅 DDR）：排除搶先遊玩對象曲中尚未一般解禁的樂曲
+      media:
+        type: video
+        src: filter.mp4
+        poster: filter.jpg
+    - title: 提升空間保留的樂曲
+      desc: 提升空間只保留將該譜面分數提升到極限後，能進入核心指標名額、且會比目前數值更高的樂曲。指標為 SDVX 的 VOLFORCE、DDR 的 Flare Skill、GITADORA 的 Skill，三個機種皆可使用。
+  - heading: 樂曲詳細
+    items:
+    - title: 與上一段的差距
+      desc: 同等級區間T分數區塊並列自己、所屬區段中位數、上一段中位數 3 個點，並顯示與上一段的差距。標記以圓形・三角形・四方形的形狀區分，不只依賴顏色。
+    - title: 分數紀錄的數值
+      desc: 分數紀錄會顯示每次的分數數值。
+      media:
+        type: image
+        src: detail-1.jpg
+    - title: 分數紀錄圖表
+      desc: 分數紀錄的折線圖新增日期刻度與期間切換（3 個月・1 年・全期間），紀錄列表預設為收合。
+  - heading: 同步
+    items:
+    - title: 可選擇「昨天的成果」
+      desc: 遊玩當天發現忘了上次同步時，遊玩前以「昨天的成果」同步、遊玩後以「今天的成果」同步，就能只整理當天的成果。
+      media:
+        type: image
+        src: sync-yesterday.jpg
+    - title: 記錄的日期
+      desc: 可選擇將同步的成果記錄為「今天的遊玩」，或「上次同步到昨天為止的成果」。
+  - heading: Tier表與分享圖片
+    items:
+    - title: Tier表
+      list:
+      - 改善建立時等級・指標・分類的選擇方式
+      - 顯示自己的分數與評級
+      - 縮減圖片容量，修正樂曲數多（SDVX 等）的圖片輸出時 App 當機的問題
+      media:
+        type: video
+        src: tier.mp4
+        poster: tier.jpg
+    - title: Tier表的格子
+      desc: 格子左上角顯示通關燈・Flare・評級標記，中央下方顯示分數。
+    - title: 高難度的分享圖片
+      desc: 修正 SDVX Lv16～18 無法產生 Tier表分享圖片的問題。
+    - title: 統一分享圖片外觀
+      desc: 統一了各功能各不相同的分享圖片外觀，從右上角圖示輸出。同時精簡畫面上方配置，讓主要內容更寬。
+      media:
+        type: video
+        src: share-image.mp4
+        poster: share-image.jpg
+    - title: 分享圖片的 5 個入口
+      desc: 成果・對象樂曲・樂曲一覽・Tier表・成長 5 個入口的分享圖片，外觀與操作皆已統一。
+  - heading: 小工具與配置變更
+    items:
+    - title: 目標小工具與排序
+      list:
+      - 目標小工具的圖表文字不再重疊
+      - 改善小工具配置變更、樂曲一覽顯示預設排序等變更配置的操作
+      media:
+        type: video
+        src: ui.mp4
+        poster: ui.jpg
+    - title: 成長分頁的圖表
+      desc: 目標小工具的橫軸顯示開始日與起始值，圖例顯示預估達成值。統計長條圖中，跨年月份的標示也已調整。
+    - title: 預設排序的方式
+      desc: 長按預設並選擇「變更排序」，預設會開始晃動，可直接拖曳左右移動。點選預設以外的地方即可確定。
