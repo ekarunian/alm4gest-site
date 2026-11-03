@@ -1315,7 +1315,7 @@ html[lang="ko"] .hero-lead {
 .release-toc a { border-radius: 10px; }
 .release-list { list-style: none; margin: 0; padding: 0; }
 .release-list li { border-top: 1px solid var(--hairline); }
-.release-list li:last-child { border-bottom: 1px solid var(--hairline); }
+.release-list { border-bottom: 1px solid var(--hairline); }
 .release-list a { display: flex; flex-direction: column; gap: 8px; padding: 18px 4px; color: var(--text); text-decoration: none; }
 .release-list a:hover .release-name { color: var(--accent); }
 .release-date { color: var(--muted); font-size: 14px; }
@@ -1396,3 +1396,10 @@ budoux-ja, budoux-zh-hant { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* 技術記事（palmdoc の書き出しを影の中に置く）。色と書体を影の中へ渡す */
 .pd-host { --pd-bg: var(--bg-top); --pd-text: var(--text); --pd-heading: var(--heading); --pd-muted: var(--muted); --pd-accent: var(--accent); --pd-hairline: var(--hairline); --pd-line: var(--line-soft); --pd-card: var(--card); --pd-font: var(--font-body); margin-top: 8px; }
+
+/* 記事一覧の絞り込み。押している種類を塗る */
+.blog-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: -8px 0 20px; }
+.blog-filter button { display: inline-flex; align-items: center; min-height: 36px; padding: 4px 14px; border: 1px solid var(--hairline); border-radius: 999px; background: var(--card); color: var(--text); font: inherit; font-size: 14px; cursor: pointer; }
+.blog-filter button .release-kind { padding: 0; border: 0; background: none; font-size: 14px; color: inherit; }
+.blog-filter button[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--heading); font-weight: 700; }
+.release-list li[hidden] { display: none; }

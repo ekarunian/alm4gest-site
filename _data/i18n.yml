@@ -45,7 +45,8 @@ ja:
     zoom: "拡大して見る"
     close: "閉じる"
     title: "記事一覧"
-    kinds: { release: "リリースノート", tech: "技術記事" }
+    all: "すべて"
+    kinds: { release: "リリースノート", tech: "仕様解説" }
     date_format: "%Y年%-m月%-d日"
   og_locale: ja_JP
   html_lang: ja
@@ -138,6 +139,7 @@ en:
     zoom: "View larger"
     close: "Close"
     title: "Blog"
+    all: "All"
     kinds: { release: "Release notes", tech: "Tech article" }
     date_format: "%B %-d, %Y"
   og_locale: en_US
@@ -213,6 +215,7 @@ ko:
     zoom: "크게 보기"
     close: "닫기"
     title: "블로그"
+    all: "전체"
     kinds: { release: "릴리스 노트", tech: "기술 글" }
     date_format: "%Y년 %-m월 %-d일"
   og_locale: ko_KR
@@ -288,6 +291,7 @@ zh:
     zoom: "放大檢視"
     close: "關閉"
     title: "部落格"
+    all: "全部"
     kinds: { release: "版本說明", tech: "技術文章" }
     date_format: "%Y年%-m月%-d日"
   og_locale: zh_TW

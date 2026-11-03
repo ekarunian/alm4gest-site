@@ -59,3 +59,7 @@
   .pd .dtable td.num { display: flex; justify-content: space-between; gap: 16px; margin-top: 6px; }
   .pd .dtable td.num::before { display: inline; margin: 0; }
 }
+/* 値の比較グラフ: 狭い画面では行名が線の上に来るので、線の上に出す値ラベルの分だけ線を下げて重なりを防ぐ */
+@media (max-width: 600px) {
+  .pd .mth-vr__track:has(.mth-vr__val.is-above) { margin-top: calc(var(--type-aux) * 1.6); }
+}

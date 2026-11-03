@@ -10,10 +10,38 @@ layout: default
 <article class="doc release">
   <div class="container">
     <h1 class="doc-title">{{ i.blog.title }}</h1>
-    <ul class="release-list">
+    {%- assign kinds = list | map: "kind" | uniq -%}
+    {%- if kinds.size > 1 %}
+    <div class="blog-filter" data-blog-filter>
+      <button type="button" data-kind="" aria-pressed="true">{{ i.blog.all }}</button>
+      {%- for k in kinds %}
+      <button type="button" data-kind="{{ k }}" aria-pressed="false"><span class="release-kind kind-{{ k }}">{{ i.blog.kinds[k] }}</span></button>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    <ul class="release-list" data-blog-list>
       {%- for r in list %}
       {% include article-row.html r=r i=i lang=page.lang prefix=lang_prefix %}
       {%- endfor %}
     </ul>
   </div>
 </article>
+<script>
+(function () {
+  // 種類で絞り込む。?kind=tech のように URL でも指定できる
+  var bar = document.querySelector('[data-blog-filter]');
+  var list = document.querySelector('[data-blog-list]');
+  if (!bar || !list) return;
+  var btns = Array.prototype.slice.call(bar.querySelectorAll('button'));
+  var set = function (kind) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.kind === kind ? 'true' : 'false'); });
+    Array.prototype.forEach.call(list.children, function (li) { li.hidden = !!kind && !li.classList.contains('kind-' + kind); });
+    var u = new URL(location.href);
+    if (kind) { u.searchParams.set('kind', kind); } else { u.searchParams.delete('kind'); }
+    history.replaceState(null, '', u);
+  };
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.kind); }); });
+  var q = new URL(location.href).searchParams.get('kind');
+  if (q && btns.some(function (b) { return b.dataset.kind === q; })) set(q);
+})();
+</script>
