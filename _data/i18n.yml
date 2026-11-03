@@ -26,7 +26,7 @@ urls:
   roadmap_en: https://app.notion.com/p/804682d933bb467e95cfbb5ffb097378
   release_ja: https://app.notion.com/p/3b00513fdbf88128990bcedae004017e
   release_en: https://app.notion.com/p/3b00513fdbf881eabaffcf5baf877f68
-  basic_course: https://p.eagate.573.jp/payment/p/api_csinfo.html?course=eaBASIC
+  basic_course: https://p.eagate.573.jp/payment/p/ex_course_detail.html?course=eaBASIC
 
 machines:
   - SOUND VOLTEX
