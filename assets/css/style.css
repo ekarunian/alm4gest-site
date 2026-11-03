@@ -1223,12 +1223,13 @@ html[lang="ko"] .hero-lead {
 }
 
 /* リリースノート: 左に項目、右に1つの枠。項目と枠の画面は1対1で、押すと切り替わる */
-.release-meta { display: flex; gap: 16px; margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+.release-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+.release-meta > * { white-space: nowrap; }
 .release-meta a { color: var(--accent); }
 .doc.release .container { max-width: 1080px; }
-.release-toc ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 40px; padding: 0; list-style: none; counter-reset: toc; }
+.release-toc ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0 0 40px; padding: 0; list-style: none; counter-reset: toc; }
 .release-toc li { margin: 0; }
-.release-toc a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--card-border); border-radius: 999px; background: var(--card); color: var(--text); font-size: 14px; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+.release-toc a { display: flex; align-items: center; gap: 10px; height: 100%; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--card-border); border-radius: 999px; background: var(--card); color: var(--text); font-size: 14px; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
 .release-toc a:hover { border-color: var(--accent); color: var(--heading); text-decoration: none; }
 .release-sec-num { display: inline-flex; align-items: center; justify-content: center; line-height: 1; min-width: 1.6em; height: 1.6em; padding: 0 0.3em; border-radius: 6px; background: var(--btn); color: var(--btn-text); font-size: 0.8em; font-weight: 700; font-variant-numeric: tabular-nums; }
 .release-toc .release-sec-num { min-width: 1.5em; height: 1.5em; font-size: 12px; }
@@ -1266,28 +1267,46 @@ html[lang="ko"] .hero-lead {
   .release-body { grid-template-columns: minmax(0, 1fr) 340px; gap: 64px; }
   .release-viewer-col { position: sticky; top: 96px; order: 2; }
 }
-/* スマホ: 1項目を1枚のスライドにし、左右のスワイプか前後のボタンで送る（見出し・項目名・画面・説明）。PC は左右2列のまま */
+/* スマホ: 1項目を1枚のカードにして左右に送る。見出しのタブ・カード・進み具合を1画面に収め、そこまで来たら送るだけで読める。PC は左右2列のまま */
 .rs { display: none; }
 @media (max-width: 859px) {
   .release-body { display: none; }
   .release-body.release-body-text { display: block; }
-  .rs { display: block; }
-  .rs-track { display: flex; margin: 0 -30px; padding: 0; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .release:has(.rs) .release-toc { display: none; }
+  .rs { display: flex; flex-direction: column; height: calc(100svh - 59px); min-height: 560px; margin: 0 -30px; scroll-margin-top: -37px; }
+  /* 見出しのタブ: 横1列。今の見出しを塗る */
+  .rs-tabs { flex: none; display: flex; gap: 8px; padding: 10px 30px; overflow-x: auto; scrollbar-width: none; }
+  .rs-tabs::-webkit-scrollbar { display: none; }
+  .rs-tab { flex: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px 0 8px; border: 1px solid var(--hairline); border-radius: 999px; background: var(--card); color: var(--text); font: inherit; font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
+  .rs-tab[aria-current="true"] { border-color: var(--accent); background: rgb(var(--accent-rgb, 109 151 224) / 0.16); color: var(--heading); }
+  /* カード: 幅を少し残して次のカードをのぞかせる */
+  .rs-track { flex: 1; min-height: 0; display: flex; gap: 10px; margin: 0; padding: 4px 24px 8px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 24px; scrollbar-width: none; overscroll-behavior-x: contain; }
   .rs-track::-webkit-scrollbar { display: none; }
-  .rs-slide { flex: 0 0 100%; box-sizing: border-box; padding: 0 30px; scroll-snap-align: start; scroll-snap-stop: always; }
-  .rs-sec { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font-size: 14px; font-weight: 700; color: var(--muted); }
-  .rs-title { margin: 0 0 12px; font-size: 17px; line-height: 1.5; color: var(--heading); }
-  .rs-media { display: flex; justify-content: center; height: min(56vh, 520px); margin: 0 0 14px; }
+  .rs-slide { flex: 0 0 calc(100vw - 58px); box-sizing: border-box; display: flex; flex-direction: column; min-height: 0; padding: 14px 16px 16px; border: 1px solid var(--hairline); border-radius: 18px; background: var(--card); scroll-snap-align: center; scroll-snap-stop: always; }
+  .rs-title { flex: none; display: flex; gap: 10px; margin: 0 0 12px; font-size: 16px; line-height: 1.45; color: var(--heading); }
+  .rs-num { flex: none; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .rs-media { flex: 1; min-height: 0; display: flex; justify-content: center; margin: 0 0 12px; }
   .rs-media img, .rs-media video { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; border: 1px solid var(--hairline); border-radius: 10px; background: #04060f; }
-  .rs-text .release-row-desc, .rs-text .release-row-list > span { padding-left: 0; }
+  .rs-text { flex: none; max-height: 40%; overflow-y: auto; font-size: 14px; }
+  .rs-slide-text .rs-text { flex: 1; max-height: none; }
+  .rs-text p { margin: 0; }
+  .rs-text .release-row-desc, .rs-text .release-row-list > span { margin-top: 0; padding-left: 0; }
   .rs-text .release-row-list > span { padding-left: 1em; }
   .rs-text .release-row-list > span::before { left: 0; }
-  .rs-text p { margin: 0; }
-  .rs { scroll-margin-top: -28px; }
-  .rs-nav { display: flex; align-items: center; justify-content: center; gap: 20px; margin: 0 0 14px; }
-  .rs-nav .rv-nav { position: static; transform: none; }
-  .rs-count { min-width: 4em; margin: 0; text-align: center; font-size: 14px; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+  /* 進み具合: 見出しごとに区切った点。今の1枚は横に伸ばして塗る */
+  .rs-nav { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 18px 12px; }
+  .rs-arrow { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--hairline); border-radius: 50%; background: var(--card); color: var(--text); cursor: pointer; }
+  .rs-arrow svg { width: 18px; height: 18px; }
+  .rs-arrow:disabled { opacity: 0.3; cursor: default; }
+  .rs-dots { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 12px; }
+  .rs-dot-group { display: flex; gap: 4px; }
+  .rs-dot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: rgba(154, 167, 184, 0.35); cursor: pointer; transition: width 0.2s, background-color 0.2s; }
+  .rs-dot[aria-current="true"] { width: 22px; background: var(--accent); }
+  [data-theme="light"] .rs-dot { background: rgba(15, 23, 42, 0.18); }
+  [data-theme="light"] .rs-slide, [data-theme="light"] .rs-tab, [data-theme="light"] .rs-arrow { background: #ffffff; border-color: rgba(0, 40, 140, 0.12); }
+  [data-theme="light"] .rs-tab[aria-current="true"] { background: rgba(0, 87, 255, 0.08); border-color: var(--accent); }
 }
+.release-toc a { border-radius: 10px; }
 .release-list { list-style: none; margin: 0; padding: 0; }
 .release-list li { border-top: 1px solid var(--hairline); }
 .release-list li:last-child { border-bottom: 1px solid var(--hairline); }
@@ -1358,4 +1377,3 @@ html[lang="ko"] .hero-lead {
 /* 記事の上部（一覧へのリンク・種類・日付・版）は、狭い画面では語の途中で折らずに行ごと送る */
 .release-meta { flex-wrap: wrap; gap: 6px 14px; }
 .release-meta > * { white-space: nowrap; }
-[data-theme="light"] .rs-nav .rv-nav { background: #ffffff; border-color: rgba(0, 40, 140, 0.18); color: #0f172a; box-shadow: 0 2px 10px rgba(0, 40, 140, 0.1); }

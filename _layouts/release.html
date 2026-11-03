@@ -85,19 +85,17 @@ layout: default
     </div>
 
     {%- if total > 0 %}
-    {%- assign n = 0 -%}{%- for s in t.sections -%}{%- assign n = n | plus: s.items.size -%}{%- endfor %}
     <div class="rs" data-rs>
-      <div class="rs-nav">
-        <button type="button" class="rv-nav rs-prev" data-rs-dir="-1" aria-label="{{ i.shots.prev }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
-        <p class="rs-count" aria-live="polite"><span data-rs-pos>1</span> / {{ n }}</p>
-        <button type="button" class="rv-nav rs-next" data-rs-dir="1" aria-label="{{ i.shots.next }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
-      </div>
+      <nav class="rs-tabs" aria-label="{{ i.blog.toc }}">
+        {%- for s in t.sections %}
+        <button type="button" class="rs-tab" data-rs-sec="{{ forloop.index }}"><span class="release-sec-num">{{ forloop.index }}</span>{{ s.heading }}</button>
+        {%- endfor %}
+      </nav>
       <ol class="rs-track">
         {%- for s in t.sections %}{%- assign sn = forloop.index %}{%- for it in s.items %}
         {%- assign m = it.media %}
-        <li class="rs-slide" data-sec="{{ sn }}" data-num="{{ sn }}-{{ forloop.index }}">
-          <p class="rs-sec"><span class="release-sec-num">{{ sn }}</span>{{ s.heading }}</p>
-          <h2 class="rs-title"><span class="release-row-num">{{ sn }}-{{ forloop.index }}</span>{{ it.title }}</h2>
+        <li class="rs-slide{% unless m %} rs-slide-text{% endunless %}" data-sec="{{ sn }}">
+          <h2 class="rs-title"><span class="rs-num">{{ sn }}-{{ forloop.index }}</span><span>{{ it.title }}</span></h2>
           {%- if m %}
           <div class="rs-media">
             {%- if m.type == 'video' %}
@@ -114,8 +112,23 @@ layout: default
         </li>
         {%- endfor %}{%- endfor %}
       </ol>
+      <div class="rs-nav">
+        <button type="button" class="rs-arrow" data-rs-dir="-1" aria-label="{{ i.shots.prev }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+        <div class="rs-dots">
+          {%- assign k = 0 -%}
+          {%- for s in t.sections %}{%- assign sn = forloop.index %}
+          <span class="rs-dot-group">
+            {%- for it in s.items %}
+            <button type="button" class="rs-dot" data-rs-to="{{ k }}" aria-label="{{ sn }}-{{ forloop.index }} {{ it.title | escape }}"></button>
+            {%- assign k = k | plus: 1 -%}
+            {%- endfor %}
+          </span>
+          {%- endfor %}
+        </div>
+        <button type="button" class="rs-arrow" data-rs-dir="1" aria-label="{{ i.shots.next }}"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+      </div>
     </div>
     {%- endif %}
   </div>
 </article>
-<script src="/assets/js/release.js" defer></script>
+<script src="/assets/js/release.js?v={{ site.time | date: "%s" }}" defer></script>

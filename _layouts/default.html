@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap"></noscript>
 <script>try{if(localStorage.getItem("alm4gest-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v={{ site.time | date: "%s" }}">
 {%- if page.page_id == 'index' %}
 <link rel="preload" as="image" href="/assets/img/shots/{% if page.lang == 'ja' %}ja{% else %}en{% endif %}/01_home.webp" type="image/webp">
 <script type="application/ld+json">
@@ -108,7 +108,7 @@
   </div>
 </footer>
 {%- if page.page_id == 'index' %}
-<script src="/assets/js/shots.js" defer></script>
+<script src="/assets/js/shots.js?v={{ site.time | date: "%s" }}" defer></script>
 {%- endif %}
 <script>
 (function(){var b=document.querySelector('[data-theme-toggle]');if(!b)return;var h=document.documentElement;

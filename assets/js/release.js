@@ -1,6 +1,6 @@
 // リリースノート（記事）の画面の出し方。
 // PC: 左の項目と右の枠の画面を1対1でつなぐ。項目を押すとその画面に切り替わり、表示中の項目を強調する。
-// スマホ: 1項目を1枚のスライドにし、左右のスワイプか前後のボタンで送る。目次は見出しの最初の1枚へ飛ぶ。
+// スマホ: 1項目を1枚のカードにし、左右のスワイプ・前後のボタン・見出しのタブ・点で送る。
 // JSが無くても、PCは1枚目、スマホは横スクロールで全部見られる。
 (function () {
   'use strict';
@@ -55,49 +55,61 @@
     });
   }
 
-  // ---- スマホ: スライド
+  // ---- スマホ: 1項目1枚のカード。見出しのタブ・カード・点が連動する
   var rs = document.querySelector('[data-rs]');
-  var goSlide = function () {};
   if (rs) {
     var track = rs.querySelector('.rs-track');
     var cards = Array.prototype.slice.call(track.querySelectorAll('.rs-slide'));
-    var rsPos = rs.querySelector('[data-rs-pos]');
-    var cur = 0;
-    var current = function () { return Math.round(track.scrollLeft / track.clientWidth); };
-    var sync = function () {
-      cur = Math.max(0, Math.min(cards.length - 1, current()));
-      rsPos.textContent = cur + 1;
+    var tabs = Array.prototype.slice.call(rs.querySelectorAll('[data-rs-sec]'));
+    var tabBar = rs.querySelector('.rs-tabs');
+    var dots = Array.prototype.slice.call(rs.querySelectorAll('[data-rs-to]'));
+    var arrows = Array.prototype.slice.call(rs.querySelectorAll('[data-rs-dir]'));
+    var cur = -1;
+    var step = function () { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth; };
+    var mark = function (i) {
+      if (i === cur) return;
+      cur = i;
+      var sec = cards[i].dataset.sec;
+      dots.forEach(function (d, j) { if (j === i) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); } });
+      tabs.forEach(function (t) {
+        if (t.dataset.rsSec === sec) {
+          t.setAttribute('aria-current', 'true');
+          // 今の見出しのタブが帯の中で見えるよう、帯だけを横に送る（ページは動かさない）
+          var l = t.offsetLeft - tabBar.offsetLeft, r = l + t.offsetWidth;
+          if (l < tabBar.scrollLeft || r > tabBar.scrollLeft + tabBar.clientWidth) tabBar.scrollTo({ left: l - 24, behavior: 'smooth' });
+        } else { t.removeAttribute('aria-current'); }
+      });
+      arrows[0].disabled = i === 0;
+      arrows[1].disabled = i === cards.length - 1;
       cards.forEach(function (c, j) {
         var v = c.querySelector('video');
-        if (v) { if (j === cur && narrow.matches) { v.play().catch(function () {}); } else { v.pause(); } }
+        if (v) { if (j === i && narrow.matches) { v.play().catch(function () {}); } else { v.pause(); } }
       });
     };
-    goSlide = function (i, smooth) {
+    var go = function (i, smooth) {
       i = Math.max(0, Math.min(cards.length - 1, i));
-      cur = i;
-      rsPos.textContent = i + 1;
-      track.scrollTo({ left: i * track.clientWidth, behavior: smooth === false ? 'auto' : 'smooth' });
-      if (smooth === false) sync();
+      mark(i);
+      track.scrollTo({ left: i * step(), behavior: smooth === false ? 'auto' : 'smooth' });
     };
-    var t = null;
-    track.addEventListener('scroll', function () { clearTimeout(t); t = setTimeout(sync, 80); }, { passive: true });
-    rs.querySelectorAll('[data-rs-dir]').forEach(function (b) {
-      b.addEventListener('click', function () { goSlide(cur + Number(b.dataset.rsDir)); });
+    var pending = false;
+    track.addEventListener('scroll', function () {
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(function () { pending = false; mark(Math.max(0, Math.min(cards.length - 1, Math.round(track.scrollLeft / step())))); });
+    }, { passive: true });
+    arrows.forEach(function (b) { b.addEventListener('click', function () { go(cur + Number(b.dataset.rsDir)); }); });
+    dots.forEach(function (d) { d.addEventListener('click', function () { go(Number(d.dataset.rsTo)); }); });
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        go(cards.findIndex(function (c) { return c.dataset.sec === t.dataset.rsSec; }));
+      });
     });
-    sync();
+    mark(0);
   }
 
-  // 目次: PCはその見出しの最初の項目を表示する。スマホはその見出しの最初の1枚へ送り、スライドの所まで画面を動かす
+  // 目次（PC）: その見出しの最初の項目を表示する。スマホでは目次の代わりに見出しのタブを使う
   document.querySelectorAll('.release-toc a').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var sn = a.getAttribute('href').replace('#sec-', '');
-      if (narrow.matches && rs) {
-        e.preventDefault();
-        var k = cards.findIndex(function (c) { return c.dataset.sec === sn; });
-        if (k >= 0) goSlide(k, false);
-        rs.scrollIntoView({ block: 'start' });
-        return;
-      }
+    a.addEventListener('click', function () {
       var sec = document.querySelector(a.getAttribute('href'));
       var first = sec && sec.querySelector('.release-row[data-idx]');
       if (first && root) showPc(Number(first.dataset.idx));
