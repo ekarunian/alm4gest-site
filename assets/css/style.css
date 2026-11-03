@@ -1384,3 +1384,5 @@ html[lang="ko"] .hero-lead {
 /* 記事の上部（一覧へのリンク・種類・日付・版）は、狭い画面では語の途中で折らずに行ごと送る */
 .release-meta { flex-wrap: wrap; gap: 6px 14px; }
 .release-meta > * { white-space: nowrap; }
+/* 記事の冒頭の要約（Notion の回の書き出し） */
+.release-lead { max-width: 760px; margin: -4px 0 28px; color: var(--muted); font-size: 15px; line-height: 1.8; }

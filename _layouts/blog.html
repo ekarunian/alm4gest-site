@@ -4,7 +4,8 @@ layout: default
 {%- assign i = site.data.i18n[page.lang] -%}
 {%- assign lang_prefix = "" -%}
 {%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
-{%- assign list = site.data.releases | sort: "date" | reverse -%}
+{%- include all_releases.html -%}
+{%- assign list = all_releases -%}
 <article class="doc release">
   <div class="container">
     <h1 class="doc-title">{{ i.blog.title }}</h1>
