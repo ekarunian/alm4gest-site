@@ -70,7 +70,7 @@ ja:
     - heading: "SDVX の判定調整"
       items:
         - title: "判定調整（音）"
-          desc: "判定調整を、目盛（±50、1目盛2ms）とmsの併記で表示します。"
+          desc: "判定調整を、目盛（±50、1目盛2ms）とmsの併記で表示します。1目盛は正しくは4msで、次の版 1.2.20261024 で訂正しました。"
           media: {type: "image", src: "452212e0-bad3-4ce9-83b7-ccf31a920590.webp"}
         - title: "判定調整（描画）"
           desc: "描画の判定調整も、目盛とmsを併記します。"
@@ -155,7 +155,7 @@ en:
     - heading: "SDVX timing adjustment"
       items:
         - title: "Timing adjustment (audio)"
-          desc: "Timing adjustment is shown as steps (±50, 1 step = 2 ms) together with ms."
+          desc: "Timing adjustment is shown as steps (±50, 1 step = 2 ms) together with ms. One step is actually 4 ms; this was corrected in the next version, 1.2.20261024."
           media: {type: "image", src: "452212e0-bad3-4ce9-83b7-ccf31a920590.webp"}
         - title: "Timing adjustment (visual)"
           desc: "Visual timing adjustment also shows steps together with ms."
@@ -240,7 +240,7 @@ ko:
     - heading: "SDVX 판정 조정"
       items:
         - title: "판정 조정(소리)"
-          desc: "판정 조정을 스텝(±50, 1스텝 2ms)과 ms를 함께 표시합니다."
+          desc: "판정 조정을 스텝(±50, 1스텝 2ms)과 ms를 함께 표시합니다. 1스텝은 실제로는 4ms이며, 다음 버전 1.2.20261024에서 정정했습니다."
           media: {type: "image", src: "452212e0-bad3-4ce9-83b7-ccf31a920590.webp"}
         - title: "판정 조정(화면)"
           desc: "화면 판정 조정도 스텝과 ms를 함께 표시합니다."
@@ -325,7 +325,7 @@ zh:
     - heading: "SDVX 判定調整"
       items:
         - title: "判定調整（聲音）"
-          desc: "判定調整以刻度（±50，1 格 2ms）與 ms 並列顯示。"
+          desc: "判定調整以刻度（±50，1 格 2ms）與 ms 並列顯示。1 格實際為 4ms，已於下一版 1.2.20261024 更正。"
           media: {type: "image", src: "452212e0-bad3-4ce9-83b7-ccf31a920590.webp"}
         - title: "判定調整（畫面）"
           desc: "畫面的判定調整也並列顯示刻度與 ms。"
