@@ -110,8 +110,7 @@ layout: default
       <h2 class="en">{{ i.development.en }}</h2>
       {%- if i.development.sub != "" %}<span class="sub">{{ i.development.sub }}</span>{% endif %}
     </div>
-    {%- include all_releases.html -%}
-    {%- assign rel = all_releases -%}
+    {%- assign rel = site.data.releases | sort: "date" | reverse -%}
     <ul class="release-list reveal">
       {%- for r in rel limit: 3 %}
       <li><a href="{{ lang_prefix }}/blog/{{ r.id }}"><span class="release-date">{{ r.date | date: i.blog.date_format }}</span><span class="release-kind">{{ i.blog.kinds[r.kind] }}</span><span class="release-ver">{{ r.version }}</span><span class="release-name">{{ r[page.lang].title }}</span></a></li>

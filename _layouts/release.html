@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign r = site.data.releases[page.release_id] -%}
+{%- assign r = site.data.releases | where: "id", page.release_id | first -%}
 {%- assign t = r[page.lang] -%}
 {%- assign i = site.data.i18n[page.lang] -%}
 {%- assign lang_prefix = "" -%}
@@ -16,11 +16,7 @@ layout: default
   <div class="container">
     <p class="release-meta"><a href="{{ lang_prefix }}/blog/">{{ i.blog.title }}</a><span class="release-kind">{{ i.blog.kinds[r.kind] }}</span><span>{{ r.date | date: i.blog.date_format }}</span><span class="release-ver">{{ r.version }}</span></p>
     <h1 class="doc-title">{% include jp.html text=t.title %}</h1>
-    {%- if t.lead %}
-    <p class="release-lead">{% include jp.html text=t.lead %}</p>
-    {%- endif %}
 
-    {%- if t.sections.size > 1 %}
     <nav class="release-toc" aria-label="{{ i.blog.toc }}">
       <ol>
         {%- for s in t.sections %}
@@ -28,7 +24,6 @@ layout: default
         {%- endfor %}
       </ol>
     </nav>
-    {%- endif %}
 
     <div class="release-body{% if total == 0 %} release-body-text{% endif %}"{% if total > 0 %} data-release{% endif %}>
       <div class="release-items">
