@@ -43,7 +43,6 @@ ja:
     more: "記事をすべて見る"
     toc: "目次"
     title: "記事"
-    size: { label: "画面の大きさ", s: "小さく", m: "標準", l: "大きく" }
     kinds: { release: "リリースノート", tech: "技術記事" }
     date_format: "%Y年%-m月%-d日"
   og_locale: ja_JP
@@ -135,7 +134,6 @@ en:
     more: "See all posts"
     toc: "Contents"
     title: "Blog"
-    size: { label: "Screen size", s: "Small", m: "Medium", l: "Large" }
     kinds: { release: "Release notes", tech: "Tech article" }
     date_format: "%B %-d, %Y"
   og_locale: en_US
@@ -209,7 +207,6 @@ ko:
     more: "모든 글 보기"
     toc: "목차"
     title: "블로그"
-    size: { label: "화면 크기", s: "작게", m: "보통", l: "크게" }
     kinds: { release: "릴리스 노트", tech: "기술 글" }
     date_format: "%Y년 %-m월 %-d일"
   og_locale: ko_KR
@@ -283,7 +280,6 @@ zh:
     more: "查看所有文章"
     toc: "目錄"
     title: "部落格"
-    size: { label: "畫面大小", s: "小", m: "標準", l: "大" }
     kinds: { release: "版本說明", tech: "技術文章" }
     date_format: "%Y年%-m月%-d日"
   og_locale: zh_TW
