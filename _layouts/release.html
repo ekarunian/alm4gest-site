@@ -20,6 +20,7 @@ layout: default
     <p class="release-lead">{% include jp.html text=t.lead %}</p>
     {%- endif %}
 
+    {%- if t.sections.size > 1 %}
     <nav class="release-toc" aria-label="{{ i.blog.toc }}">
       <ol>
         {%- for s in t.sections %}
@@ -27,6 +28,7 @@ layout: default
         {%- endfor %}
       </ol>
     </nav>
+    {%- endif %}
 
     <div class="release-body{% if total == 0 %} release-body-text{% endif %}"{% if total > 0 %} data-release{% endif %}>
       <div class="release-items">
