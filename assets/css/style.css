@@ -1371,7 +1371,7 @@ html[lang="ko"] .hero-lead {
 @media (max-width: 859px) {
   .lang-drop > summary { width: auto; gap: 6px; padding: 0 10px; }
 }
-/* 記事の種類の札（リリースノート・技術記事） */
+/* 記事の種類の札（リリースノート・仕様解説） */
 .release-kind { display: inline-flex; align-items: center; align-self: center; padding: 2px 10px; border: 1px solid var(--line); border-radius: 50px; font-size: 12px; line-height: 1.6; color: var(--muted); white-space: nowrap; }
 /* 文節の切れ目（release.js がゼロ幅スペースを入れる）でだけ折り返す */
 /* 画像の無い項目は文章だけ（押せない）。画像が1枚も無い記事は枠を出さず1列 */
@@ -1394,7 +1394,7 @@ html[lang="ko"] .hero-lead {
 .release-kind.kind-tech { border-color: transparent; background: color-mix(in srgb, var(--heading) 14%, transparent); color: var(--heading); }
 budoux-ja, budoux-zh-hant { word-break: keep-all; overflow-wrap: anywhere; }
 
-/* 技術記事（palmdoc の書き出しを影の中に置く）。色と書体を影の中へ渡す */
+/* 仕様解説（palmdoc の書き出しを影の中に置く）。色と書体を影の中へ渡す */
 .pd-host { --pd-bg: var(--bg-top); --pd-text: var(--text); --pd-heading: var(--heading); --pd-muted: var(--muted); --pd-accent: var(--accent); --pd-hairline: var(--hairline); --pd-line: var(--line-soft); --pd-card: var(--card); --pd-font: var(--font-body); margin-top: 8px; }
 
 /* 記事一覧の絞り込み。押している種類を塗る */
