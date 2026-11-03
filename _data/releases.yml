@@ -12,9 +12,11 @@
           - title: "他の機種と同じ機能"
             desc: "楽曲一覧、Tier表、目標管理、フレンド機能など、他の機種と同じ機能が使えます。楽曲ジャケットにはバナーを使っています（一部の曲はバナーがありません）。"
             media: {type: video, src: popn.mp4, poster: popn.jpg}
+            games: ["pop'n"]
           - title: "楽曲名のメイン表記を選べる"
             desc: "メイン表記を「楽曲名」と「ジャンル名」から選べます。画面右上の設定から変更できます。"
             media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+            games: ["pop'n"]
       - heading: "DDRの譜面確認"
         items:
           - title: "譜面全体の確認とメモ"
@@ -23,6 +25,7 @@
               - "メモや踏み足を記録できます"
               - "メモや踏み足を入れた範囲を、画像で出力できます"
             media: {type: video, src: chart.mp4, poster: chart.jpg}
+            games: [DDR]
       - heading: "高速化とデザイン"
         items:
           - title: "速く、見やすく"
@@ -54,6 +57,7 @@
               - "その他の画像も、文字・ジャケットのサイズを変えられます（アプリの設定は変わりません）"
               - "楽曲の差分同期のフォールバック先を、レベルで指定できます"
             media: {type: video, src: export.mp4, poster: export.jpg}
+            games: [DDR, "pop'n"]
       - heading: "フレンド"
         items:
           - title: "投げた課題の履歴"
@@ -76,9 +80,11 @@
           - title: "Same features as other games"
             desc: "The song list, Tier List, goals, friends and other features work the same as for other games. Song jackets use banners (some songs have no banner)."
             media: {type: video, src: popn.mp4, poster: popn.jpg}
+            games: ["pop'n"]
           - title: "Choose the main song label"
             desc: "Choose whether songs are shown mainly by song title or by genre name. Change it from the settings at the top right of the screen."
             media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+            games: ["pop'n"]
       - heading: "DDR chart viewer"
         items:
           - title: "Whole-chart view and memos"
@@ -87,6 +93,7 @@
               - "Record memos and footing"
               - "Export a selected range with your memos and footing as an image"
             media: {type: video, src: chart.mp4, poster: chart.jpg}
+            games: [DDR]
       - heading: "Speed and design"
         items:
           - title: "Faster and easier to read"
@@ -118,6 +125,7 @@
               - "Other images can also change text and jacket size (your app settings stay the same)"
               - "Choose by level what a differential sync falls back to"
             media: {type: video, src: export.mp4, poster: export.jpg}
+            games: [DDR, "pop'n"]
       - heading: "Friends"
         items:
           - title: "History of challenges you sent"
@@ -140,9 +148,11 @@
           - title: "다른 기종과 같은 기능"
             desc: "곡 목록, 티어표, 목표 관리, 친구 기능 등 다른 기종과 같은 기능을 쓸 수 있습니다. 곡 재킷에는 배너를 사용합니다(일부 곡은 배너가 없습니다)."
             media: {type: video, src: popn.mp4, poster: popn.jpg}
+            games: ["pop'n"]
           - title: "곡명 메인 표기 선택"
             desc: "메인 표기를 '곡명'과 '장르명' 중에서 고를 수 있습니다. 화면 오른쪽 위 설정에서 바꿀 수 있습니다."
             media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+            games: ["pop'n"]
       - heading: "DDR 채보 확인"
         items:
           - title: "채보 전체 확인과 메모"
@@ -151,6 +161,7 @@
               - "메모와 발 배치를 기록할 수 있습니다"
               - "메모와 발 배치를 넣은 범위를 이미지로 내보낼 수 있습니다"
             media: {type: video, src: chart.mp4, poster: chart.jpg}
+            games: [DDR]
       - heading: "속도와 디자인"
         items:
           - title: "더 빠르고 보기 쉽게"
@@ -182,6 +193,7 @@
               - "다른 이미지도 글자·재킷 크기를 바꿀 수 있습니다(앱 설정은 바뀌지 않습니다)"
               - "곡 차분 동기화의 대체 수집 범위를 레벨로 지정할 수 있습니다"
             media: {type: video, src: export.mp4, poster: export.jpg}
+            games: [DDR, "pop'n"]
       - heading: "친구"
         items:
           - title: "보낸 과제의 이력"
@@ -204,9 +216,11 @@
           - title: "與其他機種相同的功能"
             desc: "樂曲一覽、Tier表、目標管理、好友功能等，都能與其他機種一樣使用。樂曲封面使用橫幅圖（部分樂曲沒有橫幅圖）。"
             media: {type: video, src: popn.mp4, poster: popn.jpg}
+            games: ["pop'n"]
           - title: "可選擇樂曲名稱的主要標示"
             desc: "主要標示可在「樂曲名」與「類型名」之間選擇。可從畫面右上角的設定變更。"
             media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+            games: ["pop'n"]
       - heading: "DDR 譜面確認"
         items:
           - title: "確認整份譜面與備忘"
@@ -215,6 +229,7 @@
               - "可記錄備忘與踏法"
               - "可將加入備忘與踏法的指定範圍輸出為圖片"
             media: {type: video, src: chart.mp4, poster: chart.jpg}
+            games: [DDR]
       - heading: "速度與設計"
         items:
           - title: "更快、更好讀"
@@ -246,6 +261,7 @@
               - "其他圖片也能改變文字與封面的大小（App 的設定不會改變）"
               - "可用等級指定樂曲差分同步的備援範圍"
             media: {type: video, src: export.mp4, poster: export.jpg}
+            games: [DDR, "pop'n"]
       - heading: "好友"
         items:
           - title: "送出課題的履歷"
