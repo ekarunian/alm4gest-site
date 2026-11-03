@@ -23,14 +23,31 @@ layout: default
         {%- if it.body %}<p>{{ it.body }}</p>{% endif %}
         {%- if it.list %}<ol>{% for li in it.list %}<li>{{ li }}</li>{% endfor %}</ol>{% endif %}
         </div>
-        <div class="release-media release-media--{{ it.media.size }}">
-          {%- for m in it.media %}
-          {%- if m.type == 'video' %}
-          <video controls playsinline muted preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.heading | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
-          {%- else %}
-          <img src="{{ base }}{{ m.src }}" alt="{{ it.heading | escape }}" loading="lazy">
+        {%- assign sid = 'r' | append: forloop.index -%}
+        <div class="shots release-shots" role="group" aria-roledescription="carousel" aria-label="{{ it.heading | escape }}">
+          <p class="visually-hidden" aria-live="polite" data-shots-status></p>
+          <ul class="shots-track">
+            {%- for m in it.media %}
+            <li class="shots-slide" id="{{ sid }}-{{ forloop.index }}">
+              {%- if m.type == 'video' %}
+              <video controls playsinline muted preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.heading | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
+              {%- else %}
+              <img src="{{ base }}{{ m.src }}" alt="{{ it.heading | escape }}" loading="lazy">
+              {%- endif %}
+            </li>
+            {%- endfor %}
+          </ul>
+          {%- if it.media.size > 1 %}
+          <div class="shots-nav">
+            <button type="button" class="shots-arrow" data-shots-dir="-1" aria-label="{{ i.shots.prev }}" hidden><svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M8.5 1L1.5 8l7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
+            <div class="shots-dots">
+              {%- for m in it.media %}
+              <a class="shots-dot" href="#{{ sid }}-{{ forloop.index }}" aria-label="{{ forloop.index }} / {{ forloop.length }}"{% if forloop.first %} aria-current="true"{% endif %}><span></span></a>
+              {%- endfor %}
+            </div>
+            <button type="button" class="shots-arrow" data-shots-dir="1" aria-label="{{ i.shots.next }}" hidden><svg width="10" height="16" viewBox="0 0 10 16" aria-hidden="true"><path d="M1.5 1l7 7-7 7" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
+          </div>
           {%- endif %}
-          {%- endfor %}
         </div>
       </section>
       {%- endfor %}

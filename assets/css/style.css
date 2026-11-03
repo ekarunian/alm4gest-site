@@ -1226,24 +1226,24 @@ html[lang="ko"] .hero-lead {
   }
 }
 
-/* リリースノート: 項目ごとに左が文章、右が画面。スマホでは縦に積む */
+/* リリースノート: 項目ごとに左が文章、右が画面の切り替え（トップと同じ .shots）。スマホでは縦に積む */
 .release-meta { display: flex; gap: 16px; margin: 0 0 8px; font-size: 14px; color: var(--muted); }
 .release-meta a { color: var(--accent); }
-.doc.release .container { max-width: 1120px; }
+.doc.release .container { max-width: 1040px; }
 .release .doc-body > p:first-child { font-size: 16px; color: var(--text); }
+.release .doc-body h2 { padding-left: 0; }
+.release .doc-body h2::before { content: none; }
 .release-summary { max-width: 640px; padding: 18px 20px 18px 2.2em !important; border: 1px solid var(--card-border); border-radius: 12px; background: var(--card); }
-.release-item { display: grid; gap: 20px 48px; align-items: start; padding: 48px 0; border-top: 1px solid var(--hairline); }
+.release-item { display: grid; gap: 24px 56px; align-items: start; padding: 48px 0; border-top: 1px solid var(--hairline); }
 .release-item:first-of-type { margin-top: 40px; }
 .release-item .release-text h2 { margin-top: 0; }
-.release-media { display: flex; gap: 12px; }
-.release-media img, .release-media video { display: block; width: 240px; max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--card-border); background: var(--card); }
+.release-shots { width: 300px; margin: 0 auto; }
+.release-shots .shots-track { margin: 0; padding: 0; }
+.release-shots .shots-slide { justify-content: flex-start; margin: 0; }
+.release-shots .shots-slide::marker { content: none; }
+.release-shots img, .release-shots video { display: block; width: 100%; aspect-ratio: 540 / 1100; object-fit: contain; border-radius: 14px; background: rgba(0, 0, 0, 0.25); }
 @media (min-width: 860px) {
-  .release-item { grid-template-columns: minmax(0, 1fr) 492px; }
-  .release-text { position: sticky; top: 96px; }
-}
-@media (max-width: 859px) {
-  .release-media img, .release-media video { width: calc(50% - 6px); }
-  .release-media--1 img, .release-media--1 video { width: min(100%, 300px); }
+  .release-item { grid-template-columns: minmax(0, 1fr) 300px; }
 }
 .release-list { list-style: none; margin: 0; padding: 0; }
 .release-list li { border-top: 1px solid var(--hairline); }
