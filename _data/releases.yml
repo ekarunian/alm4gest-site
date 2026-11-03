@@ -1,5 +1,265 @@
 # リリースノートの正本。X の告知（8/21 アップデート予告①〜⑦・公開時の投稿）の事実を、機能ごとに整理し直して書く。
 # 1項目 = 右の枠に出す画面1つ。画像・動画は site.release_media_base/<id>/ に置く。
+- id: "2026-09-04"
+  kind: release
+  version: "1.2.20260904"
+  date: "2026-09-01"
+  ja:
+    title: "pop'n music に対応し、DDRの譜面確認を強化しました"
+    sections:
+      - heading: "pop'n music に対応"
+        items:
+          - title: "他の機種と同じ機能"
+            desc: "楽曲一覧、Tier表、目標管理、フレンド機能など、他の機種と同じ機能が使えます。楽曲ジャケットにはバナーを使っています（一部の曲はバナーがありません）。"
+            media: {type: video, src: popn.mp4, poster: popn.jpg}
+          - title: "楽曲名のメイン表記を選べる"
+            desc: "メイン表記を「楽曲名」と「ジャンル名」から選べます。画面右上の設定から変更できます。"
+            media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+      - heading: "DDRの譜面確認"
+        items:
+          - title: "譜面全体の確認とメモ"
+            list:
+              - "譜面全体を確認し、目的の位置にすぐ移動できます"
+              - "メモや踏み足を記録できます"
+              - "メモや踏み足を入れた範囲を、画像で出力できます"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "高速化とデザイン"
+        items:
+          - title: "速く、見やすく"
+            list:
+              - "起動・タブ切替えが速くなりました"
+              - "公式素材の活用、全体のレイアウトの調整、ムダな余白の削減などを行いました"
+            media: {type: video, src: speed.mp4, poster: speed.jpg}
+      - heading: "目標管理"
+        items:
+          - title: "アプリを入れる前の記録を埋める"
+            list:
+              - "目標管理ダッシュボードで、アプリを入れる前の記録を手で埋められます"
+              - "手入力に加えて、CSVでの書き出しと取り込みができます"
+              - "対象は skill系・消費カロリー・プレー数です"
+            media: {type: video, src: before-install.mp4, poster: before-install.jpg}
+      - heading: "検索・楽曲一覧・Tier表"
+        items:
+          - title: "検索とフィルタ"
+            list:
+              - "検索機能を強化し、今までより検索幅が広がりました。間違った名前で検索してもヒットします"
+              - "楽曲一覧のフィルタに小数を足しました（SDVXは0.1刻み・GITADORAは0.5刻み）"
+              - "Tier表の段の中を、Tier順とレベル順で並べ替えられます"
+            media: {type: video, src: search.mp4, poster: search.jpg}
+      - heading: "成果画像と同期"
+        items:
+          - title: "画像の出力と差分同期"
+            list:
+              - "成果画像の出力時に、skill対象曲だけを表示できます"
+              - "その他の画像も、文字・ジャケットのサイズを変えられます（アプリの設定は変わりません）"
+              - "楽曲の差分同期のフォールバック先を、レベルで指定できます"
+            media: {type: video, src: export.mp4, poster: export.jpg}
+      - heading: "フレンド"
+        items:
+          - title: "投げた課題の履歴"
+            desc: "フレンドに投げた課題の履歴を見られます。投げた課題がその後どうなったかは追跡しません（目標を達成できずに削除されることもあるため）。"
+            media: {type: video, src: friend.mp4, poster: friend.jpg}
+      - heading: "統計と不具合の修正"
+        items:
+          - title: "統計の改善"
+            desc: "利用者が増えて統計情報が出るようになり、課題が見えてきました。目下改善中で、改善に伴ってランク帯区分・偏差値・個人差が変わっています。"
+          - title: "不具合の修正"
+            list:
+              - "GITADORA など、一部の楽曲の同期に失敗する"
+              - "GITADORA で skill ソートをすると、異なる難易度の曲も固まって並んでしまう"
+              - "フレンドの表示名を変えても、プレイヤーネームで表示されてしまう"
+  en:
+    title: "pop'n music support, and a stronger DDR chart viewer"
+    sections:
+      - heading: "pop'n music support"
+        items:
+          - title: "Same features as other games"
+            desc: "The song list, Tier List, goals, friends and other features work the same as for other games. Song jackets use banners (some songs have no banner)."
+            media: {type: video, src: popn.mp4, poster: popn.jpg}
+          - title: "Choose the main song label"
+            desc: "Choose whether songs are shown mainly by song title or by genre name. Change it from the settings at the top right of the screen."
+            media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+      - heading: "DDR chart viewer"
+        items:
+          - title: "Whole-chart view and memos"
+            list:
+              - "See the whole chart and jump straight to the part you want"
+              - "Record memos and footing"
+              - "Export a selected range with your memos and footing as an image"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "Speed and design"
+        items:
+          - title: "Faster and easier to read"
+            list:
+              - "Faster startup and tab switching"
+              - "Uses official art, with an adjusted overall layout and less wasted space"
+            media: {type: video, src: speed.mp4, poster: speed.jpg}
+      - heading: "Goals"
+        items:
+          - title: "Fill in records from before install"
+            list:
+              - "On the goals dashboard, you can fill in records from before you installed the app"
+              - "Besides typing them in, you can export and import CSV"
+              - "Covers skill metrics, calories burned and play count"
+            media: {type: video, src: before-install.mp4, poster: before-install.jpg}
+      - heading: "Search, Song list and Tier List"
+        items:
+          - title: "Search and filters"
+            list:
+              - "Search now finds more. It also hits when you search with a wrong name"
+              - "Song list filters now take decimals (0.1 steps for SDVX, 0.5 steps for GITADORA)"
+              - "Within each Tier List row, sort by tier or by level"
+            media: {type: video, src: search.mp4, poster: search.jpg}
+      - heading: "Result images and sync"
+        items:
+          - title: "Image export and differential sync"
+            list:
+              - "When exporting a result image, you can show only songs that count toward skill"
+              - "Other images can also change text and jacket size (your app settings stay the same)"
+              - "Choose by level what a differential sync falls back to"
+            media: {type: video, src: export.mp4, poster: export.jpg}
+      - heading: "Friends"
+        items:
+          - title: "History of challenges you sent"
+            desc: "See the history of challenges you sent to friends. What happened to them afterwards isn't tracked, since some are deleted when a goal isn't reached."
+            media: {type: video, src: friend.mp4, poster: friend.jpg}
+      - heading: "Statistics and bug fixes"
+        items:
+          - title: "Improving statistics"
+            desc: "With more users, statistics now appear, and problems have become visible. We are improving them, and rank ranges, T-scores and individual difficulty have changed as a result."
+          - title: "Bug fixes"
+            list:
+              - "Sync failed for some songs, including GITADORA"
+              - "Sorting by skill in GITADORA grouped songs of other difficulties together"
+              - "Friends were shown by player name even after changing their display name"
+  ko:
+    title: "pop'n music 지원과 DDR 채보 확인 강화"
+    sections:
+      - heading: "pop'n music 지원"
+        items:
+          - title: "다른 기종과 같은 기능"
+            desc: "곡 목록, 티어표, 목표 관리, 친구 기능 등 다른 기종과 같은 기능을 쓸 수 있습니다. 곡 재킷에는 배너를 사용합니다(일부 곡은 배너가 없습니다)."
+            media: {type: video, src: popn.mp4, poster: popn.jpg}
+          - title: "곡명 메인 표기 선택"
+            desc: "메인 표기를 '곡명'과 '장르명' 중에서 고를 수 있습니다. 화면 오른쪽 위 설정에서 바꿀 수 있습니다."
+            media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+      - heading: "DDR 채보 확인"
+        items:
+          - title: "채보 전체 확인과 메모"
+            list:
+              - "채보 전체를 확인하고 원하는 위치로 바로 이동할 수 있습니다"
+              - "메모와 발 배치를 기록할 수 있습니다"
+              - "메모와 발 배치를 넣은 범위를 이미지로 내보낼 수 있습니다"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "속도와 디자인"
+        items:
+          - title: "더 빠르고 보기 쉽게"
+            list:
+              - "시작과 탭 전환이 빨라졌습니다"
+              - "공식 소재를 활용하고, 전체 레이아웃 조정과 불필요한 여백 줄이기 등을 했습니다"
+            media: {type: video, src: speed.mp4, poster: speed.jpg}
+      - heading: "목표 관리"
+        items:
+          - title: "앱 설치 전 기록 채우기"
+            list:
+              - "목표 관리 대시보드에서 앱을 설치하기 전의 기록을 직접 채울 수 있습니다"
+              - "직접 입력 외에 CSV 내보내기와 가져오기도 됩니다"
+              - "대상은 skill 계열·소비 칼로리·플레이 수입니다"
+            media: {type: video, src: before-install.mp4, poster: before-install.jpg}
+      - heading: "검색·곡 목록·티어표"
+        items:
+          - title: "검색과 필터"
+            list:
+              - "검색 기능을 강화해 이전보다 넓게 찾을 수 있습니다. 틀린 이름으로 검색해도 찾아집니다"
+              - "곡 목록 필터에 소수를 추가했습니다(SDVX는 0.1 단위·GITADORA는 0.5 단위)"
+              - "티어표의 각 단 안을 티어순과 레벨순으로 정렬할 수 있습니다"
+            media: {type: video, src: search.mp4, poster: search.jpg}
+      - heading: "성과 이미지와 동기화"
+        items:
+          - title: "이미지 내보내기와 차분 동기화"
+            list:
+              - "성과 이미지를 내보낼 때 skill 대상곡만 표시할 수 있습니다"
+              - "다른 이미지도 글자·재킷 크기를 바꿀 수 있습니다(앱 설정은 바뀌지 않습니다)"
+              - "곡 차분 동기화의 대체 수집 범위를 레벨로 지정할 수 있습니다"
+            media: {type: video, src: export.mp4, poster: export.jpg}
+      - heading: "친구"
+        items:
+          - title: "보낸 과제의 이력"
+            desc: "친구에게 보낸 과제의 이력을 볼 수 있습니다. 보낸 과제가 그 후 어떻게 되었는지는 추적하지 않습니다(목표를 달성하지 못해 삭제되는 경우도 있기 때문입니다)."
+            media: {type: video, src: friend.mp4, poster: friend.jpg}
+      - heading: "통계와 버그 수정"
+        items:
+          - title: "통계 개선"
+            desc: "이용자가 늘어 통계 정보가 나오게 되면서 과제가 보이기 시작했습니다. 현재 개선 중이며, 개선에 따라 랭크대 구분·T점수·개인차가 바뀌었습니다."
+          - title: "버그 수정"
+            list:
+              - "GITADORA 등 일부 곡의 동기화에 실패하는 문제"
+              - "GITADORA에서 skill 정렬 시 다른 난이도의 곡까지 묶여서 정렬되는 문제"
+              - "친구 표시 이름을 바꿔도 플레이어 이름으로 표시되는 문제"
+  zh:
+    title: "支援 pop'n music，並強化 DDR 譜面確認"
+    sections:
+      - heading: "支援 pop'n music"
+        items:
+          - title: "與其他機種相同的功能"
+            desc: "樂曲一覽、Tier表、目標管理、好友功能等，都能與其他機種一樣使用。樂曲封面使用橫幅圖（部分樂曲沒有橫幅圖）。"
+            media: {type: video, src: popn.mp4, poster: popn.jpg}
+          - title: "可選擇樂曲名稱的主要標示"
+            desc: "主要標示可在「樂曲名」與「類型名」之間選擇。可從畫面右上角的設定變更。"
+            media: {type: video, src: popn-name.mp4, poster: popn-name.jpg}
+      - heading: "DDR 譜面確認"
+        items:
+          - title: "確認整份譜面與備忘"
+            list:
+              - "可確認整份譜面，並立即移動到想看的位置"
+              - "可記錄備忘與踏法"
+              - "可將加入備忘與踏法的指定範圍輸出為圖片"
+            media: {type: video, src: chart.mp4, poster: chart.jpg}
+      - heading: "速度與設計"
+        items:
+          - title: "更快、更好讀"
+            list:
+              - "啟動與切換分頁變快了"
+              - "活用官方素材，並調整整體版面、減少多餘的留白"
+            media: {type: video, src: speed.mp4, poster: speed.jpg}
+      - heading: "目標管理"
+        items:
+          - title: "補上安裝前的記錄"
+            list:
+              - "可在目標管理儀表板手動補上安裝 App 之前的記錄"
+              - "除了手動輸入，也可匯出與匯入 CSV"
+              - "對象為 skill 類、消耗熱量與遊玩次數"
+            media: {type: video, src: before-install.mp4, poster: before-install.jpg}
+      - heading: "搜尋・樂曲一覽・Tier表"
+        items:
+          - title: "搜尋與篩選"
+            list:
+              - "強化搜尋功能，搜尋範圍比以前更廣。用錯誤的名稱搜尋也能找到"
+              - "樂曲一覽的篩選加入小數（SDVX 以 0.1 為單位、GITADORA 以 0.5 為單位）"
+              - "Tier表各段內可依 Tier 順序或等級順序排列"
+            media: {type: video, src: search.mp4, poster: search.jpg}
+      - heading: "成果圖片與同步"
+        items:
+          - title: "圖片輸出與差分同步"
+            list:
+              - "輸出成果圖片時，可只顯示 skill 對象曲"
+              - "其他圖片也能改變文字與封面的大小（App 的設定不會改變）"
+              - "可用等級指定樂曲差分同步的備援範圍"
+            media: {type: video, src: export.mp4, poster: export.jpg}
+      - heading: "好友"
+        items:
+          - title: "送出課題的履歷"
+            desc: "可查看送給好友的課題履歷。送出的課題之後如何不會追蹤（因為也有未達成目標而刪除的情況）。"
+            media: {type: video, src: friend.mp4, poster: friend.jpg}
+      - heading: "統計與錯誤修正"
+        items:
+          - title: "改善統計"
+            desc: "隨著使用者增加，開始出現統計資訊，也看到了問題。目前正在改善，隨之改變了等級帶區分、T分數與個人差。"
+          - title: "錯誤修正"
+            list:
+              - "GITADORA 等部分樂曲同步失敗"
+              - "GITADORA 依 skill 排序時，不同難度的樂曲也會被聚在一起排序"
+              - "變更好友顯示名稱後，仍以玩家名稱顯示"
 - id: "2026-08-21"
   kind: release
   version: "1.2.20260821"
