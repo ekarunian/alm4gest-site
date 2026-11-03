@@ -11,6 +11,21 @@
   var viewer = root.querySelector('.rv');
   var index = 0;
   var narrow = window.matchMedia('(max-width: 859px)');
+  var col = viewer.closest('.release-viewer-col');
+  // スマホでの枠の出し方の試作（?mobile=inline: 選んだ項目の下に開く／?mobile=mini: 小さい固定枠＋押すと全画面）
+  var trial = new URLSearchParams(location.search).get('mobile');
+  if (trial) root.setAttribute('data-mobile', trial);
+
+  // inline: 枠を選んだ項目の直後へ移す。押した項目が画面上で動かないよう、移した分だけ戻す
+  function place(fromRow) {
+    if (!(narrow.matches && root.dataset.mobile === 'inline')) {
+      if (col.parentNode !== root) root.appendChild(col);
+      return;
+    }
+    var row = rows[index], before = row.getBoundingClientRect().top;
+    if (row.nextElementSibling !== col) row.after(col);
+    if (fromRow) window.scrollBy(0, row.getBoundingClientRect().top - before);
+  }
 
   // 句読点で区切った塊が1行に収まらない時、語の途中で折れないよう、文節の切れ目（助詞の後に漢字・カタカナ・英数字・括弧が来る所）だけを折り返し位置にする。
   // 送り仮名（選び方・見た目・並べ替え）の後では折らない
@@ -38,6 +53,7 @@
     });
     title.textContent = slides[index].dataset.num + '\u3000' + slides[index].dataset.title;
     pos.textContent = slides[index].dataset.num;
+    place(fromRow);
     // 狭い画面では枠が上に固定されるので、項目が枠の裏や画面の下に隠れたら、項目の頭を枠のすぐ下へ合わせる
     if (!fromRow && narrow.matches) {
       syncStick();
@@ -50,7 +66,7 @@
 
   // 固定された枠の下端（ヘッダーの高さ＋枠の高さ）。見出しや項目の止まる位置に使う
   function stick() {
-    var col = viewer.closest('.release-viewer-col');
+    if (narrow.matches && root.dataset.mobile === 'inline') return document.querySelector('.site-header').offsetHeight;
     return (parseFloat(getComputedStyle(col).top) || 0) + col.offsetHeight;
   }
   function syncStick() {
@@ -58,6 +74,15 @@
     var pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
     root.closest('.release').style.setProperty('--rv-stick', (narrow.matches ? stick() - pad : 0) + 'px');
   }
+  place(false);
+  // mini: 小さい枠を押すと全画面で開き、暗い所を押すと閉じる
+  col.addEventListener('click', function (e) {
+    if (!(narrow.matches && root.dataset.mobile === 'mini')) return;
+    var full = root.classList.contains('rv-full');
+    if (!full && e.target.closest('.rv-body')) { e.preventDefault(); root.classList.add('rv-full'); }
+    else if (full && e.target === col) { root.classList.remove('rv-full'); }
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') root.classList.remove('rv-full'); });
   syncStick();
   window.addEventListener('resize', syncStick);
   window.addEventListener('load', syncStick);

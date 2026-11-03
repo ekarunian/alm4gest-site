@@ -1343,3 +1343,14 @@ html[lang="ko"] .hero-lead {
 }
 /* 文節の切れ目（release.js がゼロ幅スペースを入れる）でだけ折り返す */
 .nb-phrase { word-break: keep-all; overflow-wrap: anywhere; }
+/* スマホの枠の試作 */
+@media (max-width: 859px) {
+  .release-body[data-mobile="inline"] { display: block; }
+  .release-body[data-mobile="inline"] .release-viewer-col { position: static; margin: 6px 0 24px; padding: 0; background: none; }
+  .release-body[data-mobile="inline"] .rv-body { height: min(62vh, 540px); }
+  .release-body[data-mobile="mini"] .rv-body { height: 24vh; cursor: zoom-in; }
+  .release-body[data-mobile="mini"] .rv-nav { width: 36px; height: 36px; }
+  .release-body.rv-full .release-viewer-col { position: fixed; inset: 0; z-index: 100; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; background: rgba(6, 8, 14, 0.94); }
+  .release-body.rv-full .rv { width: min(86vw, 420px); }
+  .release-body.rv-full .rv-body { height: 74vh; cursor: zoom-out; }
+}
