@@ -40,7 +40,7 @@ layout: default
           {%- endif %}
             <span class="release-row-title"><span class="release-row-num">{{ sn }}-{{ forloop.index }}</span>{% include jp.html text=it.title %}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span>
             {%- if it.desc %}{% assign paras = it.desc | newline_to_br | split: '<br />' %}{% for pa in paras %}{% assign pt = pa | strip %}<span class="release-row-desc">{% include jp.html text=pt %}</span>{% endfor %}{% endif %}
-            {%- if it.list %}<span class="release-row-list{% if it.ordered %} is-ordered{% endif %}">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</span>{% endif %}
+            {%- if it.list %}<span class="release-row-list{% if it.ordered %} is-ordered{% endif %}">{% for li in it.list %}<span{% if it.levels[forloop.index0] == 1 %} class="is-sub"{% endif %}>{% include jp.html text=li %}</span>{% endfor %}</span>{% endif %}
           {%- if it.media %}
           </a>
           {%- assign k = k | plus: 1 -%}
@@ -98,7 +98,7 @@ layout: default
           <h2 class="rs-title"><span class="rs-num">{{ sn }}-{{ forloop.index }}</span><span>{% include jp.html text=it.title %}{%- if it.games %}<span class="rel-games">{% for gm in it.games %}<span class="rel-game">{{ gm }}</span>{% endfor %}</span>{% endif %}</span></h2>
           <div class="rs-text">
             {%- if it.desc %}{% assign paras = it.desc | newline_to_br | split: '<br />' %}{% for pa in paras %}{% assign pt = pa | strip %}<p class="release-row-desc">{% include jp.html text=pt %}</p>{% endfor %}{% endif %}
-            {%- if it.list %}<p class="release-row-list{% if it.ordered %} is-ordered{% endif %}">{% for li in it.list %}<span>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}
+            {%- if it.list %}<p class="release-row-list{% if it.ordered %} is-ordered{% endif %}">{% for li in it.list %}<span{% if it.levels[forloop.index0] == 1 %} class="is-sub"{% endif %}>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}
           </div>
           {%- if m %}
           <div class="rs-media" role="button" tabindex="0" aria-label="{{ i.blog.zoom }}" data-rs-zoom>

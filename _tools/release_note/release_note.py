@@ -93,11 +93,17 @@ def parse_md(path: Path) -> dict:
                 raise FormatError(f"{where}: 1項目に画像・動画は1つまでです")
             name, src = re.match(r"!\[([^\]]*)\]\(([^)]+)\)$", line).groups()
             item["media"] = {"name": name.strip(), "file": src.strip()}
+        elif (line.startswith("- ") or re.match(r"\d+\.\s", line)) and raw[:1] in (" ", "\t") and "list" in item:
+            # 字下げした箇条は、直前の箇条の下の一段下げた箇条にする（2026-11-04 川口さん「字下げを一段下げて出す」）
+            item["list"].append(re.sub(r"^(- |\d+\.\s+)", "", line).strip())
+            item.setdefault("levels", [0] * (len(item["list"]) - 1)).append(1)
         elif line.startswith("- ") or re.match(r"\d+\.\s", line):
             ordered = not line.startswith("- ")
             if "list" in item and item.get("ordered", False) != ordered:
                 raise FormatError(f"{where}: 1項目の箇条は「- 」か「1. 」のどちらかに揃えてください")
             item.setdefault("list", []).append(re.sub(r"^(- |\d+\.\s+)", "", line).strip())
+            if "levels" in item:
+                item["levels"].append(0)
             if ordered:
                 item["ordered"] = True
         else:
@@ -288,6 +294,8 @@ def emit_entry(entry: dict, tr: dict) -> str:
                     lines += [f"              - {q(x)}" for x in it["list"]]
                     if it_ja.get("ordered"):
                         lines.append("            ordered: true")
+                    if it_ja.get("levels"):
+                        lines.append("            levels: [" + ", ".join(str(x) for x in it_ja["levels"]) + "]")
                 m = it_ja.get("media")
                 if m:
                     lines.append("            media: {" + ", ".join(f"{k}: {m[k]}" for k in ("type", "src", "poster") if k in m) + "}")
@@ -358,7 +366,14 @@ def cmd_import(rid: str, out: Path) -> int:
             lines.append(f"### {it['title']}" + (f" [{', '.join(it['games'])}]" if it.get("games") else ""))
             if "desc" in it:
                 lines.append(it["desc"].replace("\n", "\n\n"))
-            lines += [(f"{n}. {x}" if it.get("ordered") else f"- {x}") for n, x in enumerate(it.get("list", []), 1)]
+            lv = it.get("levels") or [0] * len(it.get("list", []))
+            n = 0
+            for x, l in zip(it.get("list", []), lv):
+                if l:
+                    lines.append(f"  - {x}")
+                else:
+                    n += 1
+                    lines.append(f"{n}. {x}" if it.get("ordered") else f"- {x}")
             m = it.get("media")
             if m:
                 lines.append(f"![]({m['src']})")

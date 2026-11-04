@@ -1276,6 +1276,8 @@ html[lang="ko"] .hero-lead {
 .release-row-list.is-ordered { counter-reset: rl; }
 .release-row-list.is-ordered > span { counter-increment: rl; }
 .release-row-list.is-ordered > span::before { content: counter(rl) "."; font-variant-numeric: tabular-nums; }
+.release-row-list > span.is-sub { counter-increment: none; margin-top: 0; padding-left: calc(2.2em + 10px + 2em); }
+.release-row-list > span.is-sub::before { content: "・"; left: calc(2.2em + 10px + 1em); }
 
 .rv { position: relative; width: 340px; margin: 0 auto 40px; }
 .rv-frame { position: relative; padding: 4px; background: rgb(18, 24, 42); outline: 1.5px solid #000; box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.85), inset 1px 1px 0 rgba(99, 153, 255, 0.07); }
@@ -1328,6 +1330,8 @@ html[lang="ko"] .hero-lead {
   .rs-text .release-row-desc, .rs-text .release-row-list > span { margin-top: 0; padding-left: 0; }
   .rs-text .release-row-list > span { padding-left: 1em; }
   .rs-text .release-row-list > span::before { left: 0; }
+  .rs-text .release-row-list > span.is-sub { padding-left: 2em; }
+  .rs-text .release-row-list > span.is-sub::before { left: 1em; }
   /* 進み具合: 等間隔の点。今の1枚は塗って少し大きくする（位置は動かさない） */
   .rs-nav { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 18px 12px; }
   .rs-arrow { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--hairline); border-radius: 50%; background: var(--card); color: var(--text); cursor: pointer; }
