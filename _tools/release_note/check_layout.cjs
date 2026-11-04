@@ -12,7 +12,7 @@
 //   - 語の途中の改行（ハングル・英字が続く所で行が分かれたもの。日本語・中国語は BudouX が文節で切る）
 //   - 読み込めない画像・動画・ポスター
 //   - 項目の数が日本語と違う
-// 右の枠の題の帯（.rv-title）は長い題を「…」で省く作り（左の項目に全文がある）なので、FAIL にせず注記として数える。
+//   - 右の枠の題の帯（.rv-title）で題が「…」で省かれる（2026-11-04 川口さん「基本はそれ以上長くならないようにしてほしい」。訳を縮める）
 // 撮った画像は <撮影先>/<言語>_<幅>_<明暗>.png（PCは全体、スマホはカードを1枚ずつ）。
 const { chromium } = require('playwright');
 const fs = require('node:fs');
@@ -43,7 +43,17 @@ function measure() {
       if (r.right > W + 1 || r.left < -1) out.outside.push(label(el) + ` 画面の外 ${Math.round(r.left)}〜${Math.round(r.right)} / ${W}`);
     }
     const cs = getComputedStyle(el);
-    if (el.childNodes.length && [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim()) && ['hidden', 'clip'].includes(cs.overflowX) && el.scrollWidth > el.clientWidth + 1) (el.matches('.rv-title') ? out.ellipsis : out.clipped).push(label(el));
+    if (el.childNodes.length && [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim()) && ['hidden', 'clip'].includes(cs.overflowX) && el.scrollWidth > el.clientWidth + 1) { if (!el.matches('.rv-title')) out.clipped.push(label(el)); }
+  }
+  // 右の枠の題の帯は、表示中の1項目しか入っていない。全項目の題を1つずつ入れて、帯に収まるかを測る
+  const bar = root.querySelector('.rv-title');
+  if (bar && visible(bar)) {
+    const keep = bar.textContent;
+    for (const f of root.querySelectorAll('.rv-slide')) {
+      bar.textContent = f.dataset.num + '　' + f.dataset.title;
+      if (bar.scrollWidth > bar.clientWidth + 1) out.ellipsis.push(`${f.dataset.num}「${f.dataset.title}」 ${bar.scrollWidth}px / ${bar.clientWidth}px`);
+    }
+    bar.textContent = keep;
   }
   for (const s of root.querySelectorAll('.rs-slide')) {
     out.slides++;
@@ -100,7 +110,7 @@ function measure() {
     const m = await pg.evaluate(measure);
     const bad = [];
     if (m.pageOverflow > 1) bad.push(`ページが横に ${m.pageOverflow}px あふれ`);
-    bad.push(...m.outside.map((x) => 'はみ出し ' + x), ...m.clipped.map((x) => '文字が切れ ' + x), ...m.slideOver.map((x) => 'カードの縦あふれ ' + x), ...m.badges, ...m.midword.map((x) => '語の途中で改行 ' + x));
+    bad.push(...m.outside.map((x) => 'はみ出し ' + x), ...m.clipped.map((x) => '文字が切れ ' + x), ...m.slideOver.map((x) => 'カードの縦あふれ ' + x), ...m.badges, ...m.midword.map((x) => '語の途中で改行 ' + x), ...m.ellipsis.map((x) => '題が帯に入らず「…」 ' + x));
     for (const u of m.mediaUrls) { const r = await ctx.request.get(u); if (r.status() !== 200) bad.push(`読み込めない ${u}（${r.status()}）`); }
     bad.push(...m.media.map((u) => '画像が出ない ' + u), ...errors.map((e) => 'JSのエラー ' + e));
     const count = w > 600 ? m.rows : m.slides;
@@ -119,7 +129,6 @@ function measure() {
     }
     console.log(`${bad.length ? 'FAIL' : 'OK  '} ${tag}（${w > 600 ? '行' : 'カード'} ${count}）`);
     for (const x of bad) console.log('    ' + x);
-    for (const x of m.ellipsis) console.log('    注記: 右の枠の題を「…」で省いている ' + x);
     fails += bad.length ? 1 : 0;
     await ctx.close();
   }

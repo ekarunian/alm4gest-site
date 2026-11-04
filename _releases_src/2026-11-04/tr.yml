@@ -67,7 +67,7 @@ en:
   sections:
   - heading: beatmania IIDX support
     items:
-    - title: Sync, song list, recommendations, Tier List and goals
+    - title: Sync, Songs, Tier List, goals and more
       desc: Sync, the song list, recommendations, Tier Lists and goals now work for beatmania IIDX.
     - title: Chart viewer
       list:

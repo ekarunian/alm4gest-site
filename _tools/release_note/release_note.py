@@ -60,10 +60,13 @@ def parse_md(path: Path) -> dict:
     entry = {"id": rid, "kind": meta.get("kind", "release"), "version": str(meta["version"]),
              "date": str(meta["date"]), "title": None, "sections": []}
     item = None
+    blank = False
     for no, raw in enumerate(text.splitlines(), 1):
         line = raw.strip()
         if not line:
+            blank = True
             continue
+        after_blank, blank = blank, False
         where = f"{path.name} {no}行目"
         if line.startswith("### "):
             if not entry["sections"]:
@@ -71,7 +74,7 @@ def parse_md(path: Path) -> dict:
             title, games = line[4:].strip(), None
             g = re.match(r"(.*?)\s*\[([^\]]+)\]$", title)
             if g:
-                title, games = g.group(1).strip(), [s.strip() for s in g.group(2).split(",") if s.strip()]
+                title, games = g.group(1).strip(), [game_name(s, where) for s in g.group(2).split(",") if s.strip()]
             item = {"title": title}
             if games:
                 item["games"] = games
@@ -90,10 +93,19 @@ def parse_md(path: Path) -> dict:
                 raise FormatError(f"{where}: 1項目に画像・動画は1つまでです")
             name, src = re.match(r"!\[([^\]]*)\]\(([^)]+)\)$", line).groups()
             item["media"] = {"name": name.strip(), "file": src.strip()}
-        elif line.startswith("- "):
-            item.setdefault("list", []).append(line[2:].strip())
+        elif line.startswith("- ") or re.match(r"\d+\.\s", line):
+            ordered = not line.startswith("- ")
+            if "list" in item and item.get("ordered", False) != ordered:
+                raise FormatError(f"{where}: 1項目の箇条は「- 」か「1. 」のどちらかに揃えてください")
+            item.setdefault("list", []).append(re.sub(r"^(- |\d+\.\s+)", "", line).strip())
+            if ordered:
+                item["ordered"] = True
         else:
-            item["desc"] = (item.get("desc", "") + line) if _cjk_join(item.get("desc", ""), line) else (item.get("desc", "") + " " + line).strip()
+            d = item.get("desc", "")
+            if d and after_blank:
+                item["desc"] = d + "\n" + line  # 空行で区切った段落は、サイトでも段落を分ける
+            else:
+                item["desc"] = (d + line) if _cjk_join(d.rsplit("\n", 1)[-1], line) else (d + " " + line).strip()
     if not entry["title"]:
         raise FormatError("# の題がありません")
     for s in entry["sections"]:
@@ -103,6 +115,18 @@ def parse_md(path: Path) -> dict:
             if "desc" not in it and "list" not in it:
                 raise FormatError(f"項目「{it['title']}」に説明も箇条もありません")
     return entry
+
+
+# 機種の札の名前。原稿の書き方の揺れ（POPN・ポップン など）をサイトの表記に揃える
+GAMES = {"sdvx": "SDVX", "ddr": "DDR", "gitadora": "GITADORA", "gd": "GITADORA", "popn": "pop'n", "pop'n": "pop'n",
+         "ポップン": "pop'n", "iidx": "IIDX", "jubeat": "jubeat"}
+
+
+def game_name(s: str, where: str) -> str:
+    k = s.strip().lower().replace("’", "'").replace(" music", "")
+    if k not in GAMES:
+        raise FormatError(f"{where}: 機種の札「{s.strip()}」が分かりません（使える名前: SDVX, DDR, GITADORA, pop'n, IIDX）")
+    return GAMES[k]
 
 
 def _cjk_join(a: str, b: str) -> bool:
@@ -262,6 +286,8 @@ def emit_entry(entry: dict, tr: dict) -> str:
                 if "list" in it:
                     lines.append("            list:")
                     lines += [f"              - {q(x)}" for x in it["list"]]
+                    if it_ja.get("ordered"):
+                        lines.append("            ordered: true")
                 m = it_ja.get("media")
                 if m:
                     lines.append("            media: {" + ", ".join(f"{k}: {m[k]}" for k in ("type", "src", "poster") if k in m) + "}")
@@ -311,7 +337,8 @@ def cmd_build(md: Path) -> int:
     DATA.write_text(replace_block(DATA.read_text(encoding="utf-8"), entry["id"], emit_entry(entry, tr)), encoding="utf-8")
     pages = write_pages(entry)
     (SRC_DIR / entry["id"]).mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(md, SRC_DIR / entry["id"] / "ja.md")
+    if md.resolve() != (SRC_DIR / entry["id"] / "ja.md").resolve():
+        shutil.copyfile(md, SRC_DIR / entry["id"] / "ja.md")
     print(f"記事データ: {DATA.relative_to(SITE)}（id {entry['id']}）")
     print("ページ: " + " ".join(str(p.relative_to(SITE)) for p in pages))
     print(f"原稿の写し: {(SRC_DIR / entry['id'] / 'ja.md').relative_to(SITE)}")
@@ -330,8 +357,8 @@ def cmd_import(rid: str, out: Path) -> int:
         for it in s["items"]:
             lines.append(f"### {it['title']}" + (f" [{', '.join(it['games'])}]" if it.get("games") else ""))
             if "desc" in it:
-                lines.append(it["desc"])
-            lines += [f"- {x}" for x in it.get("list", [])]
+                lines.append(it["desc"].replace("\n", "\n\n"))
+            lines += [(f"{n}. {x}" if it.get("ordered") else f"- {x}") for n, x in enumerate(it.get("list", []), 1)]
             m = it.get("media")
             if m:
                 lines.append(f"![]({m['src']})")

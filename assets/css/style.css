@@ -1273,6 +1273,9 @@ html[lang="ko"] .hero-lead {
 .release-row-desc, .release-row-list > span { display: block; margin-top: 4px; padding-left: calc(2.2em + 10px); font-size: 14px; line-height: 1.8; color: var(--text); }
 .release-row-list > span { position: relative; padding-left: calc(2.2em + 10px + 1em); }
 .release-row-list > span::before { content: "・"; position: absolute; left: calc(2.2em + 10px); color: var(--muted); }
+.release-row-list.is-ordered { counter-reset: rl; }
+.release-row-list.is-ordered > span { counter-increment: rl; }
+.release-row-list.is-ordered > span::before { content: counter(rl) "."; font-variant-numeric: tabular-nums; }
 
 .rv { position: relative; width: 340px; margin: 0 auto 40px; }
 .rv-frame { position: relative; padding: 4px; background: rgb(18, 24, 42); outline: 1.5px solid #000; box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.85), inset 1px 1px 0 rgba(99, 153, 255, 0.07); }
