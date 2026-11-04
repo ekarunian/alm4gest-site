@@ -5,13 +5,6 @@ layout: default
 {%- assign u = site.data.i18n.urls -%}
 {%- assign lang_prefix = "" -%}
 {%- for l in site.data.i18n.langs -%}{%- if l.code == page.lang -%}{%- assign lang_prefix = l.prefix -%}{%- endif -%}{%- endfor -%}
-{%- if page.lang == 'ja' -%}
-  {%- assign roadmap_url = u.roadmap_ja -%}
-  {%- assign release_url = u.release_ja -%}
-{%- else -%}
-  {%- assign roadmap_url = u.roadmap_en -%}
-  {%- assign release_url = u.release_en -%}
-{%- endif -%}
 {%- assign shot_dir = page.lang -%}
 {%- assign shot_files = '01_home,02_detail_t1,03_tier,04_growth,05_share,06_friends' | split: ',' -%}
 

@@ -1,7 +1,5 @@
 # サイトの表示文言（4言語）。ページ本文は各 Markdown、共通パーツと
 # トップページの文言はこのファイルが正本。
-# 開発ロードマップ・リリースノートは Notion の外部向けページへリンクする。
-# 日本語ページは日本語版、それ以外の3言語は英語版を指す。
 
 langs:
   - code: ja
@@ -22,10 +20,6 @@ urls:
   playstore: https://play.google.com/store/apps/details?id=com.alm4gest
   x: https://x.com/ekarunian
   mail: mailto:kawaguchi.ek@gmail.com
-  roadmap_ja: https://app.notion.com/p/3af0513fdbf880738e13e953ee84e900
-  roadmap_en: https://app.notion.com/p/804682d933bb467e95cfbb5ffb097378
-  release_ja: https://app.notion.com/p/3b00513fdbf88128990bcedae004017e
-  release_en: https://app.notion.com/p/3b00513fdbf881eabaffcf5baf877f68
   basic_course: https://p.eagate.573.jp/payment/p/ex_course_detail.html?course=eaBASIC
 
 # 対応機種。並びはアプリの機種タブと同じ。ロゴは konami_score_app の assets/brand/ を縮めたもの
@@ -106,8 +100,6 @@ ja:
   development:
     en: DEVELOPMENT
     sub: 開発状況
-    roadmap_title: 開発ロードマップ
-    roadmap_body: これから作るもの・作っているものの一覧です。
     release_title: リリースノート
     release_body: 各バージョンで変わったことの記録です。
   contact:
@@ -182,8 +174,6 @@ en:
   development:
     en: DEVELOPMENT
     sub: ""
-    roadmap_title: Roadmap
-    roadmap_body: What is planned and what is being built.
     release_title: Release notes
     release_body: What changed in each version.
   contact:
@@ -258,8 +248,6 @@ ko:
   development:
     en: DEVELOPMENT
     sub: 개발 현황
-    roadmap_title: 개발 로드맵
-    roadmap_body: 앞으로 만들 것과 만들고 있는 것의 목록입니다.
     release_title: 릴리스 노트
     release_body: 각 버전에서 바뀐 내용의 기록입니다.
   contact:
@@ -341,8 +329,6 @@ zh:
   development:
     en: DEVELOPMENT
     sub: 開發狀況
-    roadmap_title: 開發藍圖
-    roadmap_body: 預計開發與開發中的項目一覽。
     release_title: 版本資訊
     release_body: 各版本變更內容的記錄。
   contact:
