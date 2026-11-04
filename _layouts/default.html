@@ -41,6 +41,8 @@
 <link rel="alternate" hreflang="{{ site.data.i18n[l.code].html_lang }}" href="{{ site.url }}{{ alt_href }}">
 {%- endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ self_path }}">
+{%- comment %}初めて開いた人を、端末の言語のページへ送る（2026-11-04 川口さん「やるべきだよ」）。言語メニューで選んだ言語は覚えて、そちらを優先する。検索エンジンの巡回は送らない（日本語のページが索引から消えないように）。{% endcomment %}
+<script>(function(){try{if(/bot|crawl|spider|slurp|facebookexternalhit|embedly|lighthouse/i.test(navigator.userAgent))return;var m={ {%- for l in site.data.i18n.langs -%}{%- if page.page_id == 'index' %}{% assign alt_href = l.prefix | append: '/' %}{% else %}{% assign alt_href = l.prefix | append: '/' | append: page.page_id %}{% endif %}"{{ l.code }}":"{{ alt_href }}"{% unless forloop.last %},{% endunless %}{%- endfor -%} },cur="{{ page.lang }}",want=null;try{want=localStorage.getItem("alm4gest-lang")}catch(e){}if(!m[want]){want=null;var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var k=0;k<ls.length&&!want;k++){var c=String(ls[k]).toLowerCase().split("-")[0];if(m[c])want=c}want=want||"en"}if(want!==cur&&m[want]!==location.pathname)location.replace(m[want]+location.search+location.hash)}catch(e){}})();</script>
 {%- endunless %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,10 +92,11 @@
       <div class="lang-drop-list">
         {%- for l in site.data.i18n.langs %}
         {%- if page.page_id == 'index' %}{% assign href = l.prefix | append: '/' %}{% elsif page.lang_only and l.code != page.lang %}{% assign href = l.prefix | append: '/blog/' %}{% else %}{% assign href = l.prefix | append: '/' | append: page.page_id %}{% endif %}
-        <a href="{{ href }}" lang="{{ site.data.i18n[l.code].html_lang }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
+        <a href="{{ href }}" data-lang="{{ l.code }}" lang="{{ site.data.i18n[l.code].html_lang }}"{% if l.code == page.lang %} aria-current="page"{% endif %}>{{ l.name }}</a>
         {%- endfor %}
       </div>
     </details>
+    <script>document.querySelectorAll('.lang-drop-list a[data-lang]').forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('alm4gest-lang',a.dataset.lang)}catch(e){}})});</script>
   </div>
 </header>
 

@@ -20,7 +20,8 @@ const path = require('node:path');
 
 const [BASE, ID, OUT] = process.argv.slice(2);
 if (!BASE || !ID || !OUT) { console.error('使い方: node check_layout.cjs <ベースURL> <id> <撮影先>'); process.exit(1); }
-const LANGS = [['ja', ''], ['en', '/en'], ['ko', '/ko'], ['zh', '/zh']];
+// 4つ目はブラウザの言語。サイトは端末の言語のページへ送るので、各言語のページをその言語の端末として開く
+const LANGS = [['ja', '', 'ja-JP'], ['en', '/en', 'en-US'], ['ko', '/ko', 'ko-KR'], ['zh', '/zh', 'zh-TW']];
 const WIDTHS = [1440, 390];
 const MODES = ['dark', 'light'];
 
@@ -95,14 +96,15 @@ function measure() {
   const b = await chromium.launch();
   let fails = 0;
   let jaCount = null;
-  for (const [lang, prefix] of LANGS) for (const w of WIDTHS) for (const mode of MODES) {
-    const ctx = await b.newContext({ viewport: { width: w, height: w > 600 ? 900 : 844 }, deviceScaleFactor: w > 600 ? 1 : 2 });
+  for (const [lang, prefix, locale] of LANGS) for (const w of WIDTHS) for (const mode of MODES) {
+    const ctx = await b.newContext({ locale, viewport: { width: w, height: w > 600 ? 900 : 844 }, deviceScaleFactor: w > 600 ? 1 : 2 });
     await ctx.addInitScript((m) => { try { localStorage.setItem('alm4gest-theme', m); } catch (e) {} }, mode);
     const pg = await ctx.newPage();
     const errors = [];
     pg.on('pageerror', (e) => errors.push(e.message));
     const url = `${BASE}${prefix}/blog/${ID}`;
     const res = await pg.goto(url, { waitUntil: 'networkidle' });
+    if (new URL(pg.url()).pathname !== new URL(url).pathname) { console.log(`FAIL ${lang}: ${url} が ${pg.url()} へ送られた`); fails++; await ctx.close(); continue; }
     const tag = `${lang}_${w}_${mode}`;
     if (res.status() !== 200) { console.log(`FAIL ${tag}: ${url} が ${res.status()}`); fails++; await ctx.close(); continue; }
     await pg.evaluate(() => document.fonts.ready);
