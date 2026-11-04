@@ -1,0 +1,103 @@
+# 英・韓・中の訳。Claude が書く（川口さんは直さない）。
+# src は訳したときの日本語。原稿の日本語が変わった文は build が TODO に戻す。
+# アプリの用語は konami_score_app/lib/l10n/app_*.arb に合わせる。
+src:
+  title: GITADORAのGALAXY WAVE DELTA(Δ)とGALAXY WAVEの記録が混ざる不具合を直しました
+  sections:
+  - heading: GITADORA
+    items:
+    - title: GALAXY WAVE DELTA(Δ)とGALAXY WAVEの記録を分けて管理
+      desc: 1.3.20261104 から、GALAXY WAVE DELTAとGALAXY WAVEの両方を遊んでいる方の記録が混ざっていました。ご迷惑をおかけして申し訳ありません。
+      list:
+      - スコア・Skill の推移・目標の伸びを、版ごとに分けて持つようにしました
+      - 次の同期で両方の版を読み直し、混ざった推移を直します
+      - 同期のほかに操作は要りません
+    - title: 楽曲一覧で版を切り替え
+      desc: 両方の版に記録がある方は、楽曲一覧で「Δ」と「GW」を切り替えられます。
+      list:
+      - 選んだ版が Skill・一覧・目標に反映されます
+      - 楽曲詳細では、両方の版の達成率を同じ行に並べます
+  - heading: IIDX
+    items:
+    - title: 前回差分で一部の曲が取り込まれない不具合を修正
+      list:
+      - 前回差分の同期で取得出来なかった曲を改めて読み直すようにしました。
+    - title: 課題の目標を選ぶと落ちる不具合を修正
+      list:
+      - フレンドに課題を投げるとき、目標にクリアランプとDJ LEVELを選べるようにしました
+      - 前の版から届いた課題の目標がIIDXに無いものだったときは、受け取るときに目標を選び直せるようにしました
+en:
+  title: Fixed GITADORA GALAXY WAVE DELTA (Δ) and GALAXY WAVE records getting mixed
+  sections:
+  - heading: GITADORA
+    items:
+    - title: GALAXY WAVE DELTA (Δ) and GALAXY WAVE records are kept separately
+      desc: Since 1.3.20261104, records of players who play both GALAXY WAVE DELTA and GALAXY WAVE were mixed together. We apologize for the inconvenience.
+      list:
+      - Scores, Skill history, and goal progress are now kept per version
+      - The next sync re-reads both versions and fixes the mixed history
+      - No action is needed besides syncing
+    - title: Switch versions in the song list
+      desc: If you have records in both versions, you can switch between "Δ" and "GW" in the song list.
+      list:
+      - The selected version applies to Skill, the list, and goals
+      - Song details show the achievement rates of both versions on the same row
+  - heading: IIDX
+    items:
+    - title: Fixed some songs missing from "since last sync" syncs
+      list:
+      - Songs that could not be fetched in a "since last sync" sync are now read again.
+    - title: Fixed a crash when choosing a challenge goal
+      list:
+      - When sending a challenge to a friend, you can now choose a clear lamp or DJ LEVEL as the goal
+      - If a challenge from an older version has a goal that IIDX does not have, you can choose a new goal when accepting it
+ko:
+  title: GITADORA GALAXY WAVE DELTA(Δ)와 GALAXY WAVE의 기록이 섞이는 문제를 수정했습니다
+  sections:
+  - heading: GITADORA
+    items:
+    - title: GALAXY WAVE DELTA(Δ)와 GALAXY WAVE의 기록을 따로 관리
+      desc: 1.3.20261104부터 GALAXY WAVE DELTA와 GALAXY WAVE를 모두 플레이하시는 분의 기록이 섞여 있었습니다. 불편을 드려 죄송합니다.
+      list:
+      - 스코어·Skill 추이·목표 진척을 버전별로 따로 저장하도록 했습니다
+      - 다음 동기화에서 두 버전을 다시 읽어 섞인 추이를 바로잡습니다
+      - 동기화 외에 따로 조작할 필요는 없습니다
+    - title: 악곡 목록에서 버전 전환
+      desc: 두 버전 모두 기록이 있는 분은 악곡 목록에서 「Δ」와 「GW」를 전환할 수 있습니다.
+      list:
+      - 선택한 버전이 Skill·목록·목표에 반영됩니다
+      - 악곡 상세에서는 두 버전의 달성률을 같은 줄에 표시합니다
+  - heading: IIDX
+    items:
+    - title: 지난 동기화 이후 동기화에서 일부 곡이 반영되지 않는 문제 수정
+      list:
+      - 지난 동기화 이후 동기화에서 가져오지 못한 곡을 다시 읽도록 했습니다.
+    - title: 과제 목표를 고르면 앱이 종료되는 문제 수정
+      list:
+      - 친구에게 과제를 보낼 때 목표로 클리어 램프와 DJ LEVEL을 고를 수 있게 했습니다
+      - 이전 버전에서 받은 과제의 목표가 IIDX에 없는 것일 때는 받을 때 목표를 다시 고를 수 있게 했습니다
+zh:
+  title: 修正了 GITADORA GALAXY WAVE DELTA(Δ) 與 GALAXY WAVE 紀錄混在一起的問題
+  sections:
+  - heading: GITADORA
+    items:
+    - title: 分開管理 GALAXY WAVE DELTA(Δ) 與 GALAXY WAVE 的紀錄
+      desc: 自 1.3.20261104 起，同時遊玩 GALAXY WAVE DELTA 與 GALAXY WAVE 的玩家紀錄混在了一起。造成不便，深感抱歉。
+      list:
+      - 分數、Skill 推移與目標進度改為依版本分開保存
+      - 下次同步時會重新讀取兩個版本，修正混在一起的推移
+      - 除了同步之外不需要其他操作
+    - title: 在樂曲列表切換版本
+      desc: 兩個版本都有紀錄的玩家，可在樂曲列表切換「Δ」與「GW」。
+      list:
+      - 所選的版本會套用到 Skill、列表與目標
+      - 樂曲詳情會在同一行並列兩個版本的達成率
+  - heading: IIDX
+    items:
+    - title: 修正上次同步後的同步中部分樂曲未匯入的問題
+      list:
+      - 上次同步後的同步中未能取得的樂曲，現在會重新讀取。
+    - title: 修正選擇課題目標時當機的問題
+      list:
+      - 向好友發送課題時，現在可選擇通關燈與 DJ LEVEL 作為目標
+      - 從舊版本收到的課題目標若是 IIDX 沒有的項目，接收時可重新選擇目標
