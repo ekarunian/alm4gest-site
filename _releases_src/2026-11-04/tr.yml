@@ -1,0 +1,247 @@
+# 英・韓・中の訳。Claude が書く（川口さんは直さない）。
+# src は訳したときの日本語。原稿の日本語が変わった文は build が TODO に戻す。
+# アプリの用語は konami_score_app/lib/l10n/app_*.arb に合わせる。
+src:
+  title: beatmania IIDX に対応しました
+  sections:
+  - heading: beatmania IIDX に対応
+    items:
+    - title: 同期・楽曲一覧・おすすめ・Tier表・目標管理
+      desc: beatmania IIDX で、同期・楽曲一覧・おすすめ・Tier表・目標管理を使えます。
+    - title: 譜面確認
+      list:
+      - ☆8以上が対象です
+      - ZINRAIの「譜面表示エリアの固定」にも対応しました
+    - title: RANDOMの当たり配置の記録と共有
+      list:
+      - オプションと、RANDOMの当たり配置を記録・管理できます
+      - 皆さんのオプション設定の分布と当たり配置が共有されます
+      - 当たり配置から、対応する譜面をすぐ確認できます
+      - 当たり配置に対応するランダムレーンチケットがある場合は、それが分かるように表示します
+    - title: 注意事項
+      list:
+      - 初めのうちは統計の精度が暴れることが想定されます。11月中はご容赦ください
+      - INFINITASの取り込みには対応していません
+      - IIDXはジャケットがなく、Tier表が見づらい可能性があります。見せ方のご意見は、アプリ内のフォームなどでお待ちしています
+  - heading: 楽曲一覧の絞り込み
+    items:
+    - title: 絞り込みのUIを改善
+      list:
+      - レベルごとの楽曲数を棒グラフで表します
+      - 得意度・レーダーの主軸でも絞り込めます
+      - 参加中のすべてのスコアタの対象曲で絞り込めます
+      - DDRは、フレアランクなどでの絞り込みに対応しました
+  - heading: 課題の受け付け
+    items:
+    - title: レベルごとの受け付け設定
+      list:
+      - レベルごとに「歓迎」「OK」「NG」を設定できます
+      - 受け付けるときの一言を設定できます（優先度は譜面ごと→機種ごと→全体）
+      - 重複を避けるため、課題に登録済みの譜面は投げられないようにしました
+  - heading: スコアタ
+    items:
+    - title: 家庭用の参加可否
+      desc: 主催者が「家庭用の参加可否」を選べます。機能は変わらず、参加できるかどうかを明示するだけです。
+    - title: 家庭用マークとコメントの全文
+      list:
+      - 順位表などに「家庭用」マークを表示します
+      - 投稿されたコメントを、省略せずに全文で表示できます
+  - heading: ホーム画面ウィジェット
+    items:
+    - title: iPhoneのホーム画面ウィジェット
+      list:
+      - 小・中の2サイズに対応しました
+      - この機能はプロトタイプの状態で、今後も改善していきます
+      - 不具合を報告するときに、画像4枚と動画1本（60秒まで）を添付できます。このアカウントへのリンクも置きました
+  - heading: 軽微な改善と修正
+    items:
+    - title: Tier表の未クリアの絞り込み
+      desc: Tier表に、未クリアだけの絞り込みを足しました。
+    - title: 判定調整とハイスピの既定値
+      list:
+      - 判定調整とハイスピの既定値を、GF/DM・SP/DPで分けました
+      - SDVXの判定調整を、1ms単位で変えられるように直しました
+      - 各機種の同期と表示の不具合を直しました（一部は調査用のログの取得まで）
+en:
+  title: beatmania IIDX support
+  sections:
+  - heading: beatmania IIDX support
+    items:
+    - title: Sync, song list, recommendations, Tier List and goals
+      desc: Sync, the song list, recommendations, Tier Lists and goals now work for beatmania IIDX.
+    - title: Chart viewer
+      list:
+      - Covers ☆8 and above
+      - Supports ZINRAI's "fixed chart display area"
+    - title: Record and share good RANDOM patterns
+      list:
+      - Record and manage options and good RANDOM lane patterns
+      - Everyone's option settings and good patterns are shared
+      - Jump from a good pattern straight to the matching chart
+      - If a random lane ticket matches the pattern, it's shown
+    - title: Notes
+      list:
+      - Statistics are expected to be unstable at first. Please bear with us through November
+      - INFINITAS import isn't supported
+      - IIDX has no jackets, so Tier Lists may be hard to read. We welcome ideas on how to show them through the in-app form
+  - heading: Song list filters
+    items:
+    - title: A better filter UI
+      list:
+      - The number of songs per level is shown as a bar chart
+      - Filter by Strength or the main axis of the radar
+      - Filter by the songs of all Score Attacks you've joined
+      - For DDR, filter by Flare rank and more
+  - heading: Accepting challenges
+    items:
+    - title: Acceptance per level
+      list:
+      - Set "Welcome", "OK" or "No" for each level
+      - 'Set a short message for accepting (priority: per chart, then per game, then overall)'
+      - Charts already registered as challenges can't be sent again, to avoid duplicates
+  - heading: Score Attack
+    items:
+    - title: Home version entries
+      desc: The host can choose whether home versions can take part. This doesn't change any features; it only makes it clear.
+    - title: Home mark and full comments
+      list:
+      - A "Home" mark appears in rankings and elsewhere
+      - Posted comments can be shown in full, without truncation
+  - heading: Home screen widget
+    items:
+    - title: iPhone home screen widget
+      list:
+      - Available in small and medium sizes
+      - This feature is a prototype and will keep improving
+      - Bug reports can include 4 images and 1 video (up to 60 seconds). A link to this account is also included
+  - heading: Small improvements and fixes
+    items:
+    - title: Filter Tier Lists by not cleared
+      desc: Added a filter to show only not-cleared charts in Tier Lists.
+    - title: Timing and hi-speed defaults
+      list:
+      - Timing and hi-speed defaults are now separate for GF/DM and SP/DP
+      - SDVX timing can now be changed in 1 ms steps
+      - Fixed sync and display problems in each game (some only up to collecting logs for investigation)
+ko:
+  title: beatmania IIDX에 대응했습니다
+  sections:
+  - heading: beatmania IIDX 지원
+    items:
+    - title: 동기화·곡 목록·추천·티어표·목표 관리
+      desc: beatmania IIDX에서 동기화·곡 목록·추천·티어표·목표 관리를 쓸 수 있습니다.
+    - title: 채보 확인
+      list:
+      - ☆8 이상이 대상입니다
+      - ZINRAI의 '채보 표시 영역 고정'에도 대응했습니다
+    - title: RANDOM 좋은 배치 기록과 공유
+      list:
+      - 옵션과 RANDOM의 좋은 배치를 기록·관리할 수 있습니다
+      - 모두의 옵션 설정 분포와 좋은 배치가 공유됩니다
+      - 좋은 배치에서 해당 채보를 바로 확인할 수 있습니다
+      - 좋은 배치에 맞는 랜덤 레인 티켓이 있으면 보이게 표시합니다
+    - title: 주의 사항
+      list:
+      - 처음에는 통계 정확도가 크게 흔들릴 수 있습니다. 11월 중에는 양해 부탁드립니다
+      - INFINITAS 가져오기는 지원하지 않습니다
+      - IIDX는 재킷이 없어 티어표가 보기 어려울 수 있습니다. 보여 주는 방식에 대한 의견은 앱 내 양식 등으로 보내 주세요
+  - heading: 곡 목록 필터
+    items:
+    - title: 필터 UI 개선
+      list:
+      - 레벨별 곡 수를 막대그래프로 보여 줍니다
+      - 강점도·레이더 주축으로도 좁힐 수 있습니다
+      - 참가 중인 모든 스코어 어택 대상곡으로 좁힐 수 있습니다
+      - DDR은 플레어 랭크 등으로 좁힐 수 있습니다
+  - heading: 과제 수락
+    items:
+    - title: 레벨별 수락 설정
+      list:
+      - 레벨별로 '환영' 'OK' 'NG'를 설정할 수 있습니다
+      - 수락할 때의 한마디를 설정할 수 있습니다(우선순위는 채보별 → 기종별 → 전체)
+      - 중복을 피하기 위해 이미 과제로 등록된 채보는 보낼 수 없게 했습니다
+  - heading: 스코어 어택
+    items:
+    - title: 가정용 참가 가능 여부
+      desc: 주최자가 '가정용 참가 가능 여부'를 고를 수 있습니다. 기능은 바뀌지 않고, 참가 가능 여부를 명시할 뿐입니다.
+    - title: 가정용 마크와 코멘트 전문
+      list:
+      - 순위표 등에 '가정용' 마크를 표시합니다
+      - 올라온 코멘트를 생략하지 않고 전문으로 표시할 수 있습니다
+  - heading: 홈 화면 위젯
+    items:
+    - title: iPhone 홈 화면 위젯
+      list:
+      - 소·중 2가지 크기에 대응했습니다
+      - 이 기능은 프로토타입 상태이며 앞으로 계속 개선합니다
+      - 버그를 신고할 때 이미지 4장과 동영상 1개(60초까지)를 첨부할 수 있습니다. 이 계정으로 가는 링크도 두었습니다
+  - heading: 작은 개선과 수정
+    items:
+    - title: 티어표 미클리어 필터
+      desc: 티어표에 미클리어만 보는 필터를 추가했습니다.
+    - title: 판정 조정과 하이스피드 기본값
+      list:
+      - 판정 조정과 하이스피드 기본값을 GF/DM·SP/DP로 나눴습니다
+      - SDVX 판정 조정을 1ms 단위로 바꿀 수 있게 고쳤습니다
+      - 각 기종의 동기화와 표시 문제를 고쳤습니다(일부는 조사용 로그 수집까지)
+zh:
+  title: 支援 beatmania IIDX
+  sections:
+  - heading: 支援 beatmania IIDX
+    items:
+    - title: 同步、樂曲一覽、推薦、Tier表與目標管理
+      desc: beatmania IIDX 可使用同步、樂曲一覽、推薦、Tier表與目標管理。
+    - title: 譜面確認
+      list:
+      - 對象為 ☆8 以上
+      - 也支援 ZINRAI 的「固定譜面顯示區域」
+    - title: 記錄與分享 RANDOM 的好配置
+      list:
+      - 可記錄與管理選項及 RANDOM 的好配置
+      - 會分享大家的選項設定分布與好配置
+      - 可從好配置立即確認對應的譜面
+      - 若有對應好配置的隨機軌道券，會顯示出來
+    - title: 注意事項
+      list:
+      - 初期統計精度可能不穩定，11 月期間敬請見諒
+      - 尚不支援匯入 INFINITAS
+      - IIDX 沒有封面，Tier表可能不易閱讀。歡迎透過 App 內表單等提供呈現方式的意見
+  - heading: 樂曲一覽篩選
+    items:
+    - title: 改善篩選 UI
+      list:
+      - 以長條圖呈現各等級的樂曲數
+      - 也能依擅長度或雷達的主軸篩選
+      - 可依參加中所有分數挑戰的對象曲篩選
+      - DDR 支援依 Flare 階級等篩選
+  - heading: 接受課題
+    items:
+    - title: 依等級設定接受
+      list:
+      - 可依等級設定「歡迎」「OK」「NG」
+      - 可設定接受時的一句話（優先順序為譜面 → 機種 → 全體）
+      - 為避免重複，已登錄為課題的譜面無法再送出
+  - heading: 分數挑戰
+    items:
+    - title: 家用版可否參加
+      desc: 主辦者可選擇「家用版可否參加」。功能不變，只是明示能否參加。
+    - title: 家用版標記與完整留言
+      list:
+      - 排名表等會顯示「家用版」標記
+      - 投稿的留言可完整顯示，不再省略
+  - heading: 主畫面小工具
+    items:
+    - title: iPhone 主畫面小工具
+      list:
+      - 支援小、中兩種尺寸
+      - 此功能仍是原型，之後會持續改善
+      - 回報錯誤時可附加 4 張圖片與 1 段影片（60 秒以內），也放上了本帳號的連結
+  - heading: 小幅改善與修正
+    items:
+    - title: Tier表的未通關篩選
+      desc: Tier表新增只顯示未通關的篩選。
+    - title: 判定調整與 Hi-Speed 的預設值
+      list:
+      - 判定調整與 Hi-Speed 的預設值改為依 GF/DM、SP/DP 分開
+      - 修正為 SDVX 判定調整可用 1ms 為單位變更
+      - 修正各機種的同步與顯示問題（部分僅到取得調查用記錄為止）
