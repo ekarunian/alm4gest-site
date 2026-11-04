@@ -3,7 +3,7 @@ page_id: terms
 title: "ALM4GEST Terms of Service"
 ---
 
-Last updated: August 19, 2026
+Last updated: November 5, 2026
 
 ## 1. Scope
 
@@ -44,8 +44,11 @@ You must not:
 ## 6. Paid services
 
 1. The core features of the App are free.
-2. The App may offer an optional in-app purchase (a tip) intended to support development.
+2. The App may offer optional in-app purchases (tips and monthly support) intended to support development.
 3. A tip is a gratuity for development support, not payment for additional features or services (refunds after purchase follow App Store / Google Play policy).
+4. Monthly support is a subscription that renews automatically every month. While it is active, the App shows no ads.
+5. Monthly support renews automatically at the same price unless you cancel it in your store's subscription settings at least 24 hours before the current period ends. If you cancel, ads stay hidden until the end of the period you have paid for.
+6. Monthly support belongs to the store account you bought it with. It does not carry over between iOS and Android and is not shared through Family Sharing.
 
 ## 7. Backup feature
 
