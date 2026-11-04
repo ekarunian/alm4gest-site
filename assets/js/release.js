@@ -1,5 +1,6 @@
 // リリースノート（記事）の画面の出し方。
-// PC: 左の項目と右の枠の画面を1対1でつなぐ。項目を押すとその画面に切り替わり、表示中の項目を強調する。
+// PC: 左の項目と右の枠の画面を1対1でつなぐ。スクロールで読み進めると右の画面が今の項目へ切り替わり、
+//     項目を押してもその画面に切り替わる。表示中の項目を強調する。
 // スマホ: 1項目を1枚のカードにし、左右のスワイプ・前後のボタン・見出しのタブ・点で送る。
 // JSが無くても、PCは1枚目、スマホは横スクロールで全部見られる。
 (function () {
@@ -31,7 +32,13 @@
       pos.textContent = slides[index].dataset.num;
     };
     rows.forEach(function (r, j) {
-      r.addEventListener('click', function (e) { e.preventDefault(); showPc(j); });
+      r.addEventListener('click', function (e) {
+        e.preventDefault();
+        showPc(j);
+        // 押した項目を切り替えの線まで送る（送らないと、次に少し動かしたときに別の項目へ戻る）
+        var top = window.scrollY + r.getBoundingClientRect().top - window.innerHeight * 0.4 + 1;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      });
     });
     root.querySelectorAll('[data-rv-dir]').forEach(function (b) {
       b.addEventListener('click', function () { showPc(index + Number(b.dataset.rvDir)); });
@@ -40,6 +47,27 @@
       if (e.key === 'ArrowLeft') showPc(index - 1);
       if (e.key === 'ArrowRight') showPc(index + 1);
     });
+
+    // スクロールに合わせて右の画面を切り替える（押さなくても読み進めるだけで変わる）。
+    // 画面の上から4割の線を越えた最後の項目を今の項目にする。下端まで送ったら最後の項目
+    // （2026-11-04 オーナー「webだと画像や動画を切り替えられることに気付いてくれなかった」
+    // 「スクロールに応じてカチカチと勝手に変わってくれる方が良い」）
+    var spyQueued = false;
+    var spy = function () {
+      spyQueued = false;
+      if (narrow.matches || !rows.length) return;
+      var line = window.innerHeight * 0.4;
+      var at = 0;
+      rows.forEach(function (r, j) { if (r.getBoundingClientRect().top <= line) at = j; });
+      var doc = document.documentElement;
+      if (window.innerHeight + window.scrollY >= doc.scrollHeight - 4) at = rows.length - 1;
+      if (at !== index) showPc(at);
+    };
+    window.addEventListener('scroll', function () {
+      if (spyQueued) return;
+      spyQueued = true;
+      window.requestAnimationFrame(spy);
+    }, { passive: true });
   }
 
   // ---- スマホ: 1項目1枚のカード。見出しのタブ・カード・点が連動する
