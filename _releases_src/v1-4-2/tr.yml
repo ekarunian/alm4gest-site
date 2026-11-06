@@ -1,0 +1,203 @@
+# 英・韓・中の訳。Claude が書く（川口さんは直さない）。
+# src は訳したときの日本語。原稿の日本語が変わった文は build が TODO に戻す。
+# アプリの用語は konami_score_app/lib/l10n/app_*.arb に合わせる。
+src:
+  title: プレミアムコースのCSV同期に対応・ウィジェットの改善など
+  sections:
+  - heading: 同期
+    items:
+    - title: プレミアムコースのCSV同期
+      desc: 'e-amusementのプレミアムコースに加入している場合、CSVで全曲の記録をまとめて取り込むようにしました。
+
+        全譜面に記録がある場合の同期時間の目安は以下の通りです。
+
+        加入中はCSV同期が自動で選ばれ、同期方法を変更できません。加入状況は同期のたびに確認します。'
+      list:
+      - SDVX：約50分 → 約8秒
+      - IIDX：約20分 → 約25秒
+  - heading: ホーム画面ウィジェット
+    items:
+    - title: ウィジェットを6種類に拡充
+      desc: iPhoneのホーム画面ウィジェットを作り直し、以下の6種類に対応しました。
+      list:
+      - 目標・成長・クリアランプ分布・レーダー・自己ベスト更新・活動
+      - 目標は、アプリで設定した表示形式（進捗バー・半円ゲージ・累積グラフ）をそのまま表示します
+  - heading: フレンド
+    items:
+    - title: 楽曲一覧でフレンド・ライバルを一括表示切替
+      desc: 楽曲一覧の絞り込みにある人のアイコンから、フレンド・ライバルのスコア表示をまとめてオン・オフできるようにしました。
+    - title: フレンドの表示設定
+      list:
+      - 「通常」「ライバル」「スコア非表示」を機種ごとに設定できるようにしました
+      - 従来の非表示設定は、全機種共通の非表示として引き継ぎます
+  - heading: beatmania IIDX
+    items:
+    - title: EXスコア率
+      list:
+      - EXスコアの表示を「DJ LEVELとの差」「EXスコア」「スコア率」から選べるようにしました
+      - 楽曲一覧の並べ替えにEXスコア率を追加しました
+    - title: その他の改善
+      list:
+      - 「NO PLAY」の絞り込みに、記録のない譜面も含めるようにしました
+      - レベル別の到達状況を、ノーマルクリア以上・AA以上・AAA以上・MAX-以上で集計するようにしました
+  - heading: 軽微な改善と修正
+    items:
+    - title: 楽曲一覧・楽曲詳細
+      list:
+      - 全機種の楽曲一覧で、クリアランプ順に並べ替えられるようにしました
+      - 楽曲詳細にアーティスト名を追加しました。長い場合はスクロールして表示されます
+    - title: 設定画面
+      list:
+      - 設定の各項目にアイコンを追加し、分かりやすくしました
+    - title: 不具合修正
+      desc: 公式サイトで達成率が「NO」の譜面を、記録のない譜面として扱うように修正しました。次回の同期で、GWのみでプレーした譜面がΔのSkillから除外されます。
+en:
+  title: CSV sync for the Premium Course, improved widgets, and more
+  sections:
+  - heading: Sync
+    items:
+    - title: CSV sync for the Premium Course
+      desc: 'If you subscribe to the e-amusement Premium Course, the app now imports the records of all songs at once via CSV.
+
+        Approximate sync times when every chart has a record:
+
+        While you are subscribed, CSV sync is chosen automatically and the sync method cannot be changed. Your subscription status is checked at every sync.'
+      list:
+      - 'SDVX: about 50 min → about 8 sec'
+      - 'IIDX: about 20 min → about 25 sec'
+  - heading: Home screen widgets
+    items:
+    - title: Six kinds of widgets
+      desc: We rebuilt the iPhone home screen widgets. Six kinds are now available.
+      list:
+      - Goal, Growth, Clear lamps, Radar, Personal bests, and Activity
+      - The Goal widget uses the display format you chose in the app (progress bar, semicircle gauge, or cumulative graph)
+  - heading: Friends
+    items:
+    - title: Toggle friends and rivals in the song list
+      desc: The person icon in the song list filters now turns the scores of friends and rivals on or off all at once.
+    - title: Friend display settings
+      list:
+      - '"Normal", "Rival", and "Hide scores" can now be set per game'
+      - Friends you hid before stay hidden in all games
+  - heading: beatmania IIDX
+    items:
+    - title: EX score rate
+      list:
+      - 'You can now choose how EX scores are shown: "Gap to DJ LEVEL", "EX score", or "Score rate"'
+      - EX score rate was added to the song list sort options
+    - title: Other improvements
+      list:
+      - The "NO PLAY" filter now includes charts with no record
+      - Progress by level now counts NORMAL CLEAR or better, AA or better, AAA or better, and MAX- or better
+  - heading: Minor improvements and fixes
+    items:
+    - title: Song list and song details
+      list:
+      - The song list of every game can now be sorted by clear lamp
+      - Song details now show the artist name. Long names scroll
+    - title: Settings
+      list:
+      - Each settings item now has an icon to make it easier to find
+    - title: Bug fix
+      desc: Charts whose achievement rate is "NO" on the official site are now treated as charts with no record. After your next sync, charts you played only on GW are no longer counted in your Δ Skill.
+ko:
+  title: 프리미엄 코스 CSV 동기화 지원, 위젯 개선 등
+  sections:
+  - heading: 동기화
+    items:
+    - title: 프리미엄 코스 CSV 동기화
+      desc: 'e-amusement 프리미엄 코스에 가입되어 있으면, CSV로 모든 곡의 기록을 한꺼번에 가져오도록 했습니다.
+
+        모든 보면에 기록이 있을 때의 동기화 시간 기준은 다음과 같습니다.
+
+        가입 중에는 CSV 동기화가 자동으로 선택되며, 동기화 방법을 바꿀 수 없습니다. 가입 상태는 동기화할 때마다 확인합니다.'
+      list:
+      - 'SDVX: 약 50분 → 약 8초'
+      - 'IIDX: 약 20분 → 약 25초'
+  - heading: 홈 화면 위젯
+    items:
+    - title: 위젯을 6종류로 확장
+      desc: iPhone 홈 화면 위젯을 새로 만들어, 다음 6종류를 지원합니다.
+      list:
+      - 목표·성장·클리어 램프 분포·레이더·자기 베스트 갱신·활동
+      - 목표 위젯은 앱에서 설정한 표시 형식(진행 바·반원 게이지·누적 그래프)을 그대로 표시합니다
+  - heading: 친구
+    items:
+    - title: 악곡 목록에서 친구·라이벌 표시를 한꺼번에 전환
+      desc: 악곡 목록 필터에 있는 사람 아이콘으로 친구·라이벌의 점수 표시를 한꺼번에 켜고 끌 수 있게 했습니다.
+    - title: 친구 표시 설정
+      list:
+      - 「일반」「라이벌」「점수 숨김」을 기종별로 설정할 수 있게 했습니다
+      - 기존의 숨김 설정은 모든 기종 공통의 숨김으로 이어집니다
+  - heading: beatmania IIDX
+    items:
+    - title: EX 스코어율
+      list:
+      - EX 스코어 표시를 「DJ LEVEL과의 차」「EX 스코어」「스코어율」 중에서 고를 수 있게 했습니다
+      - 악곡 목록 정렬에 EX 스코어율을 추가했습니다
+    - title: 기타 개선
+      list:
+      - 「NO PLAY」 필터에 기록이 없는 보면도 포함하도록 했습니다
+      - 레벨별 달성 현황을 NORMAL CLEAR 이상·AA 이상·AAA 이상·MAX- 이상으로 집계하도록 했습니다
+  - heading: 소소한 개선 및 수정
+    items:
+    - title: 악곡 목록·악곡 상세
+      list:
+      - 모든 기종의 악곡 목록에서 클리어 램프 순으로 정렬할 수 있게 했습니다
+      - 악곡 상세에 아티스트 이름을 추가했습니다. 길면 스크롤되어 표시됩니다
+    - title: 설정 화면
+      list:
+      - 설정의 각 항목에 아이콘을 추가해 알아보기 쉽게 했습니다
+    - title: 버그 수정
+      desc: 공식 사이트에서 달성률이 「NO」인 보면을 기록이 없는 보면으로 다루도록 수정했습니다. 다음 동기화부터 GW에서만 플레이한 보면이 Δ의 Skill에서 제외됩니다.
+zh:
+  title: 支援高級課程的 CSV 同步、改善小工具等
+  sections:
+  - heading: 同步
+    items:
+    - title: 高級課程的 CSV 同步
+      desc: '若已加入 e-amusement 高級課程，現在會透過 CSV 一次匯入所有樂曲的紀錄。
+
+        所有譜面都有紀錄時，同步時間的參考如下。
+
+        加入期間會自動選擇 CSV 同步，無法變更同步方式。每次同步時都會確認加入狀態。'
+      list:
+      - SDVX：約 50 分鐘 → 約 8 秒
+      - IIDX：約 20 分鐘 → 約 25 秒
+  - heading: 主畫面小工具
+    items:
+    - title: 小工具擴充為 6 種
+      desc: 重新製作了 iPhone 的主畫面小工具，支援以下 6 種。
+      list:
+      - 目標、成長、通關燈號分布、雷達、自我最佳更新、活動
+      - 目標小工具會直接沿用在 App 中設定的顯示形式（進度條、半圓儀表、累積圖）
+  - heading: 好友
+    items:
+    - title: 在樂曲列表一次切換好友與對手的顯示
+      desc: 現在可透過樂曲列表篩選中的人物圖示，一次開啟或關閉好友與對手的分數顯示。
+    - title: 好友的顯示設定
+      list:
+      - 「一般」「對手」「隱藏分數」現在可依機種分別設定
+      - 原本的隱藏設定會沿用為所有機種共通的隱藏
+  - heading: beatmania IIDX
+    items:
+    - title: EX分數率
+      list:
+      - EX 分數的顯示現在可從「與 DJ LEVEL 的差」「EX 分數」「分數率」中選擇
+      - 樂曲列表的排序新增了 EX分數率
+    - title: 其他改善
+      list:
+      - 「NO PLAY」篩選現在也會包含沒有紀錄的譜面
+      - 各等級的達成狀況改為以 NORMAL CLEAR 以上、AA 以上、AAA 以上、MAX- 以上統計
+  - heading: 細微的改善與修正
+    items:
+    - title: 樂曲列表與樂曲詳情
+      list:
+      - 所有機種的樂曲列表現在都能依通關燈排序
+      - 樂曲詳情新增了藝人名稱。名稱較長時會捲動顯示
+    - title: 設定畫面
+      list:
+      - 設定的各個項目新增了圖示，更容易辨識
+    - title: 錯誤修正
+      desc: 修正為將官方網站上達成率為「NO」的譜面視為沒有紀錄的譜面。下次同步後，只在 GW 遊玩過的譜面將不再計入 Δ 的 Skill。

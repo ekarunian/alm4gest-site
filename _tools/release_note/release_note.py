@@ -125,13 +125,15 @@ def parse_md(path: Path) -> dict:
 
 # 機種の札の名前。原稿の書き方の揺れ（POPN・ポップン など）をサイトの表記に揃える
 GAMES = {"sdvx": "SDVX", "ddr": "DDR", "gitadora": "GITADORA", "gd": "GITADORA", "popn": "pop'n", "pop'n": "pop'n",
-         "ポップン": "pop'n", "iidx": "IIDX", "jubeat": "jubeat"}
+         "ポップン": "pop'n", "iidx": "IIDX", "jubeat": "jubeat",
+         # 機種でなく端末で分かれる項目（iPhone だけのホーム画面ウィジェットなど）
+         "iphone": "iPhone", "android": "Android"}
 
 
 def game_name(s: str, where: str) -> str:
     k = s.strip().lower().replace("’", "'").replace(" music", "")
     if k not in GAMES:
-        raise FormatError(f"{where}: 機種の札「{s.strip()}」が分かりません（使える名前: SDVX, DDR, GITADORA, pop'n, IIDX）")
+        raise FormatError(f"{where}: 機種の札「{s.strip()}」が分かりません（使える名前: SDVX, DDR, GITADORA, pop'n, IIDX, iPhone, Android）")
     return GAMES[k]
 
 
