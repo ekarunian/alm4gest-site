@@ -23,6 +23,7 @@
             list:
               - "目標・成長・クリアランプ分布・レーダー・自己ベスト更新・活動"
               - "目標は、アプリで設定した表示形式（進捗バー・半円ゲージ・累積グラフ）をそのまま表示します"
+            media: {type: image, src: 261106-v142widget-6.jpg}
       - heading: "フレンド"
         items:
           - title: "楽曲一覧でフレンド・ライバルを一括表示切替"
@@ -78,6 +79,7 @@
             list:
               - "Goal, Growth, Clear lamps, Radar, Personal bests, and Activity"
               - "The Goal widget uses the display format you chose in the app (progress bar, semicircle gauge, or cumulative graph)"
+            media: {type: image, src: 261106-v142widget-6.jpg}
       - heading: "Friends"
         items:
           - title: "Toggle friends and rivals in the song list"
@@ -133,6 +135,7 @@
             list:
               - "목표·성장·클리어 램프 분포·레이더·자기 베스트 갱신·활동"
               - "목표 위젯은 앱에서 설정한 표시 형식(진행 바·반원 게이지·누적 그래프)을 그대로 표시합니다"
+            media: {type: image, src: 261106-v142widget-6.jpg}
       - heading: "친구"
         items:
           - title: "악곡 목록에서 친구·라이벌 표시를 한꺼번에 전환"
@@ -188,6 +191,7 @@
             list:
               - "目標、成長、通關燈號分布、雷達、自我最佳更新、活動"
               - "目標小工具會直接沿用在 App 中設定的顯示形式（進度條、半圓儀表、累積圖）"
+            media: {type: image, src: 261106-v142widget-6.jpg}
       - heading: "好友"
         items:
           - title: "在樂曲列表一次切換好友與對手的顯示"
