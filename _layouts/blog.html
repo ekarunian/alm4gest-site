@@ -7,7 +7,7 @@ layout: default
 {%- assign list = site.data.releases -%}
 {%- if page.lang == 'ja' -%}{%- assign tech = site.pages | where: "layout", "techdoc" -%}{%- assign list = list | concat: tech -%}{%- endif -%}
 {%- assign list = list | sort: "date" | reverse -%}
-<article class="doc release">
+<article class="doc release blog-index">
   <div class="container">
     <h1 class="doc-title">{{ i.blog.title }}</h1>
     {%- assign kinds = list | map: "kind" | uniq -%}
