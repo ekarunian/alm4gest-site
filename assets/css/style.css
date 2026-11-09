@@ -1317,6 +1317,20 @@ html[lang="ko"] .hero-lead {
   .rs-num { flex: none; color: var(--accent); font-variant-numeric: tabular-nums; }
   .rs-media { flex: 1; min-height: 0; display: flex; justify-content: center; margin: 12px 0 0; cursor: zoom-in; -webkit-tap-highlight-color: transparent; }
   .rs-media img, .rs-media video { display: block; height: 100%; width: auto; max-width: 100%; object-fit: contain; border: 1px solid var(--hairline); border-radius: 10px; background: #04060f; }
+  /* 動画: 押しても広げない。拡大（右上）と最初から（右下）は動画の外の右に置き、録画の中のボタンと重ねない。
+     再生位置は動画の下の縁の細い線で出す（縦は伸ばさない。左は同じ幅を空けて動画を真ん中に保つ） */
+  .rs-media-video { cursor: default; }
+  .rs-vid { display: flex; align-items: stretch; gap: 6px; height: 100%; max-width: 100%; }
+  .rs-vid-side { flex: none; width: 34px; }
+  .rs-vid-tools { display: flex; flex-direction: column; justify-content: space-between; }
+  .rs-vid-frame { position: relative; min-width: 0; height: 100%; }
+  .rs-vid-frame video { height: 100%; }
+  .rs-vid-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; padding: 0; border: 1px solid var(--hairline); border-radius: 50%; background: var(--card); color: var(--text); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .rs-vid-btn[data-rs-zoom-btn] { cursor: zoom-in; }
+  .rs-vid-btn svg { width: 18px; height: 18px; }
+  .rs-vid-btn::after { content: ""; position: absolute; inset: -5px; }
+  .rs-vid-line { position: absolute; left: 1px; right: 1px; bottom: 1px; height: 4px; overflow: hidden; border-radius: 0 0 9px 9px; background: rgba(0, 0, 0, 0.55); pointer-events: none; }
+  .rs-vid-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #fff; }
   .rs-text { flex: none; max-height: 40%; overflow-y: auto; font-size: 14px; }
   .rs-slide-text .rs-text { flex: 1; max-height: none; }
   .rs-zoom { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 56px 12px 20px; background: rgba(2, 4, 12, 0.94); }

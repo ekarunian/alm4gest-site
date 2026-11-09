@@ -101,13 +101,28 @@ layout: default
             {%- if it.list %}<p class="release-row-list{% if it.ordered %} is-ordered{% endif %}">{% for li in it.list %}<span{% if it.levels[forloop.index0] == 1 %} class="is-sub"{% endif %}>{% include jp.html text=li %}</span>{% endfor %}</p>{% endif %}
           </div>
           {%- if m %}
-          <div class="rs-media" role="button" tabindex="0" aria-label="{{ i.blog.zoom }}" data-rs-zoom>
-            {%- if m.type == 'video' %}
-            <video playsinline muted loop preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.title | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
-            {%- else %}
-            <img src="{{ base }}{{ m.src }}" alt="{{ it.title | escape }}" loading="lazy">
-            {%- endif %}
+          {%- if m.type == 'video' %}
+          {%- comment %} 動画は押しても広げない。広げるのは右上のボタンだけ。下の帯で今どこを流しているかを見せ、最初へ戻せる
+          （2026-11-10 オーナー「全体のどこを再生しているのか、最初から再生したい時にサクッと戻せる状態には少なくともしておきたい。
+          デカい画面にするのは動画の右上とか右下とか、拡大ボタンを押した時で良い」） {% endcomment %}
+          <div class="rs-media rs-media-video">
+            <div class="rs-vid" data-rs-vid>
+              <span class="rs-vid-side" aria-hidden="true"></span>
+              <div class="rs-vid-frame">
+                <video playsinline muted loop preload="none" poster="{{ base }}{{ m.poster }}" aria-label="{{ it.title | escape }}"><source src="{{ base }}{{ m.src }}" type="video/mp4"></video>
+                <span class="rs-vid-line" role="progressbar" aria-label="{{ i.blog.seek }}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-rs-line><span class="rs-vid-fill"></span></span>
+              </div>
+              <span class="rs-vid-side rs-vid-tools">
+                <button type="button" class="rs-vid-btn" aria-label="{{ i.blog.zoom }}" data-rs-zoom-btn><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg></button>
+                <button type="button" class="rs-vid-btn" aria-label="{{ i.blog.replay }}" data-rs-replay><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg></button>
+              </span>
+            </div>
           </div>
+          {%- else %}
+          <div class="rs-media" role="button" tabindex="0" aria-label="{{ i.blog.zoom }}" data-rs-zoom>
+            <img src="{{ base }}{{ m.src }}" alt="{{ it.title | escape }}" loading="lazy">
+          </div>
+          {%- endif %}
           {%- endif %}
         </li>
         {%- endfor %}{%- endfor %}

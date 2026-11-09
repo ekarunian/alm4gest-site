@@ -149,7 +149,7 @@
       }
     }
 
-    // 画面をタップすると、画面いっぱいに広げて見せる（動画は操作バー付き）。背景か×で閉じる
+    // 画像はタップ、動画は右上のボタンで、画面いっぱいに広げて見せる（動画は操作バー付き）。背景か×で閉じる
     var layer = rs.querySelector('[data-rs-zoom-layer]');
     var body = layer.querySelector('.rs-zoom-body');
     var close = function () {
@@ -161,6 +161,7 @@
     };
     var open = function (box) {
       var src = box.querySelector('img, video');
+      // 広げた方も今の位置から流す
       var el = src.cloneNode(true);
       if (el.tagName === 'VIDEO') { el.controls = true; el.muted = true; el.loop = true; el.setAttribute('playsinline', ''); el.preload = 'auto'; }
       // 広げた方だけを流す（カードの方は止める）
@@ -168,12 +169,45 @@
       body.appendChild(el);
       layer.hidden = false;
       document.documentElement.classList.add('rs-zoom-open');
-      if (el.tagName === 'VIDEO') el.play().catch(function () {});
+      if (el.tagName === 'VIDEO') {
+        var at = src.readyState > 0 ? src.currentTime : 0;
+        if (at > 0) {
+          if (el.readyState > 0) { el.currentTime = at; } else { el.addEventListener('loadedmetadata', function () { el.currentTime = at; }, { once: true }); }
+        }
+        el.play().catch(function () {});
+      }
       layer.querySelector('.rs-zoom-close').focus();
     };
     rs.querySelectorAll('[data-rs-zoom]').forEach(function (box) {
       box.addEventListener('click', function () { open(box); });
       box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(box); } });
+    });
+
+    // 動画は押しても広げない。右上のボタンで広げ、下の帯で再生位置を見せて最初へ戻せる
+    // （2026-11-10 オーナー「全体のどこを再生しているのか、最初から再生したい時にサクッと戻せる状態には
+    // 少なくともしておきたい。デカい画面にするのは動画の右上とか右下とか、拡大ボタンを押した時で良い」）
+    rs.querySelectorAll('[data-rs-vid]').forEach(function (box) {
+      var v = box.querySelector('video');
+      var line = box.querySelector('[data-rs-line]');
+      var fill = line.querySelector('.rs-vid-fill');
+      var frame = 0;
+      var paint = function () {
+        var d = v.duration;
+        var r = d > 0 && isFinite(d) ? Math.min(1, v.currentTime / d) : 0;
+        fill.style.width = (r * 100) + '%';
+        line.setAttribute('aria-valuenow', String(Math.round(r * 100)));
+      };
+      // 流れている間だけ毎フレーム描く（timeupdate は1秒に数回しか来ず、線がカクつく）
+      var loop = function () { paint(); frame = v.paused ? 0 : window.requestAnimationFrame(loop); };
+      v.addEventListener('play', function () { if (!frame) frame = window.requestAnimationFrame(loop); });
+      v.addEventListener('seeked', paint);
+      v.addEventListener('loadedmetadata', paint);
+      box.querySelector('[data-rs-zoom-btn]').addEventListener('click', function () { open(box); });
+      box.querySelector('[data-rs-replay]').addEventListener('click', function () {
+        if (v.readyState > 0) v.currentTime = 0;
+        paint();
+        if (inView && narrow.matches && layer.hidden) v.play().catch(function () {});
+      });
     });
     layer.addEventListener('click', function (e) { if (e.target === layer || e.target === body || e.target.closest('.rs-zoom-close')) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
