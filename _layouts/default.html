@@ -42,6 +42,9 @@
 {%- endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ self_path }}">
 {%- comment %}初めて開いた人を、端末の言語のページへ送る（2026-11-04 川口さん「やるべきだよ」）。言語メニューで選んだ言語は覚えて、そちらを優先する。検索エンジンの巡回は送らない（日本語のページが索引から消えないように）。{% endcomment %}
+<script>(function(){try{if(/[?&]app=1(&|$)/.test(location.search))return;if(/bot|crawl|spider|slurp|facebookexternalhit|embedly|lighthouse/i.test(navigator.userAgent))return;var m={ {%- for l in site.data.i18n.langs -%}{%- if page.page_id == 'index' %}{% assign alt_href = l.prefix | append: '/' %}{% else %}{% assign alt_href = l.prefix | append: '/' | append: page.page_id %}{% endif %}"{{ l.code }}":"{{ alt_href }}"{% unless forloop.last %},{% endunless %}{%- endfor -%} },cur="{{ page.lang }}",want=null;try{want=localStorage.getItem("alm4gest-lang")}catch(e){}if(!m[want]){want=null;var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var k=0;k<ls.length&&!want;k++){var c=String(ls[k]).toLowerCase().split("-")[0];if(m[c])want=c}want=want||"en"}if(want!==cur&&m[want]!==location.pathname)location.replace(m[want]+location.search+location.hash)}catch(e){}})();</script>
+{%- endunless %}
+{%- comment %}アプリの中で開いた時の見せ方は、日本語だけの記事（仕様解説・lang_only）にも当てる{% endcomment %}
 <script>
 /* アプリの中（ALM-261 のリリースノート）で開いた時は ?app=1 が付く。
    言語はアプリが URL で決めるので切り替えず、ヘッダとフッタを隠す。
@@ -55,9 +58,7 @@ var m={bg:['--bg-top','--bg-bottom','--footer'],ink:['--text','--heading'],sub:[
 Object.keys(c).forEach(function(n){(m[n]||[]).forEach(function(v){h.style.setProperty(v,c[n])})});
 document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('a[href]').forEach(function(a){try{var u=new URL(a.getAttribute('href'),location.href);if(u.origin!==location.origin)return;u.searchParams.set('app','1');a.setAttribute('href',u.pathname+u.search+u.hash)}catch(e){}})});})();
 </script>
-<style>.in-app .site-header,.in-app .site-footer,.in-app .skip-link,.in-app .theme-toggle{display:none!important}.in-app main{padding-top:0}.in-app .doc{padding:12px 0 32px}.in-app .blog-index .doc-title,.in-app .blog-index .blog-filter,.in-app .release-kind,.in-app .release-list li:not(.kind-release){display:none!important}</style>
-<script>(function(){try{if(/[?&]app=1(&|$)/.test(location.search))return;if(/bot|crawl|spider|slurp|facebookexternalhit|embedly|lighthouse/i.test(navigator.userAgent))return;var m={ {%- for l in site.data.i18n.langs -%}{%- if page.page_id == 'index' %}{% assign alt_href = l.prefix | append: '/' %}{% else %}{% assign alt_href = l.prefix | append: '/' | append: page.page_id %}{% endif %}"{{ l.code }}":"{{ alt_href }}"{% unless forloop.last %},{% endunless %}{%- endfor -%} },cur="{{ page.lang }}",want=null;try{want=localStorage.getItem("alm4gest-lang")}catch(e){}if(!m[want]){want=null;var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var k=0;k<ls.length&&!want;k++){var c=String(ls[k]).toLowerCase().split("-")[0];if(m[c])want=c}want=want||"en"}if(want!==cur&&m[want]!==location.pathname)location.replace(m[want]+location.search+location.hash)}catch(e){}})();</script>
-{%- endunless %}
+<style>.in-app .site-header,.in-app .site-footer,.in-app .skip-link,.in-app .theme-toggle{display:none!important}.in-app main{padding-top:0}.in-app .doc{padding:12px 0 32px}.in-app .blog-index .doc-title{display:none!important}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Belanosima&family={{ font_family }}&display=swap" media="print" onload="this.media='all'">
