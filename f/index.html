@@ -32,7 +32,9 @@ sitemap: false
   // LINE の中のブラウザはアプリへ渡さずにこのページを開く。
   // openExternalBrowser=1 で OS へ渡し直すと、アプリが入っていればアプリが開く
   if (/ Line\//.test(ua) && !/[?&]openExternalBrowser=1/.test(location.search)) {
-    location.replace(location.href + (location.search ? '&' : '?') + 'openExternalBrowser=1');
+    var u = new URL(location.href);
+    u.searchParams.set('openExternalBrowser', '1');
+    location.replace(u.toString());
     return;
   }
   // ほかのアプリの中のブラウザ（Instagram・Facebook など）も、アプリが入っていても
