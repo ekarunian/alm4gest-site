@@ -121,6 +121,19 @@
     });
     mark(0);
 
+    // アプリの中で記事を開いた時は、カードの所（ページの下端）まで送ってから見せる
+    // （2026-11-10 オーナー「リリースノートに関しては一番下までスクロールしてもらった方が
+    // 読みやすい(カード型コンテンツの部分が見たい)」）。
+    // 戻って出し直した面と、位置（#…）を指して開いた面は動かさない
+    if (document.documentElement.classList.contains('in-app') && narrow.matches && !location.hash) {
+      var nav = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+      if (!nav || nav.type !== 'back_forward') {
+        var toBottom = function () { window.scrollTo(0, document.documentElement.scrollHeight); };
+        toBottom();
+        window.addEventListener('load', toBottom, { once: true });
+      }
+    }
+
     // 画面をタップすると、画面いっぱいに広げて見せる（動画は操作バー付き）。背景か×で閉じる
     var layer = rs.querySelector('[data-rs-zoom-layer]');
     var body = layer.querySelector('.rs-zoom-body');
