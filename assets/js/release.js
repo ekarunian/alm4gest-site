@@ -80,6 +80,8 @@
     var dots = Array.prototype.slice.call(rs.querySelectorAll('[data-rs-to]'));
     var arrows = Array.prototype.slice.call(rs.querySelectorAll('[data-rs-dir]'));
     var cur = -1;
+    // カードの帯が画面から外れている間は、動画を流さない（読み込み・電池を使わない）
+    var inView = true;
     var step = function () { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth; };
     var mark = function (i) {
       if (i === cur) return;
@@ -98,8 +100,13 @@
       arrows[1].disabled = i === cards.length - 1;
       cards.forEach(function (c, j) {
         var v = c.querySelector('video');
-        if (v) { if (j === i && narrow.matches) { v.play().catch(function () {}); } else { v.pause(); } }
+        if (v) { if (j === i && narrow.matches && inView) { v.play().catch(function () {}); } else { v.pause(); } }
       });
+    };
+    var replay = function () {
+      var c = cards[cur], v = c && c.querySelector('video');
+      if (!v) return;
+      if (inView && narrow.matches && layer.hidden) { v.play().catch(function () {}); } else { v.pause(); }
     };
     var go = function (i, smooth) {
       i = Math.max(0, Math.min(cards.length - 1, i));
@@ -120,6 +127,9 @@
       });
     });
     mark(0);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { inView = es[0].isIntersecting; replay(); }).observe(track);
+    }
 
     // アプリの中で記事を開いた時は、カードの所（ページの下端）まで送ってから見せる
     // （2026-11-10 オーナー「リリースノートに関しては一番下までスクロールしてもらった方が
@@ -128,7 +138,12 @@
     if (document.documentElement.classList.contains('in-app') && narrow.matches && !location.hash) {
       var nav = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
       if (!nav || nav.type !== 'back_forward') {
-        var toBottom = function () { window.scrollTo(0, document.documentElement.scrollHeight); };
+        // 画像や字の読み込みで丈が伸びたら読み込み後に送り直す。その前に指で触れていたら送り直さない
+        var touched = false;
+        var mine = function () { touched = true; };
+        window.addEventListener('touchstart', mine, { once: true, passive: true });
+        window.addEventListener('wheel', mine, { once: true, passive: true });
+        var toBottom = function () { if (!touched) window.scrollTo(0, document.documentElement.scrollHeight); };
         toBottom();
         window.addEventListener('load', toBottom, { once: true });
       }
@@ -142,11 +157,14 @@
       layer.hidden = true;
       body.innerHTML = '';
       document.documentElement.classList.remove('rs-zoom-open');
+      replay();
     };
     var open = function (box) {
       var src = box.querySelector('img, video');
       var el = src.cloneNode(true);
       if (el.tagName === 'VIDEO') { el.controls = true; el.muted = true; el.loop = true; el.setAttribute('playsinline', ''); el.preload = 'auto'; }
+      // 広げた方だけを流す（カードの方は止める）
+      if (src.tagName === 'VIDEO') src.pause();
       body.appendChild(el);
       layer.hidden = false;
       document.documentElement.classList.add('rs-zoom-open');
