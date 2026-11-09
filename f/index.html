@@ -29,6 +29,15 @@ sitemap: false
   var ua = navigator.userAgent || '';
   var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   var android = /Android/.test(ua);
+  // LINE の中のブラウザはアプリへ渡さずにこのページを開く。
+  // openExternalBrowser=1 で OS へ渡し直すと、アプリが入っていればアプリが開く
+  if (/ Line\//.test(ua) && !/[?&]openExternalBrowser=1/.test(location.search)) {
+    location.replace(location.href + (location.search ? '&' : '?') + 'openExternalBrowser=1');
+    return;
+  }
+  // ほかのアプリの中のブラウザ（Instagram・Facebook など）も、アプリが入っていても
+  // ここを開く。ストアへ飛ばすとこのリンクが消えて申請に戻れないので、札を出すだけにする
+  if (/Instagram|FBAN|FBAV|FB_IAB|; wv\)/.test(ua)) return;
   if (ios) location.replace('https://apps.apple.com/app/id6793808647');
   else if (android) location.replace('https://play.google.com/store/apps/details?id=com.alm4gest');
 })();
@@ -37,7 +46,7 @@ sitemap: false
   :root { color-scheme: dark; }
   html, body { margin: 0; background: #12171e; color: #e8edf2; }
   body {
-    min-height: 100vh; display: flex; flex-direction: column;
+    min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 24px; padding: 24px 16px;
     box-sizing: border-box;
     font-family: "Noto Sans JP", "Hiragino Sans", system-ui, sans-serif;
