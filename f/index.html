@@ -1,0 +1,69 @@
+---
+layout: null
+sitemap: false
+---
+<!DOCTYPE html>
+<!--
+  フレンド申請のリンク（ALM-259）の受け口。https://alm4gest.com/f/?c=<フレンドコード>
+  アプリが入っている端末では OS がこのページを開かずにアプリへ渡す
+  （iOS: /.well-known/apple-app-site-association、Android: /.well-known/assetlinks.json）。
+  ここが開くのはアプリが入っていない端末なので、iPhone は App Store、Android は Google Play へ送る。
+  パソコンなどではストアの札を2つ並べる。
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#12171e">
+<title>ALM4GEST</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALM4GEST">
+<meta property="og:title" content="ALM4GEST">
+<meta property="og:image" content="https://alm4gest.com/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+(function () {
+  var ua = navigator.userAgent || '';
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var android = /Android/.test(ua);
+  if (ios) location.replace('https://apps.apple.com/app/id6793808647');
+  else if (android) location.replace('https://play.google.com/store/apps/details?id=com.alm4gest');
+})();
+</script>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; background: #12171e; color: #e8edf2; }
+  body {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 24px; padding: 24px 16px;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", "Hiragino Sans", system-ui, sans-serif;
+  }
+  /* 画像の四辺に約8%の透明な余白があるので、図柄が96px前後になる大きさで置く */
+  .mark { width: 112px; height: 112px; }
+  .stores { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+  .stores a { display: block; line-height: 0; }
+  .stores img { height: 48px; width: auto; }
+</style>
+</head>
+<body>
+<img class="mark" src="/assets/img/logo-mark.png" width="112" height="112" alt="ALM4GEST">
+<div class="stores">
+  <a id="appstore" href="https://apps.apple.com/app/id6793808647"><img id="appstore-badge" src="/assets/img/badge-appstore-ja.svg" width="131" height="48" alt="App Store"></a>
+  <a id="googleplay" href="https://play.google.com/store/apps/details?id=com.alm4gest"><img id="googleplay-badge" src="/assets/img/badge-googleplay-ja.png" width="162" height="48" alt="Google Play"></a>
+</div>
+<script>
+(function () {
+  // パソコンなどでは札の言語だけ合わせる（iPhone・Android は頭で送り済み）
+  var lang = (navigator.language || 'ja').toLowerCase();
+  var code = lang.indexOf('ko') === 0 ? 'ko' : lang.indexOf('zh') === 0 ? 'zh' : lang.indexOf('ja') === 0 ? 'ja' : 'en';
+  document.documentElement.lang = code;
+  document.getElementById('appstore-badge').src = '/assets/img/badge-appstore-' + code + '.svg';
+  document.getElementById('googleplay-badge').src = '/assets/img/badge-googleplay-' + code + '.png';
+})();
+</script>
+</body>
+</html>

@@ -49,6 +49,11 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+# アプリとの紐付けの設定（ALM-259 フレンド申請のリンク）。Jekyll は「.」で始まる
+# フォルダを既定で書き出さないので、明示して入れる
+include:
+  - .well-known
+
 exclude:
   - Gemfile
   - Gemfile.lock

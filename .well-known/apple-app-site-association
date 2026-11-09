@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "4HT4PUF4SF.com.alm4gest.app",
+        "appIDs": ["4HT4PUF4SF.com.alm4gest.app"],
+        "paths": ["/f", "/f/*"],
+        "components": [
+          { "/": "/f", "comment": "フレンド申請のリンク（ALM-259）" },
+          { "/": "/f/*", "comment": "フレンド申請のリンク（ALM-259）" }
+        ]
+      }
+    ]
+  }
+}

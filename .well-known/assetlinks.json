@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.alm4gest",
+      "sha256_cert_fingerprints": [
+        "3F:A0:7A:F6:CA:80:09:F2:BF:69:17:E2:93:E2:ED:02:8D:84:E4:C5:7E:55:FD:CC:E7:2A:41:F1:BA:6A:82:05",
+        "E8:8C:E0:E5:09:0F:AE:18:82:18:83:F4:A7:52:51:FD:2D:64:93:A6:38:77:5E:A9:67:30:40:B7:5C:FF:59:EE"
+      ]
+    }
+  }
+]
