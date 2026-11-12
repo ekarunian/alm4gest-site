@@ -1,0 +1,233 @@
+# 英・韓・中の訳。Claude が書く（川口さんは直さない）。
+# src は訳したときの日本語。原稿の日本語が変わった文は build が TODO に戻す。
+# アプリの用語は konami_score_app/lib/l10n/app_*.arb に合わせる。
+src:
+  title: みんなの投票・投稿の翻訳・フレンド申請リンクに対応
+  sections:
+  - heading: みんなの投票
+    items:
+    - title: イヤホン・ヘッドホンなどの人気投票
+      desc: 'ホームに「みんなの投票」を追加しました。利用者同士で音ゲーに使う製品を評価・共有できます。
+
+        最初のテーマは「音ゲーで使うイヤホン・ヘッドホン」です。DDRでは「DDRで履く靴」を表示します（日本のみ）。テーマは今後随時追加していく予定です。取ってみたい投票がある場合は要望等からご連絡ください。'
+      list:
+      - 1人3票まで、使っている製品を星1〜5で評価できます
+      - 選択肢にない製品は、自分で追加できます
+      - コメントの投稿なども可能です（匿名化されます）
+  - heading: フレンド・交流機能
+    items:
+    - title: リンクからフレンド申請
+      desc: 'SNSなどで共有したリンクから、直接フレンド申請できるようにしました。
+
+        ※アプリがインストールされていない場合は、ストアを開きます。'
+      list:
+      - プロフィールのフレンドコードにある🔗を押すと、申請用リンクをコピーできます。
+      - 相手がリンクを開くと、アプリで申請の確認画面が表示されます。
+    - title: ほかの言語の投稿を翻訳
+      desc: スコアアタック・課題・コメントを、アプリの設定言語に翻訳して表示できるようにしました。
+      list:
+      - 翻訳された文章には印を表示し、押すと原文に切り替えられます。
+  - heading: 楽曲一覧・楽曲詳細
+    items:
+    - title: 譜面ごとのVFを表示
+      list:
+      - 楽曲一覧・楽曲詳細で、各譜面のVFを確認できます
+      - 楽曲一覧をVF順に並べ替えられるようにしました
+  - heading: アプリの改善
+    items:
+    - title: リリースノートをアプリ内で確認
+      desc: アプリ更新時に、新しいリリースノートを通知するようにしました。
+      list:
+      - 通知から更新内容をアプリ内で確認できます
+      - 過去のリリースノートは、設定の「このアプリについて」から確認できます
+    - title: アプリを切り替えても同期を継続
+      desc: 同期中にほかのアプリへ切り替えても、同期を継続できるようにしました。同期状況はAndroidの通知欄で確認できます。
+  - heading: 軽微な改善と修正
+    items:
+    - title: レーダーの表示改善
+      list:
+      - IIDXのノーツレーダーを公式と同じ項目順に変更しました
+      - 成長タブでレーダーの各項目の値と増減を表示します（IIDX・SDVX）
+    - title: 同期・記録の不具合修正
+      list:
+      - 前回差分で全件取得を無効にしても、全曲を取得していた不具合を修正しました
+      - ΔとGWの記録が混ざる不具合を修正しました。混ざった記録は自動で復元し、影響を受けた課題も正しい記録で判定し直します
+      - GWのSkillで「Shooting Star」が計算対象に含まれない不具合を修正しました
+    - title: その他の不具合修正
+      list:
+      - '[POPN] BPMが「※」になっていた曲で、譜面ごとのBPMを表示するように修正しました'
+      - '[DDR, SDVX, POPN] 公式サイトから中身のないページが返された際に、同期結果の一部が欠ける不具合を修正しました'
+en:
+  title: Player polls, translated posts, and friend request links
+  sections:
+  - heading: Player polls
+    items:
+    - title: Earphone and headphone polls
+      desc: 'Added "Player polls" to Home. Players can rate and share the products they use for rhythm games.
+
+
+        The first theme is "Earphones and headphones for rhythm games". In DDR, the poll "Shoes for DDR" is shown (Japan only). We plan to add more themes over time. If there is a poll you would like to see, let us know from "Report a request or problem".'
+      list:
+      - Each player has up to 3 votes and can rate each product they use from 1 to 5 stars
+      - You can add a product that is not in the choices
+      - You can also post comments (shown anonymously)
+  - heading: Friends and social features
+    items:
+    - title: Send friend requests from a link
+      desc: 'You can now send a friend request directly from a link shared on social media and elsewhere.
+
+
+        *If the app is not installed, the link opens the store.'
+      list:
+      - Tap 🔗 next to the friend code on your profile to copy your friend request link.
+      - When someone opens the link, the app shows the friend request confirmation screen.
+    - title: Translate posts in other languages
+      desc: Score Attacks, challenges and comments can now be translated into the app's language.
+      list:
+      - Translated text shows a mark; tap it to switch to the original.
+  - heading: Song list and song details
+    items:
+    - title: VF for each chart
+      list:
+      - See the VF of each chart in the song list and song details
+      - Sort the song list by VF
+  - heading: App improvements
+    items:
+    - title: Release notes inside the app
+      desc: After an update, the app now notifies you of the new release notes.
+      list:
+      - Open the update details inside the app from the notification
+      - Past release notes are in Settings → "About this app"
+    - title: Sync keeps running when you switch apps
+      desc: Sync now continues even if you switch to another app during sync. You can check its progress in the Android notification area.
+  - heading: Minor improvements and fixes
+    items:
+    - title: Better radar display
+      list:
+      - The IIDX notes radar now uses the same item order as the official site
+      - The Growth tab shows the value and change of each radar item (IIDX and SDVX)
+    - title: Sync and record fixes
+      list:
+      - Fixed an issue where a diff sync fetched every song even with "switch to full sync" turned off
+      - Fixed an issue where Δ and GW records got mixed. Mixed records are restored automatically, and affected challenges are judged again with the correct records
+      - Fixed an issue where "Shooting Star" was not counted in GW Skill
+    - title: Other fixes
+      list:
+      - '[POPN] Songs whose BPM showed "※" now show the BPM of each chart'
+      - '[DDR, SDVX, POPN] Fixed an issue where part of the sync results was missing when the official site returned an empty page'
+ko:
+  title: 모두의 투표, 게시글 번역, 친구 신청 링크 지원
+  sections:
+  - heading: 모두의 투표
+    items:
+    - title: 이어폰·헤드폰 등 인기 투표
+      desc: '홈에 ''모두의 투표''를 추가했습니다. 리듬게임에 쓰는 제품을 플레이어끼리 평가하고 공유할 수 있습니다.
+
+
+        첫 번째 주제는 ''리듬게임에 쓰는 이어폰·헤드폰''입니다. DDR에서는 ''DDR에서 신는 신발''을 표시합니다(일본 한정). 주제는 앞으로 계속 추가할 예정입니다. 보고 싶은 투표가 있다면 ''개발 요청·불편 신고''로 알려 주세요.'
+      list:
+      - 1인당 3표까지, 사용하는 제품을 별 1~5개로 평가할 수 있습니다
+      - 선택지에 없는 제품은 직접 추가할 수 있습니다
+      - 댓글도 남길 수 있습니다(익명으로 표시됩니다)
+  - heading: 친구·교류 기능
+    items:
+    - title: 링크로 친구 신청
+      desc: 'SNS 등에 공유한 링크에서 바로 친구 신청을 할 수 있게 되었습니다.
+
+
+        ※앱이 설치되어 있지 않으면 스토어가 열립니다.'
+      list:
+      - 프로필의 친구 코드 옆 🔗을 누르면 신청용 링크를 복사할 수 있습니다.
+      - 상대가 링크를 열면 앱에서 친구 신청 확인 화면이 표시됩니다.
+    - title: 다른 언어의 게시글 번역
+      desc: 스코어 어택·과제·댓글을 앱의 설정 언어로 번역해 표시할 수 있게 되었습니다.
+      list:
+      - 번역된 글에는 표시가 붙고, 누르면 원문으로 전환됩니다.
+  - heading: 곡 목록·곡 상세
+    items:
+    - title: 채보별 VF 표시
+      list:
+      - 곡 목록과 곡 상세에서 각 채보의 VF를 확인할 수 있습니다
+      - 곡 목록을 VF 순으로 정렬할 수 있게 되었습니다
+  - heading: 앱 개선
+    items:
+    - title: 앱 안에서 릴리스 노트 확인
+      desc: 앱을 업데이트하면 새 릴리스 노트를 알림으로 알려 드립니다.
+      list:
+      - 알림에서 업데이트 내용을 앱 안에서 확인할 수 있습니다
+      - 이전 릴리스 노트는 설정의 '이 앱에 관하여'에서 확인할 수 있습니다
+    - title: 다른 앱으로 전환해도 동기화 계속
+      desc: 동기화 중에 다른 앱으로 전환해도 동기화가 계속되게 했습니다. 진행 상황은 Android 알림창에서 확인할 수 있습니다.
+  - heading: 소소한 개선과 수정
+    items:
+    - title: 레이더 표시 개선
+      list:
+      - IIDX 노츠 레이더를 공식과 같은 항목 순서로 바꿨습니다
+      - 성장 탭에서 레이더 각 항목의 값과 증감을 표시합니다(IIDX·SDVX)
+    - title: 동기화·기록 오류 수정
+      list:
+      - 이전 차분 동기화에서 전체 가져오기를 꺼도 모든 곡을 가져오던 문제를 수정했습니다
+      - Δ와 GW의 기록이 섞이던 문제를 수정했습니다. 섞인 기록은 자동으로 복원되고, 영향을 받은 과제도 올바른 기록으로 다시 판정합니다
+      - GW의 Skill에서 'Shooting Star'가 계산 대상에 포함되지 않던 문제를 수정했습니다
+    - title: 기타 오류 수정
+      list:
+      - '[POPN] BPM이 ''※''로 표시되던 곡에서 채보별 BPM을 표시하도록 수정했습니다'
+      - '[DDR, SDVX, POPN] 공식 사이트가 빈 페이지를 반환했을 때 동기화 결과 일부가 빠지던 문제를 수정했습니다'
+zh:
+  title: 支援大家的投票、貼文翻譯與好友邀請連結
+  sections:
+  - heading: 大家的投票
+    items:
+    - title: 耳機等熱門投票
+      desc: '在首頁新增了「大家的投票」。玩家之間可以評價並分享用於音樂遊戲的產品。
+
+
+        第一個主題是「玩音樂遊戲用的耳機」。DDR 會顯示「玩 DDR 穿的鞋」（僅限日本）。之後會陸續增加主題。若有想看的投票，請從「回報需求與問題」告訴我們。'
+      list:
+      - 每人最多 3 票，可為自己使用的產品評 1～5 顆星
+      - 選項中沒有的產品，可以自行新增
+      - 也可以發表留言（以匿名顯示）
+  - heading: 好友與交流功能
+    items:
+    - title: 從連結送出好友邀請
+      desc: '現在可以從社群網站等處分享的連結直接送出好友邀請。
+
+
+        ※若尚未安裝 App，會開啟商店。'
+      list:
+      - 按下個人檔案中好友代碼旁的 🔗，即可複製邀請用連結。
+      - 對方開啟連結後，App 會顯示好友邀請的確認畫面。
+    - title: 翻譯其他語言的貼文
+      desc: 分數挑戰、課題與留言現在可以翻譯成 App 設定的語言顯示。
+      list:
+      - 翻譯過的文字會顯示標記，按下即可切換回原文。
+  - heading: 樂曲列表與樂曲詳細
+    items:
+    - title: 顯示每個譜面的 VF
+      list:
+      - 可在樂曲列表與樂曲詳細查看各譜面的 VF
+      - 樂曲列表可依 VF 排序
+  - heading: App 改善
+    items:
+    - title: 在 App 內查看版本說明
+      desc: 更新 App 後，會以通知告訴你新的版本說明。
+      list:
+      - 可從通知在 App 內查看更新內容
+      - 過去的版本說明可從設定的「關於本App」查看
+    - title: 切換到其他 App 也會繼續同步
+      desc: 同步中切換到其他 App 時，同步也會繼續進行。同步狀況可在 Android 的通知欄查看。
+  - heading: 小幅改善與修正
+    items:
+    - title: 改善雷達顯示
+      list:
+      - IIDX 的音符雷達改為與官方相同的項目順序
+      - 成長分頁會顯示雷達各項目的數值與增減（IIDX・SDVX）
+    - title: 同步與紀錄的錯誤修正
+      list:
+      - 修正前次差異同步即使關閉全部取得，仍會取得所有樂曲的問題
+      - 修正 Δ 與 GW 紀錄混在一起的問題。混在一起的紀錄會自動復原，受影響的課題也會以正確的紀錄重新判定
+      - 修正 GW 的 Skill 未將「Shooting Star」列入計算的問題
+    - title: 其他錯誤修正
+      list:
+      - '[POPN] BPM 顯示為「※」的樂曲，改為顯示各譜面的 BPM'
+      - '[DDR, SDVX, POPN] 修正官方網站回傳空白頁面時，部分同步結果缺漏的問題'
