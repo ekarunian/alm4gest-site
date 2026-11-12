@@ -3,7 +3,7 @@
 - id: "v1-4-4"
   kind: release
   version: "1.4.4"
-  date: "2026-11-20"
+  date: "2026-11-13"
   ja:
     title: "みんなの投票・投稿の翻訳・フレンド申請リンクに対応"
     sections:
@@ -15,7 +15,7 @@
               - "1人3票まで、使っている製品を星1〜5で評価できます"
               - "選択肢にない製品は、自分で追加できます"
               - "コメントの投稿なども可能です（匿名化されます）"
-            media: {type: video, src: 261120-v144poll.mp4, poster: 261120-v144poll.jpg}
+            media: {type: video, src: 261113-v144poll.mp4, poster: 261113-v144poll.jpg}
       - heading: "フレンド・交流機能"
         items:
           - title: "リンクからフレンド申請"
@@ -23,12 +23,12 @@
             list:
               - "プロフィールのフレンドコードにある🔗を押すと、申請用リンクをコピーできます。"
               - "相手がリンクを開くと、アプリで申請の確認画面が表示されます。"
-            media: {type: video, src: 261120-v144link.mp4, poster: 261120-v144link.jpg}
+            media: {type: video, src: 261113-v144link.mp4, poster: 261113-v144link.jpg}
           - title: "ほかの言語の投稿を翻訳"
             desc: "スコアアタック・課題・コメントを、アプリの設定言語に翻訳して表示できるようにしました。"
             list:
               - "翻訳された文章には印を表示し、押すと原文に切り替えられます。"
-            media: {type: video, src: 261120-v144translate.mp4, poster: 261120-v144translate.jpg}
+            media: {type: video, src: 261113-v144translate.mp4, poster: 261113-v144translate.jpg}
       - heading: "楽曲一覧・楽曲詳細"
         items:
           - title: "譜面ごとのVFを表示"
@@ -36,7 +36,7 @@
             list:
               - "楽曲一覧・楽曲詳細で、各譜面のVFを確認できます"
               - "楽曲一覧をVF順に並べ替えられるようにしました"
-            media: {type: video, src: 261120-v144vf-sdvx-vf-vf.mp4, poster: 261120-v144vf-sdvx-vf-vf.jpg}
+            media: {type: video, src: 261113-v144vf-sdvx-vf-vf.mp4, poster: 261113-v144vf-sdvx-vf-vf.jpg}
       - heading: "アプリの改善"
         items:
           - title: "リリースノートをアプリ内で確認"
@@ -44,7 +44,7 @@
             list:
               - "通知から更新内容をアプリ内で確認できます"
               - "過去のリリースノートは、設定の「このアプリについて」から確認できます"
-            media: {type: video, src: 261120-v144notes.mp4, poster: 261120-v144notes.jpg}
+            media: {type: video, src: 261113-v144notes.mp4, poster: 261113-v144notes.jpg}
           - title: "アプリを切り替えても同期を継続"
             games: [Android]
             desc: "同期中にほかのアプリへ切り替えても、同期を継続できるようにしました。同期状況はAndroidの通知欄で確認できます。"
@@ -76,7 +76,7 @@
               - "Each player has up to 3 votes and can rate each product they use from 1 to 5 stars"
               - "You can add a product that is not in the choices"
               - "You can also post comments (shown anonymously)"
-            media: {type: video, src: 261120-v144poll.mp4, poster: 261120-v144poll.jpg}
+            media: {type: video, src: 261113-v144poll.mp4, poster: 261113-v144poll.jpg}
       - heading: "Friends and social features"
         items:
           - title: "Send friend requests from a link"
@@ -84,12 +84,12 @@
             list:
               - "Tap 🔗 next to the friend code on your profile to copy your friend request link."
               - "When someone opens the link, the app shows the friend request confirmation screen."
-            media: {type: video, src: 261120-v144link.mp4, poster: 261120-v144link.jpg}
+            media: {type: video, src: 261113-v144link.mp4, poster: 261113-v144link.jpg}
           - title: "Translate posts in other languages"
             desc: "Score Attacks, challenges and comments can now be translated into the app's language."
             list:
               - "Translated text shows a mark; tap it to switch to the original."
-            media: {type: video, src: 261120-v144translate.mp4, poster: 261120-v144translate.jpg}
+            media: {type: video, src: 261113-v144translate.mp4, poster: 261113-v144translate.jpg}
       - heading: "Song list and song details"
         items:
           - title: "VF for each chart"
@@ -97,7 +97,7 @@
             list:
               - "See the VF of each chart in the song list and song details"
               - "Sort the song list by VF"
-            media: {type: video, src: 261120-v144vf-sdvx-vf-vf.mp4, poster: 261120-v144vf-sdvx-vf-vf.jpg}
+            media: {type: video, src: 261113-v144vf-sdvx-vf-vf.mp4, poster: 261113-v144vf-sdvx-vf-vf.jpg}
       - heading: "App improvements"
         items:
           - title: "Release notes inside the app"
@@ -105,7 +105,7 @@
             list:
               - "Open the update details inside the app from the notification"
               - "Past release notes are in Settings → \"About this app\""
-            media: {type: video, src: 261120-v144notes.mp4, poster: 261120-v144notes.jpg}
+            media: {type: video, src: 261113-v144notes.mp4, poster: 261113-v144notes.jpg}
           - title: "Sync keeps running when you switch apps"
             games: [Android]
             desc: "Sync now continues even if you switch to another app during sync. You can check its progress in the Android notification area."
@@ -137,7 +137,7 @@
               - "1인당 3표까지, 사용하는 제품을 별 1~5개로 평가할 수 있습니다"
               - "선택지에 없는 제품은 직접 추가할 수 있습니다"
               - "댓글도 남길 수 있습니다(익명으로 표시됩니다)"
-            media: {type: video, src: 261120-v144poll.mp4, poster: 261120-v144poll.jpg}
+            media: {type: video, src: 261113-v144poll.mp4, poster: 261113-v144poll.jpg}
       - heading: "친구·교류 기능"
         items:
           - title: "링크로 친구 신청"
@@ -145,12 +145,12 @@
             list:
               - "프로필의 친구 코드 옆 🔗을 누르면 신청용 링크를 복사할 수 있습니다."
               - "상대가 링크를 열면 앱에서 친구 신청 확인 화면이 표시됩니다."
-            media: {type: video, src: 261120-v144link.mp4, poster: 261120-v144link.jpg}
+            media: {type: video, src: 261113-v144link.mp4, poster: 261113-v144link.jpg}
           - title: "다른 언어의 게시글 번역"
             desc: "스코어 어택·과제·댓글을 앱의 설정 언어로 번역해 표시할 수 있게 되었습니다."
             list:
               - "번역된 글에는 표시가 붙고, 누르면 원문으로 전환됩니다."
-            media: {type: video, src: 261120-v144translate.mp4, poster: 261120-v144translate.jpg}
+            media: {type: video, src: 261113-v144translate.mp4, poster: 261113-v144translate.jpg}
       - heading: "곡 목록·곡 상세"
         items:
           - title: "채보별 VF 표시"
@@ -158,7 +158,7 @@
             list:
               - "곡 목록과 곡 상세에서 각 채보의 VF를 확인할 수 있습니다"
               - "곡 목록을 VF 순으로 정렬할 수 있게 되었습니다"
-            media: {type: video, src: 261120-v144vf-sdvx-vf-vf.mp4, poster: 261120-v144vf-sdvx-vf-vf.jpg}
+            media: {type: video, src: 261113-v144vf-sdvx-vf-vf.mp4, poster: 261113-v144vf-sdvx-vf-vf.jpg}
       - heading: "앱 개선"
         items:
           - title: "앱 안에서 릴리스 노트 확인"
@@ -166,7 +166,7 @@
             list:
               - "알림에서 업데이트 내용을 앱 안에서 확인할 수 있습니다"
               - "이전 릴리스 노트는 설정의 '이 앱에 관하여'에서 확인할 수 있습니다"
-            media: {type: video, src: 261120-v144notes.mp4, poster: 261120-v144notes.jpg}
+            media: {type: video, src: 261113-v144notes.mp4, poster: 261113-v144notes.jpg}
           - title: "다른 앱으로 전환해도 동기화 계속"
             games: [Android]
             desc: "동기화 중에 다른 앱으로 전환해도 동기화가 계속되게 했습니다. 진행 상황은 Android 알림창에서 확인할 수 있습니다."
@@ -198,7 +198,7 @@
               - "每人最多 3 票，可為自己使用的產品評 1～5 顆星"
               - "選項中沒有的產品，可以自行新增"
               - "也可以發表留言（以匿名顯示）"
-            media: {type: video, src: 261120-v144poll.mp4, poster: 261120-v144poll.jpg}
+            media: {type: video, src: 261113-v144poll.mp4, poster: 261113-v144poll.jpg}
       - heading: "好友與交流功能"
         items:
           - title: "從連結送出好友邀請"
@@ -206,12 +206,12 @@
             list:
               - "按下個人檔案中好友代碼旁的 🔗，即可複製邀請用連結。"
               - "對方開啟連結後，App 會顯示好友邀請的確認畫面。"
-            media: {type: video, src: 261120-v144link.mp4, poster: 261120-v144link.jpg}
+            media: {type: video, src: 261113-v144link.mp4, poster: 261113-v144link.jpg}
           - title: "翻譯其他語言的貼文"
             desc: "分數挑戰、課題與留言現在可以翻譯成 App 設定的語言顯示。"
             list:
               - "翻譯過的文字會顯示標記，按下即可切換回原文。"
-            media: {type: video, src: 261120-v144translate.mp4, poster: 261120-v144translate.jpg}
+            media: {type: video, src: 261113-v144translate.mp4, poster: 261113-v144translate.jpg}
       - heading: "樂曲列表與樂曲詳細"
         items:
           - title: "顯示每個譜面的 VF"
@@ -219,7 +219,7 @@
             list:
               - "可在樂曲列表與樂曲詳細查看各譜面的 VF"
               - "樂曲列表可依 VF 排序"
-            media: {type: video, src: 261120-v144vf-sdvx-vf-vf.mp4, poster: 261120-v144vf-sdvx-vf-vf.jpg}
+            media: {type: video, src: 261113-v144vf-sdvx-vf-vf.mp4, poster: 261113-v144vf-sdvx-vf-vf.jpg}
       - heading: "App 改善"
         items:
           - title: "在 App 內查看版本說明"
@@ -227,7 +227,7 @@
             list:
               - "可從通知在 App 內查看更新內容"
               - "過去的版本說明可從設定的「關於本App」查看"
-            media: {type: video, src: 261120-v144notes.mp4, poster: 261120-v144notes.jpg}
+            media: {type: video, src: 261113-v144notes.mp4, poster: 261113-v144notes.jpg}
           - title: "切換到其他 App 也會繼續同步"
             games: [Android]
             desc: "同步中切換到其他 App 時，同步也會繼續進行。同步狀況可在 Android 的通知欄查看。"
